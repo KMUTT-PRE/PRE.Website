@@ -15,8 +15,7 @@
 
     ul {
       list-style-type: none;
-      /* background: #F89A1C; */
-      background: red;
+      background: #F89A1C;
     }
 
     .dropbtn {
@@ -30,7 +29,7 @@
       transition-duration: 0.4s;
     }
 
-    .dropdrown {
+    .dropdown {
       position: relative;
       display: inline-block;
     }
@@ -69,12 +68,14 @@
     .button1 {
       width: 150px;
       height: 150px;
+      padding: 6px;
       border-radius: 5%;
       background: linear-gradient(to bottom, #F89A1C 0%, #FFDEB1 100%);
       color: #4E4E4E;
-      transition-duration: 0.4s;
       border: none;
       box-shadow: 5px -5px #ffe6c2;
+      /* transition: all; */
+      transition-duration: .4s;
     }
 
     .button1:hover {
@@ -125,8 +126,7 @@
 <body>
   <!-- navigation bar -->
   <ul>
-    <img src="C:\Users\Satth\OneDrive\Documents\KMUTT\PRE.Website\Pic\PEMCE LOGO WIN COLOR.png" width="70" height="70"
-      alt="Logo">
+    <img src="public/PEMCE-LOGO-WIN-COLOR.png" width="70" height="70" alt="Logo">
     <span class="dropdown">
       <button class="dropbtn">โปรไฟล์<i class="fa-solid fa-chevron-up"></i></button>
       <div class="dropdown-content">
@@ -193,27 +193,27 @@
     </span>
   </ul>
   <!-- picture-main -->
-  <img src="C:\Users\Satth\OneDrive\Documents\KMUTT\PRE.Website\Pic\Homepage\Homepage-mainpic.jpg" alt="HomepagePic"
-    margin="auto" width="1500" height="800">
+  <img src="public\Homepage\Homepage-mainpic.jpg" alt="HomepagePic" margin="auto" width="1500" height="800">
   <!-- button-main -->
-  <button class="button1">
-    <div class="button1-main">PRE</div>
-    <div class="button1-name">(Production Engineering)</div>
-  </button>
-  <button class="button1">
-    <div class="button1-main">MCE</div>
-    <div class="button1-name">(Mechatronic Engineering)</div>
-  </button>
-  <button class="button1">
-    <div class="button1-main">ISEE</div>
-    <div class="button1-name">(Engineering Program in Industrial Systems)</div>
-  </button>
-  <button class="button1">
-    <div class="button1-main">บัณฑิต</div>
-  </button>
+  <div style="display: flex; justify-content: center; column-gap: 16px;">
+    <button class="button1">
+      <div class="button1-main">PRE</div>
+      <div class="button1-name">(Production Engineering)</div>
+    </button>
+    <button class="button1">
+      <div class="button1-main">MCE</div>
+      <div class="button1-name">(Mechatronic Engineering)</div>
+    </button>
+    <button class="button1">
+      <div class="button1-main">ISEE</div>
+      <div class="button1-name">(Engineering Program in Industrial Systems)</div>
+    </button>
+    <button class="button1">
+      <div class="button1-main">บัณฑิต</div>
+    </button>
+  </div>
   <!-- picture-aboutus -->
-  <div><img src="C:\Users\Satth\OneDrive\Documents\KMUTT\PRE.Website\Pic\Homepage\Homepage-About.jpg" alt="AboutusPic"
-      margin="auto" width="400" height="400"></div>
+  <div><img src="public\Homepage\Homepage-About.jpg" alt="AboutusPic" margin="auto" width="400" height="400"></div>
   <h1>เกี่ยวกับเรา</h1>
   <div>การจัดการเรียนการสอนของภาควิชาวิศวกรรมอุตสาหการในทุกหลักสูตร ถือว่ามีคุณภาพใน
     ลำดับต้นๆ ของประเทศ ผลิตบัณฑิตประมาณ ปีละ 120 คน มหาบัณฑิตประมาณปีละ 80 คน
@@ -221,15 +221,19 @@
     ตีพิมพ์ในวารสาร วิชาการและการ</div>
   <div class="อ่าเพิ่มเติม">อ่านเพิ่มเติม<i class="fa-solid fa-arrow-right"></i></div>
   <!-- picture1 -->
-  <img src="C:\Users\Satth\OneDrive\Documents\KMUTT\PRE.Website\Pic\Homepage\Homepage-pic1.jpg" alt="pic1" width="1500"
-    height="400" object-fit="none">
+  <img src="public\Homepage\Homepage-pic1.jpg" alt="pic1" width="1500" height="400" object-fit="none">
   <!-- ปริญญาตรี -->
-  <div>
-    <h1>ระดับปริญญาตรี</h1>
-    <div>หลักสูตรที่เน้นความรู้ด้านการบริหาร จัดการโดย สามารถวิเคราะห์ วางแผน ควบคุม ระบบการผลิต
-      การปรับปรุงคุณภาพและ การบริหารองค์กร การผลิตได้อย่างมีประสิทธิภาพและเป็นเชิงระบบ </div>
-    <image src="C:\Users\Satth\OneDrive\Documents\KMUTT\PRE.Website\Pic\Homepage\Homepage-ปริญญาตรี.jpg" margin="auto"
-      width="950" height="470"></image>
+  <div style="margin: 0px 20%; position: relative; height: 50vh;">
+    <div style="position: absolute; background-color: #fff; z-index: 1; border: 2px solid #000; width: 50%;">
+      <h1>ระดับปริญญาตรี</h1>
+      <div>หลักสูตรที่เน้นความรู้ด้านการบริหาร จัดการโดย สามารถวิเคราะห์ วางแผน ควบคุม ระบบการผลิต
+        การปรับปรุงคุณภาพและ การบริหารองค์กร การผลิตได้อย่างมีประสิทธิภาพและเป็นเชิงระบบ
+      </div>
+    </div>
+    <div style="width: 400px; height: 350px; position: absolute;
+     right:0; top: 10%;">
+      <image src="public\Homepage\Homepage-ปริญญาตรี.jpg" margin="auto" height="100%" style="object-fit: contain;" />
+    </div>
   </div>
   <div>
     <button class="button2">
@@ -254,8 +258,7 @@
     <h1>ระดับบัณฑิตศึกษา</h1>
     <div>ภาควิชาเปิดสอนหลักสูตรระดับบัณฑิตศึกษาทั้งหมด 5 หลักสูตร ประกอบด้วยหลักสูตรระดับ
       ปริญญาโท 4 หลักสูตร และหลักสูตรระดับปริญญาเอก 1 หลักสูตร </div>
-    <image src="C:\Users\Satth\OneDrive\Documents\KMUTT\PRE.Website\Pic\Homepage\Homepage-บัณฑิต.jpg" margin="auto"
-      width="950" height="470"></image>
+    <image src="public\Homepage\Homepage-บัณฑิต.jpg" margin="auto" width="950" height="470"></image>
   </div>
   <div>
     <button class="button2">
