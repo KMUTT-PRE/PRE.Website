@@ -6,194 +6,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PRE.Homepage</title>
   <script src="https://kit.fontawesome.com/f7cbfce543.js" crossorigin="anonymous"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: "Prompt", sans-serif;
-    }
-
-    ul {
-      list-style-type: none;
-      background: #F89A1C;
-    }
-
-    .dropbtn {
-      padding: 7px;
-      background: none;
-      color: #4E4E4E;
-      font-size: 24px;
-      font-style: bold;
-      border: none;
-      cursor: pointer;
-      transition-duration: 0.4s;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #747474;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      color: white;
-      text-decoration: underline #FF6600;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown:hover .dropbtn {
-      color: white;
-      background-color: #FF6600;
-      border-radius: 5px;
-    }
-
-    .button1 {
-      width: 150px;
-      height: 150px;
-      padding: 6px;
-      border-radius: 5%;
-      background: linear-gradient(to bottom, #F89A1C 0%, #FFDEB1 100%);
-      color: #4E4E4E;
-      border: none;
-      box-shadow: 5px -5px #ffe6c2;
-      /* transition: all; */
-      transition-duration: .4s;
-    }
-
-    .button1:hover {
-      background: #FF6600;
-      cursor: pointer;
-      color: #ffffff;
-      border: none;
-      box-shadow: none;
-    }
-
-    .button1-main {
-      font-size: 36px;
-      font-weight: bold;
-    }
-
-    .butoon1-name {
-      font-size: 11px;
-    }
-
-    .button2 {
-      width: 950px;
-      height: 80;
-      background: #F89A1C;
-      color: #ffffff;
-      transition-duration: 0.4s;
-      border: none;
-      text-align: left;
-      text-decoration: none;
-    }
-
-    .button2-main {
-      font-size: 32px;
-    }
-
-    .button2-name {
-      font-size: 24px;
-    }
-
-    .button2:hover {
-      background: #FF6600;
-      cursor: pointer;
-      color: #ffffff;
-      border: none;
-    }
-  </style>
+  <link rel="stylesheet" href="PRE-Homepage.css">
 </head>
-
 <body>
   <!-- navigation bar -->
   <ul>
-    <img src="public/PEMCE-LOGO-WIN-COLOR.png" width="70" height="70" alt="Logo">
-    <span class="dropdown">
-      <button class="dropbtn">โปรไฟล์<i class="fa-solid fa-chevron-up"></i></button>
-      <div class="dropdown-content">
-        <a href="#">เกี่ยวกับเรา</a>
-        <a href="#">ประวัติภาควิชา</a>
-        <a href="#">บุคลากร</a>
-        <a href="#">ห้องแล็ป อุปกรณ์</a>
-        <a href="#">ชมรมมด</a>
-        <a href="#">ติดต่อเรา</a>
+    <div class="navbar">
+      <div style="left: 20px; position: absolute; margin-left: 40px;">
+        <img src="public/PEMCE-LOGO.png" width="100" height="100" alt="PEMCELogo">
       </div>
-    </span>
-    <span class="dropdown">
-      <button class="dropbtn">หลักสูตร<i class="fa-solid fa-chevron-up"></i></button>
-      <div class="dropdown-content">
-        <a href="#">ปริญญาตรี</a>
-        <a href="#">PRE</a>
-        <a href="#">MCE</a>
-        <a href="#">ISEE</a>
-        <a href="#">ปริญญาโท</a>
-        <a href="#">ปริญญาเอก</a>
+      <div style="right: 20px; position: absolute; margin-right: 40px;">  
+        <span class="dropdown">
+          <button class="dropbtn">โปรไฟล์<i class="fa-solid fa-chevron-down fa-xs"></i></i></button>
+          <div class="dropdown-content">
+            <a href="#">เกี่ยวกับเรา</a>
+            <a href="#">ประวัติภาควิชา</a>
+            <a href="#">บุคลากร</a>
+            <a href="#">ห้องแล็ป อุปกรณ์</a>
+            <a href="#">ชมรมมด</a>
+            <a href="#">ติดต่อเรา</a>
+          </div>
+        </span>
+        <span class="dropdown">
+          <button class="dropbtn">หลักสูตร<i class="fa-solid fa-chevron-down fa-xs"></i></i></button>
+          <div class="dropdown-content">
+            <a href="#">PRE</a>
+            <a href="#">MCE</a>
+            <a href="#">ISEE</a>
+            <a href="#">ปริญญาโท</a>
+            <a href="#">ปริญญาเอก</a>
+          </div>
+        </span>
+        <span class="dropdown">
+          <button class="dropbtn">TABEE<i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-content">
+            <a href="#">TABEE</a>
+            <a href="#">TABEE</a>
+            <a href="#">TABEE</a>
+          </div>
+        </span>
+        <span class="dropdown">
+          <button class="dropbtn">ผลงาน<i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-content">
+            <a href="#">ผลงาน</a>
+            <a href="#">งานวิจัย</a>
+          </div>
+        </span>
+        <span class="dropdown">
+          <button class="dropbtn">นักศึกษา<i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-content">
+            <a href="#">ระดับปริญญาตรี</a>
+            <a href="#">ระดับบัณฑิต</a>
+            <a href="#">แบบฟอร์มเอกสาร</a>
+            <a href="#">ทุนการศึกษา</a>
+            <a href="#">ปฎอทินการศึกษา</a>
+          </div>
+        </span>
+        <span class="dropdown">
+          <button class="dropbtn">สมัครเรียน<i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-content">
+            <a href="#">ปริญญาตรี</a>
+            <a href="#">ปริญญาโท</a>
+            <a href="#">ปริญญเอก</a>
+          </div>
+        </span>
+        <span class="dropdown">
+          <button class="dropbtn">ข่าวสาร<i class="fa-solid fa-chevron-down fa-xs"></i></button>
+          <div class="dropdown-content">
+            <a href="#">ทั้งหมด</a>
+            <a href="#">ประกาศสำคัญ</a>
+            <a href="#">ทุนการศึกษา</a>
+            <a href="#">งานศิษย์เก่า</a>
+          </div>
+        </span>
+        <div class="dropdown">
+          <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="dropdown">
+          <button class="login">Login</button>
+        </div>
       </div>
-    </span>
-    <span class="dropdown">
-      <button class="dropbtn">TABEE<i class="fa-solid fa-chevron-up"></i></button>
-      <div class="dropdown-content">
-        <a href="#">TABEE</a>
-        <a href="#">TABEE</a>
-        <a href="#">TABEE</a>
-      </div>
-    </span>
-    <span class="dropdown">
-      <button class="dropbtn">ผลงาน<i class="fa-solid fa-chevron-up"></i></button>
-      <div class="dropdown-content">
-        <a href="#">ผลงาน</a>
-        <a href="#">งานวิจัย</a>
-      </div>
-    </span>
-    <span class="dropdown">
-      <button class="dropbtn">นักศึกษา<i class="fa-solid fa-chevron-up"></i></button>
-      <div class="dropdown-content">
-        <a href="#">ระดับปริญญาตรี</a>
-        <a href="#">ระดับบัณฑิต</a>
-        <a href="#">แบบฟอร์มเอกสาร</a>
-        <a href="#">ทุนการศึกษา</a>
-        <a href="#">ปฎอทินการศึกษา</a>
-      </div>
-    </span>
-    <span class="dropdown">
-      <button class="dropbtn">สมัครเรียน<i class="fa-solid fa-chevron-up"></i></button>
-      <div class="dropdown-content">
-        <a href="#">ปริญญาตรี</a>
-        <a href="#">ปริญญาโท</a>
-        <a href="#">ปริญญเอก</a>
-      </div>
-    </span>
-    <span class="dropdown">
-      <button class="dropbtn">ข่าวสาร<i class="fa-solid fa-chevron-up"></i></button>
-      <div class="dropdown-content">
-        <a href="#">ทั้งหมด</a>
-        <a href="#">ประกาศสำคัญ</a>
-        <a href="#">ทุนการศึกษา</a>
-        <a href="#">งานศิษย์เก่า</a>
-      </div>
-    </span>
-  </ul>
+    </div>
+    </ul>
   <!-- picture-main -->
-  <img src="public\Homepage\Homepage-mainpic.jpg" alt="HomepagePic" margin="auto" width="1500" height="800">
+  <img src="public/Homepage/Homepage-mainpic.jpg" alt="HomepagePic" width="1500" >
   <!-- button-main -->
   <div style="display: flex; justify-content: center; column-gap: 16px;">
     <button class="button1">
@@ -213,7 +109,7 @@
     </button>
   </div>
   <!-- picture-aboutus -->
-  <div><img src="public\Homepage\Homepage-About.jpg" alt="AboutusPic" margin="auto" width="400" height="400"></div>
+  <div><img src="public/Homepage/Homepage-About.jpg" alt="AboutusPic" margin="auto" width="400" height="400"></div>
   <h1>เกี่ยวกับเรา</h1>
   <div>การจัดการเรียนการสอนของภาควิชาวิศวกรรมอุตสาหการในทุกหลักสูตร ถือว่ามีคุณภาพใน
     ลำดับต้นๆ ของประเทศ ผลิตบัณฑิตประมาณ ปีละ 120 คน มหาบัณฑิตประมาณปีละ 80 คน
@@ -221,7 +117,7 @@
     ตีพิมพ์ในวารสาร วิชาการและการ</div>
   <div class="อ่าเพิ่มเติม">อ่านเพิ่มเติม<i class="fa-solid fa-arrow-right"></i></div>
   <!-- picture1 -->
-  <img src="public\Homepage\Homepage-pic1.jpg" alt="pic1" width="1500" height="400" object-fit="none">
+  <img src="public/Homepage/Homepage-pic1.jpg" alt="pic1" width="1500" height="400" object-fit="none">
   <!-- ปริญญาตรี -->
   <div style="margin: 0px 20%; position: relative; height: 50vh;">
     <div style="position: absolute; background-color: #fff; z-index: 1; border: 2px solid #000; width: 50%;">
@@ -232,7 +128,7 @@
     </div>
     <div style="width: 400px; height: 350px; position: absolute;
      right:0; top: 10%;">
-      <image src="public\Homepage\Homepage-ปริญญาตรี.jpg" margin="auto" height="100%" style="object-fit: contain;" />
+      <image src="public/Homepage/Homepage-ปริญญาตรี.jpg" margin="auto" height="100%" style="object-fit: contain;" />
     </div>
   </div>
   <div>
@@ -258,7 +154,7 @@
     <h1>ระดับบัณฑิตศึกษา</h1>
     <div>ภาควิชาเปิดสอนหลักสูตรระดับบัณฑิตศึกษาทั้งหมด 5 หลักสูตร ประกอบด้วยหลักสูตรระดับ
       ปริญญาโท 4 หลักสูตร และหลักสูตรระดับปริญญาเอก 1 หลักสูตร </div>
-    <image src="public\Homepage\Homepage-บัณฑิต.jpg" margin="auto" width="950" height="470"></image>
+    <image src="public/Homepage/Homepage-บัณฑิต.jpg" margin="auto" width="950" height="470"></image>
   </div>
   <div>
     <button class="button2">
@@ -290,7 +186,73 @@
     2-470-9179</div>
   <div><i class="fa-brands fa-facebook"></i>facebook.com</div>
   <div><i class="fa-brands fa-youtube"></i>youtube.com</div>
+<!-- quick menu -->
+<dis class ="quickmenu">
+  <div class="colortab">
+      <div class="column">
+      <div>
+        <div class="Logo">
+        <img src="public\KMUTT_Logo.png" alt="KMUTTLogo" width="100" height="100">
+        <img src="public\PEMCE-LOGO.png" alt="PEMCELogo" width="100" height="100">
+        </div>
+        <div class="column1">
+          <div class="HeadQM">QuickLink</div>
+          <a class="BodyQM" href="https://www.leb2.org/" target="_blank">Leb2</a>
+          <a class="BodyQM" href="https://sinfo.kmutt.ac.th/" target="_blank">NewAcis</a>
+        </div>
+      </div>
+      <div class="column2">
+        <div class="HeadQM">โปรไฟล์</div>
+            <a class="BodyQM" href="#">เกี่ยวกับเรา</a>
+            <a class="BodyQM" href="#">ประวัติภาควิชา</a>
+            <a class="BodyQM" href="#">บุคลากร</a>
+            <a class="BodyQM" href="#">ห้องLab อุปกรณ์</a>
+            <a class="BodyQM" href="#">ชมรมมด</a>
+            <a class="BodyQM" href="#">ติดต่อเรา</a>
+      </div>
+      <div class="column3">
+          <div class="HeadQM">หลักสูตร</div>
+              <a class="BodyQM" href="">PRE</a>
+              <a class="BodyQM" href="">MCE</a>
+              <a class="BodyQM" href="">ISEE</a>
+              <a class="BodyQM" href="">ปริญญาโท</a>
+              <a class="BodyQM" href="">ปริญญาเอก</a>
+      </div>
+      <div class="column4">
+          <div class="HeadQM">TABEE</div>
+            <a class="BodyQM" href="">TABEE</a>
+            <a class="BodyQM" href="">TABEE</a>
+            <a class="BodyQM" href="">TABEE</a> 
+      </div>
+      <div class="column5">
+          <div class="HeadQM">ผลงาน</div>
+            <a class="BodyQM" href="">ผลงาน</a>
+            <a class="BodyQM" href="">งานวิจัย</a>
+      </div>
+      <div class="column6">
+          <div class="HeadQM">นักศึกษา</div>
+            <a class="BodyQM" href="">ระดับปริญญาตรี</a>
+            <a class="BodyQM" href="">ระดับบัณฑิต</a>
+            <a class="BodyQM" href="">แบบฟอร์มเอกสาร</a>
+            <a class="BodyQM" href="">ทุนการศึกษา</a>
+            <a class="BodyQM" href="">ปฎอทินการศึกษา</a>
+        </div>
+        <div class="column7">
+          <div class="HeadQM">ข่าวสาร</div>
+            <a class="BodyQM" href="">ทั้งหมด</a>
+            <a class="BodyQM" href="">ประกาศสำคัญ</a>
+            <a class="BodyQM" href="">ทุนการศึกษา</a>
+            <a class="BodyQM" href="">งานศิษย์เก่า</a>
+        </div>
+        <div class="column8">
+          <div class="HeadQM">สมัครเรียน</div>
+            <a class="BodyQM" href="">ปริญญาตรี</a>
+            <a class="BodyQM" href="">ปริญญาโท</a>
+            <a class="BodyQM" href="">ปริญญาเอก</a>
+        </div>
+      </div>
+  </div>
+</div>
 
 </body>
-
 </html>
