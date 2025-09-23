@@ -1,287 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRE.Homepage</title>
-  <script src="https://kit.fontawesome.com/f7cbfce543.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="PRE-Homepage.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- navigation bar -->
-  <ul>
-    <div class="navbar">
-      <div style="left: 20px; position: absolute; margin-left: 40px;">
-        <img src="public/PEMCE-LOGO.png" width="100" height="100" alt="PEMCELogo">
-      </div>
-      <div style="right: 20px; position: absolute; margin-right: 40px;">  
-        <span class="dropdown">
-          <button class="dropbtn">โปรไฟล์<i class="fa-solid fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-content">
-            <a href="#">เกี่ยวกับเรา</a>
-            <a href="#">ประวัติภาควิชา</a>
-            <a href="#">บุคลากร</a>
-            <a href="#">ห้องแล็ป อุปกรณ์</a>
-            <a href="#">ชมรมมด</a>
-            <a href="#">ติดต่อเรา</a>
-          </div>
-        </span>
-        <span class="dropdown">
-          <button class="dropbtn">หลักสูตร<i class="fa-solid fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-content">
-            <a href="#">PRE</a>
-            <a href="#">MCE</a>
-            <a href="#">ISEE</a>
-            <a href="#">ปริญญาโท</a>
-            <a href="#">ปริญญาเอก</a>
-          </div>
-        </span>
-        <span class="dropdown">
-          <button class="dropbtn">TABEE<i class="fa-solid fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-content">
-            <a href="#">TABEE</a>
-            <a href="#">TABEE</a>
-            <a href="#">TABEE</a>
-          </div>
-        </span>
-        <span class="dropdown">
-          <button class="dropbtn">ผลงาน<i class="fa-solid fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-content">
-            <a href="#">ผลงาน</a>
-            <a href="#">งานวิจัย</a>
-          </div>
-        </span>
-        <span class="dropdown">
-          <button class="dropbtn">นักศึกษา<i class="fa-solid fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-content">
-            <a href="#">ระดับปริญญาตรี</a>
-            <a href="#">ระดับบัณฑิต</a>
-            <a href="#">แบบฟอร์มเอกสาร</a>
-            <a href="#">ทุนการศึกษา</a>
-            <a href="#">ปฎอทินการศึกษา</a>
-          </div>
-        </span>
-        <span class="dropdown">
-          <button class="dropbtn">สมัครเรียน<i class="fa-solid fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-content">
-            <a href="#">ปริญญาตรี</a>
-            <a href="#">ปริญญาโท</a>
-            <a href="#">ปริญญเอก</a>
-          </div>
-        </span>
-        <span class="dropdown">
-          <button class="dropbtn">ข่าวสาร<i class="fa-solid fa-chevron-down fa-xs"></i></button>
-          <div class="dropdown-content">
-            <a href="#">ทั้งหมด</a>
-            <a href="#">ประกาศสำคัญ</a>
-            <a href="#">ทุนการศึกษา</a>
-            <a href="#">งานศิษย์เก่า</a>
-          </div>
-        </span>
-        <div class="dropdown">
-          <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRE.Homepage</title>
+    <script
+      src="https://kit.fontawesome.com/f7cbfce543.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="PRE-Homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <ul>
+      <nav class="navbar">
+        <div style="left: 20px; position: absolute; margin-left: 40px">
+          <img
+            src="public/PEMCE-LOGO.png"
+            width="100"
+            height="100"
+            alt="PEMCELogo"
+          />
         </div>
-        <div class="dropdown">
-          <button class="login">Login</button>
+        <div style="right: 20px; position: absolute; margin-right: 40px">
+          <span class="dropdown">
+            <button class="dropbtn">
+              โปรไฟล์<i class="fa-solid fa-chevron-down fa-xs"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">เกี่ยวกับเรา</a>
+              <a href="#">ประวัติภาควิชา</a>
+              <a href="#">บุคลากร</a>
+              <a href="#">ห้องแล็ป อุปกรณ์</a>
+              <a href="#">ชมรมมด</a>
+              <a href="#">ติดต่อเรา</a>
+            </div>
+          </span>
+          <span class="dropdown">
+            <button class="dropbtn">
+              หลักสูตร<i class="fa-solid fa-chevron-down fa-xs"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">PRE</a>
+              <a href="#">MCE</a>
+              <a href="#">ISEE</a>
+              <a href="#">ปริญญาโท</a>
+              <a href="#">ปริญญาเอก</a>
+            </div>
+          </span>
+          <span class="dropdown">
+            <button class="dropbtn">
+              TABEE<i class="fa-solid fa-chevron-down fa-xs"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">TABEE</a>
+              <a href="#">TABEE</a>
+              <a href="#">TABEE</a>
+            </div>
+          </span>
+          <span class="dropdown">
+            <button class="dropbtn">
+              ผลงาน<i class="fa-solid fa-chevron-down fa-xs"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">ผลงาน</a>
+              <a href="#">งานวิจัย</a>
+            </div>
+          </span>
+          <span class="dropdown">
+            <button class="dropbtn">
+              นักศึกษา<i class="fa-solid fa-chevron-down fa-xs"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">ระดับปริญญาตรี</a>
+              <a href="#">ระดับบัณฑิต</a>
+              <a href="#">แบบฟอร์มเอกสาร</a>
+              <a href="#">ทุนการศึกษา</a>
+              <a href="#">ปฎอทินการศึกษา</a>
+            </div>
+          </span>
+          <span class="dropdown">
+            <button class="dropbtn">
+              สมัครเรียน<i class="fa-solid fa-chevron-down fa-xs"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">ปริญญาตรี</a>
+              <a href="#">ปริญญาโท</a>
+              <a href="#">ปริญญเอก</a>
+            </div>
+          </span>
+          <span class="dropdown">
+            <button class="dropbtn">
+              ข่าวสาร<i class="fa-solid fa-chevron-down fa-xs"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">ทั้งหมด</a>
+              <a href="#">ประกาศสำคัญ</a>
+              <a href="#">ทุนการศึกษา</a>
+              <a href="#">งานศิษย์เก่า</a>
+            </div>
+          </span>
+          <div class="dropdown">
+            <button class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="login">Login</button>
+          </div>
         </div>
-      </div>
-    </div>
-  </ul>
-  <!-- picture-main -->
-  <div class="containertop">
-    <div class="hp-mainpic">
-      <img src="public/Homepage/Homepage-mainpic1.jpg" alt="HomepagePic1" >
-      <img src="public\Homepage\Homepage-mainpic2.jpg" alt="HomepagePic2" >
-      <img src="public\Homepage\Homepage-mainpic3.jpg" alt="HomepagePic3" > 
-    </div>
-  </div>
-  <!-- width="1680px" 100% height="1115px" -->
-  <!-- button-main -->
-  <div class="hp-button1">
-    <button class="hp-button1-box">
-      <div class="hp-button1-main">PRE</div>
-      <div class="hp-button1-name">(Production Engineering)</div>
-    </button>
-    <button class="hp-button1-box">
-      <div class="hp-button1-main">MCE</div>
-      <div class="hp-button1-name">(Mechatronic Engineering)</div>
-    </button>
-    <button class="hp-button1-box">
-      <div class="hp-button1-main">ISEE</div>
-      <div class="hp-button1-name">(Engineering Program in Industrial Systems)</div>
-    </button>
-    <button class="hp-button1-box">
-      <div class="hp-button1-main">บัณฑิต</div>
-    </button>
-  </div>
-  <!-- picture-aboutus -->
-  <div class="hp-aboutus">
-    <img src="public/Homepage/Homepage-About.jpg" alt="AboutusPic">
-    <div class="hp-aboutus-box">
-      <h1 class="hp-aboutus-head">เกี่ยวกับเรา</h1>
-      <div class="hp-aboutus-body">การจัดการเรียนการสอนของภาควิชาวิศวกรรมอุตสาหการ
-        ในทุกหลักสูตร ถือว่ามีคุณภาพในลำดับต้นๆ ของประเทศ ผลิตบัณฑิตประมาณ ปีละ 120 คน 
-        มหาบัณฑิตประมาณปีละ 80 คน ดุษฎีบัณฑิตปีละประมาณ 3-5 คน มีผลงาน
-        วิจัยและวิชาการเป็นที่ยอมรับ โดยได้รับการตีพิมพ์ในวารสาร วิชาการและการ</div>
-      <div class="read-more">อ่านเพิ่มเติม<i class="fa-solid fa-arrow-right"></i></div>
-    </div>
-  </div>
-  <!-- picture1 -->
-  <img class="picture1" src="public/Homepage/Homepage-pic1.jpg" alt="pic1" >
-  <!-- ปริญญาตรี -->
-  <div class="hp-degree1">
-
-    <div class="hp-degree1-box">
-      <h1 class="hp-degree1-head">ระดับปริญญาตรี</h1>
-      <div class="hp-degree1-body">หลักสูตรที่เน้นความรู้ด้านการบริหาร จัดการโดย สามารถวิเคราะห์ วางแผน ควบคุม ระบบการผลิต
-        การปรับปรุงคุณภาพและ การบริหารองค์กร การผลิตได้อย่างมีประสิทธิภาพและเป็นเชิงระบบ
-      </div>
-    </div>
-    
-    <div class="hp-degree1-button">
-
-      <image src="public/Homepage/Homepage-ปริญญาตรี.jpg">
-      <button class="button2">
-        <div class="button2-main">สาขาวิศวกรรมอุตสาหการ</div>
-        <div class="button2-name">(Production Engineering)</div>
-        <i class="fas fa-angle-double-right" style="font-size: 80px;"></i>
-      </button>
-      <button class="button2">
-        <div class="button2-main">สาขาวิศวกรรมเมคคาทรอนิคส</div>
-        <div class="button2-name">(Mechatronic Engineering)</div>
-        <i class="fas fa-angle-double-right" style="font-size: 80px;"></i>
-      </button>
-      <button class="button2">
-        <div class="button2-main">สาขาวิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ</div>
-        <div class="button2-name">((Engineering Program in Industrial Systems))</div>
-        <i class="fas fa-angle-double-right" style="font-size: 80px;"></i>
-      </button>
-
-    </div>
-
-  </div>
-  <!-- ระดับบัณฑิต -->
-  <div class="hp-degree2">
-    <div class="hp-degree2-box">
-      <h1 class="hp-degree2-head">ระดับบัณฑิตศึกษา</h1>
-      <div class="hp-degree2-body">ภาควิชาเปิดสอนหลักสูตรระดับบัณฑิตศึกษาทั้งหมด 5 หลักสูตร ประกอบด้วยหลักสูตรระดับ
-        ปริญญาโท 4 หลักสูตร และหลักสูตรระดับปริญญาเอก 1 หลักสูตร 
-      </div>
-    </div>
-    <image src="public/Homepage/Homepage-บัณฑิต.jpg" margin="auto" width="950" height="470">
-    <div class="hp-degree2-button">
-      <button class="button2">
-        <div class="button2-main">ระดับปริญญาโท</div>
-      </button>
-      <button class="button2">
-        <div class="button2-main">ระดับปริญญาเอก</div>
-      </button>
-    </div>
-  </div>
-  <!-- ผลงานนักศึกษา -->
-  <div class="hp-work">
-    <div class="hp-work-head">
-      <h1>ผลงานนักศึกษา</h1>
-      <div class="viewall">ดูทั้งหมด<i class="fa-solid fa-chevron-right"></i></div>
-    </div>
-    <div class="hp-work-pic">
-      <img src="public\Homepage\Homepage-workpreview1.png" alt="">
-      <img src="public\Homepage\Homepage-workpreview2.png" alt="">
-      <img src="public\Homepage\Homepage-workpreview3.png" alt="">
-      <img src="public\Homepage\Homepage-workpreview4.png" alt="">
-    </div>
-  </div>
-  <!-- ข่าวสาร -->
-  <h1>ข่าวสาร</h1>
-  <div>ดูทั้งหมด<i class="fa-solid fa-chevron-right"></i></div>
-  <h1>ทุนการศึกษา</h1>
-  <div>ดูทั้งหมด<i class="fa-solid fa-chevron-right"></i></div>
-  <!-- contact us -->
-  <h1>contact us</h1>
-  <h2>ติดต่อเรา</h2>
-  <div><i class="fa-solid fa-location-dot"></i>อาคารวิศววัฒนะ ชั้น8
-    126 ถ.ประชาอุทิศ แขวงบางมด
-    เขตทุ่งครุ กรุงเทพฯ 10140</div>
-  <div><i class="fa-solid fa-phone"></i>+66(0) 2-470-9175-7
-    2-470-9179</div>
-  <div><i class="fa-brands fa-facebook"></i>facebook.com</div>
-  <div><i class="fa-brands fa-youtube"></i>youtube.com</div>
-<!-- quick menu -->
-<div class ="quickmenu">
-  <div class="colortab">
-      <div class="column">
-      <div>
-        <div class="Logo">
-        <a href="https://www.kmutt.ac.th/" target="_blank">
-          <img src="public\KMUTT_Logo.png" alt="KMUTTLogo" width="100" height="100">
-        </a>
-        <img src="public\PEMCE-LOGO.png" alt="PEMCELogo" width="100" height="100">
+      </nav>
+    </ul>
+    <!-- picture-main -->
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img
+            src="public/Homepage/Homepage-mainpic1.jpg"
+            class="d-block w-100"
+            alt="HomepagePic1"
+          />
         </div>
-        <div class="column1">
-          <div class="HeadQM">QuickLink</div>
-          <a class="BodyQM" href="https://www.leb2.org/" target="_blank">Leb2</a>
-          <a class="BodyQM" href="https://sinfo.kmutt.ac.th/" target="_blank">NewAcis</a>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="public/Homepage/Homepage-mainpic2.jpg"
+            class="d-block w-100"
+            alt="HomepagePic2"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="public/Homepage/Homepage-mainpic3.jpg"
+            class="d-block w-100"
+            alt="HomepagePic3"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img
+            src="public/Homepage/Homepage-mainpic4.jpg"
+            class="d-block w-100"
+            alt="HomepagePic4"
+          />
+        </div>
+        <span class="mainpic-gradient"></span>
+      </div>
+    </div>
+    <!-- button-main -->
+    <div class="hp-button1">
+      <button class="hp-button1-box">
+        <div class="hp-button1-main">PRE</div>
+        <div class="hp-button1-name">วิศวกรรมอุตสาหการ</div>
+      </button>
+      <button class="hp-button1-box">
+        <div class="hp-button1-main">MCE</div>
+        <div class="hp-button1-name">วิศวกรรมเมคคาทรอนิกส์</div>
+      </button>
+      <button class="hp-button1-box">
+        <div class="hp-button1-main">ISEE</div>
+        <div class="hp-button1-name">
+          วิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ
+        </div>
+      </button>
+      <button class="hp-button1-box">
+        <div class="hp-button1-main">บัณฑิต</div>
+      </button>
+    </div>
+    <!-- picture-aboutus -->
+    <div class="hp-aboutus">
+      <img src="public/Homepage/Homepage-About.jpg" alt="AboutusPic" />
+      <div class="hp-aboutus-box">
+        <h1 class="hp-aboutus-head">เกี่ยวกับเรา</h1>
+        <div class="hp-aboutus-body">
+          การจัดการเรียนการสอนของภาควิชาวิศวกรรมอุตสาหการ ในทุกหลักสูตร
+          ถือว่ามีคุณภาพในลำดับต้นๆ ของประเทศ ผลิตบัณฑิตประมาณ ปีละ 120 คน
+          มหาบัณฑิตประมาณปีละ 80 คน ดุษฎีบัณฑิตปีละประมาณ 3-5 คน มีผลงาน
+          วิจัยและวิชาการเป็นที่ยอมรับ โดยได้รับการตีพิมพ์ในวารสาร วิชาการและการ
+        </div>
+        <div class="read-more">
+          อ่านเพิ่มเติม<i class="fa-solid fa-arrow-right"></i>
         </div>
       </div>
-      <div class="column2">
-        <div class="HeadQM">โปรไฟล์</div>
+    </div>
+    <!-- picture1 -->
+    <img class="picture1" src="public/Homepage/Homepage-pic1.jpg" alt="pic1" />
+    <!-- ปริญญาตรี -->
+    <div class="hp-degree1">
+      <div class="hp-degree1-box">
+        <h1 class="hp-degree1-head">ระดับปริญญาตรี</h1>
+        <div class="hp-degree1-body">
+          หลักสูตรที่เน้นความรู้ด้านการบริหาร จัดการโดย สามารถวิเคราะห์ วางแผน
+          ควบคุม ระบบการผลิต การปรับปรุงคุณภาพและ การบริหารองค์กร
+          การผลิตได้อย่างมีประสิทธิภาพและเป็นเชิงระบบ
+        </div>
+      </div>
+      <div class="hp-degree1-button">
+        <img src="public/Homepage/Homepage-ปริญญาตรี.jpg" alt="ปริญญาตรีpic" />
+        <button class="button2">
+          <div class="button2-main">สาขาวิศวกรรมอุตสาหการ</div>
+          <div class="button2-name">(Production Engineering)</div>
+          <i class="fas fa-angle-double-right" style="font-size: 80px"></i>
+        </button>
+        <button class="button2">
+          <div class="button2-main">สาขาวิศวกรรมเมคคาทรอนิคส</div>
+          <div class="button2-name">(Mechatronic Engineering)</div>
+          <i class="fas fa-angle-double-right" style="font-size: 80px"></i>
+        </button>
+        <button class="button2">
+          <div class="button2-main">
+            สาขาวิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ
+          </div>
+          <div class="button2-name">
+            ((Engineering Program in Industrial Systems))
+          </div>
+          <i class="fas fa-angle-double-right" style="font-size: 80px"></i>
+        </button>
+      </div>
+    </div>
+    <!-- ระดับบัณฑิต -->
+    <div class="hp-degree2">
+      <div class="hp-degree2-box">
+        <h1 class="hp-degree2-head">ระดับบัณฑิตศึกษา</h1>
+        <div class="hp-degree2-body">
+          ภาควิชาเปิดสอนหลักสูตรระดับบัณฑิตศึกษาทั้งหมด 5 หลักสูตร
+          ประกอบด้วยหลักสูตรระดับ ปริญญาโท 4 หลักสูตร และหลักสูตรระดับปริญญาเอก
+          1 หลักสูตร
+        </div>
+      </div>
+      <img
+        src="public/Homepage/Homepage-บัณฑิต.jpg"
+        margin="auto"
+        width="950"
+        height="470"
+      />
+      <div class="hp-degree2-button">
+        <button class="button2">
+          <div class="button2-main">ระดับปริญญาโท</div>
+        </button>
+        <button class="button2">
+          <div class="button2-main">ระดับปริญญาเอก</div>
+        </button>
+      </div>
+    </div>
+    <!-- ผลงานนักศึกษา -->
+    <div class="hp-work">
+      <div class="hp-work-head">
+        <h1>ผลงานนักศึกษา</h1>
+        <div class="viewall">
+          ดูทั้งหมด<i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+      <div class="hp-work-pic">
+        <img src="public\Homepage\Homepage-workpreview1.png" alt="" />
+        <img src="public\Homepage\Homepage-workpreview2.png" alt="" />
+        <img src="public\Homepage\Homepage-workpreview3.png" alt="" />
+        <img src="public\Homepage\Homepage-workpreview4.png" alt="" />
+      </div>
+    </div>
+    <!-- ข่าวสาร -->
+    <h1>ข่าวสาร</h1>
+    <div>ดูทั้งหมด<i class="fa-solid fa-chevron-right"></i></div>
+    <h1>ทุนการศึกษา</h1>
+    <div>ดูทั้งหมด<i class="fa-solid fa-chevron-right"></i></div>
+    <!-- contact us -->
+    <h1>contact us</h1>
+    <h2>ติดต่อเรา</h2>
+    <div>
+      <i class="fa-solid fa-location-dot"></i>อาคารวิศววัฒนะ ชั้น8 126
+      ถ.ประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140
+    </div>
+    <div><i class="fa-solid fa-phone"></i>+66(0) 2-470-9175-7 2-470-9179</div>
+    <div><i class="fa-brands fa-facebook"></i>facebook.com</div>
+    <div><i class="fa-brands fa-youtube"></i>youtube.com</div>
+    <!-- quick menu -->
+    <div class="quickmenu">
+      <div class="colortab">
+        <div class="column">
+          <div>
+            <div class="Logo">
+              <a href="https://www.kmutt.ac.th/" target="_blank">
+                <img
+                  src="public\KMUTT_Logo.png"
+                  alt="KMUTTLogo"
+                  width="100"
+                  height="100"
+                />
+              </a>
+              <img
+                src="public\PEMCE-LOGO.png"
+                alt="PEMCELogo"
+                width="100"
+                height="100"
+              />
+            </div>
+            <div class="column1">
+              <div class="HeadQM">QuickLink</div>
+              <a class="BodyQM" href="https://www.leb2.org/" target="_blank"
+                >Leb2</a
+              >
+              <a
+                class="BodyQM"
+                href="https://sinfo.kmutt.ac.th/"
+                target="_blank"
+                >NewAcis</a
+              >
+            </div>
+          </div>
+          <div class="column2">
+            <div class="HeadQM">โปรไฟล์</div>
             <a class="BodyQM" href="#">เกี่ยวกับเรา</a>
             <a class="BodyQM" href="#">ประวัติภาควิชา</a>
             <a class="BodyQM" href="#">บุคลากร</a>
             <a class="BodyQM" href="#">ห้องLab อุปกรณ์</a>
             <a class="BodyQM" href="#">ชมรมมด</a>
             <a class="BodyQM" href="#">ติดต่อเรา</a>
-      </div>
-      <div class="column3">
-          <div class="HeadQM">หลักสูตร</div>
-              <a class="BodyQM" href="">PRE</a>
-              <a class="BodyQM" href="">MCE</a>
-              <a class="BodyQM" href="">ISEE</a>
-              <a class="BodyQM" href="">ปริญญาโท</a>
-              <a class="BodyQM" href="">ปริญญาเอก</a>
-      </div>
-      <div class="column4">
-          <div class="HeadQM">TABEE</div>
+          </div>
+          <div class="column3">
+            <div class="HeadQM">หลักสูตร</div>
+            <a class="BodyQM" href="">PRE</a>
+            <a class="BodyQM" href="">MCE</a>
+            <a class="BodyQM" href="">ISEE</a>
+            <a class="BodyQM" href="">ปริญญาโท</a>
+            <a class="BodyQM" href="">ปริญญาเอก</a>
+          </div>
+          <div class="column4">
+            <div class="HeadQM">TABEE</div>
             <a class="BodyQM" href="">TABEE</a>
             <a class="BodyQM" href="">TABEE</a>
-            <a class="BodyQM" href="">TABEE</a> 
-      </div>
-      <div class="column5">
-          <div class="HeadQM">ผลงาน</div>
+            <a class="BodyQM" href="">TABEE</a>
+          </div>
+          <div class="column5">
+            <div class="HeadQM">ผลงาน</div>
             <a class="BodyQM" href="">ผลงาน</a>
             <a class="BodyQM" href="">งานวิจัย</a>
-      </div>
-      <div class="column6">
-          <div class="HeadQM">นักศึกษา</div>
+          </div>
+          <div class="column6">
+            <div class="HeadQM">นักศึกษา</div>
             <a class="BodyQM" href="">ระดับปริญญาตรี</a>
             <a class="BodyQM" href="">ระดับบัณฑิต</a>
             <a class="BodyQM" href="">แบบฟอร์มเอกสาร</a>
             <a class="BodyQM" href="">ทุนการศึกษา</a>
             <a class="BodyQM" href="">ปฎอทินการศึกษา</a>
-        </div>
-        <div class="column7">
-          <div class="HeadQM">ข่าวสาร</div>
+          </div>
+          <div class="column7">
+            <div class="HeadQM">ข่าวสาร</div>
             <a class="BodyQM" href="">ทั้งหมด</a>
             <a class="BodyQM" href="">ประกาศสำคัญ</a>
             <a class="BodyQM" href="">ทุนการศึกษา</a>
             <a class="BodyQM" href="">งานศิษย์เก่า</a>
-        </div>
-        <div class="column8">
-          <div class="HeadQM">สมัครเรียน</div>
+          </div>
+          <div class="column8">
+            <div class="HeadQM">สมัครเรียน</div>
             <a class="BodyQM" href="">ปริญญาตรี</a>
             <a class="BodyQM" href="">ปริญญาโท</a>
             <a class="BodyQM" href="">ปริญญาเอก</a>
+          </div>
         </div>
       </div>
-  </div>
-</div>
+    </div>
 
-
-<!-- const toTopBtnElement = document.getElementById("to-top-btn");
+    <!-- const toTopBtnElement = document.getElementById("to-top-btn");
 
 console.log("Hello world!");
 
@@ -306,6 +409,5 @@ toTopBtnElement.addEventListener("click", function () {
   bottom: 0;
   width: 100%;
 } -->
-
-</body>
+  </body>
 </html>
