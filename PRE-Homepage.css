@@ -178,10 +178,14 @@ ul {
   padding-top: 50px;
   font-size: 22px;
 }
-.read-more {
-  padding-top: 20px;
-  padding-left: 80%;
+.hp-aboutus-read-more {
+  padding: 20px 0 0 70%;
   text-decoration-line: underline;
+}
+.hp-aboutus-read-more:hover {
+  padding: 20px 0 0 70%;
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
 /* picture1 */
 .picture1 {
@@ -320,7 +324,7 @@ ul {
   background: #aaa;
   margin: -15vh 0;
   width: 100%;
-  height: 460px;
+  height: 490px;
 }
 .hp-work-box {
   position: absolute;
@@ -360,6 +364,54 @@ ul {
   object-fit: cover;
   object-position: top;
 }
+/* ข่าวสาร */
+.hp-news {
+  margin-top: 15vh;
+  height: 1170px;
+  width: 100%;
+  background: #f89a1c;
+}
+.hp-news-container {
+  display: flex;
+  flex-direction: row;
+  margin: 15vh 0 0 20vh;
+  padding: 10vh 0 0 0;
+}
+.hp-news-head {
+  padding-right: 50vh;
+}
+.hp-news-ข่าวสาร {
+  display: flex;
+  flex-direction: column;
+  margin: 3vh 0 0 20vh;
+  row-gap: 5vh;
+}
+.hp-news-ข่าวสาร img {
+  display: flex;
+  flex-direction: row;
+  width: 360px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+.hp-news-ข่าวสาร-box {
+  background: white;
+  width: 260px;
+  height: 300px;
+}
+.hp-news-รับสมัคร {
+  display: flex;
+  flex-direction: column;
+  margin: -1650vh 0 0 25vh;
+  row-gap: 5vh;
+}
+.hp-news-รับสมัคร img {
+  width: 360px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
 /* Quick menu */
 .quickmenu {
   background: #525252;
