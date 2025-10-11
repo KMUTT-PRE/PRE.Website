@@ -140,7 +140,7 @@ ul {
   background: linear-gradient(to bottom, #f89a1c 0%, #ffdeb1 100%);
   color: #4e4e4e;
   box-shadow: 5px -5px #ffe6c2;
-  transition-duration: 0.4s;
+  transition-duration: 1s;
 }
 .hp-button1-box:hover {
   background: #ff6600;
@@ -148,6 +148,7 @@ ul {
   color: #ffffff;
   border: none;
   box-shadow: none;
+  transition-duration: 1s;
 }
 .hp-button1-main {
   font-size: 36px;
@@ -178,14 +179,27 @@ ul {
   padding-top: 50px;
   font-size: 22px;
 }
-.hp-aboutus-read-more {
+.aboutus-read-more {
+  display: flex;
+  flex-direction: row;
   padding: 20px 0 0 70%;
-  text-decoration-line: underline;
+  column-gap: 0vh;
+  transition-duration: 0.4s;
+  color: black;
+  text-decoration-line: none;
 }
-.hp-aboutus-read-more:hover {
+.aboutus-read-more:hover {
+  column-gap: 2vh;
   padding: 20px 0 0 70%;
   cursor: pointer;
   transition-duration: 0.4s;
+}
+.aboutus-read-more-underline {
+  background-color: black;
+  right: 50vh;
+  width: 125px;
+  margin: 0 0 0 49vh;
+  padding: 1px 0 0 0;
 }
 /* picture1 */
 .picture1 {
@@ -347,11 +361,16 @@ ul {
   width: 95px;
   text-decoration: underline 2px;
   text-underline-offset: 5px;
+  color: rgb(0, 0, 0);
+  transition-duration: 1s;
 }
 .viewall:hover {
   color: white;
   cursor: pointer;
-  transition-duration: 0.4s;
+  transition-duration: 1s;
+}
+.fa-chevron-right {
+  object-position: center;
 }
 .hp-work-pic {
   display: flex;
@@ -366,52 +385,68 @@ ul {
 }
 /* ข่าวสาร */
 .hp-news {
+  display: flex;
+  flex-direction: row;
   margin-top: 15vh;
   height: 1170px;
   width: 100%;
   background: #f89a1c;
 }
+.hp.new.ข่าวสาร {
+}
 .hp-news-container {
   display: flex;
   flex-direction: row;
-  margin: 15vh 0 0 20vh;
+  margin: 0 0 0 10vh;
   padding: 10vh 0 0 0;
 }
-.hp-news-head {
+.hp-news-head1 {
   padding-right: 50vh;
 }
-.hp-news-ข่าวสาร {
+.hp-news-card1 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 3vh 0 0 20vh;
   row-gap: 5vh;
 }
-.hp-news-ข่าวสาร img {
-  display: flex;
-  flex-direction: row;
+.hp-news-card1 img {
   width: 360px;
   height: 300px;
   object-fit: cover;
   object-position: top;
 }
-.hp-news-ข่าวสาร-box {
+.hp-news-body1 {
+  display: flex;
+  flex-direction: column;
   background: white;
   width: 260px;
   height: 300px;
 }
 .hp-news-รับสมัคร {
+}
+.hp-news-head2 {
+  padding-right: 50vh;
+  padding-left: 5vh;
+}
+.hp-news-card2 {
   display: flex;
-  flex-direction: column;
-  margin: -1650vh 0 0 25vh;
+  flex-direction: row;
+  margin: 3vh 0 0 20vh;
   row-gap: 5vh;
 }
-.hp-news-รับสมัคร img {
+.hp-news-card2 img {
   width: 360px;
   height: 300px;
   object-fit: cover;
   object-position: top;
 }
-
+.hp-news-body2 {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 260px;
+  height: 300px;
+}
 /* Quick menu */
 .quickmenu {
   background: #525252;
