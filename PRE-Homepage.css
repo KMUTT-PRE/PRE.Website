@@ -25,7 +25,7 @@ ul {
   position: fixed;
   border-radius: 0 0 25px 25px;
 }
-.navbar {
+#navbar {
   display: flex;
   height: 90px;
   flex-direction: row;
@@ -115,6 +115,7 @@ ul {
 .carousel-inner {
   width: 100%;
   height: 80vh;
+  z-index: -1;
 }
 .mainpic-gradient {
   width: 100%;
@@ -401,12 +402,12 @@ ul {
   padding: 10vh 0 0 0;
 }
 .hp-news-head1 {
-  padding-right: 50vh;
+  padding-right: 56vh;
 }
 .hp-news-card1 {
   display: flex;
   flex-direction: row;
-  margin: 3vh 0 0 20vh;
+  margin: 3vh 0 0 10vh;
   row-gap: 5vh;
 }
 .hp-news-card1 img {
@@ -418,6 +419,7 @@ ul {
 .hp-news-body1 {
   display: flex;
   flex-direction: column;
+  padding: 1vh 1vh 1vh 1vh;
   background: white;
   width: 260px;
   height: 300px;
@@ -425,13 +427,13 @@ ul {
 .hp-news-รับสมัคร {
 }
 .hp-news-head2 {
-  padding-right: 50vh;
+  padding-right: 54vh;
   padding-left: 5vh;
 }
 .hp-news-card2 {
   display: flex;
   flex-direction: row;
-  margin: 3vh 0 0 20vh;
+  margin: 3vh 0 0 15vh;
   row-gap: 5vh;
 }
 .hp-news-card2 img {
@@ -443,12 +445,67 @@ ul {
 .hp-news-body2 {
   display: flex;
   flex-direction: column;
+  padding: 1vh 1vh 1vh 1vh;
   background: white;
   width: 260px;
   height: 300px;
 }
+.hp-news-card-date {
+  color: rgb(126, 126, 126);
+  font-size: 12px;
+}
+.hp-news-card-head {
+  color: black;
+  font-size: 23px;
+}
+.hp-news-card-body {
+  color: black;
+  font-size: 15px;
+}
+.news-tags {
+  display: inline-block;
+  margin-top: auto;
+  padding: 3px 10px;
+  border-radius: 30px;
+  border: black solid 1px;
+  color: #f89a1c;
+  background-color: white;
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: 500;
+}
+.news-read-more {
+  direction: rtl;
+  margin-top: auto;
+  color: #000000;
+  text-underline-offset: 3px;
+}
+/* contact us */
+.hp-contact-box {
+  display: flex;
+  flex-direction: row;
+}
+.hp-contact-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3vh;
+  width: 620px;
+  height: 480px;
+  padding: 5vh 5vh 5vh 5vh;
+  background: #efefef;
+}
+.contact-head-eng {
+  font-size: 46px;
+  font-weight: 700;
+}
+.fa-location-dot {
+  padding-bottom: -10px;
+}
+.ctac #googleMap {
+  object-position: right;
+}
 /* Quick menu */
-.quickmenu {
+#quickmenu {
   background: #525252;
   display: flex;
   height: 280px;
