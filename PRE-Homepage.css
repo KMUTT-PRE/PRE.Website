@@ -504,8 +504,8 @@ ul {
 .ctac #googleMap {
   object-position: right;
 }
-/* Quick menu */
-#quickmenu {
+/* footer menu */
+#footermenu {
   background: #525252;
   display: flex;
   height: 280px;
