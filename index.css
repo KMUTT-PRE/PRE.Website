@@ -393,8 +393,6 @@ ul {
   width: 100%;
   background: #f89a1c;
 }
-.hp.new.ข่าวสาร {
-}
 .hp-news-container {
   display: flex;
   flex-direction: row;
@@ -423,8 +421,6 @@ ul {
   background: white;
   width: 260px;
   height: 300px;
-}
-.hp-news-รับสมัคร {
 }
 .hp-news-head2 {
   padding-right: 54vh;
