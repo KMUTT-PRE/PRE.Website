@@ -141,7 +141,7 @@ ul {
   background: linear-gradient(to bottom, #f89a1c 0%, #ffdeb1 100%);
   color: #4e4e4e;
   box-shadow: 5px -5px #ffe6c2;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 .hp-button1-box:hover {
   background: #ff6600;
@@ -149,7 +149,7 @@ ul {
   color: #ffffff;
   border: none;
   box-shadow: none;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 .hp-button1-main {
   font-size: 36px;
@@ -208,7 +208,7 @@ ul {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: center;
+  object-position: bottom;
 }
 /* ปริญญาตรี */
 .hp-degree1 {
@@ -237,7 +237,7 @@ ul {
   width: 950px;
   height: 470px;
   object-fit: cover;
-  object-position: top;
+  object-position: bottom;
 }
 .hp-degree1-button {
   display: flex;
