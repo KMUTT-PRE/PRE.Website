@@ -8,7 +8,8 @@
       src="https://kit.fontawesome.com/f7cbfce543.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/js/index.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,151 +22,60 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-      crossorigin="anonymous"
-    ></script>
     <link
       href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- navigation bar -->
-    <div class="topnav">
-      <nav id="mytopnav">
-        <div class="navlogo">
-          <img
-            src="public/PEMCE-LOGO.png"
-            width="100"
-            height="100"
-            alt="PEMCELogo"
-          />
-        </div>
-        <div style="right: 20px; position: absolute; margin-right: 40px">
-          <span class="dropdown">
-            <button class="dropbtn">
-              โปรไฟล์<i class="fa-solid fa-chevron-down fa-xs"></i>
-            </button>
-            <ul class="dropdown-content">
-              <li><a href="#">เกี่ยวกับเรา</a></li>
-              <li><a href="#">ประวัติภาควิชา</a></li>
-              <li><a href="#">บุคลากร</a></li>
-              <li><a href="/LAB/instrument.html">ห้องแล็ป อุปกรณ์</a></li>
-              <li><a href="#">ชมรมมด</a></li>
-              <li><a href="#">ติดต่อเรา</a></li>
-            </ul>
-          </span>
-          <span class="dropdown">
-            <button class="dropbtn">
-              หลักสูตร<i class="fa-solid fa-chevron-down fa-xs"></i>
-            </button>
-            <ul class="dropdown-content">
-              <li><a href="PRE.html">PRE</a></li>
-              <li><a href="#">MCE</a></li>
-              <li><a href="#">ISEE</a></li>
-              <li><a href="#">ปริญญาโท</a></li>
-              <li><a href="#">ปริญญาเอก</a></li>
-            </ul>
-          </span>
-          <span class="dropdown">
-            <button class="dropbtn"><a href=""> TABEE</a></button>
-          </span>
-          <!-- <span class="dropdown">
-            <button class="dropbtn">
-              ผลงาน<i class="fa-solid fa-chevron-down fa-xs"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">ผลงาน</a>
-              <a href="#">งานวิจัย</a>
-            </div>
-          </span> -->
-          <span class="dropdown">
-            <button class="dropbtn">
-              นักศึกษา<i class="fa-solid fa-chevron-down fa-xs"></i>
-            </button>
-            <ul class="dropdown-content">
-              <li><a href="#">ระดับปริญญาตรี</a></li>
-              <li><a href="#">ระดับบัณฑิต</a></li>
-              <li><a href="#">แบบฟอร์มเอกสาร</a></li>
-              <li><a href="#">ทุนการศึกษา</a></li>
-            </ul>
-          </span>
-          <span class="dropdown">
-            <button class="dropbtn">
-              สมัครเรียน<i class="fa-solid fa-chevron-down fa-xs"></i>
-            </button>
-            <ul class="dropdown-content">
-              <li><a href="#">ปริญญาตรี</a></li>
-              <li><a href="#">ปริญญาโท</a></li>
-              <li><a href="#">ปริญญเอก</a></li>
-            </ul>
-          </span>
-          <span class="dropdown">
-            <button class="dropbtn"><a href=""> ข่าวสาร</a></button>
-          </span>
-          <div class="dropdown">
-            <button class="search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
-          <!-- <div class="dropdown">
-            <button class="login">Login</button>
-          </div> -->
-        </div>
-      </nav>
-    </div>
     <!-- picture-main -->
-    <div
-      id="carouselExampleSlidesOnly"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">
-          <img
-            src="public/Homepage/Homepage-mainpic1.png"
-            style="object-fit: cover; object-position: bottom; height: 600px"
-            class="d-block w-100"
-            alt="HomepagePic1"
-          />
+    <div class="carousel-wrapper">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img
+              src="./assets/public/Homepage/Homepage-mainpic1.png"
+              style="object-fit: cover; object-position: bottom; height: 600px"
+              class="d-block w-100"
+              alt="HomepagePic1"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="./assets/public/Homepage/Homepage-mainpic2.png"
+              style="object-fit: cover; object-position: top; height: 600px"
+              class="d-block w-100"
+              alt="HomepagePic2"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="./assets/public/Homepage/Homepage-mainpic3.png"
+              style="object-fit: cover; object-position: bottom; height: 600px"
+              class="d-block w-100"
+              alt="HomepagePic3"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="./assets/public/Homepage/Homepage-mainpic4.png"
+              style="object-fit: cover; object-position: bottom; height: 800px"
+              class="d-block w-100"
+              alt="HomepagePic4"
+            />
+          </div>
         </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img
-            src="public/Homepage/Homepage-mainpic2.png"
-            style="object-fit: cover; object-position: top; height: 600px"
-            class="d-block w-100"
-            alt="HomepagePic2"
-          />
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img
-            src="public/Homepage/Homepage-mainpic3.png"
-            style="object-fit: cover; object-position: bottom; height: 600px"
-            class="d-block w-100"
-            alt="HomepagePic3"
-          />
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img
-            src="public/Homepage/Homepage-mainpic4.png"
-            style="object-fit: cover; object-position: bottom; height: 800px"
-            class="d-block w-100"
-            alt="HomepagePic4"
-          />
-        </div>
-        <span class="mainpic-gradient"></span>
+        <div class="mainpic-gradient"></div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- button-main -->
     <div class="hp-button1">
-      <a href="PRE\PRE.html">
+      <a href="PRE.html">
         <button class="hp-button1-box">
           <div class="hp-button1-main">PRE</div>
           <div class="hp-button1-name">วิศวกรรมอุตสาหการ</div>
@@ -198,7 +108,7 @@
     </div>
     <!-- picture-aboutus -->
     <div class="hp-aboutus">
-      <img src="public/Homepage/Homepage-About.jpg" alt="AboutusPic" />
+      <img src="./assets\public\Homepage\Homepage-About.jpg" alt="AboutusPic" />
       <div class="hp-aboutus-box">
         <h1 class="hp-aboutus-head">เกี่ยวกับเรา</h1>
         <div class="hp-aboutus-body">
@@ -207,75 +117,278 @@
           มหาบัณฑิตประมาณปีละ 80 คน ดุษฎีบัณฑิตปีละประมาณ 3-5 คน มีผลงาน
           วิจัยและวิชาการเป็นที่ยอมรับ โดยได้รับการตีพิมพ์ในวารสาร วิชาการและการ
         </div>
-        <a href="" class="aboutus-read-more"
-          >อ่านเพิ่มเติม <span><i class="fa-solid fa-arrow-right"></i></span
-        ></a>
-        <div class="aboutus-read-more-underline"></div>
+        <div>
+          <a href="" class="aboutus-read-more"
+            >อ่านเพิ่มเติม <span><i class="fa-solid fa-arrow-right"></i></span
+          ></a>
+        </div>
       </div>
     </div>
-    <!-- footer menu -->
-    <div id="footermenu">
-      <div class="colortab">
-        <div class="column">
-          <div>
-            <div class="Logo">
-              <a href="https://www.kmutt.ac.th/" target="_blank">
-                <img
-                  src="public\KMUTT_Logo.png"
-                  alt="KMUTTLogo"
-                  width="100"
-                  height="100"
-                />
-              </a>
+    <!-- ผลงาน -->
+    <div class="reward-carousel">
+      <div class="reward-group">
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward1.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward2.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card1">
+          <img
+            src="./assets/public/Homepage/Homepage-reward3.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward4.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card1">
+          <img
+            src="./assets/public/Homepage/Homepage-reward5.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward6.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card1">
+          <img
+            src="./assets/public/Homepage/Homepage-reward7.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward8.jpg"
+            alt="rewardpic"
+          />
+        </div>
+      </div>
+      <div aria-hidden class="reward-group">
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward1.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward2.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card1">
+          <img
+            src="./assets/public/Homepage/Homepage-reward3.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward4.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card1">
+          <img
+            src="./assets/public/Homepage/Homepage-reward5.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward6.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card1">
+          <img
+            src="./assets/public/Homepage/Homepage-reward7.jpg"
+            alt="rewardpic"
+          />
+        </div>
+        <div class="reward-card">
+          <img
+            src="./assets/public/Homepage/Homepage-reward8.jpg"
+            alt="rewardpic"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- ข่าวสาร -->
+    <div id="carouselIndicators" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="new-card-wrpper">
+            <div class="new-card" style="width: 18rem">
               <img
-                src="public\PEMCE-LOGO.png"
-                alt="PEMCELogo"
-                width="100"
-                height="100"
+                src="./assets/public/Homepage/Homepage-new1.jpg"
+                class="card-img-top"
+                alt="new1"
               />
-            </div>
-            <div class="column1">
-              <div class="HeadQM">QuickLink</div>
-              <a class="BodyQM" href="https://www.leb2.org/" target="_blank"
-                >Leb2</a
-              >
-              <a
-                class="BodyQM"
-                href="https://sinfo.kmutt.ac.th/"
-                target="_blank"
-                >NewAcis</a
-              >
-            </div>
-            <div class="column2">
-              <div class="BodyQM1">
-                อาคารวิศววัฒนะ ชั้น8 126 ถ.ประชาอุทิศ แขวงบางมด เขตทุ่งครุ
-                กรุงเทพฯ 10140
-              </div>
-              <div class="BodyQM1">
-                <i class="fa-solid fa-phone"></i>+66(0) 2-470-9175-7 2-470-9179
-              </div>
-              <div class="BodyQM1">
-                <i class="fa-brands fa -facebook"></i>facebook.com
-              </div>
-              <div class="BodyQM1">
-                <i class="fa-brands fa-youtube"></i>youtube.com
+              <div class="new-card-body">
+                <h5 class="new-card-title">DEK69 วิศวกรรมอุตสาหรการ</h5>
+                <p class="new-card-text">
+                  วิศวกรรมอุตสาหการเปิดรับสมัครรอบที่ 1 ตั้งแต่ 12 พฤจิกายน 2568
+                  - 6 มกราคม 2569
+                </p>
+                <hr />
+                <p>12/11/2568</p>
+                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
               </div>
             </div>
-            <div id="googleMap">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1087.9790686534698!2d100.49415143166782!3d13.650667015406144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDM5JzAyLjAiTiAxMDDCsDI5JzQwLjMiRQ!5e0!3m2!1sen!2sth!4v1761721042013!5m2!1sen!2sth"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div class="new-card" style="width: 18rem">
+              <img
+                src="./assets/public/Homepage/Homepage-new2.jpg"
+                class="card-img-top"
+                alt="new2"
+              />
+              <div class="new-card-body">
+                <h5 class="new-card-title">
+                  วิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ
+                </h5>
+                <p class="new-card-text">หลักสูตรใหม่ ISEE</p>
+                <hr />
+                <p>06/11/2568</p>
+                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
+              </div>
+            </div>
+            <div class="new-card" style="width: 18rem">
+              <img
+                src="./assets/public/Homepage/Homepage-new3.jpg"
+                class="card-img-top"
+                alt="new3"
+              />
+              <div class="new-card-body">
+                <h5 class="new-card-title">
+                  เปิดรับสมัครนักศึกษาใหม่ ระดับปริญญาโท
+                </h5>
+                <p class="new-card-text">
+                  สาขาวิชาวิศวกรรมอุตสาหการและระบบการผลิต (หลักสูตรปรับปรุง พ.ศ.
+                  2568)
+                </p>
+                <hr />
+                <p>21/10/2568</p>
+                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="new-card-wrpper">
+            <div class="new-card" style="width: 18rem">
+              <img
+                src="./assets/public/Homepage/Homepage-new4.jpg"
+                class="card-img-top"
+                alt="new4"
+              />
+              <div class="new-card-body">
+                <h5 class="new-card-title">รับสมัครนักศึกษาปริญญาโท-เอก</h5>
+                <p class="new-card-text">
+                  อาจารย์ที่ปรึกษา รศ. ดร.พร้อมพงษ์ ปานดี
+                </p>
+                <hr />
+                <p>10/10/2568</p>
+                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
+              </div>
+            </div>
+            <div class="new-card" style="width: 18rem">
+              <img
+                src="./assets/public/Homepage/Homepage-new5.jpg"
+                class="card-img-top"
+                alt="new5"
+              />
+              <div class="new-card-body">
+                <h5 class="new-card-title">
+                  โครงการทุนเพชรพระจอมเกล้ามหาบัณฑิต เปิดรับสมัครแล้ว
+                </h5>
+                <p class="new-card-text">ระดับปริญญาโท ภาคการศึกษาที่ 2/2568</p>
+                <hr />
+                <p>02/10/2568</p>
+                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
+              </div>
+            </div>
+            <div class="new-card" style="width: 18rem">
+              <img
+                src="./assets/public/Homepage/Homepage-new6.jpg"
+                class="card-img-top"
+                alt="new6"
+              />
+              <div class="new-card-body">
+                <h5 class="new-card-title">กำหนดการรับสมัคร มจธ. ปี 2569</h5>
+                <p class="new-card-text">
+                  โอกาสเป็นส่วนหนึ่งของมหาวิทยาลัยชั้นนำในไทยมาแล้ว!
+                  เล็งคณะไหนไว้ ลุยเลย❗️
+                </p>
+                <hr />
+                <p>17/09/2568</p>
+                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselIndicators"
+        data-bs-slide="prev"
+      >
+        <span
+          style="background-color: black"
+          class="carousel-control-prev-icon arrow"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselIndicators"
+        data-bs-slide="next"
+      >
+        <span
+          style="background-color: black"
+          class="carousel-control-next-icon arrow"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="carousel-indicators">
+        <button
+          style="background-color: black"
+          type="button"
+          data-bs-target="#carouselIndicators"
+          data-bs-slide-to="0"
+          class="button active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          style="background-color: black"
+          type="button"
+          data-bs-target="#carouselIndicators"
+          data-bs-slide-to="1"
+          class="button"
+          aria-label="Slide 2"
+        ></button>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- footer menu -->
+
     <!-- const toTopBtnElement = document.getElementById("to-top-btn");
 
 console.log("Hello world!");
