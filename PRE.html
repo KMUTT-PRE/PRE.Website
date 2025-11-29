@@ -4,223 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PRE</title>
-    <link href="PRE.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/f7cbfce543.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/PRE.css" />
+    <link rel="stylesheet" href="./assets/js/PRE.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/f7cbfce543.js"
-      crossorigin="anonymous"
-    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <!-- navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"
-          ><img src="public\PEMCE-LOGO.png" alt="prelogo"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <div class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img src="public\PEMCE-LOGO.png" alt="prelogo" />
-            </div>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content flex-grow-1 pe-3">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link mx-lg-2 dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  โปรไฟล์
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">เกี่ยวกับเรา</a></li>
-                  <li><a class="dropdown-item" href="#">ประวัติภาควิชา</a></li>
-                  <li><a class="dropdown-item" href="#">บุคลากร</a></li>
-                  <li><a class="dropdown-item" href="#">ห้องLab อุปกรณ์</a></li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="https:\\www.kmutt.ac.th\alumni-network\"
-                      target="_blank"
-                      >ชมรมมด</a
-                    >
-                  </li>
-                  <li><a class="dropdown-item" href="#">ติดต่อเรา</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link mx-lg-2 dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  หลักสูตร
-                </a>
-                <ul class="dropdown-menu">
-                  <li><div class="dropdown-item">ปริญญาตรี</div></li>
-                  <li><a class="dropdown-item" href="#">PRE</a></li>
-                  <li><a class="dropdown-item" href="#">MCE</a></li>
-                  <li><a class="dropdown-item" href="#">ISEE</a></li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li><a class="dropdown-item" href="#">ปริญญาโท</a></li>
-                  <li><a class="dropdown-item" href="#">ปริญญาเอก</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link mx-lg-2"
-                  href="https:\\coe.or.th\degreecetificate-tabee\?_college=b8a5fd89a80395f5ccbad56a0f020f36&_college_search=%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%B2%E0%B8%A3"
-                  target="_blank"
-                  >TABEE</a
-                >
-              </li>
-              <!-- <li class="nav-item dropdown">
-                <a
-                  class="nav-link mx-lg-2 dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  ผลงาน
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">ผลงาน</a></li>
-                  <li><a class="dropdown-item" href="#">งานวืจัย</a></li>
-                </ul>
-              </li> -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link mx-lg-2 dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  นักศึกษา
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">ปริญญาตรี</a></li>
-                  <li><a class="dropdown-item" href="#">ปริญญาโท</a></li>
-                  <li><a class="dropdown-item" href="#">เอกสาร</a></li>
-                  <li><a class="dropdown-item" href="#">ทุนการศึกษา</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link mx-lg-2"
-                  href="https:\\join.kmutt.ac.th\degree"
-                  target="_blank"
-                  >สมัครเรียน</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">ข่าวสาร</a>
-              </li>
-            </ul>
-            <form class="d-flex mt-3" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn-search" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+      <div class="container-fluid"></div>
     </nav>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
     <!-- picture main -->
-    <div
-      id="carouselExampleSlidesOnly"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">
-          <img
-            src="public/PRE/PRE-mainpic1.jpg"
-            class="d-block w-100"
-            alt="PREepic1"
-          />
+    <div class="carousel-wrapper">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="1000">
+            <img
+              src="./assets/public/PRE/PRE-mainpic1.jpg"
+              class="d-block w-100"
+              alt="HomepagePic1"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img
+              src="./assets/public/PRE/PRE-mainpic2.jpg"
+              class="d-block w-100"
+              alt="HomepagePic2"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img
+              src="./assets/public/PRE/PRE-mainpic3.jpg"
+              class="d-block w-100"
+              alt="HomepagePic3"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img
+              src="./assets/public/PRE/PRE-mainpic4.jpg"
+              class="d-block w-100"
+              alt="HomepagePic4"
+            />
+          </div>
         </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img
-            src="public/PRE/PRE-mainpic2.jpg"
-            class="d-block w-100"
-            alt="PREpic2"
-          />
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img
-            src="public/PRE/PRE-mainpic3.jpg"
-            class="d-block w-100"
-            alt="PREpic3"
-          />
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img
-            src="public/PRE/PRE-mainpc4.jpg"
-            class="d-block w-100"
-            alt="PREpic4"
-          />
-        </div>
-        <span class="mainpic-gradient"></span>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <div class="PRE-picboxmain">
-      <span
-        ><a href="PRE-Homepage.html">หน้าหลัก</a
-        ><i class="fa-solid fa-chevron-right"></i>วิศวกรรมอุสาหการ</span
-      >
+      <div class="navlink-underline">
+        <span class="navlink"
+          ><p>
+            <a href="index.html">หน้าหลัก</a
+            ><i class="fa-solid fa-chevron-right"></i>วิศวกรรมอุสาหการ
+          </p></span
+        >
+      </div>
       <div>ในหน้านี้</div>
       <p>วิศวกรรมอุสาหการ</p>
       <p>ชื่อหลักสูตร</p>
