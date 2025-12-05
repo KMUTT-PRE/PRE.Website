@@ -3,13 +3,13 @@
   <head>
     <%- include('head', { title : 'navbar' }) %>
 
-    <link rel="stylesheet" href="../css/assets/navbar.css" />
+    <link rel="stylesheet" href="/css/assets/navbar.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="../pages/Home.ejs"
-          ><img src="../images/PEMCE-LOGO.png" alt="prelogo"
+          ><img src="/images/PEMCE-LOGO.png" alt="prelogo"
         /></a>
         <button
           class="navbar-toggler"
@@ -52,9 +52,13 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">เกี่ยวกับเรา</a></li>
-                  <li><a class="dropdown-item" href="#">ประวัติภาควิชา</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">ประวัติภาควิชา</a>
+                  </li>
                   <li><a class="dropdown-item" href="#">บุคลากร</a></li>
-                  <li><a class="dropdown-item" href="#">ห้องLab อุปกรณ์</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">ห้องLab อุปกรณ์</a>
+                  </li>
                   <li>
                     <a
                       class="dropdown-item"
@@ -141,7 +145,7 @@
                 <a class="nav-link mx-lg-2" href="#">ข่าวสาร</a>
               </li>
             </ul>
-            <form class="d-flex mt-3" role="search">
+            <!-- <form class="d-flex mt-3" role="search">
               <input
                 class="form-control me-2"
                 type="search"
@@ -151,12 +155,12 @@
               <button class="btn-search" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-            </form>
+            </form> -->
           </div>
         </div>
       </div>
     </nav>
-
+    <script src="/js/assets/navbar.js"></script>
     <%- include('bootstrapend') %>
   </body>
 </html>

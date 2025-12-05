@@ -1,0 +1,149 @@
+/*------Homepage------ */
+
+/* ------IPad------ */
+@media (max-width: 1024px) {
+  /* ปุ่มหลัก */
+  .hp-button1 {
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .hp-button1-box {
+    width: 40vw;
+    height: 10vw;
+    margin-top: -2vh;
+  }
+
+  .hp-button1-main {
+    font-size: 28px;
+  }
+
+  /* about us */
+  .hp-aboutus {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .hp-aboutus img {
+    width: 80%;
+    height: auto;
+  }
+
+  .hp-aboutus-box {
+    width: 90%;
+    text-align: center;
+  }
+
+  .hp-aboutus-body {
+    font-size: 18px;
+  }
+
+  .aboutus-read-more {
+    margin: 2em 5em;
+  }
+
+  /* reward */
+  .reward-card img,
+  .reward-card1 img {
+    width: 30vh;
+    height: 25vh;
+  }
+
+  /* news */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .news-multi-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      justify-items: center;
+    }
+
+    .new-card {
+      max-width: 320px;
+    }
+  }
+}
+
+/* ------MOBILE------ */
+@media (max-width: 600px) {
+  /* mainpic */
+  .carousel-inner img {
+    height: 45vh;
+  }
+
+  .mainpic-gradient {
+    height: 15vh;
+    margin-top: 30vh;
+  }
+
+  /* ปุ่มหลัก */
+  .hp-button1 {
+    gap: 1.5em;
+  }
+
+  .hp-button1-box {
+    width: 50vw;
+    height: 25vw;
+  }
+
+  /* ข่าวสาร */
+  .news-multi-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-card {
+    max-width: 100%;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+}
+
+/* ------Footer------ */
+
+/* ------- iPad ------- */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+  }
+
+  .footer-brand img {
+    width: 18vw;
+    margin: 1rem;
+  }
+
+  .footer-map {
+    width: 100%;
+    height: 250px;
+  }
+
+  .contact-phone,
+  .contact-media {
+    justify-content: center;
+  }
+}
+
+/* ------- Mobile Phones ------- */
+@media (max-width: 600px) {
+  .footer-brand img {
+    width: 25vw;
+  }
+
+  .footer-ul a,
+  .footer-contact p,
+  .contact-phone p,
+  .media {
+    font-size: 14px;
+  }
+
+  .footer-map {
+    width: 100%;
+    height: 200px;
+  }
+}

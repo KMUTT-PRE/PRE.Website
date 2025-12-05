@@ -4,7 +4,7 @@
     <%- include('../partials/navbar', { title : 'Homepage'} ) %>
 
     <link rel="stylesheet" href="../css/Home.css" />
-    <link rel="stylesheet" href="../js/Home.js" />
+    <link rel="stylesheet" href="../css/assets/Responsive.css" />
   </head>
   <body>
     <!-- picture-main -->
@@ -47,7 +47,7 @@
         <div class="mainpic-gradient"></div>
       </div>
     </div>
-
+    <script src="../js/Home"></script>
     <%- include('../partials/bootstrapend') %>
     <!-- button-main -->
     <div class="hp-button1">
@@ -151,170 +151,58 @@
           <img src="../images/Homepage/Homepage-reward7.jpg" alt="rewardpic" />
         </div>
         <div class="reward-card">
+          s
           <img src="../images/Homepage/Homepage-reward8.jpg" alt="rewardpic" />
         </div>
       </div>
     </div>
     <!-- ข่าวสาร -->
-    <div id="carouselIndicators" class="carousel slide">
+    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="new-card-wrpper">
-            <div class="new-card" style="width: 18rem">
-              <img
-                src="../images/Homepage/Homepage-new1.jpg"
-                class="card-img-top"
-                alt="new1"
-              />
+        <% const chunkSize = 3; for (let i = 0; i < New_data.length; i +=
+        chunkSize) { const chunk = New_data.slice(i, i + chunkSize); %>
+        <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+          <div class="news-multi-row">
+            <% chunk.forEach(news => { %>
+
+            <div class="new-card">
+              <img src="<%= news.Img %>" class="card-img-top" />
+
               <div class="new-card-body">
-                <h5 class="new-card-title">DEK69 วิศวกรรมอุตสาหรการ</h5>
-                <p class="new-card-text">
-                  วิศวกรรมอุตสาหการเปิดรับสมัครรอบที่ 1 ตั้งแต่ 12 พฤจิกายน 2568
-                  - 6 มกราคม 2569
-                </p>
+                <h5><%= news.Title %></h5>
+                <p><%= news.Description %></p>
                 <hr />
-                <p>12/11/2568</p>
-                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
+                <p><%= news.Date %></p>
+                <a class="btn btn-primary">อ่านเพิ่มเติม</a>
               </div>
             </div>
-            <div class="new-card" style="width: 18rem">
-              <img
-                src="../images/Homepage/Homepage-new2.jpg"
-                class="card-img-top"
-                alt="new2"
-              />
-              <div class="new-card-body">
-                <h5 class="new-card-title">
-                  วิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ
-                </h5>
-                <p class="new-card-text">หลักสูตรใหม่ ISEE</p>
-                <hr />
-                <p>06/11/2568</p>
-                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
-              </div>
-            </div>
-            <div class="new-card" style="width: 18rem">
-              <img
-                src="../images/Homepage/Homepage-new3.jpg"
-                class="card-img-top"
-                alt="new3"
-              />
-              <div class="new-card-body">
-                <h5 class="new-card-title">
-                  เปิดรับสมัครนักศึกษาใหม่ ระดับปริญญาโท
-                </h5>
-                <p class="new-card-text">
-                  สาขาวิชาวิศวกรรมอุตสาหการและระบบการผลิต (หลักสูตรปรับปรุง พ.ศ.
-                  2568)
-                </p>
-                <hr />
-                <p>21/10/2568</p>
-                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
-              </div>
-            </div>
+
+            <% }) %>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="new-card-wrpper">
-            <div class="new-card" style="width: 18rem">
-              <img
-                src="../images/Homepage/Homepage-new4.jpg"
-                class="card-img-top"
-                alt="new4"
-              />
-              <div class="new-card-body">
-                <h5 class="new-card-title">รับสมัครนักศึกษาปริญญาโท-เอก</h5>
-                <p class="new-card-text">
-                  อาจารย์ที่ปรึกษา รศ. ดร.พร้อมพงษ์ ปานดี
-                </p>
-                <hr />
-                <p>10/10/2568</p>
-                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
-              </div>
-            </div>
-            <div class="new-card" style="width: 18rem">
-              <img
-                src="../images/Homepage/Homepage-new5.jpg"
-                class="card-img-top"
-                alt="new5"
-              />
-              <div class="new-card-body">
-                <h5 class="new-card-title">
-                  โครงการทุนเพชรพระจอมเกล้ามหาบัณฑิต เปิดรับสมัครแล้ว
-                </h5>
-                <p class="new-card-text">ระดับปริญญาโท ภาคการศึกษาที่ 2/2568</p>
-                <hr />
-                <p>02/10/2568</p>
-                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
-              </div>
-            </div>
-            <div class="new-card" style="width: 18rem">
-              <img
-                src="../images/Homepage/Homepage-new6.jpg"
-                class="card-img-top"
-                alt="new6"
-              />
-              <div class="new-card-body">
-                <h5 class="new-card-title">กำหนดการรับสมัคร มจธ. ปี 2569</h5>
-                <p class="new-card-text">
-                  โอกาสเป็นส่วนหนึ่งของมหาวิทยาลัยชั้นนำในไทยมาแล้ว!
-                  เล็งคณะไหนไว้ ลุยเลย❗️
-                </p>
-                <hr />
-                <p>17/09/2568</p>
-                <a href="#" class="btn btn-primary">อ่านเพิ่มเติม</a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <% } %>
       </div>
+
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselIndicators"
+        data-bs-target="#newsCarousel"
         data-bs-slide="prev"
       >
-        <span
-          style="background-color: black"
-          class="carousel-control-prev-icon arrow"
-          aria-hidden="true"
-        ></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="carousel-control-prev-icon news-arrow"></span>
       </button>
+
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselIndicators"
+        data-bs-target="#newsCarousel"
         data-bs-slide="next"
       >
-        <span
-          style="background-color: black"
-          class="carousel-control-next-icon arrow"
-          aria-hidden="true"
-        ></span>
-        <span class="visually-hidden">Next</span>
+        <span class="carousel-control-next-icon news-arrow"></span>
       </button>
-      <div class="carousel-indicators">
-        <button
-          style="background-color: black"
-          type="button"
-          data-bs-target="#carouselIndicators"
-          data-bs-slide-to="0"
-          class="button active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          style="background-color: black"
-          type="button"
-          data-bs-target="#carouselIndicators"
-          data-bs-slide-to="1"
-          class="button"
-          aria-label="Slide 2"
-        ></button>
-      </div>
+      <script src="../routes/Home.js"></script>
     </div>
-    <%- include('../partials/bootstrapend') %> <%- include('../partials/footer')
-    -%>
+    <%- include('../partials/footer') -%>
   </body>
 </html>

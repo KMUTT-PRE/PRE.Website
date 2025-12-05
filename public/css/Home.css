@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Prompt", sans-serif;
+  font-family: "Noto Sans Thai", sans-serif;
 }
 
 /* mainpic */
@@ -95,9 +95,11 @@
 }
 
 .aboutus-read-more {
-  display: block;
-  margin: 2em 28em 0 0;
-  padding: 1em 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin: 2em 27em 0 0;
+  padding: 1em;
   border-radius: 10px;
   color: white;
   background-color: #ff3300;
@@ -106,6 +108,7 @@
 }
 
 .aboutus-read-more:hover {
+  gap: 2em;
   color: black;
   background-color: #ffec48;
 }
@@ -135,6 +138,10 @@
   animation: spin 90s infinite linear;
 }
 
+.reward-group:hover {
+  animation-play-state: paused;
+}
+
 .reward-card img {
   width: 50vh;
   height: 40vh;
@@ -153,6 +160,13 @@
   text-align: center;
 }
 
+.reward-card :hover,
+.reward-card1 :hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+}
+
 @keyframes spin {
   from {
     translate: 0;
@@ -164,14 +178,14 @@
 
 /* ข่าวสาร) */
 
-.carousel-inner {
+/* .carousel-inner {
   background-color: #ff3300;
 }
 
 .new-card-wrpper {
   display: flex;
   justify-content: space-evenly;
-  margin: 5em 15em;
+  margin: 5em 20em;
 }
 
 .new-card {
@@ -181,6 +195,12 @@
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
+}
+
+.new-card-wrpper :hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition-duration: 0.3s;
 }
 
 .card-img-top {
@@ -209,108 +229,36 @@
   padding: 1.5em;
 }
 
-/* RESPONSIVE ZONE */
-
-/* MOBILE & TABLET */
-@media (max-width: 992px) {
-  /* ปุ่มหลัก */
-  .hp-button1 {
-    flex-wrap: wrap;
-    gap: 2em;
-  }
-
-  .hp-button1-box {
-    width: 40vw;
-    height: 10vw;
-    margin-top: -2vh;
-  }
-
-  .hp-button1-main {
-    font-size: 28px;
-  }
-
-  /* about us */
-  .hp-aboutus {
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-  }
-
-  .hp-aboutus img {
-    width: 80%;
-    height: auto;
-  }
-
-  .hp-aboutus-box {
-    width: 90%;
-    text-align: center;
-  }
-
-  .hp-aboutus-body {
-    font-size: 18px;
-  }
-
-  .aboutus-read-more {
-    margin: 2em 5em;
-  }
-
-  /* reward */
-  .reward-card img,
-  .reward-card1 img {
-    width: 30vh;
-    height: 25vh;
-  }
-
-  /* news */
-  .new-card-wrpper {
-    flex-wrap: wrap;
-    margin: 2em 5em;
-    gap: 1em;
-  }
-
-  .new-card {
-    width: 80vw;
-    height: auto;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    display: none !important;
-  }
+.carousel-control-prev,
+.carousel-control-next {
+  margin: 40vh;
+} */
+.news-multi-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  /* mainpic */
-  .carousel-inner img {
-    height: 45vh;
-  }
+.new-card {
+  width: 100%;
+  max-width: 330px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
 
-  .mainpic-gradient {
-    height: 15vh;
-    margin-top: 30vh;
-  }
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
-  /* ปุ่มหลัก */
-  .hp-button1 {
-    gap: 1.5em;
-  }
-
-  .hp-button1-box {
-    width: 50vw;
-    height: 25vw;
-  }
-
-  /* ข่าวสาร */
-  .new-card {
-    width: 90vw;
-  }
-
-  .new-card-title {
-    font-size: 18px;
-  }
-
-  .new-card-text {
-    font-size: 14px;
-  }
+/* Arrow styling */
+.news-arrow {
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 50%;
 }
