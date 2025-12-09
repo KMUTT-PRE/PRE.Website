@@ -45,7 +45,7 @@ const New_data = [
 ];
 
 router.get("/", (req, res) => {
-  res.render("pages/Home", { New_data: News - data });
+  res.render("pages/Home", { New_data });
 });
 
 module.exports = router;
