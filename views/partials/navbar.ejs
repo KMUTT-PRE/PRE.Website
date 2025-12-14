@@ -4,11 +4,12 @@
     <%- include('head', { title : 'navbar' }) %>
 
     <link rel="stylesheet" href="/css/assets/navbar.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive.css" />
   </head>
   <body>
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../pages/Home.ejs"
+        <a class="navbar-brand" href="/"
           ><img src="/images/PEMCE-LOGO.png" alt="prelogo"
         /></a>
         <button
@@ -160,7 +161,7 @@
         </div>
       </div>
     </nav>
-    <script src="/js/assets/navbar.js"></script>
     <%- include('bootstrapend') %>
+    <script src="../js/assets/navbar.js"></script>
   </body>
 </html>

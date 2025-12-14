@@ -13,9 +13,6 @@ app.get("/pre", (req, res) => {
   res.render("pages/PRE");
 });
 
-const HomeRoute = require("./routes/Home-new");
-app.use("/", HomeRoute);
-
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
 });

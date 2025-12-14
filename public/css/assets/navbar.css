@@ -9,9 +9,20 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 15vh;
   background-color: #ff5900;
-  transition: 0.5s;
+  transition: 0.5s ease;
+}
+
+#navbar .navbar {
+  overflow: visible !important;
+}
+
+.navbar {
+  z-index: 1050;
+}
+
+.dropdown-menu {
+  z-index: 1100;
 }
 
 .navbar-expand-lg {
@@ -23,9 +34,9 @@
 
 .navbar-brand img,
 .offcanvas-header img {
-  margin: 0 5rem;
-  height: 6rem;
-  width: 6rem;
+  margin: 0 1rem;
+  height: 100px;
+  width: auto;
 }
 
 .offcanvas {
@@ -59,12 +70,12 @@
   color: white;
   column-gap: 0.5vh;
   margin: 1vh 5vh 0 0;
+  padding: 0.5rem 1rem;
   text-decoration: none;
 }
 
 .nav-link:hover {
   background-color: white !important;
-  padding: 1vh;
   border-radius: 15px;
 }
 

@@ -47,7 +47,7 @@
         <div class="mainpic-gradient"></div>
       </div>
     </div>
-    <script src="/js/Homepage.js"></script>
+    <script src="/js/Homepage"></script>
     <%- include('../partials/bootstrapend') %>
     <!-- button-main -->
     <div class="hp-button1">
@@ -157,52 +157,123 @@
       </div>
     </div>
     <!-- ข่าวสาร -->
-    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <% const chunkSize = 3; for (let i = 0; i < New_data.length; i +=
-        chunkSize) { const chunk = New_data.slice(i, i + chunkSize); %>
-        <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
-          <div class="news-multi-row">
-            <% chunk.forEach(news => { %>
-
-            <div class="new-card">
-              <img src="<%= news.Img %>" class="card-img-top" />
-
-              <div class="new-card-body">
-                <h5><%= news.Title %></h5>
-                <p><%= news.Description %></p>
-                <hr />
-                <p><%= news.Date %></p>
-                <a class="btn btn-primary">อ่านเพิ่มเติม</a>
-              </div>
-            </div>
-
-            <% }) %>
-          </div>
-        </div>
-
-        <% } %>
+    <div class="container swiper">
+      <div class="card-wrapper">
+        <ul class="card-list swiper-wrapper">
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="/images/Homepage/Homepage-new1.jpg"
+                alt="News1"
+                class="card-image"
+              />
+              <p class="badge">รับสมัคร</p>
+              <h2 class="card-title">
+                DEK69 วิศวกรรมอุตสาหการเปิดรับสมัครรอบที่ 1 ตั้งแต่ 12 พฤจิกายน
+                2568 - 6 มกราคม 2569
+              </h2>
+              <p class="Dates">12 พฤศจิกายน 2568</p>
+              <button class="card-button material-symbols-rounded">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="/images/Homepage/Homepage-new2.jpg"
+                alt="News1"
+                class="card-image"
+              />
+              <p class="badge">ข่าวสาร</p>
+              <h2 class="card-title">
+                วิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ หลักสูตรใหม่ ISEE
+              </h2>
+              <p class="Dates">06 พฤศจิกายน 2568</p>
+              <button class="card-button material-symbols-rounded">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="/images/Homepage/Homepage-new3.jpg"
+                alt="News1"
+                class="card-image"
+              />
+              <p class="badge">รับสมัคร</p>
+              <h2 class="card-title">
+                เปิดรับสมัครนักศึกษาใหม่ ระดับปริญญาโท
+                สาขาวิชาวิศวกรรมอุตสาหการและระบบการผลิต หลักสูตรปรับปรุง
+                พ.ศ.2568
+              </h2>
+              <p class="Dates">21 ตุลาคม 2568</p>
+              <button class="card-button material-symbols-rounded">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="/images/Homepage/Homepage-new4.jpg"
+                alt="News1"
+                class="card-image"
+              />
+              <p class="badge">รับสมัคร</p>
+              <h2 class="card-title">
+                รับสมัครนักศึกษาปริญญาโท-เอก
+                สาขาวิชาวิศวกรรมอุตสาหการและระบบการผลิต อาจารย์ที่ปรึกษา รศ.
+                ดร.พร้อมพงษ์ ปานดี
+              </h2>
+              <p class="Dates">10 ตุลาคม 2568</p>
+              <button class="card-button material-symbols-rounded">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="/images/Homepage/Homepage-new5.jpg"
+                alt="News1"
+                class="card-image"
+              />
+              <p class="badge">ทุนการศึกษา</p>
+              <h2 class="card-title">
+                โครงการทุนเพชรพระจอมเกล้ามหาบัณฑิต เปิดรับสมัครแล้ว
+                ระดับปริญญาโท ภาคการศึกษาที่ 2/2568
+              </h2>
+              <p class="Dates">02 ตุลาคม 2568</p>
+              <button class="card-button material-symbols-rounded">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="/images/Homepage/Homepage-new6.jpg"
+                alt="News1"
+                class="card-image"
+              />
+              <p class="badge">รับสมัคร</p>
+              <h2 class="card-title">กำหนดการรับสมัคร มจธ. ปี 2569</h2>
+              <p class="Dates">17 กันยายน 2568</p>
+              <button class="card-button material-symbols-rounded">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </a>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
       </div>
-
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#newsCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon news-arrow"></span>
-      </button>
-
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#newsCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon news-arrow"></span>
-      </button>
-      <script src="../routes/Homepage.js"></script>
     </div>
-    <%- include('../partials/footer') -%>
+    <%- include('../partials/swiper.ejs')%>
+    <script src="../js/Home-news.js"></script>
+    <%- include('../partials/footer')-%>
   </body>
 </html>

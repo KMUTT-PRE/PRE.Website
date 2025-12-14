@@ -1,3 +1,10 @@
+/* ------Navbar------ */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
 /*------Homepage------ */
 
 /* ------IPad------ */
@@ -49,20 +56,6 @@
     width: 30vh;
     height: 25vh;
   }
-
-  /* news */
-  @media (min-width: 601px) and (max-width: 1024px) {
-    .news-multi-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      justify-items: center;
-    }
-
-    .new-card {
-      max-width: 320px;
-    }
-  }
 }
 
 /* ------MOBILE------ */
@@ -86,19 +79,16 @@
     width: 50vw;
     height: 25vw;
   }
+}
 
-  /* ข่าวสาร */
-  .news-multi-row {
-    flex-direction: column;
-    align-items: center;
+/* ข่าวสาร */
+@media screen and (max-width: 768px) {
+  .card-wrapper {
+    margin: 0 10px 25px;
   }
 
-  .new-card {
-    max-width: 100%;
-  }
-
-  .card-img-top {
-    height: 160px;
+  .card-wrapper .swiper-slide-button {
+    display: none;
   }
 }
 
