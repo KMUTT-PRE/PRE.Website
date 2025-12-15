@@ -10,7 +10,8 @@
   top: 0;
   width: 100%;
   background-color: #ff5900;
-  transition: 0.5s ease;
+  transition: top 0.5s ease;
+  z-index: 1055;
 }
 
 #navbar .navbar {
@@ -118,4 +119,15 @@
   border: none;
   box-shadow: none;
   border-radius: 50px;
+}
+
+.offcanvas .dropdown-menu {
+  position: static;
+  transform: none !important;
+  display: none;
+  margin-left: 1rem;
+}
+
+.offcanvas .dropdown-menu.show {
+  display: block;
 }
