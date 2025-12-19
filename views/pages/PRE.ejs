@@ -7,92 +7,118 @@
     <link rel="stylesheet" href="../css/assets/Responsive.css" />
   </head>
   <body>
-    <!-- picture main -->
-    <div class="carousel-wrapper">
-      <div
-        id="carouselExampleSlidesOnly"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="1000">
-            <img
-              src="./assets/public/PRE/PRE-mainpic1.jpg"
-              class="d-block w-100"
-              alt="HomepagePic1"
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="1000">
-            <img
-              src="./assets/public/PRE/PRE-mainpic2.jpg"
-              class="d-block w-100"
-              alt="HomepagePic2"
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="1000">
-            <img
-              src="./assets/public/PRE/PRE-mainpic3.jpg"
-              class="d-block w-100"
-              alt="HomepagePic3"
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="1000">
-            <img
-              src="./assets/public/PRE/PRE-mainpic4.jpg"
-              class="d-block w-100"
-              alt="HomepagePic4"
-            />
+    <!-- LEFT -->
+    <div class="pre-layout">
+      <aside class="pre-left">
+        <div class="Breadcrumb">
+          <a href="/">หน้าหลัก</a>
+          <span><i class="fa-solid fa-chevron-right"></i></span>
+          <span>วิศวกรรมอุตสาหการ</span>
+        </div>
+        <span class="underline"></span>
+
+        <nav class="primary-navigation">
+          <p class="Anchor">ในหน้านี้</p>
+          <ul>
+            <li><a href="#section-1">วิศวกรรมอุตสาหการ</a></li>
+            <li><a href="#section-2">ชื่อหลักสูตร</a></li>
+            <li><a href="#section-3">วัตถุประสงค์</a></li>
+            <li><a href="#section-4">แนวทางการเรียนรู้แต่ละชั้นปี</a></li>
+            <li><a href="#section-5">PLO</a></li>
+            <li><a href="#section-6">อาชีพในอนาคต</a></li>
+            <li><a href="#section-7">เอกสาร</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- RIGHT -->
+      <section class="pre-right">
+        <div class="carousel-wrapper">
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div
+                class="carousel-item active d-block hero-img"
+                data-bs-interval="2000"
+              >
+                <img
+                  src="./images/PRE/PRE-mainpic1.jpg"
+                  class="d-block w-100"
+                  alt="HomepagePic1"
+                />
+              </div>
+              <div
+                class="carousel-item d-block hero-img"
+                data-bs-interval="2000"
+              >
+                <img
+                  src="./images/PRE/PRE-mainpic2.jpg"
+                  class="d-block w-100"
+                  alt="HomepagePic2"
+                />
+              </div>
+              <div
+                class="carousel-item d-block hero-img"
+                data-bs-interval="2000"
+              >
+                <img
+                  src="./images/PRE/PRE-mainpic3.jpg"
+                  class="d-block w-100"
+                  alt="HomepagePic3"
+                />
+              </div>
+              <div
+                class="carousel-item d-block hero-img"
+                data-bs-interval="2000"
+              >
+                <img
+                  src="./images/PRE/PRE-mainpic4.jpg"
+                  class="d-block w-100"
+                  alt="HomepagePic4"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <div class="PRE-picboxmain">
-      <div class="navlink-underline">
-        <span class="navlink"
-          ><p>
-            <a href="index.html">หน้าหลัก</a
-            ><i class="fa-solid fa-chevron-right"></i>วิศวกรรมอุสาหการ
-          </p></span
-        >
-      </div>
-      <div>ในหน้านี้</div>
-      <p>วิศวกรรมอุสาหการ</p>
-      <p>ชื่อหลักสูตร</p>
-      <p>วัตถุประสงค์</p>
-      <p>แนวทางการเรียนรู้แต่ละชั้นปี</p>
-      <p>PLO</p>
-      <p>ผลงาน</p>
-      <p>อาชีพในอนาคต</p>
-      <p>โครงสร้างหลักสูตร</p>
-      <p>ค่าเล่าเรียน</p>
-      <p>เอกสาร</p>
-    </div>
-    <div>
-      <h3>Production Engineering(PRE)</h3>
-      <h3>วิศวกรรมอุสาหการ</h3>
-      <p>
-        หลักสูตรที่เน้นความสำคัญของทั้งกลุ่มวิชา Production Engineering,
-        Industrial Engineering พร้อมด้วยความรู้ด้านการบริหาร จัดการโดยสามารถ
-        วิเคราะห์ วางแผน ควบคุม ระบบการผลิต การปรับปรุง คุณภาพและ
-        การบริหารองค์กร การผลิตได้อย่างมี ประสิทธิภาพและเป็นเชิงระบบ
-      </p>
+        <%- include('../partials/bootstrapend') %>
+        <script src="/js/PRE-mainpic.js"></script>
+
+        <div class="overlay-main">
+          <h3>Production Engineering(PRE)</h3>
+          <h3>วิศวกรรมอุสาหการ</h3>
+          <p>
+            หลักสูตรที่เน้นความสำคัญของทั้งกลุ่มวิชา Production Engineering,
+            Industrial Engineering พร้อมด้วยความรู้ด้านการบริหาร จัดการโดยสามารถ
+            วิเคราะห์ วางแผน ควบคุม ระบบการผลิต การปรับปรุง คุณภาพและ
+            การบริหารองค์กร การผลิตได้อย่างมี ประสิทธิภาพและเป็นเชิงระบบ
+          </p>
+        </div>
+      </section>
     </div>
     <!-- PRE name -->
-    <div>
-      <div class="name1-underline"><h4>ชื่อหลักสูตร</h4></div>
-      <p>หลักสูตรวิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมอุตสาหการ</p>
-      <p>Bachelor of Engineering Program in Production Engineering</p>
-      <div class="name2-underline"><h4>ชื่อปริญญาและสาขาวิชา</h4></div>
-      <h5>ชื่อเต็ม</h5>
-      <p>วิศวกรรมศาสตรบัณฑิต (วิศวกรรมอุตสาหการ)</p>
-      <p>Bachelor of Engineering (Production Engineering)</p>
-      <h5>ชื่อย่อ</h5>
-      <p>วศ.บ. (วิศวกรรมอุตสาหการ)</p>
-      <p>B.Eng. (Production Engineering)</p>
+    <div id="section-2" class="namebox">
+      <span>
+        <div class="name1-underline"><h4>ชื่อหลักสูตร</h4></div>
+        <p>หลักสูตรวิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมอุตสาหการ</p>
+        <p>Bachelor of Engineering Program in Production Engineering</p>
+      </span>
+      <span>
+        <div class="name2-underline"><h4>ชื่อปริญญาและสาขาวิชา</h4></div>
+        <h5>ชื่อเต็ม</h5>
+        <p>วิศวกรรมศาสตรบัณฑิต (วิศวกรรมอุตสาหการ)</p>
+        <p>Bachelor of Engineering (Production Engineering)</p>
+        <h5>ชื่อย่อ</h5>
+        <p>วศ.บ. (วิศวกรรมอุตสาหการ)</p>
+        <p>B.Eng. (Production Engineering)</p>
+      </span>
     </div>
     <!-- วัตถุประสงค์ -->
-    <div class="วัตถุประสงค์-underline"><h2>วัตถุประสงค์</h2></div>
+    <div id="section-3" class="วัตถุประสงค์-underline">
+      <h2>วัตถุประสงค์</h2>
+    </div>
     <div>
       <img src="" alt="" />
       <ul class="วัตถุประสงค์-box">
@@ -119,7 +145,7 @@
       </ul>
     </div>
     <!-- แนวทางการเรียนรู้แต่ละชั้นปี -->
-    <div class="แนวทาง-underline">
+    <div id="section-4" class="แนวทาง-underline">
       <h2>แนวทางการจัดการเรียนรู้ของหลักสูตร</h2>
     </div>
     <div>
@@ -164,64 +190,66 @@
       </div>
     </div>
     <!-- PLO -->
-    <div class="PLO-underline">
-      <h2>ผลลัพธ์การเรียนรู้ระดับหลักสูตร</h2>
-      <h2>(Program Learning Outcome: PLOs)</h2>
-    </div>
-    <div class="PLO1-card">
-      <h4>PLO-1</h4>
-      <p>
-        ความรู้และทักษะด้านระบบการผลิตบัณฑิตสามารถบูรณาการความรู้
-        และทักษะด้านระบบการผลิตทั้งขั้น พื้นฐานและเทคโนโลยีอัจฉริยะใน
-        การแก้ปัญหา อุตสาหกรรมได้
-      </p>
-      <button class="PLO-card-detail">
-        <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-      </button>
-    </div>
-    <div class="PLO2-card">
-      <h4>PLO-2</h4>
-      <p>
-        ความรู้และทักษะด้านการบริหารอุตสาหกรรม บัณฑิตสามารถบูรณาการ ความรู้
-        และทักษะด้านการบริหาร อุตสาหกรรม ในการแก้ปัญหา อุตสาหกรรมในภาค
-        การผลิตหรือ การบริการได้โดยตระหนัก ถึงความปลอดภัย สังคมสาธารณะ และ
-        สิ่งแวดล้อมเพื่อการพัฒนาอย่างยั่งยืน
-      </p>
-      <button class="PLO-card-detail">
-        <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-      </button>
-    </div>
-    <div class="PLO3-card">
-      <h4>PLO-2</h4>
-      <p>
-        การคิดอย่างเป็นระบบ บัณฑิตเป็น ผู้มีความคิดเชิงระบบ สามารถ
-        บูรณาการความรู้ทางด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้อง
-        ในการแก้ปัญหาอุตสาหกรรม
-        รวมถึงรองรับเทคโนโลยีอัจฉริยะได้ภายใต้จรรยาบรรณวิศวกร
-      </p>
-      <button class="PLO-card-detail">
-        <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-      </button>
-    </div>
-    <div class="PLO4-card">
-      <h4>PLO-2</h4>
-      <p>
-        ทักษะการเรียนรู้ด้วยตนเอง
-        บัณฑิตเป็นผู้มีความสามารถในการเรียนรู้ด้วยตนเอง
-      </p>
-      <button class="PLO-card-detail">
-        <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-      </button>
-    </div>
-    <div class="PLO5-card">
-      <h4>PLO-2</h4>
-      <p>
-        ทักษะการสื่อสารและทำงานเป็นทีม
-        บัณฑิตเป็นผู้มีความสามารถในการสื่อสารเพื่อการนำเสนอและการ ทำงานเป็นทีม
-      </p>
-      <button class="PLO-card-detail">
-        <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-      </button>
+    <div>
+      <div id="section-5" class="PLO-underline">
+        <h2>ผลลัพธ์การเรียนรู้ระดับหลักสูตร</h2>
+        <h2>(Program Learning Outcome: PLOs)</h2>
+      </div>
+      <div class="PLO1-card">
+        <h4>PLO-1</h4>
+        <p>
+          ความรู้และทักษะด้านระบบการผลิตบัณฑิตสามารถบูรณาการความรู้
+          และทักษะด้านระบบการผลิตทั้งขั้น พื้นฐานและเทคโนโลยีอัจฉริยะใน
+          การแก้ปัญหา อุตสาหกรรมได้
+        </p>
+        <button class="PLO-card-detail">
+          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
+        </button>
+      </div>
+      <div class="PLO2-card">
+        <h4>PLO-2</h4>
+        <p>
+          ความรู้และทักษะด้านการบริหารอุตสาหกรรม บัณฑิตสามารถบูรณาการ ความรู้
+          และทักษะด้านการบริหาร อุตสาหกรรม ในการแก้ปัญหา อุตสาหกรรมในภาค
+          การผลิตหรือ การบริการได้โดยตระหนัก ถึงความปลอดภัย สังคมสาธารณะ และ
+          สิ่งแวดล้อมเพื่อการพัฒนาอย่างยั่งยืน
+        </p>
+        <button class="PLO-card-detail">
+          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
+        </button>
+      </div>
+      <div class="PLO3-card">
+        <h4>PLO-2</h4>
+        <p>
+          การคิดอย่างเป็นระบบ บัณฑิตเป็น ผู้มีความคิดเชิงระบบ สามารถ
+          บูรณาการความรู้ทางด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้อง
+          ในการแก้ปัญหาอุตสาหกรรม
+          รวมถึงรองรับเทคโนโลยีอัจฉริยะได้ภายใต้จรรยาบรรณวิศวกร
+        </p>
+        <button class="PLO-card-detail">
+          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
+        </button>
+      </div>
+      <div class="PLO4-card">
+        <h4>PLO-2</h4>
+        <p>
+          ทักษะการเรียนรู้ด้วยตนเอง
+          บัณฑิตเป็นผู้มีความสามารถในการเรียนรู้ด้วยตนเอง
+        </p>
+        <button class="PLO-card-detail">
+          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
+        </button>
+      </div>
+      <div class="PLO5-card">
+        <h4>PLO-2</h4>
+        <p>
+          ทักษะการสื่อสารและทำงานเป็นทีม
+          บัณฑิตเป็นผู้มีความสามารถในการสื่อสารเพื่อการนำเสนอและการ ทำงานเป็นทีม
+        </p>
+        <button class="PLO-card-detail">
+          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
+        </button>
+      </div>
     </div>
     <!-- <div class="PLO1-overlay">
       <div class="PLO1-popup">
@@ -234,9 +262,8 @@
         <button class="close-btn">ปิด</button>
       </div>
     </div> -->
-    <!-- ผลงาน -->
     <!-- อาชีพอนาคต -->
-    <div class="work-box">
+    <div id="section-6" class="work-box">
       <div class="work-underline">
         <h4>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา</h4>
       </div>
@@ -251,16 +278,14 @@
       </ul>
     </div>
     <img src="" class="work-pic" alt="" />
-    <!-- โครงสร้างหลักสูตร -->
-    <div class="หลักสตร-gradient">
+    <!-- เอกสารเพิ่มเติม -->
+    <div id="section-7" class="หลักสตร-gradient">
       <img src="" class="หลักสตร-bg" alt="" />
     </div>
     <div class="หลักสูตร-box">
       <div class="หลักสูตร-underline">
-        <h4>โครงสร้างหลักสูตร</h4>
+        <h4>เอกสารเพิ่มเติม</h4>
       </div>
-      <h2>หลักสูตรประจำปี พ.ศ. 2569</h2>
-      <p>จำนวนหน่วยกิต ตลอดหลักสูตร 149 หน่วยกิต</p>
     </div>
     <%- include('../partials/footer')-%>
   </body>

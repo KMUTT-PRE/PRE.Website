@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentScroll = window.scrollY;
 
     if (currentScroll > lastScroll && currentScroll > 80) {
-      navbar.style.top = "-120px";
+      navbar.style.top = "-150px";
     } else {
       navbar.style.top = "0";
     }

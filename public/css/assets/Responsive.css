@@ -92,6 +92,99 @@
   }
 }
 
+/* ------PRE------ */
+@media (max-width: 1024px) {
+  .pre-layout {
+    flex-direction: column;
+  }
+
+  .pre-left {
+    width: 100%;
+    padding: 2em 2.5em;
+  }
+
+  .Breadcrumb {
+    margin-top: 0;
+  }
+
+  .underline {
+    width: 200px;
+  }
+
+  .primary-navigation {
+    margin-top: 20px;
+  }
+
+  .pre-right {
+    width: 100%;
+  }
+
+  .carousel-wrapper {
+    height: 60vh;
+    filter: none;
+  }
+
+  .carousel-inner img {
+    height: 60vh;
+  }
+
+  .overlay-main {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 480px;
+  }
+
+  .namebox {
+    padding: 2em 2em;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .pre-left {
+    padding: 1.5em;
+  }
+
+  .primary-navigation .Anchor {
+    font-size: 20px;
+  }
+
+  .primary-navigation li {
+    font-size: 16px;
+  }
+
+  .carousel-wrapper {
+    height: 45vh;
+  }
+
+  .carousel-inner img {
+    height: 45vh;
+  }
+
+  .namebox {
+    padding: 1em;
+  }
+
+  /* overlay */
+  .overlay-main {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: -40px 1.2em 0;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .overlay-main h3 {
+    font-size: 22px !important;
+  }
+
+  .overlay-main p {
+    font-size: 14px;
+  }
+}
+
 /* ------Footer------ */
 
 /* ------- iPad ------- */

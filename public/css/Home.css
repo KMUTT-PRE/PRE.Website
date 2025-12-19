@@ -177,6 +177,15 @@
 }
 
 /* ข่าวสาร) */
+.container-bg {
+  background: #ff3300;
+}
+
+.container.swiper {
+  display: flex;
+  justify-content: center;
+}
+
 .card-wrapper {
   margin: 2em auto;
   width: 90%;
@@ -191,13 +200,14 @@
 
 .card-wrapper {
   max-width: 1100px;
-  margin: 0 60px 35px;
+  margin: 0 auto 35px;
   padding: 20px 10px;
   overflow: hidden;
 }
 
 .card-list .card-item {
   list-style: none;
+  justify-content: center;
 }
 
 .card-list .card-item .card-link {
@@ -207,7 +217,7 @@
   padding: 18px;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 1px 1px 3px 3px #717171;
+  box-shadow: 1px 1px 3px 3px #c3c3c3;
   transition: 0.2s ease;
 }
 
@@ -265,7 +275,7 @@
   height: 13px;
   width: 13px;
   opacity: 0.5;
-  background: #ff3300;
+  background: #ffffff;
 }
 
 .card-wrapper .swiper-pagination-bullet-active {
@@ -289,14 +299,4 @@
 .swiper-button-next::after {
   font-size: 18px;
   color: #ff3300;
-}
-
-@media screen and (max-width: 768px) {
-  .card-wrapper {
-    margin: 0 10px 25px;
-  }
-
-  .card-wrapper .swiper-slide-button {
-    display: none;
-  }
 }

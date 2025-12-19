@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+.pre-layout {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* LEFT */
+.pre-left {
+  width: 60vh;
+  padding: 2em 5em;
+  background: #fff;
+}
+
+.Breadcrumb {
+  font-size: 18px;
+  margin-top: 18vh;
+}
+
+.Breadcrumb a {
+  color: #000;
+  text-decoration: none;
+}
+
+.Breadcrumb a:hover {
+  font-weight: 700;
+}
+
+.Breadcrumb span {
+  margin: 0 6px;
+}
+
+.underline {
+  display: block;
+  width: 250px;
+  border-bottom: 1px solid #000;
+  margin: 8px 0 15px;
+}
+
+/* left-navigation */
+.primary-navigation {
+  font-size: 14px;
+}
+
+.primary-navigation .Anchor {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.primary-navigation ul {
+  padding-left: 18px;
+}
+
+.primary-navigation li {
+  list-style: disc;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.primary-navigation a {
+  color: #000;
+  text-decoration: none;
+}
+
+.primary-navigation a:hover {
+  text-decoration: underline;
+  color: #ff5900;
+}
+
+/* RIGHT */
+.pre-right {
+  position: relative;
+  flex: 1;
+}
+
+.carousel-wrapper {
+  height: 85vh;
+  overflow: hidden;
+  filter: blur(1px);
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* overlay */
+.overlay-main {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  background: #eeeeee;
+  padding: 28px 32px;
+  max-width: 520px;
+  border-radius: 10px;
+}
+
+.overlay-main h3:first-child {
+  color: #ff5900;
+  opacity: 1;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.overlay-main h3:nth-child(2) {
+  color: #ff5900;
+  opacity: 1;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.overlay-main p {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 1;
+  line-height: 1.7;
+  color: #000000;
+}
+
+/* name section */
+.namebox {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 2em 20em;
+  background: #ff5900;
+  color: #fff;
+}
+
+.namebox span {
+  width: 50%;
+}
+
+.name1-underline h4,
+.name2-underline h4 {
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  font-size: 30px;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+.namebox p,
+.namebox h5 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
