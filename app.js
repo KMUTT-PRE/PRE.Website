@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
   res.render("pages/Homepage");
 });
 
+app.get("/history_dep", (req, res) => {
+  res.render("pages/history_dep");
+});
+
 app.get("/pre", (req, res) => {
   res.render("pages/PRE");
 });
@@ -124,3 +128,4 @@ app.get("/personel/p27_chaowalit", (req, res) => {
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
 });
+
