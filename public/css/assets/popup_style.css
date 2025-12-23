@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 101; /* Above overlay */
+  background-color: white;
+  width: 800px;
+  max-width: 80%;
+  height: 200px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1); /* Show modal */
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none; /* Allows clicks to go through when hidden */
+  transition: 200ms ease-in-out;
+  z-index: 100;
+}
+
+#overlay.active {
+  opacity: 1; /* Show overlay */
+  pointer-events: all;
+}
+/* Add styling for modal-header, title, close-button, and modal-body */
