@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head', { title : 'topbtn'}) %>
+    <style>
+      .body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .scroll-up-btn {
+        z-index: 9999;
+        position: fixed;
+        bottom: 4vh;
+        right: 3vh;
+        height: 9vh;
+        width: 9vh;
+        max-height: 90px;
+        max-width: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.8);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+      }
+
+      .scroll-up-btn.show {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+
+      .scroll-up-btn i {
+        color: black;
+        font-size: 40px;
+        line-height: 8vh;
+        text-align: center;
+        display: block;
+      }
+
+      .scroll-up-btn::before,
+      .scroll-up-btn::after {
+        content: none;
+      }
+
+      .scroll-up-btn:hover {
+        transform: scale(1.08);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="scroll-up-btn">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <script>
+      const btn = document.querySelector(".scroll-up-btn");
+
+      window.addEventListener("scroll", () => {
+        const showAfterVH = 20;
+        const trigger = (window.innerHeight * showAfterVH) / 100;
+
+        if (window.scrollY > trigger) {
+          btn.classList.add("show");
+        } else {
+          btn.classList.remove("show");
+        }
+      });
+
+      function smoothScrollToTop(duration = 900) {
+        const start = window.pageYOffset;
+        let startTime = null;
+
+        function easeInOutCubic(t) {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function animation(currentTime) {
+          if (!startTime) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+
+          window.scrollTo(0, start * (1 - easeInOutCubic(progress)));
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        }
+
+        requestAnimationFrame(animation);
+      }
+
+      btn.addEventListener("click", () => {
+        smoothScrollToTop(1000);
+      });
+    </script>
+  </body>
+</html>

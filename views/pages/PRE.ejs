@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/assets/Responsive.css" />
   </head>
   <body>
+    <%- include('../partials/topbtn') %>
     <!-- LEFT -->
     <div class="pre-layout">
       <aside class="pre-left">
@@ -15,7 +16,7 @@
           <span><i class="fa-solid fa-chevron-right"></i></span>
           <span>วิศวกรรมอุตสาหการ</span>
         </div>
-        <span class="underline"></span>
+        <span class="Breadcrumb-underline"></span>
 
         <nav class="primary-navigation">
           <p class="Anchor">ในหน้านี้</p>
@@ -29,51 +30,42 @@
             <li><a href="#section-7">เอกสาร</a></li>
           </ul>
         </nav>
+        <script src="./js/assets/Navigation.js"></script>
       </aside>
 
       <!-- RIGHT -->
-      <section class="pre-right">
+      <section id="section-1" class="pre-right">
         <div class="carousel-wrapper">
           <div
             id="carouselExampleSlidesOnly"
             class="carousel slide"
             data-bs-ride="carousel"
+            data-bs-interval="5000"
           >
             <div class="carousel-inner">
-              <div
-                class="carousel-item active d-block hero-img"
-                data-bs-interval="2000"
-              >
+              <div class="carousel-item active hero-img">
                 <img
                   src="./images/PRE/PRE-mainpic1.jpg"
                   class="d-block w-100"
                   alt="HomepagePic1"
                 />
               </div>
-              <div
-                class="carousel-item d-block hero-img"
-                data-bs-interval="2000"
-              >
+              <div class="carousel-item hero-img">
                 <img
                   src="./images/PRE/PRE-mainpic2.jpg"
                   class="d-block w-100"
                   alt="HomepagePic2"
                 />
               </div>
-              <div
-                class="carousel-item d-block hero-img"
-                data-bs-interval="2000"
-              >
+              <div class="carousel-item hero-img">
                 <img
                   src="./images/PRE/PRE-mainpic3.jpg"
                   class="d-block w-100"
+                  style="object-position: bottom"
                   alt="HomepagePic3"
                 />
               </div>
-              <div
-                class="carousel-item d-block hero-img"
-                data-bs-interval="2000"
-              >
+              <div class="carousel-item hero-img">
                 <img
                   src="./images/PRE/PRE-mainpic4.jpg"
                   class="d-block w-100"
@@ -84,8 +76,7 @@
           </div>
         </div>
         <%- include('../partials/bootstrapend') %>
-        <script src="/js/PRE-mainpic.js"></script>
-
+        <script src="./js/PRE-mainpic.js"></script>
         <div class="overlay-main">
           <h3>Production Engineering(PRE)</h3>
           <h3>วิศวกรรมอุสาหการ</h3>
@@ -116,175 +107,181 @@
       </span>
     </div>
     <!-- วัตถุประสงค์ -->
-    <div id="section-3" class="วัตถุประสงค์-underline">
-      <h2>วัตถุประสงค์</h2>
-    </div>
-    <div>
-      <img src="" alt="" />
-      <ul class="วัตถุประสงค์-box">
-        <li>
-          1.เพื่อผลิตบัณฑิตที่มีความรู้และทักษะด้านระบบการผลิตทั้งขั้นพื้นฐานและเทคโนโลยีอัจฉริยะ
-          สามารถบูรณาการความรู้ในการแก้ปัญหาอุตสาหกรรมได้
-        </li>
-        <li>
-          2.เพื่อผลิตบัณฑิตที่มีความรู้และทักษะด้านการบริหารอุตสาหกรรม
-          สามารถบูรณาการความรู้ในการแก้ปัญหาอุตสาหกรรมในภาคการผลิตหรือการบริการได้
-        </li>
-        <li>
-          3.เพื่อผลิตบัณฑิตที่เป็นผู้มีความคิดเชื่อมโยงเป็นระบบสามารถบูรณาการความรู้ทางด้าน
-          วิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้องในการแก้ปัญหาอุตสาหกรรมในยุคปัจจุบัน
-          รวมถึงรองรับอุตสาหกรรม 4.0 ได้ ภายใต้จรรยาบรรณวิศวกร
-        </li>
-        <li>
-          4.เพื่อผลิตบัณฑิตที่เป็นผู้มีความสามารถในการเรียนรู้ด้วยตนเองและเรียนรู้อย่างต่อเนื่องตลอดชีวิต
-        </li>
-        <li>
-          5.บัณฑิตเป็นผู้มีความสามารถในการทำงานเป็นทีม
-          และสื่อสารได้อย่างมีประสิทธิภาพ
-        </li>
-      </ul>
+    <div id="section-3" class="วัตถุประสงค์">
+      <img src="./images/PRE/PRE-วัตถุประสงค์.jpg" alt="วัตถุประสงค์" />
+
+      <div class="วัตถุประสงค์-underline">
+        <h2>เป้าหมายการเรียนรู้</h2>
+        <ul class="วัตถุประสงค์-box">
+          <li>
+            ผลิตบัณฑิตที่มีความรู้และทักษะด้านระบบการผลิตและเทคโนโลยีอัจฉริยะ
+            สามารถแก้ปัญหาในภาคอุตสาหกรรมได้
+          </li>
+          <li>
+            ผลิตบัณฑิตที่มีความรู้และทักษะด้านการบริหารอุตสาหกรรม
+            และประยุกต์ใช้แก้ปัญหาในภาคการผลิตหรือบริการได้
+          </li>
+          <li>
+            ผลิตบัณฑิตที่คิดเป็นระบบ สามารถบูรณาการความรู้วิศวกรรมอุตสาหการ
+            รวมถึงรองรับอุตสาหกรรม 4.0 ภายใต้จรรยาบรรณวิศวกร
+          </li>
+          <li>
+            เพื่อผลิตบัณฑิตที่เป็นผู้มีความสามารถในการเรียนรู้ด้วยตนเองและเรียนรู้อย่างต่อเนื่องตลอดชีวิต
+          </li>
+          <li>
+            บัณฑิตเป็นผู้มีความสามารถในการทำงานเป็นทีม
+            และสื่อสารได้อย่างมีประสิทธิภาพ
+          </li>
+        </ul>
+      </div>
     </div>
     <!-- แนวทางการเรียนรู้แต่ละชั้นปี -->
-    <div id="section-4" class="แนวทาง-underline">
-      <h2>แนวทางการจัดการเรียนรู้ของหลักสูตร</h2>
-    </div>
-    <div>
-      <img src="" alt="" />
-      <div>
-        <h3>ชั้นปีที่1</h3>
-        <p>
-          นักศึกษาสามารถอธิบายหลักการองค์ความรู้ทาง
-          วิทยาศาสตร์และวิศวกรรมพื้นฐาน
-        </p>
+    <div id="section-4" class="แนวทาง">
+      <div class="แนวทาง-underline">
+        <h2>แนวทางการจัดการเรียนรู้ของหลักสูตร</h2>
       </div>
-      <img src="" alt="" />
-      <div>
-        <h3>ชั้นปีที่2</h3>
-        <p>
-          นักศึกษาสามารถอธิบายหลักการทำงานของกระบวนการ ผลิตขั้นพื้นฐาน
-          สามารถระบุปัญหาและบูรณาการความรู้
-          ในกลุ่มวิชาเพื่อสร้างชิ้นงานเบื้องต้นได้
-        </p>
-      </div>
-      <img src="" alt="" />
-      <div>
-        <h3>ชั้นปีที่3</h3>
-        <p>
-          นักศึกษาสามารถอธิบายหลักการ วิธีการและเทคนิคทางด้าน บริหารอุตสาหกรรม
-          สามารถบูรณาการความรู้ทั้งด้านระบบ
-          การผลิตและการบริหารอุตสาหกรรมในการแก้ปัญหา อุตสาหกรรม
-          สามารถสื่อสารและกระตุ้นทีมให้เกิด ความร่วมมือในการทำงาน
-        </p>
-      </div>
-      <img src="" alt="" />
-      <div>
-        <h3>ชั้นปีที่4</h3>
-        <p>
-          นักศึกษาสามารถวิเคราะห์ปัญหาและบูรณาการความรู้ทาง
-          ด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้องในการ
-          กำหนดแนวทางที่เหมาะสมสำหรับการแก้ปัญหาอุตสาหกรรมในภาคการผลิตหรือการบริการอย่างเป็นระบบ
-          ภายใต้ข้อ จำกัดของอุตสาหกรรมและจรรยาบรรณวิศวกร  สามารถ
-          สื่อสารและกระตุ้นทีมให้เกิดความร่วมมือในการ ทำงาน
-          รวมถึงสามารถเรียนรู้และติดตามความรู้ใหม่ด้วยตนเองได้
-        </p>
+      <div class="ชั้นปี-box">
+        <div class="Year1 year-row">
+          <img
+            src="./images/PRE/PRE-แนวทาง1.jpg"
+            style="width: 40vh; height: 40vh"
+            alt="แนวทางปี1"
+          />
+          <div class="year-box">
+            <h3>ชั้นปีที่1</h3>
+            <p>
+              นักศึกษาสามารถอธิบายหลักการองค์ความรู้ทาง
+              วิทยาศาสตร์และวิศวกรรมพื้นฐาน
+            </p>
+          </div>
+        </div>
+        <div class="Year2 year-row reverse">
+          <img
+            src="./images/PRE/PRE-แนวทาง2.jpg"
+            style="width: 40vh; height: 40vh"
+            alt="แนวทางปี2"
+          />
+          <div class="year-box">
+            <h3>ชั้นปีที่2</h3>
+            <p>
+              นักศึกษาสามารถอธิบายหลักการทำงานของกระบวนการ ผลิตขั้นพื้นฐาน
+              สามารถระบุปัญหาและบูรณาการความรู้
+              ในกลุ่มวิชาเพื่อสร้างชิ้นงานเบื้องต้นได้
+            </p>
+          </div>
+        </div>
+        <div class="Year3 year-row">
+          <img
+            src="./images/PRE/PRE-แนวทาง3.jpg"
+            style="width: 40vh; height: 40vh; justify-content: center"
+            alt="แนวทางปี3"
+          />
+          <div class="year-box">
+            <h3>ชั้นปีที่3</h3>
+            <p>
+              นักศึกษาสามารถอธิบายหลักการ วิธีการและเทคนิคทางด้าน
+              บริหารอุตสาหกรรม สามารถบูรณาการความรู้ทั้งด้านระบบ
+              การผลิตและการบริหารอุตสาหกรรมในการแก้ปัญหา อุตสาหกรรม
+              สามารถสื่อสารและกระตุ้นทีมให้เกิด ความร่วมมือในการทำงาน
+            </p>
+          </div>
+        </div>
+        <div class="Year4 year-row reverse">
+          <img
+            src="./images/PRE/PRE-แนวทาง4.jpg"
+            style="width: 40vh; height: 40vh"
+            alt="แนวทางปี4"
+          />
+          <div class="year-box">
+            <h3>ชั้นปีที่4</h3>
+            <p>
+              นักศึกษาสามารถวิเคราะห์ปัญหา
+              บูรณาการความรู้ด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้อง
+              เพื่อแก้ปัญหาในภาคการผลิตและบริการอย่างเป็นระบบ
+              ภายใต้จรรยาบรรณวิศวกร มีทักษะการสื่อสาร การทำงานเป็นทีม
+              และสามารถเรียนรู้ด้วยตนเองได้อย่างต่อเนื่องได้
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <!-- PLO -->
-    <div>
-      <div id="section-5" class="PLO-underline">
-        <h2>ผลลัพธ์การเรียนรู้ระดับหลักสูตร</h2>
-        <h2>(Program Learning Outcome: PLOs)</h2>
+    <div id="section-5" class="plo-section">
+      <div class="plo-title">
+        <div class="plo-underline">
+          <h1>ผลลัพธ์การเรียนรู้ระดับหลักสูตร</h1>
+          <h3>(Program Learning Outcome: PLOs)</h3>
+        </div>
       </div>
-      <div class="PLO1-card">
-        <h4>PLO-1</h4>
-        <p>
-          ความรู้และทักษะด้านระบบการผลิตบัณฑิตสามารถบูรณาการความรู้
-          และทักษะด้านระบบการผลิตทั้งขั้น พื้นฐานและเทคโนโลยีอัจฉริยะใน
-          การแก้ปัญหา อุตสาหกรรมได้
-        </p>
-        <button class="PLO-card-detail">
-          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-        </button>
-      </div>
-      <div class="PLO2-card">
-        <h4>PLO-2</h4>
-        <p>
-          ความรู้และทักษะด้านการบริหารอุตสาหกรรม บัณฑิตสามารถบูรณาการ ความรู้
-          และทักษะด้านการบริหาร อุตสาหกรรม ในการแก้ปัญหา อุตสาหกรรมในภาค
-          การผลิตหรือ การบริการได้โดยตระหนัก ถึงความปลอดภัย สังคมสาธารณะ และ
-          สิ่งแวดล้อมเพื่อการพัฒนาอย่างยั่งยืน
-        </p>
-        <button class="PLO-card-detail">
-          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-        </button>
-      </div>
-      <div class="PLO3-card">
-        <h4>PLO-2</h4>
-        <p>
-          การคิดอย่างเป็นระบบ บัณฑิตเป็น ผู้มีความคิดเชิงระบบ สามารถ
-          บูรณาการความรู้ทางด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้อง
-          ในการแก้ปัญหาอุตสาหกรรม
-          รวมถึงรองรับเทคโนโลยีอัจฉริยะได้ภายใต้จรรยาบรรณวิศวกร
-        </p>
-        <button class="PLO-card-detail">
-          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-        </button>
-      </div>
-      <div class="PLO4-card">
-        <h4>PLO-2</h4>
-        <p>
-          ทักษะการเรียนรู้ด้วยตนเอง
-          บัณฑิตเป็นผู้มีความสามารถในการเรียนรู้ด้วยตนเอง
-        </p>
-        <button class="PLO-card-detail">
-          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-        </button>
-      </div>
-      <div class="PLO5-card">
-        <h4>PLO-2</h4>
-        <p>
-          ทักษะการสื่อสารและทำงานเป็นทีม
-          บัณฑิตเป็นผู้มีความสามารถในการสื่อสารเพื่อการนำเสนอและการ ทำงานเป็นทีม
-        </p>
-        <button class="PLO-card-detail">
-          <p><i class="fa-solid fa-circle-plus"></i>รายละเอียดSubPLO</p>
-        </button>
+
+      <div class="container-bg">
+        <div class="container swiper">
+          <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+              <%- include('../partials/PLOs/PLO-PRE/PLO1.ejs') %> <%-
+              include('../partials/PLOs/PLO-PRE/PLO2.ejs') %> <%-
+              include('../partials/PLOs/PLO-PRE/PLO3.ejs') %> <%-
+              include('../partials/PLOs/PLO-PRE/PLO4.ejs') %> <%-
+              include('../partials/PLOs/PLO-PRE/PLO5.ejs') %>
+            </ul>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- <div class="PLO1-overlay">
-      <div class="PLO1-popup">
-        <h3>SubPLO-1A</h3>
-        <ul>
-          <li>1.1 บูรณาการความรู้ทางด้านวิทยาศาสตร์และวิศวกรรมพื้นฐาน</li>
-          <li>1.2 วิเคราะห์ ออกแบบ และปรับปรุงกระบวนการผลิต</li>
-          <li>1.3 ใช้เทคโนโลยีอัจฉริยะในระบบการผลิต</li>
-        </ul>
-        <button class="close-btn">ปิด</button>
+    <div id="plo-modal" class="plo-modal">
+      <div class="plo-modal-overlay"></div>
+      <div class="plo-modal-content">
+        <button class="plo-modal-close">&times;</button>
+        <div id="plo-modal-body"></div>
       </div>
-    </div> -->
+    </div>
+    <%- include('../partials/swiper.ejs')%>
+    <script src="/js/assets/PLO.js"></script>
     <!-- อาชีพอนาคต -->
-    <div id="section-6" class="work-box">
-      <div class="work-underline">
-        <h4>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา</h4>
+    <div id="section-6" class="work">
+      <div>
+        <div class="work-underline">
+          <h4>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา</h4>
+        </div>
+        <div class="work-box">
+          <ul>
+            <li>วิศวกรอุตสาหการในทุกองค์กร</li>
+            <li>วิศวกรออกแบบวิธีการทำงานหรือการผลิต</li>
+            <li>วิศวกรวางแผนและควบคุมกระบวนการผลิต</li>
+            <li>วิศวกรควบคุมคุณภาพในโรงงานอุตสาหกรรม</li>
+            <li>วิศวกรความปลอดภัย</li>
+            <li>วิศวกรขายและ/หรือให้คำบริการด้านเทคนิค</li>
+            <li>วิศวกรประเมินโครงการสินเชื่อธนาคาร</li>
+          </ul>
+        </div>
       </div>
-      <ul>
-        <li>วิศวกรอุตสาหการในทุกองค์กร</li>
-        <li>วิศวกรออกแบบวิธีการทำงานหรือการผลิต</li>
-        <li>วิศวกรวางแผนและควบคุมกระบวนการผลิต</li>
-        <li>วิศวกรควบคุมคุณภาพในโรงงานอุตสาหกรรม</li>
-        <li>วิศวกรความปลอดภัย</li>
-        <li>วิศวกรขายและ/หรือให้คำบริการด้านเทคนิค</li>
-        <li>วิศวกรประเมินโครงการสินเชื่อธนาคาร</li>
-      </ul>
+      <img src="./images/PRE/PRE-work.jpg" alt="Work-pic" />
     </div>
-    <img src="" class="work-pic" alt="" />
+
     <!-- เอกสารเพิ่มเติม -->
-    <div id="section-7" class="หลักสตร-gradient">
-      <img src="" class="หลักสตร-bg" alt="" />
-    </div>
-    <div class="หลักสูตร-box">
-      <div class="หลักสูตร-underline">
-        <h4>เอกสารเพิ่มเติม</h4>
+    <div id="section-7" class="papers">
+      <div>
+        <div class="papers-underline">
+          <h4>เอกสารหลักสูตรเพิ่มเติม(2023)</h4>
+        </div>
+
+        <button class="papers-box">
+          <a
+            href="https://drive.google.com/file/d/1EokGrafZ87qYPUR_4CrahSM-6SPD3G5R/view?usp=sharing"
+            target="_blank"
+            >Program Pofile</a
+          >
+        </button>
+        <button class="papers-box">
+          <a
+            href="https://drive.google.com/file/d/1NY0fhTHPN0ugy40Pe60Po3-0IsvjO0iW/view?usp=sharing"
+            target="_blank"
+            >Program Details</a
+          >
+        </button>
       </div>
     </div>
     <%- include('../partials/footer')-%>

@@ -5,9 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastScroll = window.scrollY;
   let lockNavbar = false;
 
-  /* =====================
-     OFFCANVAS
-  ===================== */
+  /* OFFCANVAS */
   document.addEventListener("shown.bs.offcanvas", () => {
     lockNavbar = true;
     navbar.style.top = "0";
@@ -17,9 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lockNavbar = false;
   });
 
-  /* =====================
-     DROPDOWN (manual)
-  ===================== */
+  /* DROPDOWN (manual) */
   document
     .querySelectorAll(".offcanvas .nav-item.dropdown > .nav-link")
     .forEach((link) => {
@@ -29,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const menu = link.nextElementSibling;
         if (!menu) return;
 
-        // ปิด dropdown อื่น
         document
           .querySelectorAll(".offcanvas .dropdown-menu.show")
           .forEach((d) => {
@@ -41,9 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  /* =====================
-     SCROLL ANIMATION
-  ===================== */
+  /* SCROLL ANIMATION */
   window.addEventListener("scroll", () => {
     if (lockNavbar) return;
 

@@ -9,8 +9,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #ff5900;
-  transition: top 0.5s ease;
+  background-image: linear-gradient(to bottom, #ff5900 80%, #ffec48);
   z-index: 1055;
 }
 
@@ -36,7 +35,7 @@
 .navbar-brand img,
 .offcanvas-header img {
   margin: 0 1rem;
-  height: 100px;
+  height: 80px;
   width: auto;
 }
 
@@ -49,7 +48,7 @@
 }
 
 .offcanvas-body {
-  margin: 1em;
+  margin: 0.5em;
 }
 
 .navbar-toggler {

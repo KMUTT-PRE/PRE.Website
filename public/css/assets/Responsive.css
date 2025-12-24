@@ -94,6 +94,7 @@
 
 /* ------PRE------ */
 @media (max-width: 1024px) {
+  /* Head */
   .pre-layout {
     flex-direction: column;
   }
@@ -135,11 +136,121 @@
     max-width: 480px;
   }
 
+  /* Name */
   .namebox {
     padding: 2em 2em;
     gap: 20px;
   }
+
+  .Breadcrumb {
+    margin-top: 7em;
+  }
+
+  /* วัตถุประสงค์ */
+  .วัตถุประสงค์ {
+    flex-direction: column;
+    padding: 6vh 5em;
+  }
+
+  .วัตถุประสงค์ img {
+    width: 100%;
+    max-height: 40vh;
+  }
+
+  .วัตถุประสงค์-underline {
+    width: 100%;
+  }
+
+  /* แนวทางแต่ละชั้นปี */
+  #section-4 {
+    padding: 0 8vw;
+  }
+
+  .แนวทาง-underline {
+    width: 100%;
+  }
+
+  .แนวทาง-underline h2 {
+    width: 30vh;
+    justify-content: center;
+  }
+
+  .year-row,
+  .year-row.reverse {
+    flex-direction: column;
+  }
+
+  .year-row img,
+  .year-box {
+    width: 100%;
+  }
+
+  .year-row img {
+    max-height: 32vh;
+  }
+
+  .year-row {
+    margin-bottom: 7vh;
+  }
+
+  .year-box p {
+    font-size: 20px;
+  }
+
+  /* PLO */
+  .plo-underline h3 {
+    width: auto;
+    font-size: 26px;
+  }
+
+  .card-wrapper {
+    width: 95%;
+  }
+
+  .plo-modal-content {
+    width: 92%;
+    max-width: 720px;
+    max-height: 85vh;
+    padding: 2em;
+  }
+
+  /* งานอนาคต */
+  #section-6.work {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 5vh 6vw;
+  }
+
+  .work-underline h4 {
+    justify-content: center;
+    width: 40vh;
+  }
+
+  #section-6 img {
+    width: 40vh;
+    margin-top: 3vh;
+  }
+
+  /* papers */
+  .papers-box {
+    width: 240px;
+    height: 75px;
+    font-size: 17px;
+  }
+
+  .papers-underline h4 {
+    width: 30vh;
+  }
 }
+
+@media (max-width: 1366px) {
+  .card-wrapper {
+    width: 90%;
+    margin: 8vh auto;
+  }
+}
+
 @media (max-width: 768px) {
   .pre-left {
     padding: 1.5em;
@@ -162,7 +273,12 @@
   }
 
   .namebox {
+    width: 100%;
     padding: 1em;
+  }
+
+  .Breadcrumb {
+    margin-top: 5em;
   }
 
   /* overlay */
@@ -182,6 +298,123 @@
 
   .overlay-main p {
     font-size: 14px;
+  }
+
+  /* วัตถุประสงค์ */
+  .วัตถุประสงค์ {
+    padding: 5vh 2em;
+    gap: 3em;
+  }
+
+  .วัตถุประสงค์-underline h2 {
+    font-size: 24px;
+  }
+
+  .วัตถุประสงค์-box {
+    padding: 2.5vh 2em;
+  }
+
+  .วัตถุประสงค์-box li {
+    font-size: 18px;
+  }
+
+  /* แนวทางแต่ละชั้นปี */
+  #section-4 {
+    padding: 5vh 2em;
+  }
+
+  .underline h2 {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .year-row img {
+    max-height: 26vh;
+  }
+
+  .year-box {
+    padding: 2.5vh 2em;
+  }
+
+  .year-box p {
+    font-size: 18px;
+  }
+
+  /* PLO */
+  #section-5.plo-section {
+    padding: 4vh 0;
+  }
+
+  .plo-title h1 {
+    font-size: 26px;
+  }
+
+  .plo-title h3 {
+    font-size: 18px;
+  }
+
+  .card-wrapper {
+    width: 100%;
+    margin: 4vh auto;
+  }
+
+  .card-plo {
+    height: auto;
+    min-height: 420px;
+  }
+
+  .plo-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0.8em 1em 1em;
+  }
+
+  .plo-open {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .plo-modal-content {
+    width: 95%;
+    max-width: none;
+    max-height: 90vh;
+
+    padding: 1.5em;
+    border-radius: 14px;
+  }
+
+  .plo-modal-close {
+    font-size: 2.2em;
+    top: 8px;
+    right: 12px;
+  }
+
+  /* งานในอนาคต */
+  .work-underline h4 {
+    font-size: 1.3em;
+  }
+
+  .work-box li {
+    font-size: 1em;
+  }
+
+  #section-6 img {
+    width: 80%;
+  }
+
+  /* papers */
+  #section-7.papers {
+    padding: 5vh 6vw;
+  }
+
+  .papers-box {
+    width: 100%;
+    height: 70px;
+    margin-right: 0;
+  }
+
+  .papers-box a {
+    font-size: 16px;
   }
 }
 
