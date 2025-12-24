@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personel</title>
+        
+        <link rel="stylesheet" href="pers_card.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" /> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        
+    </head>
+    <body>
+    <!-- สร้างเมนู -->
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="color:black;background-color:rgb(255, 128,0);font-weight:bold">
+        <div class="container">
+            <a href="../" class="nav-link navbar-brand">< Home </a>
+            <a style="color: blue;">คณาจารย์ เจ้าหน้าที่และนายช่างเทคนิค</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#top" class="nav-link navbar-brand" style="font-size:medium">ผู้บริหาร</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#subhead" class="nav-link navbar-brand" style="font-size:medium">หัวหน้าสาขา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#lecturer" class="nav-link navbar-brand" style="font-size:medium">อาจารย์ประจำภาควิชา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#support" class="nav-link navbar-brand" style="font-size:medium">นายช่างเทคนิค</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">ติดต่องาน</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        <section id="top"></section>
+
+            <div class="container team" style = "margin-top:40px">
+                <!-- Use Bootstrap flex utilities to arrange cards horizontally; g-3 adds gap -->
+
+                    <!-- row 0.0 หัวหน้าภาควิชา -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title">ผู้บริหาร</h5>
+                        </div>
+                    </div>
+
+                        <!-- row 0.1 หัวหน้าภาควิชา -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p00_xomporn', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/xomporn.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p00_xomporn', '_blank', 'width=600,height=560,noopener'); return false;">ดร.สมพร เพียรสุขมณี</a>
+                                </h6>
+                                <h6 class="ms-1" >หัวหน้าภาควิชา</h6>     
+                                <h6 class="ms-1" >วิศวกรรมอุตสาหการ</h6>                        
+                            </div>
+                        </div>
+                    </div>         
+
+                    <!-- row 0.2 ผศ. ดร.เชษฐพงษ์ จรรยาอนุรักษ์  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p18_chettapong', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/chettapong.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p18_chettapong', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ. ดร.เชษฐพงษ์ จรรยาอนุรักษ์</a>
+                                </h6>  
+                                <h6 class="ms-1" >เลขานุการภาควิชา</h6>     
+                                <h6 class="ms-1" >วิศวกรรมอุตสาหการ</h6>               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 0.3 ผศ. ดร.ไชยา ดำคำ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p05_chaiya', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/chaiya.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p05_chaiya', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ. ดร.ไชยา ดำคำ</a>
+                                </h6>
+                                <h6 class="ms-1" >รองคณบดีฝ่ายบริหาร</h6>     
+                                <h6 class="ms-1" >คณะวิศวกรรมศาสตร์</h6>               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 0.4 ศ.ดร.เชาวลิต ลิ้มมณีวิจิตร -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p27_chaowalit', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/chaowalit.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p27_chaowalit', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ศ. ดร.เชาวลิต ลิ้มมณีวิจิตร</a>
+                                </h6>
+                                <h6 class="ms-1" >รองอธิการบดี</h6>     
+                                <h6 class="ms-1" >มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</h6>                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- row 2.0 ประธานหลักสูตร -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title">ประธานหลักสูตร</h5>
+                        </div>
+                    </div>
+
+                    <!-- row 2.1 วิศวกรรมอุตสาหการ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p04_ussaneei', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/ussaneei.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p04_ussaneei', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ. ดร.อุษณีษ์ คำพูล</a>
+                                </h6>
+                                <h6 class="ms-1 small text-center">วิศวกรรมอุตสาหการ</h6>           
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 2.2 วิศวกรรมเมคคาทรอนิคส์ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p15_pinet', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/pinet.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p02_viboon', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.พิเนษฐ์ ศรีโยธา </a>
+                                </h6>
+                                <h6 class="ms-1 small">วิศวกรรมเมคคาทรอนิคส์</h6>                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 2.3 วิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p06_phromphong', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/phromphong.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p06_phromphong', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">รศ. ดร.พร้อมพงษ์ ปานดี</a>
+                                </h6>
+                                <h6 class="ms-1 small">วิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ</h6>                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 2.4 สาขาวิชาวิศวกรรมอุตสาหการและระบบการผลิต -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p07_chorkaew', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/chorkaew.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p07_chorkaew', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ. ดร.ช่อแก้ว จตุรานนท์ </a>
+                                </h6>
+                                <h6 class="ms-1 small">สาขาวิชาวิศวกรรมอุตสาหการและระบบการผลิต</h6>
+                                <h6 class="ms-1 small">ระดับปริญญาโท-เอก</h6>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="subhead"></section>
+
+                    <!-- row 3.0 หัวหน้าสาขา -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title">หัวหน้าสาขาวิชา</h5>
+                        </div>
+                    </div>
+
+                    <!-- row 3.1 วิศวกรรมระบบการผลิต -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p02_viboon', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/viboon.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p02_viboon', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">รศ. ดร.วิบุญ แซ่ตั้ง</a>
+                                </h6>
+                                <h6 class="ms-1 small">วิศวกรรมระบบการผลิต</h6>                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 3.2 สาขาวิศวกรรมหล่อโลหะและโลหการ -->  
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p08_supparerk', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/supparerk.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p08_supparerk', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.ศุภฤกษ์ บุญเทียร</a>
+                                </h6>
+                                <h6 class="ms-1 small">สาขาวิศวกรรมหล่อโลหะและโลหการ</h6>                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 3.3 วิศวกรรมการเชื่อม -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p01_bovornchok', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/bovornchok.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p01_bovornchok', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">รศ. ดร.บวรโชค ผู้พัฒน์</a>
+                                </h6>
+                                <h6 class="ms-1 small">วิศวกรรมการเชื่อม</h6>                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 3.4 บริหารอุตสาหกรรม -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p04_ussaneei', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/ussaneei.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p04_ussaneei', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ. ดร.อุษณีษ์ คำพูล</a>
+                                </h6>
+                                <h6 class="ms-1 small text-center">บริหารอุตสาหกรรม</h6>           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <section id="lecturer"></section>
+
+                    <!-- row 4.0 อาจารย์ประจำภาควิชา -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title">อาจารย์ประจำภาควิชา</h5>
+                        </div>
+                    </div>
+
+                    <!-- row 4.1 ผศ. ดร.สมบุญ เจริญวิไลศิริ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p12_sombun', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/sombun.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p12_sombun', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ. ดร.สมบุญ เจริญวิไลศิริ</a>
+                                </h6>                 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 4.2 รศ. ดร.เจริญชัย โขมพัตราภรณ์ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p14_charoenchai', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/charoenchai.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p14_charoenchai', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">รศ. ดร.เจริญชัย โขมพัตราภรณ์</a>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 4.3 ดร.ก้องเกียรติ ปุภรัตนพงษ์ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p03_kongkiat', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/kongkiat.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p03_kongkiat', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.ก้องเกียรติ ปุภรัตนพงษ์</a>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 4.4 ผศ.พจมาน เตียวัฒนรัฐติกาล -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p16_pochamarn', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/pochamarn.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p16_pochamarn', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ.พจมาน เตียวัฒนรัฐติกาล</a>
+                                </h6>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <!-- row 5.0 อาจารย์ประจำภาควิชา -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title"></h5>
+                        </div>
+                    </div>
+
+                    <!-- row 5.1 อ.ชนากานต์ แคล้วอ้อม -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p13_chanakan', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/chanakan.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p13_chanakan', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">อ.ชนากานต์ แคล้วอ้อม</a>
+                                </h6>                 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 5.2 อ.เจษฎา จันทวงษ์โส -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p09_jessada', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/jessada.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p09_jessada', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">อ.เจษฎา จันทวงษ์โส</a>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 5.3 ผศ. มงคล สีนะวัฒน์ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p10_mongkol', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/mongkol.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p10_mongkol', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ. มงคล สีนะวัฒน์</a>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 5.4 อ.นพณรงค์ ศิริเสถียร -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p20_nopnarong', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/nopnarong.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p20_nopnarong', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">อ.นพณรงค์ ศิริเสถียร</a>
+                                </h6>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- row 6.0 อาจารย์ประจำภาควิชา -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title"></h5>
+                        </div>
+                    </div>
+
+                    <!-- row 6.1 ดร.ชาณุพล ตระการไชโย   -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p22_chanuphon', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/chanuphon.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p22_chanuphon', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.ชาณุพล ตระการไชโย </a>
+                                </h6>                 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 6.2 ดร.พงษ์ศักดิ์ ถึงสุข   -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p11_pongsak', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/pongsak.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p11_pongsak', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.พงษ์ศักดิ์ ถึงสุข</a>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 6.3 ดร.ไพบูลย์ ช่วงทอง  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p17_paiboon', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/paiboon.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p17_paiboon', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.ไพบูลย์ ช่วงทอง</a>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 6.4 ดร.สุริยพงศ์ นิลสังข์  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p23_suriyaphong', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/suriyaphong.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p23_suriyaphong', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.สุริยพงศ์ นิลสังข์ </a>
+                                </h6>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <!-- row 7.0 อาจารย์ประจำภาควิชา -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title"></h5>
+                        </div>
+                    </div>
+
+                    <!-- row 7.1 อ.นพดล พลายชุม -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p21_noppadon', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/noppadon.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p21_noppadon', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">อ.นพดล พลายชุม</a>
+                                </h6>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 7.2 ดร.อิทธิฤทธิ์ โมหะหมัด   -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p24_Ittirit', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/Ittirit.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p24_Ittirit', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.อิทธิฤทธิ์ โมหะหมัด</a>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 7.3 ดร.ฐิตินันท์ มีทอง  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/p19_titinan', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/titinan.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/p19_titinan', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.ฐิตินันท์ มีทอง</a>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 7.4  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title"></h5>
+                        </div>
+                    </div>
+
+
+                    <!-- row 7.5  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title"></h5>
+                        </div>
+                    </div>
+
+        <section id="support"></section>
+
+                    <!-- row 8.0 นายช่างเทคนิค -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title">นายช่างเทคนิค</h5>
+                        </div>
+                    </div>
+
+                    <!-- row 8.1 นายสุธีภรณ์ เครือวงศ์ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <p><img class="card-img-top pers-card-img" src="../images/pers_pic/support/suteeporn.jpg" alt="" /></p>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <p style = "font-size: medium;">นายสุธีภรณ์ เครือวงศ์</p>
+                                </h6>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 8.2 นายคมกริช กองสินหลาก -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <p><img class="card-img-top pers-card-img" src="../images/pers_pic/support/komgrich.jpg" alt="" /></p>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <p style = "font-size: medium;">นายคมกริช กองสินหลาก</p>
+                                </h6>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 8.3 นายนพดล จันทร  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <p><img class="card-img-top pers-card-img" src="../images/pers_pic/support/noppadol.jpg" alt="" /></p>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <p style = "font-size: medium;">นายนพดล จันทร</p>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 8.4  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title"></h5>
+                        </div>
+                    </div>
+
+                    <!-- row 8.5  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title"></h5>
+                        </div>
+                    </div>
+
+                    <!-- row 9.0 เจ้าหน้าที่ -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                                <h5 class="section-title">เจ้าหน้าที่</h5>
+                        </div>
+                    </div>
+
+                    <!-- row 9.1 นางสาวราตรี รอดแก้ว -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <p><img class="card-img-top pers-card-img" src="../images/pers_pic/support/ratree.jpg" alt="" /></p>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <p style = "font-size: medium;">นางสาวราตรี รอดแก้ว</p>
+                                    <span class="ms-1" >นักบริหารงานทั่วไป (แผน/งบประมาณ)</span>   
+                                </h6>   
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row 9.1 นางสาวณธิกา ยิ้มวิไล -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <p><img class="card-img-top pers-card-img" src="../images/pers_pic/support/natika.jpg" alt="" /></p>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <p style = "font-size: medium;">นางสาวณธิกา ยิ้มวิไล</p>
+                                    <span class="ms-1" >นักบริหารงานทั่วไป (บริการการศึกษา)</span> 
+                                </h6>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 9.3 นางสาวอภิษฎา นริศเนตร  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <p><img class="card-img-top pers-card-img" src="../images/pers_pic/support/apisada.jpg" alt="" /></p>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <p style = "font-size: medium;"> </p>
+                                    <p style = "font-size: medium;"> </p>
+                                    <p style = "font-size: medium;">นางสาวอภิษฎา นริศเนตร</p>
+                                    <span class="ms-1" >นักบริหารงานทั่วไป (จัดซื้อ/จัดจ้าง)</span>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 9.4 นายพิชญ์พิชัย ใจคง -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <p><img class="card-img-top pers-card-img" src="../images/pers_pic/support/phitphichai.jpg" alt="" /></p>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <p style = "font-size: medium;">นายพิชญ์พิชัย ใจคง</p>
+                                    <span class="ms-1" >ผู้ช่วยธุรการ (บริการการศึกษา)</span>
+                                </h6>                      
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- row 99 -->
+            </div>
+    <div>
+    <a href="#top" class="navbar brand text-left" data-bs-theme="dark"><i class="text-dark ms-2 fs-5 fw-bolder" style = "width: 120%;font-weight: bolder;background-color: rgb(255, 128,0); margin-left: 10px;">Top</i></a>
+    </div>
+
+    </body>
+</html>
