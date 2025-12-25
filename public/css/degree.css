@@ -116,7 +116,7 @@
 .overlay-main h3:first-child {
   color: #ff5900;
   opacity: 1;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
 }
 
@@ -215,65 +215,13 @@
   padding: 0 40vh 0 40vh;
 }
 
-.แนวทาง-underline {
-  text-align: center;
-  margin-bottom: 7vh;
-  width: 100%;
-  border: none;
-}
-
-.แนวทาง-underline h2 {
-  font-size: 30px;
-  color: #ff5900;
-  font-weight: 700;
-  display: inline-block;
-  padding-bottom: 0.3em;
-  border-bottom: 4px solid #ff5900;
-  width: 80vh;
-}
-
-.year-row {
-  display: flex;
-  align-items: center;
-  gap: 4em;
-  margin-bottom: 10vh;
-}
-
-.year-row.reverse {
-  flex-direction: row-reverse;
-}
-
-.year-row img {
-  width: 35vh;
-  max-height: 30%;
-  object-fit: cover;
-  border-radius: 0.6em;
-}
-
-.year-box {
-  width: 50%;
-  max-height: 100vh;
-  background: #ff5900;
-  color: #fff;
-  padding: 3vh 3em;
-  border-radius: 1em;
-  list-style: decimal;
-  box-shadow: 0 1em 2em rgba(0, 0, 0, 0);
-}
-
-.year-box h3 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 2vh;
-}
-
-.year-box p {
-  font-size: 18px;
-  line-height: 1.9;
-}
-
 /* PLO */
 #section-5.plo-section {
+  padding: 1vh;
+  background: #ff5900;
+}
+
+#section-6.plo-section {
   padding: 1vh;
   background: #ff5900;
 }
@@ -300,13 +248,14 @@
 }
 
 .container.swiper {
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  max-width: 920px;
+  margin: 8vh auto;
 }
 
-.card-wrapper {
-  margin: 10vh auto;
-  width: 80%;
+.card-plo {
+  width: 270px;
+  list-style: none;
 }
 
 .card-wrapper .swiper-slide-button {
@@ -334,7 +283,7 @@
 }
 
 /* Work */
-#section-6.work {
+#section-7.work {
   width: 100%;
   min-height: 70vh;
   padding: 0 8em;
@@ -379,7 +328,7 @@
   margin-bottom: 0.6em;
 }
 
-#section-6 img {
+#section-7 img {
   width: 60vh;
   margin-top: 10vh;
   height: auto;
@@ -389,14 +338,14 @@
 }
 
 /* เอกสาร */
-#section-7.papers {
+#section-8.papers {
   width: 100%;
   padding: 6vh 8vw;
   display: flex;
   justify-content: center;
 }
 
-#section-7.papers > div {
+#section-8.papers > div {
   width: 100%;
   max-width: 1000px;
 }
@@ -424,7 +373,6 @@
   background: #ff5900;
   border-radius: 10px;
   border: none;
-
   cursor: pointer;
 }
 

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/navbar', { title : 'ISEE'} ) %>
+
+    <link rel="stylesheet" href="../css/subject.css" />
+    <link rel="stylesheet" href="../css/assets/Responsive.css" />
+  </head>
+  <body>
+    <%- include('../partials/topbtn') %>
+    <!-- LEFT -->
+    <div class="pre-layout">
+      <aside class="pre-left">
+        <div class="Breadcrumb">
+          <a href="/">หน้าหลัก</a>
+          <span><i class="fa-solid fa-chevron-right"></i></span>
+          <span>ISEE</span>
+        </div>
+        <span class="Breadcrumb-underline"></span>
+
+        <nav class="primary-navigation">
+          <p class="Anchor">ในหน้านี้</p>
+          <ul>
+            <li>
+              <a href="#section-1">ISEE</a>
+            </li>
+            <li><a href="#section-2">ชื่อหลักสูตร</a></li>
+            <li><a href="#section-3">วัตถุประสงค์</a></li>
+            <li><a href="#section-4">แนวทางการเรียนรู้แต่ละชั้นปี</a></li>
+            <li><a href="#section-5">PLO</a></li>
+            <li><a href="#section-6">อาชีพในอนาคต</a></li>
+            <li><a href="#section-7">เอกสาร</a></li>
+          </ul>
+        </nav>
+        <script src="./js/assets/Navigation.js"></script>
+      </aside>
+
+      <!-- RIGHT -->
+      <section id="section-1" class="pre-right">
+        <div class="carousel-wrapper">
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="5000"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active hero-img">
+                <img
+                  src="./images/PRE/PRE-mainpic1.jpg"
+                  class="d-block w-100"
+                  alt="HomepagePic1"
+                />
+              </div>
+              <div class="carousel-item hero-img">
+                <img
+                  src="./images/PRE/PRE-mainpic2.jpg"
+                  class="d-block w-100"
+                  alt="HomepagePic2"
+                />
+              </div>
+              <div class="carousel-item hero-img">
+                <img
+                  src="./images/PRE/PRE-mainpic3.jpg"
+                  class="d-block w-100"
+                  style="object-position: bottom"
+                  alt="HomepagePic3"
+                />
+              </div>
+              <div class="carousel-item hero-img">
+                <img
+                  src="./images/PRE/PRE-mainpic4.jpg"
+                  class="d-block w-100"
+                  alt="HomepagePic4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <%- include('../partials/bootstrapend') %>
+        <script src="./js/PRE-mainpic.js"></script>
+        <div class="overlay-main" style="margin-top: 8vh">
+          <h3>Engineering Program in Industrial Systems(ISEE)</h3>
+          <h3>วิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ</h3>
+          <p>
+            มีที่มาจากความจำเป็นในการปรับตัวของภาคการศึกษาให้สอดคล้องกับทิศทางการพัฒนาเศรษฐกิจและสังคมในยุคอุตสาหกรรม
+            5.0 ซึ่งมุ่งผสานเทคโนโลยีอัจฉริยะกับศักยภาพมนุษย์
+            เพื่อพัฒนาระบบการผลิตและบริการอย่างยั่งยืน
+            โดยใช้แนวคิดวิศวกรรมระบบในการออกแบบกระบวนการที่รองรับความซับซ้อนของอุตสาหกรรมสมัยใหม่
+          </p>
+        </div>
+      </section>
+    </div>
+    <!-- PRE name -->
+    <div id="section-2" class="namebox" style="padding: 1em 12em">
+      <span>
+        <div class="name1-underline"><h4>ชื่อหลักสูตร</h4></div>
+        <p>
+          หลักสูตรวิศวกรรมศาสตรบัณฑิต สาขาวิศวกรรมระบบ
+          อุตสาหกรรมและการประกอบการธุรกิจ
+        </p>
+        <p>
+          Bachelor of Engineering Program in Industrial Systems Engineering and
+          Entrepreneurship
+        </p>
+      </span>
+      <span>
+        <div class="name2-underline"><h4>ชื่อปริญญาและสาขาวิชา</h4></div>
+        <h5>ชื่อเต็ม</h5>
+        <p>
+          วิศวกรรมศาสตรบัณฑิต (วิศวกรรมระบบอุตสาหกรรมและการ ประกอบการธุรกิจ)
+        </p>
+        <p>
+          Bachelor of Engineering (Industrial Systems Engineering and
+          Entrepreneurship)
+        </p>
+        <h5>ชื่อย่อ</h5>
+        <p>วศ.บ. (วิศวกรรมระบบอุตสาหกรรมและการประกอบการธุรกิจ)</p>
+        <p>B.Eng. (Industrial Systems Engineering and Entrepreneurship)</p>
+      </span>
+    </div>
+    <!-- วัตถุประสงค์ -->
+    <div id="section-3" class="วัตถุประสงค์">
+      <img src="./images/PRE/PRE-วัตถุประสงค์.jpg" alt="วัตถุประสงค์" />
+
+      <div class="วัตถุประสงค์-underline">
+        <h2>เป้าหมายการเรียนรู้</h2>
+        <ul class="วัตถุประสงค์-box">
+          <li>
+            ผลิตบัณฑิตที่มีความรู้ และทักษะด้านวิศวกรรมระบบอุตสาหกรรม
+            เพื่อสามารถออกแบบ วิเคราะห์
+            และปรับปรุงระบบอุตสาหกรรมให้มีประสิทธิภาพสูงสุด
+            โดยประยุกต์ใช้แนวคิดและเครื่องมือทาง วิศวกรรมที่ทันสมัย
+          </li>
+          <li>
+            ส่งเสริมทักษะในการประกอบการธุรกิจ โดยเน้นการพัฒนาความคิดสร้างสรรค์
+            ความสามารถในการ ริเริ่มธุรกิจ การวางแผนและบริหารจัดการโครงการ
+            การพัฒนาผลิตภัณฑ์ และการจัดการนวัตกรรม ในบริบทของอุตสาหกรรม
+          </li>
+          <li>
+            เตรียมความพร้อมให้บัณฑิตสามารถปรับตัวในอุตสาหกรรมที่่เปลี่ยนแปลงอย่างรวดเร็ว
+            ด้วยทักษะ การเรียนรู้ตลอดชีวิต การปรับตัวตามเทคโนโลยีใหม่
+            และการบริหารจัดการการเปลี่ยนแปลงใน โรงงานอุตสาหกรรมและธุรกิจ
+          </li>
+          <li>
+            สร้างบัณฑิตที่มีคุณธรรม จริยธรรม และความรับผิดชอบต่อสังคม
+            สามารถนำความรู้ และทักษะ
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- แนวทางการเรียนรู้แต่ละชั้นปี -->
+    <div id="section-4" class="แนวทาง">
+      <div class="แนวทาง-underline">
+        <h2>แนวทางการจัดการเรียนรู้ของหลักสูตร</h2>
+      </div>
+      <div class="ชั้นปี-box">
+        <div class="Year1 year-row">
+          <img
+            src="./images/PRE/PRE-แนวทาง1.jpg"
+            style="width: 40vh; height: 40vh"
+            alt="แนวทางปี1"
+          />
+          <div class="year-box">
+            <h3>ชั้นปีที่1</h3>
+            <p>
+              อธิบายกระบวนการทำงาน และระบบพื้นฐานทางวิศวกรรม
+              ระบบอุตสาหกรรมและการประกอบการธุรกิจ พร้อมทั้ง
+              สื่อสารแนวคิดทางวิศวกรรมด้วยภาพ และแบบทาง เทคนิคได้อย่างถูกต้อง
+            </p>
+          </div>
+        </div>
+        <div class="Year2 year-row reverse">
+          <img
+            src="./images/PRE/PRE-แนวทาง2.jpg"
+            style="width: 40vh; height: 40vh"
+            alt="แนวทางปี2"
+          />
+          <div class="year-box">
+            <h3>ชั้นปีที่2</h3>
+            <p>
+              ประยุกต์ใช้ความรู้พื้นฐานทางคณิตศาสตร์ วิทยาศาสตร์ และวิศวกรรม
+              เพื่อวิเคราะห์และแก้ไขปัญหาเบื้องต้น
+              ในระบบอุตสาหกรรมและบริบทของธุรกิจ พร้อมทั้งประเมิน
+              ทางเลือกอย่างมีเหตุผล
+            </p>
+          </div>
+        </div>
+        <div class="Year3 year-row">
+          <img
+            src="./images/PRE/PRE-แนวทาง3.jpg"
+            style="width: 40vh; height: 40vh; justify-content: center"
+            alt="แนวทางปี3"
+          />
+          <div class="year-box">
+            <h3>ชั้นปีที่3</h3>
+            <p>
+              ออกแบบระบบงานหรือกระบวนการผลิตที่สอดคล้องกับ ข้อกำหนดด้าน
+              ประสิทธิภาพ ต้นทุน และความยั่งยืน
+              รวมถึงสามารถประเมินความเป็นไปได้ทางธุรกิจ และนำเสนอ
+              แผนงานได้อย่างมีประสิทธิภาพ
+            </p>
+          </div>
+        </div>
+        <div class="Year4 year-row reverse">
+          <img
+            src="./images/PRE/PRE-แนวทาง4.jpg"
+            style="width: 40vh; height: 40vh"
+            alt="แนวทางปี4"
+          />
+          <div class="year-box">
+            <h3>ชั้นปีที่4</h3>
+            <p>
+              ดำเนินโครงงานทางวิศวกรรมได้อย่างเป็นระบบ โดยคำนึงถึง
+              จรรยาบรรณวิชาชีพ เทคโนโลยีสมัยใหม่ ความยั่งยืน และการบริหารโครงการ
+              พร้อมทั้งพัฒนานวัตกรรม ที่ตอบ โจทย์ต่อสังคมและอุตสาหกรรม
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PLO -->
+    <div id="section-5" class="plo-section">
+      <div class="plo-title">
+        <div class="plo-underline">
+          <h1>ผลลัพธ์การเรียนรู้ระดับหลักสูตร</h1>
+          <h3>(Program Learning Outcome: PLOs)</h3>
+        </div>
+      </div>
+
+      <div class="container-bg">
+        <div class="container swiper">
+          <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+              <%- include('../partials/PLOs/PLO-ISEE/PLO-1.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-2.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-3.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-4.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-5.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-6.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-7.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-8.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-9.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-10.ejs') %> <%-
+              include('../partials/PLOs/PLO-ISEE/PLO-11.ejs') %>
+            </ul>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="plo-modal" class="plo-modal">
+      <div class="plo-modal-overlay"></div>
+      <div class="plo-modal-content">
+        <button class="plo-modal-close">&times;</button>
+        <div id="plo-modal-body"></div>
+      </div>
+    </div>
+    <%- include('../partials/swiper.ejs')%>
+    <script src="/js/assets/PLO.js"></script>
+    <!-- อาชีพอนาคต -->
+    <div id="section-6" class="work" style="margin-top: 2em">
+      <div>
+        <div class="work-underline">
+          <h4>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา</h4>
+        </div>
+        <div class="work-box">
+          <ul>
+            <li>วิศวกรระบบอุตสาหกรรม (Industrial Systems Engineer)</li>
+            <li>ผู้จัดการฝ่ายผลิต (Production Manager)</li>
+            <li>นักวิเคราะห์ข้อมูลทางอุตสาหกรรม (Industrial Data Analyst)</li>
+            <li>ผูู้ประกอบการ (Entrepreneur)</li>
+            <li>ผู้ก่อตั้งสตาร์ทอัพ (Start-Up Founder)</li>
+            <li>ผู้ประกอบการด้านเทคโนโลยี (Technopreneur)</li>
+            <li>ผู้ประกอบการนวัตกรรม (Innovation Entrepreneur)</li>
+            <li>นักออกแบบผลิตภัณฑ์นวัตกรรม (Innovative Product Designer)</li>
+            <li>นักออกแบบ/วางแผนนวัตกรรม (Innovation Designer / Planner)</li>
+            <li>ผู้จัดการโครงการวิศวกรรม (Engineering Project Manager)</li>
+          </ul>
+        </div>
+      </div>
+      <img src="./images/PRE/PRE-work.jpg" alt="Work-pic" />
+    </div>
+
+    <!-- เอกสารเพิ่มเติม -->
+    <div id="section-7" class="papers">
+      <div>
+        <div class="papers-underline">
+          <h4>เอกสารหลักสูตรเพิ่มเติม(2026)</h4>
+        </div>
+
+        <button class="papers-box">
+          <a href="#" target="_blank">Program Pofile</a>
+        </button>
+        <button class="papers-box">
+          <a href="#" target="_blank">Program Details</a>
+        </button>
+      </div>
+    </div>
+    <%- include('../partials/footer')-%>
+  </body>
+</html>

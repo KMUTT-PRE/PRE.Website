@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Thai", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.pre-layout {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* LEFT */
+.pre-left {
+  width: 60vh;
+  padding: 2em 5em;
+  background: #fff;
+}
+
+.Breadcrumb {
+  font-size: 14px;
+  margin-top: 15vh;
+}
+
+.Breadcrumb a {
+  color: #000;
+  text-decoration: none;
+}
+
+.Breadcrumb a:hover {
+  font-weight: 700;
+}
+
+.Breadcrumb span {
+  margin: 0 6px;
+}
+
+.Breadcrumb-underline {
+  display: block;
+  width: 250px;
+  border-bottom: 1px solid #000;
+  margin: 1vh 0 3vh;
+}
+
+/* left-navigation */
+.primary-navigation {
+  font-size: 14px;
+}
+
+.primary-navigation .Anchor {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 1vh;
+}
+
+.primary-navigation ul {
+  padding-left: 18px;
+}
+
+.primary-navigation li {
+  list-style: disc;
+  margin-bottom: 2vh;
+  font-size: 18px;
+}
+
+.primary-navigation a {
+  color: #000;
+  text-decoration: none;
+}
+
+.primary-navigation a:hover {
+  text-decoration: underline;
+  color: #ff5900;
+}
+
+/* RIGHT */
+.pre-right {
+  position: relative;
+  flex: 1;
+}
+
+.carousel-wrapper {
+  height: 85vh;
+  overflow: hidden;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+  object-position: center;
+  background: black;
+  opacity: 0.8;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 85vh;
+}
+
+/* overlay */
+.overlay-main {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  opacity: 0.95;
+  background: #eeeeee;
+  padding: 28px 32px;
+  max-width: 520px;
+  border-radius: 10px;
+}
+
+.overlay-main h3:first-child {
+  color: #ff5900;
+  opacity: 1;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.overlay-main h3:nth-child(2) {
+  color: #ff5900;
+  opacity: 1;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.overlay-main p {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 1;
+  line-height: 1.7;
+  color: #000000;
+}
+
+/* name section */
+.namebox {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 2em 20em;
+  background: #ff5900;
+  color: #fff;
+}
+
+.namebox span {
+  width: 50%;
+}
+
+.name1-underline h4,
+.name2-underline h4 {
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  font-size: 30px;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+.namebox p,
+.namebox h5 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* วัตถุประสงค์ */
+.วัตถุประสงค์ {
+  display: flex;
+  align-items: flex-start;
+  gap: 4em;
+  padding: 8vh 8em;
+  background: #f0f0f0;
+}
+
+.วัตถุประสงค์ img {
+  width: 28%;
+  max-height: 55vh;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+
+.วัตถุประสงค์-underline {
+  width: 72%;
+}
+
+.วัตถุประสงค์-underline h2 {
+  width: 40vh;
+  font-size: 2em;
+  font-weight: 700;
+  color: #ff5900;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  margin-bottom: 2vh;
+  border-bottom: 4px solid #ff5900;
+}
+
+.วัตถุประสงค์-box {
+  background: #ffffff;
+  padding: 3vh 4em;
+  border-radius: 0.6em;
+  box-shadow: 0 0.6vh 1.5vh #434343;
+}
+
+.วัตถุประสงค์-box li {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 1em;
+  padding-left: 0.3em;
+}
+
+/* แนวทางการเรียนรู้แต่ละชั้นปี */
+#section-4 {
+  padding: 0 40vh 0 40vh;
+}
+
+.แนวทาง-underline {
+  text-align: center;
+  margin-bottom: 7vh;
+  width: 100%;
+  border: none;
+}
+
+.แนวทาง-underline h2 {
+  font-size: 30px;
+  color: #ff5900;
+  font-weight: 700;
+  display: inline-block;
+  padding-bottom: 0.3em;
+  border-bottom: 4px solid #ff5900;
+  width: 80vh;
+}
+
+.year-row {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+  margin-bottom: 10vh;
+}
+
+.year-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.year-row img {
+  width: 35vh;
+  max-height: 30%;
+  object-fit: cover;
+  border-radius: 0.6em;
+}
+
+.year-box {
+  width: 50%;
+  max-height: 100vh;
+  background: #ff5900;
+  color: #fff;
+  padding: 3vh 3em;
+  border-radius: 1em;
+  list-style: decimal;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0);
+}
+
+.year-box h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 2vh;
+}
+
+.year-box p {
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* PLO */
+#section-5.plo-section {
+  padding: 1vh;
+  background: #ff5900;
+}
+
+.plo-title {
+  text-align: center;
+}
+
+.plo-title h1 {
+  color: #fff;
+  font-weight: 600;
+}
+
+.plo-underline {
+  width: 100%;
+}
+
+.plo-underline h3 {
+  width: 120vh;
+  color: #ffffff;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  border-bottom: 4px solid #ffffff;
+}
+
+.container.swiper {
+  display: flex;
+  justify-content: center;
+}
+
+.card-wrapper {
+  margin: 10vh auto;
+  width: 80%;
+}
+
+.card-wrapper .swiper-slide-button {
+  color: #ff5900;
+  margin-top: -35px;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #fff;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.swiper-slide-button {
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Work */
+#section-6.work {
+  width: 100%;
+  min-height: 70vh;
+  padding: 0 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+}
+
+.work-underline {
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.work-underline h4 {
+  width: 90vh;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #ff5900;
+  border-bottom: 3px solid #ff5900;
+  display: inline-block;
+  padding-bottom: 0.1em;
+}
+
+.work-box {
+  max-width: 520px;
+  background: #ff5900;
+  padding: 3vh 3em;
+  border-radius: 0.6em;
+  list-style: decimal;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0);
+}
+
+.work-box ul {
+  padding-left: 1.2em;
+  line-height: 2em;
+}
+
+.work-box li {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 0.6em;
+}
+
+#section-6 img {
+  width: 60vh;
+  margin-top: 10vh;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* เอกสาร */
+#section-7.papers {
+  width: 100%;
+  padding: 6vh 8vw;
+  display: flex;
+  justify-content: center;
+}
+
+#section-7.papers > div {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.papers-underline {
+  width: 100%;
+}
+
+.papers-underline h4 {
+  width: 80vh;
+  font-size: 28px;
+  margin-bottom: 3vh;
+  color: #ff5900;
+  border-bottom: 3px solid #ff5900;
+}
+
+.papers-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 80px;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+  background: #ff5900;
+  border-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.papers-box a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}

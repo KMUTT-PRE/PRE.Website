@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  list-style: none;
+  flex-shrink: 0;
 }
 
 .plo-title {
@@ -18,7 +20,7 @@
 }
 
 .plo-desc {
-  font-size: px;
+  font-size: 14px;
   font-size: 1em;
   line-height: 1.5;
   color: #000;

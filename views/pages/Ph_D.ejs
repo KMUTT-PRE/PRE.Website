@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../partials/navbar', { title : 'PRE'} ) %>
+    <%- include('../partials/navbar', { title : 'Ph_D'} ) %>
 
-    <link rel="stylesheet" href="../css/subject.css" />
+    <link rel="stylesheet" href="../css/degree.css" />
     <link rel="stylesheet" href="../css/assets/Responsive.css" />
   </head>
   <body>
@@ -14,16 +14,16 @@
         <div class="Breadcrumb">
           <a href="/">หน้าหลัก</a>
           <span><i class="fa-solid fa-chevron-right"></i></span>
-          <span>PRE</span>
+          <span>วิศวกรรมอุตสาหการ</span>
         </div>
         <span class="Breadcrumb-underline"></span>
 
         <nav class="primary-navigation">
           <p class="Anchor">ในหน้านี้</p>
           <ul>
-            <li><a href="#section-1">PRE</a></li>
+            <li><a href="#section-1">วิศวกรรมอุตสาหการ</a></li>
             <li><a href="#section-2">ชื่อหลักสูตร</a></li>
-            <li><a href="#section-3">เป้าหมายการเรียนรู้</a></li>
+            <li><a href="#section-3">วัตถุประสงค์</a></li>
             <li><a href="#section-4">แนวทางการเรียนรู้แต่ละชั้นปี</a></li>
             <li><a href="#section-5">PLO</a></li>
             <li><a href="#section-6">อาชีพในอนาคต</a></li>
@@ -135,76 +135,8 @@
         </ul>
       </div>
     </div>
-    <!-- แนวทางการเรียนรู้แต่ละชั้นปี -->
-    <div id="section-4" class="แนวทาง">
-      <div class="แนวทาง-underline">
-        <h2>แนวทางการจัดการเรียนรู้ของหลักสูตร</h2>
-      </div>
-      <div class="ชั้นปี-box">
-        <div class="Year1 year-row">
-          <img
-            src="./images/PRE/PRE-แนวทาง1.jpg"
-            style="width: 40vh; height: 40vh"
-            alt="แนวทางปี1"
-          />
-          <div class="year-box">
-            <h3>ชั้นปีที่1</h3>
-            <p>
-              นักศึกษาสามารถอธิบายหลักการองค์ความรู้ทาง
-              วิทยาศาสตร์และวิศวกรรมพื้นฐาน
-            </p>
-          </div>
-        </div>
-        <div class="Year2 year-row reverse">
-          <img
-            src="./images/PRE/PRE-แนวทาง2.jpg"
-            style="width: 40vh; height: 40vh"
-            alt="แนวทางปี2"
-          />
-          <div class="year-box">
-            <h3>ชั้นปีที่2</h3>
-            <p>
-              นักศึกษาสามารถอธิบายหลักการทำงานของกระบวนการ ผลิตขั้นพื้นฐาน
-              สามารถระบุปัญหาและบูรณาการความรู้
-              ในกลุ่มวิชาเพื่อสร้างชิ้นงานเบื้องต้นได้
-            </p>
-          </div>
-        </div>
-        <div class="Year3 year-row">
-          <img
-            src="./images/PRE/PRE-แนวทาง3.jpg"
-            style="width: 40vh; height: 40vh; justify-content: center"
-            alt="แนวทางปี3"
-          />
-          <div class="year-box">
-            <h3>ชั้นปีที่3</h3>
-            <p>
-              นักศึกษาสามารถอธิบายหลักการ วิธีการและเทคนิคทางด้าน
-              บริหารอุตสาหกรรม สามารถบูรณาการความรู้ทั้งด้านระบบ
-              การผลิตและการบริหารอุตสาหกรรมในการแก้ปัญหา อุตสาหกรรม
-              สามารถสื่อสารและกระตุ้นทีมให้เกิด ความร่วมมือในการทำงาน
-            </p>
-          </div>
-        </div>
-        <div class="Year4 year-row reverse">
-          <img
-            src="./images/PRE/PRE-แนวทาง4.jpg"
-            style="width: 40vh; height: 40vh"
-            alt="แนวทางปี4"
-          />
-          <div class="year-box">
-            <h3>ชั้นปีที่4</h3>
-            <p>
-              นักศึกษาสามารถวิเคราะห์ปัญหา
-              บูรณาการความรู้ด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้อง
-              เพื่อแก้ปัญหาในภาคการผลิตและบริการอย่างเป็นระบบ
-              ภายใต้จรรยาบรรณวิศวกร มีทักษะการสื่อสาร การทำงานเป็นทีม
-              และสามารถเรียนรู้ด้วยตนเองได้อย่างต่อเนื่องได้
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- จุดแข็งของหลักสูตร -->
+
     <!-- PLO -->
     <div id="section-5" class="plo-section">
       <div class="plo-title">
@@ -248,15 +180,13 @@
         </div>
         <div class="work-box">
           <ul>
-            <li>วิศวกรเมคคาทรอลิคส์ - พัฒนาเครื่องจักรหรือติดตั้งระบบ</li>
-            <li>วิศวกรระบบควบคุม - พัฒนาและดูแลระบบอัตโนมัติ</li>
-            <li>วิศวกรหุนยนต์ - ออกแบบ ประยุกต์ใช้หุ่นยนต์ในอุตสาหกรรม</li>
-            <li>วิศวกรออกแบบผลิตภัณฑ์ - ใช้ CAD ในการออกแบบเครื่องจักร</li>
-            <li>วิศวกร AI/ML - สำหรับระบบอัตโนมัติ</li>
-            <li>
-              วิศวกรประจำโรงงาน - ดูแลกระบวนการผลิตที่ใช้เครื่องจักรอัตโนมัติ
-            </li>
-            <li>วิศวกรซ่อมบำรุง</li>
+            <li>วิศวกรอุตสาหการในทุกองค์กร</li>
+            <li>วิศวกรออกแบบวิธีการทำงานหรือการผลิต</li>
+            <li>วิศวกรวางแผนและควบคุมกระบวนการผลิต</li>
+            <li>วิศวกรควบคุมคุณภาพในโรงงานอุตสาหกรรม</li>
+            <li>วิศวกรความปลอดภัย</li>
+            <li>วิศวกรขายและ/หรือให้คำบริการด้านเทคนิค</li>
+            <li>วิศวกรประเมินโครงการสินเชื่อธนาคาร</li>
           </ul>
         </div>
       </div>
@@ -272,14 +202,14 @@
 
         <button class="papers-box">
           <a
-            href="https://drive.google.com/file/d/1vwk8BIQR7FTgwF_-1yatv5pp6tcg4zmr/view?usp=sharing"
+            href="https://drive.google.com/file/d/1EokGrafZ87qYPUR_4CrahSM-6SPD3G5R/view?usp=sharing"
             target="_blank"
             >Program Pofile</a
           >
         </button>
         <button class="papers-box">
           <a
-            href="https://drive.google.com/file/d/1D34SMEuk6p8LAHDNjdDx-3-dg0LpIWR7/view?usp=sharing"
+            href="https://drive.google.com/file/d/1NY0fhTHPN0ugy40Pe60Po3-0IsvjO0iW/view?usp=sharing"
             target="_blank"
             >Program Details</a
           >
