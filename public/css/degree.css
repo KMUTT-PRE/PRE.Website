@@ -216,70 +216,53 @@
 }
 
 /* PLO */
-#section-5.plo-section {
-  padding: 1vh;
+.plo-section {
+  width: 100%;
   background: #ff5900;
+  padding: 6vh 0 8vh;
 }
 
-#section-6.plo-section {
-  padding: 1vh;
-  background: #ff5900;
+.plo-section {
+  position: relative;
+  z-index: 1;
 }
 
 .plo-title {
   text-align: center;
+  margin-bottom: 4vh;
 }
 
 .plo-title h1 {
   color: #fff;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.plo-title h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-top: 0.5em;
 }
 
 .plo-underline {
-  width: 100%;
-}
-
-.plo-underline h3 {
-  width: 120vh;
-  color: #ffffff;
   display: inline-block;
-  padding-bottom: 0.1em;
-  border-bottom: 4px solid #ffffff;
+  padding-bottom: 1vh;
+  border-bottom: 4px solid #fff;
 }
 
-.container.swiper {
+.plo-section .container.swiper {
   width: 100%;
-  max-width: 920px;
-  margin: 8vh auto;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 2vw;
 }
 
-.card-plo {
-  width: 270px;
-  list-style: none;
-}
-
-.card-wrapper .swiper-slide-button {
+.swiper-button-prev .swiper-button-next {
   color: #ff5900;
-  margin-top: -35px;
-}
-
-.card-wrapper .swiper-pagination-bullet {
-  height: 13px;
-  width: 13px;
-  opacity: 0.5;
   background: #fff;
-}
-
-.card-wrapper .swiper-pagination-bullet-active {
-  opacity: 1;
-}
-
-.swiper-slide-button {
-  width: 44px;
-  height: 44px;
-  background-color: white;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Work */

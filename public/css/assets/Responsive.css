@@ -232,6 +232,18 @@
     margin-top: 3vh;
   }
 
+  #section-7.work {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 5vh 6vw;
+  }
+
+  #section-7 img {
+    width: 40vh;
+    margin-top: 3vh;
+  }
+
   /* papers */
   .papers-box {
     width: 240px;
@@ -360,7 +372,8 @@
 
   .card-plo {
     height: auto;
-    min-height: 420px;
+    min-height: 360px;
+    padding-left: 2vh;
   }
 
   .plo-desc {
@@ -378,7 +391,6 @@
     width: 95%;
     max-width: none;
     max-height: 90vh;
-
     padding: 1.5em;
     border-radius: 14px;
   }
