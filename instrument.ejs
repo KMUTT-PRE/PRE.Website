@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> --> -->
+
+    <!-- <title>ห้องปฏิบัติการ</title> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="../css/style_instr.css">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css"> -->
+    <%- include('../partials/navbar', { title : 'Workshop'} ) %>
+</head>
+<body> 
+    สร้างเมนู
+    <!-- <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="color:black;background-color:rgb(46, 45, 58);font-weight:normal; margin-top:0px">
+        <div class="container">
+            <a href="../" class="nav-link navbar-brand" style="font-size: medium">Home</a>
+            <p class=mt-5 style="color:darkorange;">โรงประลองวิศวกรรม<br>เครื่องจักรและอุปกรณ์</p>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar1" class="collapse navbar-collapse" style="font-size: medium">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#pro_system" class="nav-link navbar-brand" style="font-size: medium">ระบบการผลิต</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#foundry" class="nav-link navbar-brand" style="font-size: medium">หล่อโลหะและโลหการ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#welding" class="nav-link navbar-brand" style="font-size: medium">การเชื่อม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ind_manage" class="nav-link navbar-brand" style="font-size: medium">บริหารอุตสาหกรรม</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">ติดต่องาน</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- การสร้าง Slider -->
+    <section id="slider">
+         <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
+             <ol class="carousel-indicators">
+                 <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="3"></button>
+             </ol>
+
+             <div class="carousel-inner"  style="margin-top:65px">
+                 <div class="carousel-item carousel-image-1 active">
+                     <div class="container">
+                         <div class="carousel-caption d-none d-sm-block">
+                             <a href="#pro_system" class="display-3 text-warning">สาขาวิศวกรรมระบบการผลิต</a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="carousel-item carousel-image-2 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <a href="#foundry" class="display-3 text-warning">สาขาวิศวกรรมหล่อโลหะและโลหการ</a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item carousel-image-3 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <a href="#welding" class="display-3 text-warning">สาขาวิศวกรรมการเชื่อม</a>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item carousel-image-4 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <a href="#ind_manage" class="display-3 text-warning">สาขาบริหารอุตสาหกรรม</a>
+                        </div>
+                    </div>
+                 </div>
+                 <button class="carousel-control-prev" data-bs-target="#mySlider" data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon"></span>
+                 </button>
+                 <button class="carousel-control-next" data-bs-target="#mySlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+             </div>
+         </div>
+        <br>
+    </section>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-left mb-0">
+                    <!-- <i class="fas fa-hiking fa-3x mb-2"></i> -->
+                    <a href="#pro_system" class = "text-primary" style="font-size: large">สาขาวิศวกรรมระบบการผลิต</a>
+                    <p><b>กลุ่มงานเครื่องจักรกลทั่วไป<br>เครื่องจักรกลอัตโนมัติ<br>ระบบอัตโนมัติในงานอุตสาหกรรม</b></p>
+                </div>
+
+                <div class="col-md-3 text-left mb-0">
+                    <a href="#foundry" class = "text-primary" style="font-size: large">สาขาวิศวกรรมหล่อโลหะและโลหการ</a>
+                    <p><b>เทคโนโลยีการหล่อโลหะ<br>วิศวกรรมหล่อโลหะ<br>ปฏิบัติการโลหการ<br>ปฏิบัติการด้านวิศวกรรมเครื่องกล</b></p>
+                </div>
+
+                <div class="col-md-3 text-left mb-0">
+                    
+                    <a href="#welding" class = "text-primary" style="font-size: large">สาขาวิศวกรรมการเชื่อม</a>
+                    <p><b>เทคโนโลยีการเชื่อม<br>การขึ้นรูปโลหะแผ่น<br>วิศวกรรมการเชื่อม<br>โลหะวิทยาในงานเชื่อม<br>การทดสอบรอยเชื่อม</b></p>
+                </div>
+
+                <div class="col-md-3 text-left mb-0">
+                    
+                    <a href="#ind_manage" class = "text-primary" style="font-size: large">สาขาบริหารอุตสาหกรรม</a>
+                    <p><b>วิศวกรรมคุณภาพ<br>การออกแบบโรงงานอุตสาหกรรม<br>การวางแผนและบริหารการผลิต<br>วิศวกรรมการบำรุงรักษาทวีผล<br>ปัญญาประดิษฐ์สำหรับวิศวกรรมอุตสาหการ</b></p>
+                </div>                
+            </div>
+        </div>
+
+    </section> -->
+    <!-- pro_system Section -->
+    <section id="pro_system" class="p-1">
+        <div class="container">
+            <h3 class="text-left text-primary py-3">สาขาวิศวกรรมระบบการผลิต</h3>
+            <!-- <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni earum tenetur quis nemo amet nihil doloremque ducimus atque tempore, quos blanditiis soluta repellendus! Mollitia quo cumque atque repellendus sunt.</p> -->
+            <!-- Image -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S1_Milling_MillCNC1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S1_Turning_McCenterCNC1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S1_Milling_VerMill1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S1_Milling_GearCutting1.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องกัดแนวตั้ง CNC</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องกลึงอัตโนมัติ CNC</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องกัดอเนกประสงค์</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องกัดเฟือง</p>
+                </div>
+
+            </div>
+            <!-- pro_system Row2 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S1_Turning_MdLathe1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S1_Turning_SmLathe1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S1_Grinding_ShaftGrind1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S1_Planer_Planer1.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องกลึงขนาดกลาง</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องกลึงขนาดเล็ก</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องเจียรนัยกลม</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องไส</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- foundry Section -->
+    <section id="foundry" class="p-1">
+        <div class="container">
+            <h3 class="text-left text-primary py-3">สาขาวิศวกรรมหล่อโลหะและโลหการ</h3>
+             <!-- <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni earum tenetur quis nemo amet nihil doloremque ducimus atque tempore, quos blanditiis soluta repellendus! Mollitia quo cumque atque repellendus sunt.</p> -->
+            <!-- Image -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_Foundry_Induction.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_Foundry_Resistance.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_Foundry_Cupola.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_Foundry_Crucible.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เตาหลอมไฟฟ้าชนิดเหนี่ยวนำ</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เตาหลอมไฟฟ้าชนิดขดลวดต้านทาน</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เตาหลอมคิวโปล่า</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เตาเบ้าหลอมใช้กับโลหะนอกกลุ่มเหล็ก</p>
+                </div>
+
+            </div>
+            <!-- Foundy Row2 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_Foundry_SandStorageSilo1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_Foundry_ResinSandMixer1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_Foundry_ShotBlast1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_Foundry_VacuumHood.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">ไซโลเก็บทราย</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องผสมทรายเรซิน</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องยิงทราย</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">ระบบดูดฝุ่นเตาหลอม</p>
+                </div>
+
+            </div>
+            <!-- Foundy Row3 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_Spectrometer.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_MicroAnaly1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_MicroAnaly2.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_Microscope2.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องวิเคราะห์ส่วนผสมทางเคมีของน้ำโลหะ</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">ชุดโปรแกรมวิเคราะห์โครงสร้างจุลภาค</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">กล้องจุลทรรศน์พร้อมชุดแสดงผล</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">กล้องตรวจสอบโครงสร้างจุลภาค</p>
+                </div>
+
+            </div>
+            <!-- Foundy Row4 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_Assy1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_MicroCut.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_Polishing1.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องขึ้นเรือนชิ้นงาน</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องตัดชิ้นงานสำหรับตรวจสอบโครงสร้างจุลภาค</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องขัดผิวมันเงา</p>
+                </div>
+
+            </div>
+            <!-- Foundy Row5 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MechTest_Tensile1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MechTest_BendTest_12T.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MechTest_CreepTest1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_HardRockw1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S2_MicroStruc_HardnessT2.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบแรงดึง</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องกดชิ้นงานด้วยระบบไฮดรอลิก</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบการคืบตัวของโลหะ</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบความแข็งแบบร็อคเวล</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบความแข็งแบบจุลภาค</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- welding Section -->
+    <section id="welding" class="p-5">
+        <div class="container">
+            <h3 class="text-left text-primary py-3">สาขาวิศวกรรมการเชื่อม</h3>
+             <!-- <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni earum tenetur quis nemo amet nihil doloremque ducimus atque tempore, quos blanditiis soluta repellendus! Mollitia quo cumque atque repellendus sunt.</p> -->
+            <!-- Image -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_WeldMc_RobotW1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_WeldMc_SMAW1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_WeldMc_GMAW1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_WeldMc_GTAW1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_WeldMc_SAW1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_WeldMc_SpotW1.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">หุ่นยนต์เชื่อม</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องเชื่อม SMAW</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องเชื่อม GMAW</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องเชื่อม GTAW</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องเชื่อม SAW</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องเชื่อมความต้านทาน</p>
+                </div>
+
+            </div>
+            <!-- welding Row2 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_SheetMetal_Shear1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_SheetMetal_Bend1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_WeldMc_GasCutCNC1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_WeldMc_PlasmaC1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_MetalPrep_HyCut1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_MetalPrep_BandCut1.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องตัดเฉือนไฮดรอลิค</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องพับไฮดรอลิค</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องตัดแก๊ส CNC </p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องตัดพลาสมา</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องตัดชิ้นงานโลหะรูปพรรณ</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องเลื่อยสายพาน</p>
+                </div>
+
+            </div>
+            <!-- welding Row3 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_Metalurgy_Assy1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_Metalurgy_Polishing1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_Metalurgy_FumeHood.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องขึ้นเรือนชิ้นงาน</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องขัดผิวโลหะ</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">ตู้ดูดควัน</p>
+                </div>
+
+            </div>
+            <!-- welding Row4 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_NDT_UltrasonicT1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_NDT_RadiographicT1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_NDT_LiquidPenMc1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_NDT_MagneticParticle1.jpg" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">อุปกรณ์ตรวจสอบโดยคลื่นเสียงความถี่สูง</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">อุปกรณ์ปล่อยรังสีเอ็กซ์</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบโดยใช้สารแทรกซึม</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องมือทดสอบด้วยอนุภาคแม่เหล็ก</p>
+                </div>
+
+            </div>
+            <!-- welding Row5 -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_DT_TensileT1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_DT_ImpactT1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_DT_HardnessT1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_DT_BendT1.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S0_blank.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <img src="../images/lab/S3_Calibration_WeldT1.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบแรงดึง</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบความต้านแรงกระแทก</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบความแข็ง</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">เครื่องทดสอบการดัดโค้ง</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center"></p>
+                </div>
+                <div class="col-md-2">
+                    <p class="img-fluid text-dark text-center">อุปกรณ์ทดสอบเครื่องเชื่อมไฟฟ้า</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ind_manage Section -->
+    <section id="ind_manage" class="p-3">
+        <div class="container">
+            <h3 class="text-left text-primary py-3">สาขาบริหารอุตสาหกรรม</h3>
+            <!-- <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni earum tenetur quis nemo amet nihil doloremque ducimus atque tempore, quos blanditiis soluta repellendus! Mollitia quo cumque atque repellendus sunt.</p> -->
+            <!-- Image -->
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <img src="../images/lab/S4_Statistics_Minitab1.jpg" class="img-fluid">
+                </div>
+
+
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <p class="img-fluid text-dark text-center">Minitab Statistical Software</p>
+                </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer class="text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Copyright &copy; Production Engineering KMUTT 2025</p>
+                </div>
+            </div>
+        </div> -->
+    </footer>
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ติดต่องาน</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>อีเมล</label>
+                            <input type="email" placeholder="ป้อนอีเมลของคุณ" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>หัวข้อ</label>
+                            <input type="text" placeholder="เสนอหัวข้องานของคุณ" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>รายละเอียด</label>
+                            <textarea id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+                    <button class="btn btn-success">ส่งข้อมูล</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        <!-- <nav class="navbar navbar-expand-md navbar-light navbar-main display-bottom-" style="background-color: rgb(255, 128,0); position: fixed; bottom: 0; width: 5%;">
+            <a href="#slider" class="navbar brand" data-bs-theme="dark"><i class="text-dark ms-2 fs-5 fw-bolder">^ Top</i></a>
+        </nav> -->
+    <div>
+    <a href="#top" class="navbar brand text-left display-bottom" data-bs-theme="dark"><i class="text-dark ms-2 fs-5 fw-bolder" 
+        style = "width: 120%;font-weight: bolder;background-color: rgb(255, 128,0); margin-left: 10px; position: fixed; bottom: 0">^ Top</i></a>
+    </div>
+</body>
+
+</html>
+
+
