@@ -2,42 +2,42 @@
 <html lang="en">
 <head>
 
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> --> -->
 
-    <title>ห้องปฏิบัติการ</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- <title>ห้องปฏิบัติการ</title> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="../css/style_instr.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-
+    <link rel="stylesheet" href="index.css"> -->
+    <%- include('../partials/navbar', { title : 'Workshop'} ) %>
 </head>
 <body> 
-    <!-- สร้างเมนู -->
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="color:black;background-color:rgb(255, 128,0);font-weight:bold">
+    สร้างเมนู
+    <!-- <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="color:black;background-color:rgb(46, 45, 58);font-weight:normal; margin-top:0px">
         <div class="container">
-            <a href="../" class="nav-link navbar-brand">Home</a>
-            <a>   ห้องปฏิบัติการ เครื่องจักรและอุปกรณ์</a>
+            <a href="../" class="nav-link navbar-brand" style="font-size: medium">Home</a>
+            <p class=mt-5 style="color:darkorange;">โรงประลองวิศวกรรม<br>เครื่องจักรและอุปกรณ์</p>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar1" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto" style="font-size:medium">
+            <div id="navbar1" class="collapse navbar-collapse" style="font-size: medium">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#pro_system" class="nav-link navbar-brand">ระบบการผลิต</a>
+                        <a href="#pro_system" class="nav-link navbar-brand" style="font-size: medium">ระบบการผลิต</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#foundry" class="nav-link navbar-brand">หล่อโลหะและโลหการ</a>
+                        <a href="#foundry" class="nav-link navbar-brand" style="font-size: medium">หล่อโลหะและโลหการ</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#welding" class="nav-link navbar-brand">การเชื่อม</a>
+                        <a href="#welding" class="nav-link navbar-brand" style="font-size: medium">การเชื่อม</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#ind_manage" class="nav-link navbar-brand">บริหารอุตสาหกรรม</a>
+                        <a href="#ind_manage" class="nav-link navbar-brand" style="font-size: medium">บริหารอุตสาหกรรม</a>
                     </li>
 
                     <!-- <li class="nav-item">
@@ -46,7 +46,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!-- การสร้าง Slider -->
     <section id="slider">
          <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
@@ -57,7 +57,7 @@
                  <button data-bs-target="#mySlider" data-bs-slide-to="3"></button>
              </ol>
 
-             <div class="carousel-inner">
+             <div class="carousel-inner"  style="margin-top:65px">
                  <div class="carousel-item carousel-image-1 active">
                      <div class="container">
                          <div class="carousel-caption d-none d-sm-block">
@@ -100,46 +100,34 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-3 text-left mb-4">
+                <div class="col-md-3 text-left mb-0">
                     <!-- <i class="fas fa-hiking fa-3x mb-2"></i> -->
-                    <h5 class = "text-primary">สาขาวิศวกรรมระบบการผลิต</h5>
+                    <a href="#pro_system" class = "text-primary" style="font-size: large">สาขาวิศวกรรมระบบการผลิต</a>
                     <p><b>กลุ่มงานเครื่องจักรกลทั่วไป<br>เครื่องจักรกลอัตโนมัติ<br>ระบบอัตโนมัติในงานอุตสาหกรรม</b></p>
                 </div>
-                <div class="col-md-3 text-left mb-4">
-                    
-                    <h5 class = "text-primary">สาขาวิศวกรรมหล่อโลหะและโลหการ</h5>
+
+                <div class="col-md-3 text-left mb-0">
+                    <a href="#foundry" class = "text-primary" style="font-size: large">สาขาวิศวกรรมหล่อโลหะและโลหการ</a>
                     <p><b>เทคโนโลยีการหล่อโลหะ<br>วิศวกรรมหล่อโลหะ<br>ปฏิบัติการโลหการ<br>ปฏิบัติการด้านวิศวกรรมเครื่องกล</b></p>
                 </div>
-                <div class="col-md-3 text-left mb-4">
+
+                <div class="col-md-3 text-left mb-0">
                     
-                    <h5 class = "text-primary">สาขาวิศวกรรมการเชื่อม</h5>
+                    <a href="#welding" class = "text-primary" style="font-size: large">สาขาวิศวกรรมการเชื่อม</a>
                     <p><b>เทคโนโลยีการเชื่อม<br>การขึ้นรูปโลหะแผ่น<br>วิศวกรรมการเชื่อม<br>โลหะวิทยาในงานเชื่อม<br>การทดสอบรอยเชื่อม</b></p>
                 </div>
-                <div class="col-md-3 text-left mb-4">
+
+                <div class="col-md-3 text-left mb-0">
                     
-                    <h5 class = "text-primary">สาขาบริหารอุตสาหกรรม</h5>
+                    <a href="#ind_manage" class = "text-primary" style="font-size: large">สาขาบริหารอุตสาหกรรม</a>
                     <p><b>วิศวกรรมคุณภาพ<br>การออกแบบโรงงานอุตสาหกรรม<br>การวางแผนและบริหารการผลิต<br>วิศวกรรมการบำรุงรักษาทวีผล<br>ปัญญาประดิษฐ์สำหรับวิศวกรรมอุตสาหการ</b></p>
                 </div>                
             </div>
         </div>
 
-    <br>
-    <!-- about -->
-    <!-- <section id="about" class="p-5">
-        <div class="dark-overlay">
-            <div class="row">
-                <div class="col">
-                    <div class="container pt-5">
-                        <h1>เกี่ยวกับเรา</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium blanditiis iste quibusdam. Eos impedit soluta asperiores expedita corrupti sequi quisquam, minus, non ipsa nostrum recusandae obcaecati consequuntur esse in voluptatum.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section> -->
-<br>
     <!-- pro_system Section -->
-    <section id="pro_system" class="p-5">
+    <section id="pro_system" class="p-1">
         <div class="container">
             <h3 class="text-left text-primary py-3">สาขาวิศวกรรมระบบการผลิต</h3>
             <!-- <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni earum tenetur quis nemo amet nihil doloremque ducimus atque tempore, quos blanditiis soluta repellendus! Mollitia quo cumque atque repellendus sunt.</p> -->
@@ -210,7 +198,7 @@
     <br>
 
     <!-- foundry Section -->
-    <section id="foundry" class="p-5">
+    <section id="foundry" class="p-1">
         <div class="container">
             <h3 class="text-left text-primary py-3">สาขาวิศวกรรมหล่อโลหะและโลหการ</h3>
              <!-- <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni earum tenetur quis nemo amet nihil doloremque ducimus atque tempore, quos blanditiis soluta repellendus! Mollitia quo cumque atque repellendus sunt.</p> -->
@@ -624,9 +612,13 @@
             </div>
         </div>
     </div> -->
-        <nav class="navbar navbar-expand-md navbar-light navbar-main display-bottom-" style="background-color: rgb(255, 128,0); position: fixed; bottom: 0; width: 5%;">
+        <!-- <nav class="navbar navbar-expand-md navbar-light navbar-main display-bottom-" style="background-color: rgb(255, 128,0); position: fixed; bottom: 0; width: 5%;">
             <a href="#slider" class="navbar brand" data-bs-theme="dark"><i class="text-dark ms-2 fs-5 fw-bolder">^ Top</i></a>
-        </nav>
+        </nav> -->
+    <div>
+    <a href="#top" class="navbar brand text-left display-bottom" data-bs-theme="dark"><i class="text-dark ms-2 fs-5 fw-bolder" 
+        style = "width: 120%;font-weight: bolder;background-color: rgb(255, 128,0); margin-left: 10px; position: fixed; bottom: 0">^ Top</i></a>
+    </div>
 </body>
 
 </html>
