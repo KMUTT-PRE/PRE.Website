@@ -210,9 +210,66 @@
   padding-left: 0.3em;
 }
 
-/* แนวทางการเรียนรู้แต่ละชั้นปี */
+/* จุดแข็งของหลักสูตร */
 #section-4 {
-  padding: 0 40vh 0 40vh;
+  padding: 6vh 20vh;
+}
+
+.course-underline {
+  text-align: center;
+  margin-bottom: 5vh;
+  width: 100%;
+  border: none;
+}
+
+.course-underline h2 {
+  font-size: 30px;
+  color: #ff5900;
+  font-weight: 700;
+  display: inline-block;
+  padding-bottom: 0.3em;
+  border-bottom: 4px solid #ff5900;
+  width: 80vh;
+}
+
+.strength-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 6vh;
+  align-items: start;
+}
+
+.strength-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20vh;
+}
+
+.strength-images img {
+  width: 35vh;
+  height: 35vh;
+  object-fit: cover;
+  border-radius: 0.6em;
+}
+
+.strength-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.course-box {
+  background: #ff5900;
+  color: #fff;
+  padding: 4vh 3em;
+  min-height: 22vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.year-box:not(:last-child) {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 /* PLO */
@@ -238,12 +295,6 @@
   font-weight: 700;
 }
 
-.plo-title h3 {
-  color: #fff;
-  font-weight: 400;
-  margin-top: 0.5em;
-}
-
 .plo-underline {
   display: inline-block;
   padding-bottom: 1vh;
@@ -257,12 +308,28 @@
   padding: 0 2vw;
 }
 
-.swiper-button-prev .swiper-button-next {
+.card-wrapper .swiper-slide-button {
   color: #ff5900;
+  margin-top: -35px;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
   background: #fff;
-  width: 48px;
-  height: 48px;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.swiper-slide-button {
+  width: 44px;
+  height: 44px;
+  background-color: white;
   border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Work */
@@ -292,7 +359,7 @@
 }
 
 .work-box {
-  max-width: 520px;
+  max-width: 540px;
   background: #ff5900;
   padding: 3vh 3em;
   border-radius: 0.6em;
