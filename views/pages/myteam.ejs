@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head> 
+        <!-- <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personel</title>
+        
+        <link rel="stylesheet" href="pers_card.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" /> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        
     <%- include('../partials/navbar', { title : 'Workshop'} ) %>
 </head>
 <body> 
     <%- include('../partials/topbtn') %>
 
     <!-- สร้างเมนู -->
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="color:black;background-color:rgb(255, 128,0);font-weight:bold">
+    <!-- Mobile top nav (visible on small screens) -->
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top d-lg-none" style="color:black;background-color:rgb(255, 128,0);font-weight:bold">
         <div class="container">
             <a href="../" class="nav-link navbar-brand">< Home </a>
             <a style="color: blue;">คณาจารย์ เจ้าหน้าที่และนายช่างเทคนิค</a>
@@ -28,19 +41,23 @@
                     <li class="nav-item">
                         <a href="#support" class="nav-link navbar-brand" style="font-size:medium">นายช่างเทคนิค</a>
                     </li>
-
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">ติดต่องาน</a>
-                    </li> -->
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Desktop right-side sidebar (visible on lg+) -->
+    <nav class="side-menu d-none d-lg-block" aria-label="sidebar" style="background-color: rgb(255, 128,0); width: 16%;margin-bottom:10px; position: fixed; top: 120px; right: 0; padding: 10px; border-radius: 8px;">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a href="#top" class="nav-link" style="color:black">ผู้บริหาร</a></li>
+        <li class="nav-item"><a href="#subhead" class="nav-link" style="color:black">หัวหน้าสาขา</a></li>
+        <li class="nav-item"><a href="#lecturer" class="nav-link" style="color:black">อาจารย์ประจำภาควิชา</a></li>
+        <li class="nav-item"><a href="#support" class="nav-link" style="color:black">นายช่างเทคนิค</a></li>
+      </ul>
+    </nav>
 
-        <section id="top"></section>
 
-            <div class="container team" style = "margin-top:40px">
+            <div class="container team content-with-sidebar" style = "margin-top:120px">
                 <!-- Use Bootstrap flex utilities to arrange cards horizontally; g-3 adds gap -->
 
                     <!-- row 0.0 หัวหน้าภาควิชา -->
@@ -48,7 +65,7 @@
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
                         <div class="card h-100 mx-1 border-0">
-                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
                                 <h5 class="section-title">ผู้บริหาร</h5>
                         </div>
                     </div>
@@ -59,7 +76,7 @@
                             <a href="#" onclick="window.open('/personel/p00_xomporn', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/xomporn.jpg" alt="" /></a>
                             <div class="card-body text-center">
                                 <h6 class="card-title small">
-                                    <a href="#" onclick="window.open('/personel/p00_xomporn', '_blank', 'width=600,height=560,noopener'); return false;">ดร.สมพร เพียรสุขมณี</a>
+                                    <a href="#" onclick="window.open('/personel/p00_xomporn', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ดร.สมพร เพียรสุขมณี</a>
                                 </h6>
                                 <h6 class="ms-1" >หัวหน้าภาควิชา</h6>     
                                 <h6 class="ms-1" >วิศวกรรมอุตสาหการ</h6>                        
@@ -115,7 +132,7 @@
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
                         <div class="card h-100 mx-1 border-0">
-                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
                                 <h5 class="section-title">ประธานหลักสูตร</h5>
                         </div>
                     </div>
@@ -183,7 +200,7 @@
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
                         <div class="card h-100 mx-1 border-0">
-                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
                                 <h5 class="section-title">หัวหน้าสาขาวิชา</h5>
                         </div>
                     </div>
@@ -248,7 +265,7 @@
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
                         <div class="card h-100 mx-1 border-0">
-                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
                                 <h5 class="section-title">อาจารย์ประจำภาควิชา</h5>
                         </div>
                     </div>
@@ -478,12 +495,12 @@
 
 
                     <!-- row 7.5  -->
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                    <!-- <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
                         <div class="card h-100 mx-1 border-0">
                             <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
                                 <h5 class="section-title"></h5>
                         </div>
-                    </div>
+                    </div> -->
 
         <section id="support"></section>
 
@@ -492,7 +509,7 @@
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
                         <div class="card h-100 mx-1 border-0">
-                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
                                 <h5 class="section-title">นายช่างเทคนิค</h5>
                         </div>
                     </div>
@@ -541,20 +558,20 @@
                         </div>
                     </div>
 
-                    <!-- row 8.5  -->
+                    <!-- row 8.5 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
                         <div class="card h-100 mx-1 border-0">
                             <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
                                 <h5 class="section-title"></h5>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- row 9.0 เจ้าหน้าที่ -->
                 <div class="row g-2 align-items-stretch d-flex align-items-center ">
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
                         <div class="card h-100 mx-1 border-0">
-                            <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a>
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
                                 <h5 class="section-title">เจ้าหน้าที่</h5>
                         </div>
                     </div>
