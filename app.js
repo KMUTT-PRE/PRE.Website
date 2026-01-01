@@ -29,6 +29,10 @@ app.get("/ph_d", (req, res) => {
   res.render("pages/Ph_D");
 });
 
+app.get("/TABEE", (req, res) => {
+  res.render("pages/TABEE");
+});
+
 app.get("/history_dep", (req, res) => {
   res.render("pages/history_dep");
 });
