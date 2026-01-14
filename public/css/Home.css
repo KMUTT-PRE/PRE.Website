@@ -133,7 +133,7 @@
     to bottom,
     transparent 0%,
     #ffec48 5%,
-    #ff3300 100%
+    #ff5900 100%
   );
   animation: spin 90s infinite linear;
 }
@@ -177,8 +177,19 @@
 }
 
 /* ข่าวสาร) */
+.container,
+.swiper,
+.swiper-wrapper {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.card-plo {
+  margin: 0 auto;
+}
+
 .container-bg {
-  background: #ff3300;
+  background: #ff5900;
 }
 
 .container.swiper {
@@ -213,6 +224,7 @@
 .card-list .card-item .card-link {
   user-select: none;
   display: block;
+  height: 70vh;
   background-color: #fff;
   padding: 18px;
   border-radius: 12px;
@@ -237,7 +249,7 @@
 }
 
 .card-list .card-link .badge {
-  color: #ff3300;
+  color: #ff5900;
   padding: 8px 16px;
   font-size: 0.95rem;
   font-weight: 500;
@@ -256,24 +268,24 @@
 .card-list .card-link .card-button {
   height: 35px;
   width: 35px;
-  color: #ff3300;
+  color: #ff5900;
   border-radius: 50%;
   margin: 30px 0 5px;
   background: none;
   cursor: pointer;
-  border: 2px solid #ff3300;
+  border: 2px solid #ff5900;
   transform: rotate(-45deg);
   transition: 0.4s ease;
 }
 
 .card-list .card-link:hover .card-button {
   color: #fff;
-  background: #ff3300;
+  background: #ff5900;
 }
 
 .card-wrapper .swiper-pagination-bullet {
-  height: 13px;
-  width: 13px;
+  height: 10px;
+  width: 10px;
   opacity: 0.5;
   background: #ffffff;
 }
@@ -283,14 +295,18 @@
 }
 
 .card-wrapper .swiper-slide-button {
-  color: #ff3300;
+  color: #ffffff;
   margin-top: -35px;
+  transition: 0.4s ease;
+}
+
+.card-wrapper .swiper-slide-button:hover {
+  color: #000000;
 }
 
 .swiper-slide-button {
   width: 44px;
   height: 44px;
-  background-color: white;
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
@@ -298,5 +314,5 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 18px;
-  color: #ff3300;
+  color: #ffffff;
 }
