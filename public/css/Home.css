@@ -184,10 +184,6 @@
   padding-right: 0 !important;
 }
 
-.card-plo {
-  margin: 0 auto;
-}
-
 .container-bg {
   background: #ff5900;
 }
@@ -222,6 +218,7 @@
 }
 
 .card-list .card-item .card-link {
+  position: relative;
   user-select: none;
   display: block;
   height: 70vh;
@@ -238,7 +235,7 @@
 }
 
 .card-list .card-item .card-link:hover {
-  box-shadow: 2px 2px 5px 5px #ffec48;
+  box-shadow: 1px 1px 3px 3px #ffec48;
 }
 
 .card-list .card-link .card-image {
@@ -266,6 +263,9 @@
 }
 
 .card-list .card-link .card-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
   height: 35px;
   width: 35px;
   color: #ff5900;
@@ -279,6 +279,10 @@
 }
 
 .card-list .card-link:hover .card-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background: #ff5900;
 }
