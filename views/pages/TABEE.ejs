@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/navbar', { title : 'TABEE'} ) %>
+</head>
+<body>
+    <%- include('../partials/topbtn') %>
+
+    <!-- สร้างเมนู -->
+    <!-- Mobile top nav (visible on small screens) -->
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top d-lg-none" style="color:black;background-color:rgb(255, 128,0);font-weight:bold">
+        <div class="container">
+            <a href="../" class="nav-link navbar-brand">< Home </a>
+            <a style="color: blue;">ประกันคุณภาพการศึกษา</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#top" class="nav-link navbar-brand" style="font-size:medium">วัตถุประสงค์</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#plo" class="nav-link navbar-brand" style="font-size:medium">ผลลัพธ์การเรียนรู้ (PLO)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#history" class="nav-link navbar-brand" style="font-size:medium">ความเป็นมา</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Desktop right-side sidebar (visible on lg+) -->
+    <nav class="side-menu d-none d-lg-block" aria-label="sidebar" style="background-color: rgb(255, 128,0); width: 16%;margin-bottom:10px; position: fixed; top: 120px; right: 0; padding: 10px; border-radius: 8px;">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a href="#top" class="nav-link" style="color:black">วัตถุประสงค์</a></li>
+        <li class="nav-item"><a href="#plo" class="nav-link" style="color:black">ผลลัพธ์การเรียนรู้ (PLO)</a></li>
+        <li class="nav-item"><a href="#history" class="nav-link" style="color:black">ความเป็นมา</a></li>
+
+      </ul>
+    </nav>
+
+                    <section id="top"></section>
+
+    <div class="flex-container padding ms-5 py-0" style="margin-top:140px;">
+        <div class="item" style="width:70%">
+
+                <h3 style="color:blue; font-weight: bold; margin: 1.0cm;">หลักสูตรที่ได้รับการรับรองมาตรฐานคุณภาพการศึกษา</h3>
+
+                <div class="container" style = "margin-top:35px;">
+                    <div class="row">
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4 py-0">
+                            <div class="card h-100 mt-0 ms-1 border-0" style="width: 65rem; margin: left 5px;">
+
+                                <h4 style="margin-left: 1.0cm;  font-weight: bolder; color: blue;">หลักสูตร วิศวกรรมศาสตรบัณฑิต<br>สาขาวิชา วิศวกรรมอุตสาหการ --- <a href="#" onclick="window.open('/images/TABEE/tabee-license.jpg', '_blank', 'width=1200,height=800,noopener'); return false;" 
+                                    style = "font-size: medium; font-weight: normal; color:red"><i> (TABEE-license-Eng)</i></a>   <a href="#" onclick="window.open('/images/TABEE/tabee-license-th.jpg', '_blank', 'width=1200,height=800,noopener'); return false;" 
+                                    style = "font-size: medium; font-weight: normal; color:blueviolet"><i> (TABEE-license-ไทย)</i></a>
+                                </h4>
+
+                                <h5 class="item" style="font-size: large; margin-left: 1.0cm">โดย<br>คณะอนุกรรมการรับรองมาตรฐานคุณภาพการศึกษาวิศวกรรมศาสตร์  สภาวิศวกร<br>
+                                    Thailand Accreditation Board of Engineering Education (TABEE) ---
+                                    <a href="#" onclick="window.open('https://coe.or.th/degreecetificate-tabee/?_college=b8a5fd89a80395f5ccbad56a0f020f36&_college_search=%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%B2%E0%B8%A3', '_blank', 'width=1200,height=800,noopener'); return false;" 
+                                    style = "font-size: medium; color:red"><i>Council of Engineers Thailand</i>
+                                    </a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-5 py-0">
+                    <div class="card h-100 mt-1 ms-4 border-0" style="width: 65rem; margin: left 5px;">
+
+                        <h5 style="margin: 1.0cm; color:blue; font-weight: bold;">วัตถุประสงค์ --- <a href="#" onclick="window.open('/images/TABEE/Course map2.jpg', '_blank', 'width=1390,height=770,noopener'); return false;" 
+                                    style = "font-size: medium; font-weight: normal; color:red"><i> แผนผังหลักสูตร</i></a> - <a href="#" onclick="window.open('', '_blank', 'width=1390,height=770,noopener'); return false;" 
+                                    style = "font-size: medium; font-weight: normal; color:red"><i> รายละเอียดหลักสูตร</i></a>
+                            <ol style="justify-content: left; color:black; align-items: left; font-weight: normal; color:black"><br>
+                                <li style="margin-left: 1.0cm; font-size: large;">ผลิตบัณฑิตที่มีความรู้และทักษะด้านระบบการผลิตทั้งขั้นพื้นฐานและเทคโนโลยีอัจฉริยะ สามารถบูรณาการความรู้ในแก้ปัญหาอุตสาหกรรมได้</li><br>
+                                <li style="margin-left: 1.0cm; font-size: large;">ผลิตบัณฑิตที่มีความรู้และทักษะด้านการบริหารอุตสาหกรรม สามารถบูรณาการความรู้ในการแก้ปัญหาอุตสาหกรรมในภาคการผลิตหรือบริการได้</li><br>
+                                <li style="margin-left: 1.0cm; font-size: large;">ผลิตบัณฑิตที่เป็นผู้มีความคิดเชิงระบบ สามารถบูรณาการความรู้ทางด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้องในการแก้ปัญหาอุตสาหกรรม 
+                                    รวมถึงรองรับเทคโนโลยีอัจฉริยะได้ภายใต้จรรยาบรรณวิศวกร</li><br>
+                                <li style="margin-left: 1.0cm; font-size: large;">ผลิตบัณฑิตที่เป็นผู้มีความสามารถในการเรียนรู้ด้วยตนเองและเรียนรู้อย่างต่อเนื่องตลอดชีวิต</li><br>
+                                <li style="margin-left: 1.0cm; font-size: large;">ผลิตบัณฑิตเป็นผู้มีความสามารถในการทำงานเป็นทีม และสื่อสารได้อย่างมีประสิทธิผลและประสิทธิภาพ</li>
+                        </ol>
+
+                            <section id="plo"></section>
+                        </h5>
+                        <h5 style="margin-left: 1.5cm; color:blue; font-weight: bold;">ผลลัพธ์การเรียนรู้ระดับหลักสูตร <span style="color:blue;">(Program Learning Outcome: PLO) <a href="#" onclick="window.open('/images/TABEE/Stakeholders_PLO.jpg', 
+                                '_blank', 'width=1200,height=800,noopener'); return false;" style = "font-size: medium; font-weight: normal; color:red"><i>ความเชื่อมโยงกับผู้มีส่วนได้ส่วนเสีย</i></a></span>
+                        </h5>
+
+                    </div>         
+                </div>
+
+
+                <!-- SubPLO 1 -->
+        <div class="container" style = "margin-left:20px;">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-5">
+                    <div class="card h-100 mt-1 ms-1" style="width: 20rem; margin: left 5px;">
+                        <div class="card-body">
+
+                                <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO1 <p style="color:black; font-size: medium; font-weight: normal;">ความรู้และทักษะด้าน
+                                ระบบการผลิต (Manufacturing Knowledge and Skills) บัณฑิตสามารถบูรณาการความรู้และทักษะด้านระบบการผลิตทั้งขั้นพื้นฐานและเทคโนโลยีอัจฉริยะ ในการแก้ปัญหาอุตสาหกรรมได้ </p>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0 pb-0" style="width: 45rem;">
+                        <div class="card-body">
+
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 1A <span style="font-size: medium; color:black; font-weight: normal;">สามารถระบุและอธิบายหลักการทำงานของ
+                                        กระบวนการผลิตขั้นพื้นฐานและเครื่องมือที่ใช้ในกระบวนการผลิต รวมถึงระบบควบคุมการผลิตแบบอัตโนมัติและเทคโนโลยีดิจิทัล</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 1B <span style="font-size: medium; color:black; font-weight: normal;">สามารถปฏิบัติงานในกระบวนการผลิตขั้นพื้นฐาน
+                                        และใช้เครื่องมือในกระบวนการผลิต รวมถึงระบบควบคุมการผลิตแบบอัตโนมัติ เทคโนโลยีดิจิทัลและโปรแกรมสำเร็จรูปที่เกี่ยวข้องเพื่อสร้างผลงานเบื้องต้นได้ และอยู่ภายใต้ความปลอดภัยตามหลักวิศวกรรม</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 1C <span style="font-size: medium; color:black; font-weight: normal;">สามารถบูรณาการความรู้ทางด้านกระบวนการผลิต
+                                        รวมถึงเทคโนโลยีอัจฉริยะ ในการแก้ปัญหาอุตสาหกรรมได้</span></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SubPLO 2 -->
+        <div class="container mt-3" style = "margin-left:20px;">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4">
+                    <div class="card h-100 mt-1 ms-1" style="width: 20rem; margin: left 5px;">
+                        <div class="card-body">
+
+                                <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO2 <p style="color:black; font-size: medium; font-weight: normal;">ความรู้และทักษะด้าน
+                                    การบริหารอุตสาหกรรม (Industrial Management Knowledge and Skills) บัณฑิตสามารถบูรณาการความรู้และทักษะด้านการบริหารอุตสาหกรรม ในการแก้ปัญหาอุตสาหกรรมในภาคการผลิตหรือการบริการได้ 
+                                    โดยตระหนักถึงความปลอดภัยสังคมสาธารณะ และสิ่งแวดล้อมเพื่อการพัฒนาที่ยั่งยืน </span></p>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0" style="width: 45rem;">
+                        <div class="card-body">
+
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 2A <span style="color:black; font-weight: normal;">สามารถอธิบายหลักการ วิธีการทางด้านบริหารอุตสาหกรรม</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 2B <span style="color:black; font-weight: normal;">สามารถบูรณาการความรู้พื้นฐานของการบริหารอุตสาหกรรมได้</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 2C <span style="color:black; font-weight: normal;">สามารถเปรียบเทียบและเลือกใช้หลักการ วิธีการและ/หรือเทคนิคทางด้าน
+                                        บริหารอุตสาหกรรม ในการแก้ปัญหาอุตสาหกรรมในภาคการผลิตหรือบริการได้อย่างมีประสิทธิผล โดยตระหนักถึงความปลอดภัย สังคมสาธารณะ และสิ่งแวดล้อมเพื่อการพัฒนาอย่างยั่งยืน</span></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SubPLO 3 -->
+        <div class="container mt-3">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4">
+                    <div class="card h-100 mt-1 ms-1 pb-0" style="width: 20rem; margin: left 5px;">
+                        <div class="card-body">
+
+                                <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO3 <p style="color:black; font-size: medium; font-weight: normal;">การคิดอย่างเป็นระบบ (Systematic Thinking) 
+                            บัณฑิตเป็นผู้มีความคิดเชิงเป็นระบบสามารถบูรณาการความรู้ทางด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้องในการแก้ปัญหาอุตสาหกรรมรวมถึงรองรับเทคโนโลยีอัจฉริยะได้ ภายใต้จรรยาบรรณวิศวกร</span></p>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0" style="width: 45rem;">
+                        <div class="card-body">
+
+
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 3A <span style="font-size: medium; color:black; font-weight: normal;">สามารถระบุและประเมินปัญหาภายใต้
+                                        กรอบความรู้ทางด้านวิศวกรรมอุตสาหการ และศาสตร์ที่เกี่ยวข้อง</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 3B <span style="font-size: medium; color:black; font-weight: normal;">สามารถวิเคราห์สาเหตุโดยใช้ประโยชน์
+                                        จากองค์ความรู้ทางด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้อง</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 3C <span style="font-size: medium; color:black; font-weight: normal;">สามารถระบุแนวคิดในการแก้ปัญหา
+                                        พร้อมกำหนดและเปรียบเทียบแนวทางในการแก้ปัญหาอุตสาหกรรมที่เหมาะสม โดยบูรณาการความรู้ดังกล่าวรวมถึงเทคโนโลยีอัจฉริยะ ภายใต้ข้อจำกัดของอุตสาหกรรมและจรรยาบรรวิศวกร</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 3D <span style="font-size: medium; color:black; font-weight: normal;">สามารถระบุและรวบรวมข้อมูลที่จำเป็น 
+                                        รวมถึงการวิเคราะห์ การสังเคราะห์และการจัดการข้อมูลดังกล่าวได้อย่างมีประสิทธิผล</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SubPLO 4 -->
+        <div class="container mt-3">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4">
+                    <div class="card h-100 mt-1 ms-1" style="width: 20rem; margin: left 5px;">
+                        <div class="card-body">
+
+                                <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO4 <p style="color:black; font-size: medium; font-weight: normal;">ทักษะการเรียนรู้ด้วยตนเอง
+                                    (Self-Learning Skill) บัณฑิตเป็นผู้มีความสามารถในการเรียนรู้ด้วยตนเอง</span></p>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0" style="width: 45rem;">
+                        <div class="card-body">
+
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 4A <span style="font-size: medium; color:black; font-weight: normal;">สามารถ
+                                        อธิบายหลักการสำคัญของความรู้ใหม่ทางด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้อง</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 4B <span style="font-size: medium; color:black; font-weight: normal;">สามารถ
+                                        เรียนรู้ความรู้ใหม่ทางด้านวิศวกรรมอุตสาหการและศาสตร์ที่เกี่ยวข้องได้ตลอดชีวิต</span></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SubPLO 5 -->
+        <div class="container mt-3">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4">
+                    <div class="card h-100 mt-1 ms-1 pb-0" style="width: 20rem; margin: left 5px;">
+                        <div class="card-body">
+
+                                <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO5 <p style="color:black; font-size: medium; font-weight: normal;">ทักษะการเรียนรู้ด้วยตนเอง
+                                    (Self-Learning Skill) บัณฑิตเป็นผู้มีความสามารถในการเรียนรู้ด้วยตนเอง</span></p>
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0" style="width: 45rem;">
+                        <div class="card-body">
+
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 5A <span style="font-size: medium; color:black; font-weight: normal;">สามารถ
+                                        พูดและเขียนเพื่อนำเสนอผลงานทางวิศววกรรม</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 5B <span style="font-size: medium; color:black; font-weight: normal;">สามารถ
+                                        สื่อสารและกระตุ้นให้ทีมเกิดความร่วมมือในการทำงานร่วมกัน</span></p><br>
+                                    <p style="margin: 0; font-size: large; font-weight: bold; color:blue">PLO 5C <span style="font-size: medium; color:black; font-weight: normal;">สามารถ
+                                        ปรับตัวให้เข้ากับทีมและทำงานร่วมกันบรรลุตามเป้าหมายที่กำหนด</span></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- History -->
+                    <section id="history"></section>
+                        <h5 style="margin-top: 1.5cm; margin-left: 2.0cm; color:blue; font-weight: bold;">ความเป็นมาของการประกันคุณภาพการศึกษา (TABEE)</h5>
+
+
+        <div class="container mt-3">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4">
+                    <div class="card h-100 mt-1 ms-0" style="width: 20rem;">
+                        <div class="card-body">
+                            <p style="color:rgb(215, 67, 0); font-size: large; font-weight: bolder;">เดือนกรกฎาคม พ.ศ. 2565
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0" style="width: 45rem;">
+                        <div class="card-body text-justify">
+
+                            <p style="margin-left: 0.5cm; font-size: large;">หัวหน้าภาควิชาฯ และคณะทำงาน TABEE ได้ประกาศนโยบายประกันคุณภาพการศึกษาหลักสูตรวิศวกรรมศาสตร์
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-3">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4">
+                    <div class="card h-100 mt-1 ms-0" style="width: 20rem;">
+                        <div class="card-body">
+                            <p style="color:rgb(215, 67, 0); font-size: large; font-weight: bolder;">เดือนตุลาคม พ.ศ. 2565
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0" style="width: 45rem;">
+                        <div class="card-body text-justify">
+
+                            <p style="margin-left: 0.5cm; font-size: large;">คณะทำงาน TABEE ได้กำหนดแนวทางการจัดทำ Course Portfolio และจัดอบรมให้กับคณาจารย์ภาควิชาฯ
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4">
+                    <div class="card h-100 mt-1 ms-0" style="width: 20rem;">
+                        <div class="card-body">
+                            <p style="color:rgb(215, 67, 0); font-size: large; font-weight: bolder;">เดือนมกราคม พ.ศ. 2566
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0" style="width: 45rem;">
+                        <div class="card-body text-justify">
+
+                            <p style="margin-left: 0.5cm; font-size: large;">จัดเก็บข้อมูลวิชาโครงงานผ่านระบบสารสนเทศ (CDP: Capstone Design Project)<br><a href="#" 
+                                onclick="window.open('/images/TABEE/CDP_Report.pdf', '_blank', 'width=1350,height=800,noopener'); return false;" 
+                                    style = "font-size: medium; font-weight: normal; color:red"><i>CDP Report</i></a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3">
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ms-4">
+                    <div class="card h-100 mt-1 ms-0" style="width: 20rem;">
+                        <div class="card-body">
+                            <p style="margin-left: 0.2cm; font-weight: bolder; color:blue; font-size: large">วันตรวจประเมินคุณภาพการศึกษา<br><br><span style="color:rgb(215, 67, 0); font-size: large">31 ต.ค. - 1 พ.ย. พ.ศ. 2567
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="card h-100 mt-1 ms-0" style="width: 45rem;">
+                        <div class="card-body text-justify">
+
+                            <p style="margin-left: 0.5cm; font-size: large;">ภาควิชาวิศวกรรมอุตสาหการได้รับการรับรองมาตรฐานคุณภาพการศึกษาตามผลลัพธ์การเรียนรู้ทางด้านวิศวกรรมศาสตร์ จากคณะทำงานกำกับการรับรอง
+                                มาตรฐานคุณภาพการศึกษาหลักสูตรวิศวกรรมศาสตร์ (TABEE)  สาขาวิศวกรรมอุตสาหการ คุณวุฒิ : วิศวกรรมศาสตรบัณฑิต 
+                                ได้รับการรับรองแบบมีเงื่อนไข : 2567 – ปัจจุบัน (1 พฤศจิกายน 2567 – 30 พฤศจิกายน 2569) การประเมินในรอบถัดไป (Date of Next Comprehensive Review) : 2570 – 2571 
+                                รับรองโดย : คณะทำงานกำกับการรับรองมาตรฐานคุณภาพการศึกษาหลักสูตรวิศวกรรมศาสตร์ตาม Washington Accord (Engineering Accreditation Commission : EAC)
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
