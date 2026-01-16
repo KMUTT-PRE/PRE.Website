@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   width: 98%;
-  background: #ff5900;
+  background: #d4d4d4;
   z-index: 1055;
 }
 
@@ -35,9 +35,8 @@
 
 .navbar-brand img,
 .offcanvas-header img {
-  margin: 0 5rem;
+  margin: 0 15vh;
   height: 50px;
-  width: auto;
 }
 
 .offcanvas {
@@ -45,7 +44,7 @@
 }
 
 .offcanvas-header {
-  background-color: #ff5900;
+  background-color: #d4d4d4;
 }
 
 .offcanvas-body {
@@ -53,8 +52,8 @@
 }
 
 .navbar-toggler {
-  border: none;
-  font-size: 20px;
+  border: none !important;
+  font-size: 25px !important;
 }
 
 .navbar-brand :focus,
@@ -69,12 +68,23 @@
   font-size: 20px;
   font-weight: 600;
   color: white;
-  column-gap: 0.5vh;
+  column-gap: 2vh;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: rgb(137, 137, 137) !important;
+  color: #ff5900 !important;
+}
+
+.nav-link.active,
+.dropdown-item.active {
+  color: #ff5900 !important;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  color: #ff5900 !important;
+  font-weight: 700;
 }
 
 .dropdown-menu {
@@ -86,12 +96,8 @@
   background-color: #ffffff;
 }
 
-.dropdown-toggle {
-}
-
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
-  background-color: #ffec48 !important;
   color: #ff5900 !important;
 }
 
@@ -141,5 +147,10 @@
   .nav-link {
     margin: 1.5vh;
     padding: 0 !important;
+  }
+
+  .navbar-brand img,
+  .offcanvas-header img {
+    margin: 0 1vh;
   }
 }

@@ -53,22 +53,31 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="\history_dep"
+                    <a
+                      class="dropdown-item"
+                      data-path="/history_dep"
+                      href="/history_dep"
                       >ประวัติภาควิชา</a
                     >
                   </li>
-                  <li><a class="dropdown-item" href="\myteam">บุคลากร</a></li>
                   <li>
-                    <a class="dropdown-item" href="\instrument"
+                    <a class="dropdown-item" data-path="/myteam" href="/myteam"
+                      >บุคลากร</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-path="/instrument"
+                      href="/instrument"
                       >ห้องLab อุปกรณ์</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#"
+                    <a class="dropdown-item" data-path="" href="#"
                       >งานวิจัยและบริการวิชาการ</a
                     >
                   </li>
-                  <li></li>
                   <li>
                     <a
                       class="dropdown-item"
@@ -91,26 +100,37 @@
                 <ul class="dropdown-menu">
                   <li><div class="dropdown-item">ปริญญาตรี</div></li>
                   <li>
-                    <a class="dropdown-item" href="/pre">PRE</a>
+                    <a class="dropdown-item" data-path="/pre" href="/pre"
+                      >PRE</a
+                    >
                   </li>
-                  <li><a class="dropdown-item" href="/mce">MCE</a></li>
-                  <li><a class="dropdown-item" href="/isee">ISEE</a></li>
+                  <li>
+                    <a class="dropdown-item" data-path="/mce" href="/mce"
+                      >MCE</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="/isee" href="/isee"
+                      >ISEE</a
+                    >
+                  </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/m_eng">ปริญญาโท</a>
+                    <a class="dropdown-item" data-path="/m_eng" href="/m_eng"
+                      >ปริญญาโท</a
+                    >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/ph_d">ปริญญาเอก</a>
+                    <a class="dropdown-item" data-path="/ph_d" href="/ph_d"
+                      >ปริญญาเอก</a
+                    >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link mx-lg-2"
-                  href="https://coe.or.th/degreecetificate-tabee/?_college=b8a5fd89a80395f5ccbad56a0f020f36"
-                  target="_blank"
+                <a class="nav-link mx-lg-2" data-path="/TABEE" href="/TABEE"
                   >TABEE</a
                 >
               </li>
@@ -138,10 +158,20 @@
                   นักศึกษา
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">ปริญญาตรี</a></li>
-                  <li><a class="dropdown-item" href="#">ปริญญาโท</a></li>
-                  <li><a class="dropdown-item" href="#">เอกสาร</a></li>
-                  <li><a class="dropdown-item" href="#">ทุนการศึกษา</a></li>
+                  <li>
+                    <a class="dropdown-item" data-path="" href="#">ปริญญาตรี</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="" href="#">ปริญญาโท</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="" href="#">เอกสาร</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="" href="#"
+                      >ทุนการศึกษา</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -153,7 +183,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">ข่าวสาร</a>
+                <a class="nav-link mx-lg-2" data-path="" href="#">ข่าวสาร</a>
               </li>
             </ul>
             <!-- <form class="d-flex mt-3" role="search">
@@ -173,5 +203,6 @@
     </nav>
     <%- include('bootstrapend') %>
     <script src="/js/assets/navbar.js"></script>
+    <script src="/js/assets/navbar-active.js"></script>
   </body>
 </html>
