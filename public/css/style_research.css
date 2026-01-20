@@ -1,0 +1,45 @@
+/* *{
+    font-family: 'Itim', cursive;
+} */
+
+
+.carousel-imageR-1{
+    background-image: url('../images/Research/picR1.jpg');
+    background-size: cover;
+}
+
+.carousel-imageR-2{
+    background-image: url('../images/Research/picR2.jpg');
+    background-size: cover;
+}
+
+.carousel-imageR-3{
+    background-image: url('../images/Research/picR3.jpg');
+    background-size: cover;
+}
+.carousel-imageR-4{
+    background-image: url('../images/Research/picR4.jpg');
+    background-size: cover;
+}
+.carousel-imageR-5{
+    background-image: url('../images/Research/picR5.jpg');
+    background-size: cover;
+}
+
+.carousel-imageR-6{
+    background-image: url('../images/Research/picR6.jpg');
+    background-size: cover;
+}
+
+.carousel-imageR-7{
+    background-image: url('../images/Research/picR7.jpg');
+    background-size: cover;
+}
+.carousel-imageR-8{
+    background-image: url('../images/Research/picR8.jpg');
+    background-size: cover;
+}
+.carousel-imageR-9{
+    background-image: url('../images/Research/picR9.jpg');
+    background-size: cover;
+}
