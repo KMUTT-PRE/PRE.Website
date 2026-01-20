@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/navbar', { title : 'Workshop'} ) %>
+    <!-- <title>ห้องปฏิบัติการ</title> -->
+    <link rel="stylesheet" href="../css/style_instr.css"/>
+    <link rel="stylesheet" href="../css/style_research.css"/>
+</head>
+  <body> 
+    <%- include('../partials/topbtn') %>
+
+    <!-- การสร้าง Slider -->
+    <div class="carousel slide" data-bs-ride="carousel" id="mySlider" style="margin-top: 65px; margin-left: 50px; width: 95%; height: 320px;">
+      <ol class="carousel-indicators">
+        <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
+        <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+        <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+        <button data-bs-target="#mySlider" data-bs-slide-to="3"></button>
+        <button data-bs-target="#mySlider" data-bs-slide-to="4"></button>
+        <button data-bs-target="#mySlider" data-bs-slide-to="5"></button>
+        <button data-bs-target="#mySlider" data-bs-slide-to="6"></button>
+        <button data-bs-target="#mySlider" data-bs-slide-to="7"></button>
+        <button data-bs-target="#mySlider" data-bs-slide-to="8"></button>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item carousel-imageR-1 active">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block"> 
+              <a href="#pro_system" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Manufacturing systems and laser cutting</a>
+                <!-- ../images/Research/picR1.jpg -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-imageR-2 ">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block">
+              <a href="#foundry" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Foundry and Metallurgy Engineering</a>
+                <!-- ../images/Research/picR2.jpg -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-imageR-3 ">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block">
+              <a href="#welding" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Welding, sheet metal, and surface technology</a>
+                <!-- ../images/Research/picR3.jpg -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-imageR-4 ">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block">
+              <a href="#ind_manage" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Nondestructive evaluation</a>
+                <!-- ../images/Research/picR4.jpg -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-imageR-5 ">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block">
+              <a href="#ind_manage" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Materials testing and characterization</a>
+                <!-- ../images/Research/picR5.jpg -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-imageR-6 ">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block">
+              <a href="#ind_manage" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Automation and mechatronics</a>
+                <!-- ../images/Research/picR6.jpg -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-imageR-7 ">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block">
+              <a href="#ind_manage" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Advanced planning, optimization, and sustainable supply chain</a>
+                <!-- ../images/Research/picR7.jpg -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-imageR-8 ">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block">
+              <a href="#ind_manage" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Quality, reliability, and applied statistics</a>
+                <!-- ../images/Research/picR8.jpg -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel-imageR-9 ">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block">
+              <a href="#ind_manage" style="color: rgb(222, 172, 8); background-color: rgba(0, 0, 0, 0.5); font-size: 2.0rem;">Artificial intelligence for industrial engineering
+                  <!-- ../images/Research/picR9.jpg -->
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" data-bs-target="#mySlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#mySlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+                <!-- Research and Services -->
+        <div class="container-fluid mt-4 ms-5" style="width: 95%; margin-bottom: 30px;">
+          <div class="row">
+
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4 ms-0">
+                <div class="card h-100 mt-1 ms-1" style="width: 30rem; margin-left: 5px;">
+                  <div class="card-body">
+                      <!-- Research clusters -->
+                    <h3 style="color: rgb(48, 11, 235);">Research clusters</h3>
+                      <ul style="color:black; font-size: 16px; margin-left: 15px;">
+                        <li>Manufacturing systems and laser cutting</li>
+                        <li>Foundry and metallurgy Engineering</li>
+                        <li>Welding, sheet metal, and surface technology</li>
+                        <li>Nondestructive evaluation</li>
+                        <li>Materials testing and characterization</li>
+                        <li>Automation and mechatronics</li>
+                        <li>Advanced planning, optimization, and sustainable supply chain</li>
+                        <li>Quality, reliability, and applied statistics</li>
+                        <li>Artificial intelligence for industrial engineering</li>
+                      </ul> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4 ms-1">
+                  <div class="card h-100 mt-1 ms-0" style="width: 30rem;">
+                    <div class="card-body">
+                        <!-- Academic services -->
+                      <h3 style="color: rgb(48, 11, 235);">Academic services</h3>
+                        <ul style="color:black; font-size: 16px; margin-left: 15px;">
+                          <li>Training and development programs</li>
+                          <li>Testing and evaluation services</li>
+                          <li>Consulting services for industry</li>
+                          <li>Collaboration opportunities for research and development</li>
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+
+          </div>
+        </div>
+
+  </body>
+
+</html>
+
+
