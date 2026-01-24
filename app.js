@@ -87,6 +87,7 @@ app.get("/personel/p08_supparerk", (req, res) => {
 app.get("/personel/p09_jessada", (req, res) => {
   res.render("pages/personel/p09_jessada");
 });
+
 app.get("/personel/p10_mongkol", (req, res) => {
   res.render("pages/personel/p10_mongkol");
 });
@@ -147,6 +148,30 @@ app.get("/personel/p24_ittirit", (req, res) => {
 
 app.get("/personel/p27_chaowalit", (req, res) => {
   res.render("pages/personel/p27_chaowalit");
+});
+
+app.get("/personel/z00_Chao", (req, res) => {
+  res.render("pages/personel/z00_Chao");
+});
+
+app.get("/personel/z01_Satit", (req, res) => {
+  res.render("pages/personel/z01_Satit");
+});
+
+app.get("/personel/z02_Kittisak", (req, res) => {
+  res.render("pages/personel/z02_Kittisak");
+});
+
+app.get("/personel/z03_Asa", (req, res) => {
+  res.render("pages/personel/z03_Asa");
+});
+
+app.get("/personel/z04_Nithi", (req, res) => {
+  res.render("pages/personel/z04_Nithi");
+});
+
+app.get("/personel/z05_Suksan", (req, res) => {
+  res.render("pages/personel/z05_Suksan");
 });
 
 app.listen(port, () => {
