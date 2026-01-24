@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        
+    <%- include('../partials/navbar', { title : 'Workshop'} ) %>
+    </head>
+<body> 
+    <%- include('../partials/topbtn') %>
+
+    <!-- สร้างเมนู -->
+    <!-- Mobile top nav (visible on small screens) -->
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top d-lg-none" style="color:black;background-color:rgb(255, 128,0);font-weight:bold">
+        <div class="container">
+            <a href="../" class="nav-link navbar-brand">< Home </a>
+            <a style="color: blue;">อาจารย์พิเศษ</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link navbar-brand" style="font-size:small">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/myteam" class="nav-link navbar-brand" style="font-size:small">บุคลากร</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Desktop right-side sidebar (visible on lg+) -->
+    <nav class="side-menu d-none d-lg-block" aria-label="sidebar" style="background-color: rgb(255, 128,0); width: 18%;margin-bottom:10px; position: fixed; top: 120px; right: 0; padding: 10px; border-radius: 8px;">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a href="/" class="nav-link" style="color:black", "font-size:small">หน้าแรก</a></li>
+        <li class="nav-item"><a href="/myteam" class="nav-link" style="color:black", "font-size:small">บุคลากร</a></li>
+      </ul>
+    </nav>
+
+
+            <div class="container team content-with-sidebar" style = "margin-top:120px">
+                <!-- Use Bootstrap flex utilities to arrange cards horizontally; g-3 adds gap -->
+
+                    <!-- row 0.0 อาจารย์พิเศษ -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
+                                <h5 class="section-title">อาจารย์พิเศษ</h5>
+                        </div>
+                    </div>
+
+                        <!-- row 0.1 อาจารย์เชาว์ เนียมสอน -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/z00_Chao', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/Z00_Chao.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/z00_Chao', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">อาจารย์เชาว์ เนียมสอน</a>
+                                </h6><br>                      
+                            </div>
+                        </div>
+                    </div>         
+
+                    <!-- row 0.2 อาจารย์สาธิต จันทนปุ่ม  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/z01_Satit', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/Z01_Satit.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/z01_Satit', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">อาจารย์สาธิต จันทนปุ่ม</a>
+                                </h6>             
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 0.3 รศ.กิติศักดิ์ พลอยพาณิชเจริญ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/z02_Kittisak', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/Z02_Kittisak.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/z02_Kittisak', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;"><br><br>รศ.กิติศักดิ์ พลอยพาณิชเจริญ</a>
+                                </h6><br>        
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 0.4 ศ. ดร.อาษา ประทีปเสน  -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/Z03_Asa', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/Z03_Asa.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/Z03_Asa', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ศ. ดร.อาษา ประทีปเสน</a>
+                                </h6>             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- row 2.0 อาจารย์พิเศษ -->
+                <div class="row g-2 align-items-stretch d-flex align-items-center ">
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
+                        </div>
+                    </div>
+
+                    <!-- row 2.1 ผศ.นิธิ บุรณจันทร์ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/Z04_Nithi', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/Z04_Nithi.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/Z04_Nithi', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">ผศ.นิธิ บุรณจันทร์</a>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 2.2 รศ. ดร.สุขสันติ์ พรหมบัญพงศ์ -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <a href="#" onclick="window.open('/personel/Z05_Suksan', '_blank', 'width=600,height=560,noopener'); return false;"><img class="card-img-top pers-card-img" src="../images/pers_pic/Z05_Suksan.jpg" alt="" /></a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title small">
+                                    <a href="#" onclick="window.open('/personel/Z05_Suksan', '_blank', 'width=600,height=560,noopener'); return false;" style = "font-size: medium;">รศ. ดร.สุขสันติ์ พรหมบัญพงศ์</a>
+                                </h6>                       
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 2.3 xxx -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
+                        </div>
+                    </div>
+
+                    <!-- row 2.4 Blank -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
+                        <div class="card h-100 mx-1 border-0">
+                            <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
+                                <h5 class="section-title"></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- row 99 -->
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
