@@ -45,6 +45,10 @@ app.get("/myteam", (req, res) => {
   res.render("pages/myteam");
 });
 
+app.get("/myteam2", (req, res) => {
+  res.render("pages/myteam2");
+});
+
 app.get("/research", (req, res) => {
   res.render("pages/research");
 });
