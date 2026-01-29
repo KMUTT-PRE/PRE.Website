@@ -178,6 +178,10 @@ app.get("/personel/z05_Suksan", (req, res) => {
   res.render("pages/personel/z05_Suksan");
 });
 
+app.get("/personel/z06_Tuanjai", (req, res) => {
+  res.render("pages/personel/z06_Tuanjai");
+});
+
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
 });
