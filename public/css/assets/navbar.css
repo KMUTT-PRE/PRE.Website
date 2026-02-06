@@ -12,7 +12,7 @@
   width: 95%;
   margin: 1em auto;
   padding: 0.5em 15em;
-  background: #46505a;
+  background: #6c757e;
   z-index: 1055;
   border-radius: 50px;
 }
@@ -54,7 +54,7 @@
 }
 
 .offcanvas-body {
-  background-color: #46505a;
+  background-color: #6c757e;
 }
 
 .navbar-toggler {
@@ -86,14 +86,18 @@
   color: #bababa !important;
 }
 
-.nav-link.active,
+.nav-link.active {
+  color: #bababa !important;
+  font-weight: 700;
+}
+
 .dropdown-item.active {
-  color: #a72c32 !important;
+  color: #c9353c !important;
   font-weight: 700;
 }
 
 .nav-link.active::after {
-  color: #a72c32 !important;
+  color: #bababa !important;
   font-weight: 700;
 }
 
@@ -108,7 +112,7 @@
 
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
-  color: #a72c32;
+  color: #c9353c;
   background-color: #d2d2d2;
 }
 

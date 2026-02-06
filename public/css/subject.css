@@ -72,7 +72,7 @@
 
 .primary-navigation a:hover {
   text-decoration: underline;
-  color: #ff5900;
+  color: #a72c32;
 }
 
 /* RIGHT */
@@ -110,18 +110,17 @@
   background: #eeeeee;
   padding: 28px 32px;
   max-width: 520px;
-  border-radius: 10px;
 }
 
 .overlay-main h3:first-child {
-  color: #ff5900;
+  color: #a72c32;
   opacity: 1;
   font-size: 28px;
   font-weight: 800;
 }
 
 .overlay-main h3:nth-child(2) {
-  color: #ff5900;
+  color: #a72c32;
   opacity: 1;
   font-size: 30px;
   font-weight: 700;
@@ -141,8 +140,8 @@
   display: flex;
   justify-content: space-between;
   gap: 60px;
-  padding: 2em 20em;
-  background: #ff5900;
+  padding: 1em 20em;
+  background: #a72c32;
   color: #fff;
 }
 
@@ -174,33 +173,31 @@
   background: #f0f0f0;
 }
 
+.วัตถุประสงค์-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
 .วัตถุประสงค์ img {
   width: 28%;
   max-height: 55vh;
   object-fit: cover;
-  border-radius: 0.5em;
 }
 
-.วัตถุประสงค์-underline {
-  width: 72%;
-}
-
-.วัตถุประสงค์-underline h2 {
+.วัตถุประสงค์ h2 {
   width: 40vh;
   font-size: 2em;
   font-weight: 700;
-  color: #ff5900;
+  color: #434343;
   display: inline-block;
   padding-bottom: 0.1em;
   margin-bottom: 2vh;
-  border-bottom: 4px solid #ff5900;
 }
 
 .วัตถุประสงค์-box {
   background: #ffffff;
   padding: 3vh 4em;
-  border-radius: 0.6em;
-  box-shadow: 0 0.6vh 1.5vh #434343;
 }
 
 .วัตถุประสงค์-box li {
@@ -212,23 +209,21 @@
 
 /* แนวทางการเรียนรู้แต่ละชั้นปี */
 #section-4 {
-  padding: 0 40vh 0 40vh;
+  padding: 3vh 40vh 0 40vh;
 }
 
-.แนวทาง-underline {
+.แนวทาง {
   text-align: center;
-  margin-bottom: 7vh;
+  margin-bottom: 3vh;
   width: 100%;
   border: none;
 }
 
-.แนวทาง-underline h2 {
-  font-size: 30px;
-  color: #ff5900;
+.แนวทาง h2 {
+  font-size: 32px;
+  color: #434343;
   font-weight: 700;
   display: inline-block;
-  padding-bottom: 0.3em;
-  border-bottom: 4px solid #ff5900;
   width: 80vh;
 }
 
@@ -236,7 +231,7 @@
   display: flex;
   align-items: center;
   gap: 4em;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 
 .year-row.reverse {
@@ -247,16 +242,15 @@
   width: 35vh;
   max-height: 30%;
   object-fit: cover;
-  border-radius: 0.6em;
 }
 
 .year-box {
   width: 50%;
+  text-align: left;
   max-height: 100vh;
-  background: #ff5900;
+  background: #434343;
   color: #fff;
-  padding: 3vh 3em;
-  border-radius: 1em;
+  padding: 3em;
   list-style: decimal;
   box-shadow: 0 1em 2em rgba(0, 0, 0, 0);
 }
@@ -285,28 +279,14 @@
 
 #section-5.plo-section {
   padding: 1vh;
-  background: #ff5900;
+  background: #f0f0f0;
 }
 
-.plo-title {
-  text-align: center;
-}
-
-.plo-title h1 {
-  color: #fff;
+.plo-head {
+  color: #434343;
+  margin: 1em;
   font-weight: 600;
-}
-
-.plo-underline {
-  width: 100%;
-}
-
-.plo-underline h3 {
-  width: 120vh;
-  color: #ffffff;
-  display: inline-block;
-  padding-bottom: 0.1em;
-  border-bottom: 4px solid #ffffff;
+  text-align: center;
 }
 
 .container.swiper {
@@ -315,24 +295,24 @@
 }
 
 .card-wrapper {
-  margin: 10vh auto;
+  margin: 1vh auto 6vh;
   width: 80%;
 }
 
 .card-wrapper .swiper-slide-button {
-  color: #c3c3c3;
+  color: #5d5d5d;
   margin-top: -35px;
 }
 
 .card-wrapper:hover .swiper-slide-button:hover {
-  color: black;
+  color: #000;
 }
 
 .card-wrapper .swiper-pagination-bullet {
   height: 13px;
   width: 13px;
   opacity: 0.5;
-  background: #fff;
+  background: #000;
 }
 
 .card-wrapper .swiper-pagination-bullet-active {
@@ -355,28 +335,23 @@
   gap: 4em;
 }
 
-.work-underline {
-  margin-bottom: 2em;
-  width: 100%;
-}
-
-.work-underline h4 {
+.work h4 {
   width: 90vh;
-  font-size: 1.6em;
+  font-size: 32px;
   font-weight: 600;
-  color: #ff5900;
-  border-bottom: 3px solid #ff5900;
+  color: #434343;
   display: inline-block;
-  padding-bottom: 0.1em;
+  padding: 0.5em 0;
 }
 
 .work-box {
+  display: flex;
+  flex-direction: flex-start;
   max-width: 540px;
-  background: #ff5900;
+  background: #5d5d5d;
   padding: 3vh 3em;
-  border-radius: 0.6em;
   list-style: decimal;
-  box-shadow: 0 1em 2em rgba(0, 0, 0, 0);
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0);
 }
 
 .work-box ul {
@@ -392,11 +367,9 @@
 
 #section-6 img {
   width: 60vh;
-  margin-top: 10vh;
-  height: auto;
-  border-radius: 8px;
+  margin-top: 5em;
+  height: 50vh;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* เอกสาร */
@@ -412,16 +385,11 @@
   max-width: 1000px;
 }
 
-.papers-underline {
-  width: 100%;
-}
-
-.papers-underline h4 {
+.papers h4 {
   width: 80vh;
   font-size: 28px;
   margin-bottom: 3vh;
-  color: #ff5900;
-  border-bottom: 3px solid #ff5900;
+  color: #434343;
 }
 
 .papers-box {
@@ -432,8 +400,7 @@
   height: 80px;
   margin-right: 1.5em;
   margin-bottom: 1.5em;
-  background: #ff5900;
-  border-radius: 10px;
+  background: #5d5d5d;
   border: none;
 
   cursor: pointer;

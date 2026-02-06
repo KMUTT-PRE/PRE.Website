@@ -47,15 +47,16 @@
   height: 15vh;
   align-content: top;
   margin-top: -5vh;
+  padding: 0.5em;
   border-radius: 5%;
-  border: 3px solid #ff5900;
-  color: #ff5900;
+  border: 3px solid #a72c32;
+  color: #a72c32;
   background-color: #ffffff;
   transition-duration: 0.3s;
 }
 
 .hp-button1-box:hover {
-  background: #ff5900;
+  background: #a72c32;
   color: #fff;
   cursor: pointer;
   box-shadow: none;
@@ -111,8 +112,8 @@
   padding: 1em;
   border-radius: 10px;
   color: white;
-  background-color: #ff5900;
-  border: solid 2px #ff5900;
+  background-color: #a72c32;
+  border: solid 2px #a72c32;
   text-decoration: none;
   transition-duration: 0.4s;
 }
@@ -148,7 +149,7 @@
   display: flex;
   gap: 1em;
   padding-right: 1em;
-  background: #ff5900;
+  background: #a72c32;
 }
 
 .reward-group:hover {
@@ -273,7 +274,7 @@
   user-select: none;
   display: block;
   height: 68vh;
-  background-color: #f2f2f2;
+  background-color: #fff;
   padding: 18px;
   border-radius: 12px;
   text-decoration: none;
@@ -286,7 +287,7 @@
 }
 
 .card-list .card-item .card-link:hover {
-  box-shadow: 1px 1px 3px 3px #ff5900;
+  box-shadow: 1px 1px 3px 3px #a72c32;
 }
 
 .card-list .card-link .card-image {
@@ -297,12 +298,12 @@
 }
 
 .card-list .card-link .badge {
-  color: #ff5900;
+  color: #fff;
   padding: 8px 16px;
   font-size: 0.95rem;
   font-weight: 500;
   margin: 16px 0 18px;
-  background: #ffec48;
+  background: #a72c32;
   width: fit-content;
   border-radius: 50px;
 }
@@ -319,12 +320,12 @@
   left: 20px;
   height: 35px;
   width: 35px;
-  color: #ff5900;
+  color: #a72c32;
   border-radius: 50%;
   margin: 30px 0 5px;
   background: none;
   cursor: pointer;
-  border: 2px solid #ff5900;
+  border: 2px solid #a72c32;
   transform: rotate(-45deg);
   transition: 0.4s ease;
 }
@@ -335,7 +336,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: #ff5900;
+  background: #a72c32;
 }
 
 .card-wrapper .swiper-pagination-bullet {
@@ -356,7 +357,7 @@
 }
 
 .card-wrapper .swiper-slide-button:hover {
-  color: #ff5900;
+  color: #a72c32;
 }
 
 .swiper-slide-button {

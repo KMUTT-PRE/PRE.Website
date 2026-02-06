@@ -45,7 +45,6 @@ app.get("/myteam", (req, res) => {
   res.render("pages/myteam");
 });
 
-<<<<<<< HEAD
 app.get("/B_Eng", (req, res) => {
   res.render("pages/B_Eng");
 });
@@ -56,14 +55,14 @@ app.get("/M_eng&PH_D", (req, res) => {
 
 app.get("/news", (req, res) => {
   res.render("pages/news");
-=======
+});
+
 app.get("/myteam2", (req, res) => {
   res.render("pages/myteam2");
 });
 
 app.get("/research", (req, res) => {
   res.render("pages/research");
->>>>>>> 7584c899935877112ddd8602b2214c0889d9876a
 });
 
 app.get("/personel/p00_xomporn", (req, res) => {
