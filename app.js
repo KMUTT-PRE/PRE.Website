@@ -45,6 +45,7 @@ app.get("/myteam", (req, res) => {
   res.render("pages/myteam");
 });
 
+<<<<<<< HEAD
 app.get("/B_Eng", (req, res) => {
   res.render("pages/B_Eng");
 });
@@ -55,6 +56,14 @@ app.get("/M_eng&PH_D", (req, res) => {
 
 app.get("/news", (req, res) => {
   res.render("pages/news");
+=======
+app.get("/myteam2", (req, res) => {
+  res.render("pages/myteam2");
+});
+
+app.get("/research", (req, res) => {
+  res.render("pages/research");
+>>>>>>> 7584c899935877112ddd8602b2214c0889d9876a
 });
 
 app.get("/personel/p00_xomporn", (req, res) => {
@@ -95,6 +104,7 @@ app.get("/personel/p08_supparerk", (req, res) => {
 app.get("/personel/p09_jessada", (req, res) => {
   res.render("pages/personel/p09_jessada");
 });
+
 app.get("/personel/p10_mongkol", (req, res) => {
   res.render("pages/personel/p10_mongkol");
 });
@@ -155,6 +165,34 @@ app.get("/personel/p24_ittirit", (req, res) => {
 
 app.get("/personel/p27_chaowalit", (req, res) => {
   res.render("pages/personel/p27_chaowalit");
+});
+
+app.get("/personel/z00_Chao", (req, res) => {
+  res.render("pages/personel/z00_Chao");
+});
+
+app.get("/personel/z01_Satit", (req, res) => {
+  res.render("pages/personel/z01_Satit");
+});
+
+app.get("/personel/z02_Kittisak", (req, res) => {
+  res.render("pages/personel/z02_Kittisak");
+});
+
+app.get("/personel/z03_Asa", (req, res) => {
+  res.render("pages/personel/z03_Asa");
+});
+
+app.get("/personel/z04_Nithi", (req, res) => {
+  res.render("pages/personel/z04_Nithi");
+});
+
+app.get("/personel/z05_Suksan", (req, res) => {
+  res.render("pages/personel/z05_Suksan");
+});
+
+app.get("/personel/z06_Tuanjai", (req, res) => {
+  res.render("pages/personel/z06_Tuanjai");
 });
 
 app.listen(port, () => {
