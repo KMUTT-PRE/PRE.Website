@@ -7,10 +7,14 @@
 
 #navbar {
   position: fixed;
+  align-items: center;
   top: 0;
-  width: 98%;
-  background: #d4d4d4;
+  width: 95%;
+  margin: 1em auto;
+  padding: 0.5em 15em;
+  background: #46505a;
   z-index: 1055;
+  border-radius: 50px;
 }
 
 #navbar .navbar {
@@ -21,39 +25,45 @@
   z-index: 1050;
 }
 
+.container-fluid {
+  padding: 0 !important;
+}
+
 .dropdown-menu {
   z-index: 1100;
 }
 
 .navbar-expand-lg {
-  opacity: 0.9 !important;
-  padding: 0.1rem;
-  margin: 0.5rem;
-  border-radius: 50px;
+  width: 100%;
   display: flex;
 }
 
 .navbar-brand img,
 .offcanvas-header img {
-  margin: 0 15vh;
-  height: 50px;
+  height: 60px;
 }
 
 .offcanvas {
-  background-color: #ff5900;
+  background-color: #46505a;
 }
 
 .offcanvas-header {
-  background-color: #d4d4d4;
+  background-color: #606d7a;
+  color: #fff;
+  width: 100%;
 }
 
 .offcanvas-body {
-  margin: 0.1em;
+  background-color: #46505a;
 }
 
 .navbar-toggler {
   border: none !important;
-  font-size: 25px !important;
+  font-size: 25px;
+}
+
+.navbar-toggler-icon {
+  color: #fff;
 }
 
 .navbar-brand :focus,
@@ -64,31 +74,31 @@
 
 .navbar-nav,
 .nav-link {
-  justify-content: center;
+  justify-content: right;
   font-size: 20px;
   font-weight: 600;
-  color: white;
+  color: #fff !important;
   column-gap: 2vh;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #ff5900 !important;
+  color: #bababa !important;
 }
 
 .nav-link.active,
 .dropdown-item.active {
-  color: #ff5900 !important;
+  color: #a72c32 !important;
   font-weight: 700;
 }
 
 .nav-link.active::after {
-  color: #ff5900 !important;
+  color: #a72c32 !important;
   font-weight: 700;
 }
 
 .dropdown-menu {
-  background-color: white !important;
+  background-color: #e3e3e3 !important;
 }
 
 .dropdown-item {
@@ -98,7 +108,8 @@
 
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
-  color: #ff5900 !important;
+  color: #a72c32;
+  background-color: #d2d2d2;
 }
 
 .btn-search {
@@ -114,7 +125,7 @@
 }
 
 .btn-search:hover {
-  background-color: #bfbfbf;
+  background-color: #d2d2d2;
 }
 
 .d-flex {
@@ -124,7 +135,7 @@
 .d-flex .form-control {
   border: none;
   box-shadow: none;
-  border-radius: 50px;
+  border-radius: 0px;
 }
 
 .offcanvas .dropdown-menu {
@@ -152,5 +163,12 @@
   .navbar-brand img,
   .offcanvas-header img {
     margin: 0 1vh;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #navbar {
+    padding: 0.5em 2em;
   }
 }

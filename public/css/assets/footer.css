@@ -1,22 +1,22 @@
 .footer {
-  background-color: #525252;
+  background-color: #343a41;
   width: 100%;
 }
 
 .footer h3 {
-  color: #ff5900;
+  color: #fff;
 }
 
 .footer p,
 .footer i {
-  color: white;
+  color: #cfcfcf;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  padding: 1em 3em 0 3em;
+  padding: 0.5em 3em 0 3em;
   flex-wrap: wrap;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .brand1 img {
-  width: 100px;
+  border-right: 1px solid #686868;
 }
 
 /* QUICK LINKS */
@@ -50,26 +50,29 @@
 }
 
 .footer-ul a {
-  color: white;
+  color: #cfcfcf;
   text-decoration: none;
   font-size: 18px;
 }
 
 .footer-ul a:hover {
-  color: #ff5900;
+  color: #fff;
 }
 
 /* CONTACT */
 .contact-phone {
   display: flex;
-  align-items: start;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 0.5rem;
+  line-height: 0.8;
   font-size: 18px;
 }
 
 .contact-media {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
@@ -78,28 +81,25 @@
 }
 
 .media {
-  color: white;
+  color: #cfcfcf;
   text-decoration: none;
 }
 
+.media-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-list a {
+  line-height: 1.6;
+}
+
 .media:hover {
-  color: #ff5900;
-}
-
-/* MAP */
-.footer-map {
-  width: 35%;
-  min-width: 280px;
-  height: 255px;
-}
-
-.footer-map iframe {
-  width: 100%;
-  height: 100%;
+  color: #fff;
 }
 
 .text-center {
   text-align: center;
   color: #cfcfcf;
-  padding: 1rem;
+  padding: 0.5rem;
 }

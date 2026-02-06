@@ -45,6 +45,18 @@ app.get("/myteam", (req, res) => {
   res.render("pages/myteam");
 });
 
+app.get("/B_Eng", (req, res) => {
+  res.render("pages/B_Eng");
+});
+
+app.get("/M_eng&PH_D", (req, res) => {
+  res.render("pages/M_eng&PH_D");
+});
+
+app.get("/news", (req, res) => {
+  res.render("pages/news");
+});
+
 app.get("/personel/p00_xomporn", (req, res) => {
   res.render("pages/personel/p00_xomporn");
 });
