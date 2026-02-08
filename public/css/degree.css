@@ -114,14 +114,14 @@
 }
 
 .overlay-main h3:first-child {
-  color: #ff5900;
+  color: #a72c32;
   opacity: 1;
   font-size: 28px;
   font-weight: 800;
 }
 
 .overlay-main h3:nth-child(2) {
-  color: #ff5900;
+  color: #a72c32;
   opacity: 1;
   font-size: 30px;
   font-weight: 700;
@@ -142,7 +142,7 @@
   justify-content: space-between;
   gap: 60px;
   padding: 2em 20em;
-  background: #ff5900;
+  background: #a72c32;
   color: #fff;
 }
 
@@ -185,22 +185,20 @@
   width: 72%;
 }
 
-.วัตถุประสงค์-underline h2 {
+.วัตถุประสงค์-container h2 {
   width: 40vh;
   font-size: 2em;
   font-weight: 700;
-  color: #ff5900;
+  color: #a72c32;
   display: inline-block;
   padding-bottom: 0.1em;
   margin-bottom: 2vh;
-  border-bottom: 4px solid #ff5900;
 }
 
 .วัตถุประสงค์-box {
   background: #ffffff;
   padding: 3vh 4em;
   border-radius: 0.6em;
-  box-shadow: 0 0.6vh 1.5vh #434343;
 }
 
 .วัตถุประสงค์-box li {
@@ -215,21 +213,20 @@
   padding: 6vh 20vh;
 }
 
-.course-underline {
+.course {
   text-align: center;
-  margin-bottom: 5vh;
-  width: 100%;
+  margin: 1vh 0;
+  width: auto;
   border: none;
 }
 
-.course-underline h2 {
+.course h2 {
   font-size: 30px;
-  color: #ff5900;
+  color: #a72c32;
   font-weight: 700;
   display: inline-block;
   padding-bottom: 0.3em;
-  border-bottom: 4px solid #ff5900;
-  width: 80vh;
+  width: auto;
 }
 
 .strength-layout {
@@ -249,7 +246,6 @@
   width: 35vh;
   height: 35vh;
   object-fit: cover;
-  border-radius: 0.6em;
 }
 
 .strength-boxes {
@@ -258,8 +254,19 @@
   gap: 0;
 }
 
+.course-box h4 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.course-box p {
+  font-size: 24px;
+  line-height: 1.9;
+}
+
 .course-box {
-  background: #ff5900;
+  background: #a72c32;
   color: #fff;
   padding: 4vh 3em;
   min-height: 22vh;
@@ -269,14 +276,14 @@
 }
 
 .year-box:not(:last-child) {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid #f0f0f0;
 }
 
 /* PLO */
 .plo-section {
   width: 100%;
-  background: #ff5900;
-  padding: 6vh 0 8vh;
+  background: #f0f0f0;
+  padding: 2vh 2vh;
 }
 
 .plo-section {
@@ -290,15 +297,22 @@
 }
 
 .plo-title h1 {
-  color: #fff;
+  color: #a72c32;
   font-size: 36px;
   font-weight: 700;
+}
+
+.plo-title h3 {
+  color: #a72c32;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 1vh;
 }
 
 .plo-underline {
   display: inline-block;
   padding-bottom: 1vh;
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid #a72c32;
 }
 
 .plo-section .container.swiper {
@@ -337,36 +351,29 @@
 /* Work */
 #section-7.work {
   width: 100%;
-  min-height: 70vh;
-  padding: 0 8em;
+  padding: 0 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4em;
 }
 
-.work-underline {
-  margin-bottom: 2em;
-  width: 100%;
-}
-
-.work-underline h4 {
-  width: 90vh;
-  font-size: 1.6em;
+.work h4 {
+  width: auto;
+  font-size: 32px;
   font-weight: 600;
-  color: #ff5900;
-  border-bottom: 3px solid #ff5900;
+  color: #434343;
   display: inline-block;
-  padding-bottom: 0.1em;
+  padding: 0.5em 0;
 }
 
 .work-box {
+  display: flex;
+  flex-direction: flex-start;
   max-width: 540px;
-  background: #ff5900;
+  background: #5d5d5d;
   padding: 3vh 3em;
-  border-radius: 0.6em;
   list-style: decimal;
-  box-shadow: 0 1em 2em rgba(0, 0, 0, 0);
 }
 
 .work-box ul {
@@ -382,11 +389,9 @@
 
 #section-7 img {
   width: 60vh;
-  margin-top: 10vh;
+  margin-top: 5em;
   height: auto;
-  border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* เอกสาร */
@@ -402,16 +407,12 @@
   max-width: 1000px;
 }
 
-.papers-underline {
-  width: 100%;
-}
-
-.papers-underline h4 {
+.papers h4 {
   width: 80vh;
   font-size: 28px;
+  font-weight: 600;
   margin-bottom: 3vh;
-  color: #ff5900;
-  border-bottom: 3px solid #ff5900;
+  color: #a72c32;
 }
 
 .papers-box {
@@ -422,8 +423,7 @@
   height: 80px;
   margin-right: 1.5em;
   margin-bottom: 1.5em;
-  background: #ff5900;
-  border-radius: 10px;
+  background: #5d5d5d;
   border: none;
   cursor: pointer;
 }
@@ -433,4 +433,8 @@
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
+}
+
+.papers-box:hover {
+  color: #434343;
 }

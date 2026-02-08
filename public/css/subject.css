@@ -248,7 +248,7 @@
   width: 50%;
   text-align: left;
   max-height: 100vh;
-  background: #434343;
+  background: #a72c32;
   color: #fff;
   padding: 3em;
   list-style: decimal;
@@ -327,8 +327,7 @@
 /* Work */
 #section-6.work {
   width: 100%;
-  min-height: 70vh;
-  padding: 0 8em;
+  padding: 0 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -336,7 +335,7 @@
 }
 
 .work h4 {
-  width: 90vh;
+  width: auto;
   font-size: 32px;
   font-weight: 600;
   color: #434343;

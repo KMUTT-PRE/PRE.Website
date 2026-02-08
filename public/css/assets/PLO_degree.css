@@ -18,7 +18,7 @@
 .plo-title {
   font-size: 24px;
   font-weight: 700;
-  color: #ff5900;
+  color: #a72c32;
   padding: 0.8em;
 }
 
@@ -34,7 +34,7 @@
 /* button */
 .plo-open {
   height: 70px;
-  background: #ff7023;
+  background: #a72c32;
   border: none;
   border-radius: 0 0 22px 22px;
   display: flex;
@@ -51,7 +51,6 @@
 }
 
 .plo-open:hover {
-  background: #ff8a4b;
   color: #fff;
   font-size: 28px;
 }
