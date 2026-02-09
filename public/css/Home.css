@@ -229,6 +229,33 @@
 }
 
 /* ข่าวสาร) */
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 14em 0 14em;
+  background: #fff;
+}
+
+.news-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.news-header a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #a72c32;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.news-header a:hover {
+  color: #7d696a;
+  text-decoration: underline;
+}
+
 .container,
 .swiper,
 .swiper-wrapper {
@@ -237,7 +264,7 @@
 }
 
 .container-bg {
-  background: #e5e5e5;
+  background: #fff;
 }
 
 .container.swiper {
@@ -276,9 +303,9 @@
   height: 68vh;
   background-color: #fff;
   padding: 18px;
+  border: 1px solid #cacaca;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 1px 1px 3px 3px #c3c3c3;
   transition: 0.2s ease;
 }
 
@@ -287,7 +314,7 @@
 }
 
 .card-list .card-item .card-link:hover {
-  box-shadow: 1px 1px 3px 3px #a72c32;
+  box-shadow: 0.5px 0.5px 2px 2px #a72c32;
 }
 
 .card-list .card-link .card-image {

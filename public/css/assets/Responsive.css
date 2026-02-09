@@ -64,6 +64,20 @@
     width: 30vh;
     height: 25vh;
   }
+
+  /* news */
+  .news-header {
+    padding: 1.5em 10em 0 10em;
+  }
+
+  .news-header h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .card-list .card-item .card-link {
+    height: 26em;
+  }
 }
 
 /* ------MOBILE------ */
@@ -100,6 +114,19 @@
 
 /* ข่าวสาร */
 @media screen and (max-width: 768px) {
+  .news-header {
+    padding: 1em;
+  }
+
+  .news-header h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .news-header a {
+    font-size: 16px;
+  }
+
   .card-wrapper {
     margin: 0 10px 25px;
   }

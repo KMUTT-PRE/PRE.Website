@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="/css/assets/Responsive.css" />
   </head>
   <body>
+    <h2>ข่าวและกิจกรรม<h2>
+    <div class="news-container">
+      <% newsList.forEach(function(news) { %>
+        <div class="news-item">
+          <h3><%= news.title %></h3>
+          <p class="date"><%= news.date %></p>
+          <p class="summary"><%= news.summary %></p>
+          <a href="<%= news.link %>" class="read-more">อ่านเพิ่มเติม</a>
+        </div>
+      <% }); %>
     <%- include('../partials/topbtn') %> <%- include('../partials/footer')-%>
   </body>
 </html>
