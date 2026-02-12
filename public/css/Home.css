@@ -14,7 +14,7 @@ footer {
 
 #watermark {
   position: fixed;
-  opacity: 0.3;
+  opacity: 0.5;
   pointer-events: none;
   z-index: 0;
 }
