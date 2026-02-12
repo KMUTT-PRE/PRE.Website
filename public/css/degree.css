@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Noto Sans Thai", sans-serif;
   scroll-behavior: smooth;
+  background-image: url(public\images\PEMCE-LOGO.png);
 }
 
 .pre-layout {
@@ -210,7 +211,7 @@
 
 /* จุดแข็งของหลักสูตร */
 #section-4 {
-  padding: 6vh 20vh;
+  padding: 6vh 24vh;
 }
 
 .course {
@@ -243,8 +244,8 @@
 }
 
 .strength-images img {
-  width: 35vh;
-  height: 35vh;
+  width: 45vh;
+  height: 45vh;
   object-fit: cover;
 }
 
@@ -255,20 +256,20 @@
 }
 
 .course-box h4 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .course-box p {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.9;
 }
 
 .course-box {
   background: #a72c32;
   color: #fff;
-  padding: 4vh 3em;
+  padding: 2vh 1em;
   min-height: 22vh;
   display: flex;
   flex-direction: column;
@@ -335,7 +336,7 @@
   height: 13px;
   width: 13px;
   opacity: 0.5;
-  background: #fff;
+  background: #000;
 }
 
 .card-wrapper .swiper-pagination-bullet-active {

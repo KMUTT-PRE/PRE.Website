@@ -51,7 +51,8 @@
   }
 
   .aboutus-read-more {
-    margin: 2em 5em;
+    margin: 2em 0;
+    justify-self: center;
   }
 
   /* reward */

@@ -1,6 +1,11 @@
-.footer {
-  background-color: #343a41;
+#footer {
+  position: relative;
   width: 100%;
+  z-index: 9999;
+}
+
+.footer {
+  background: #343a41;
 }
 
 .footer h3 {
@@ -88,13 +93,19 @@
 }
 
 /* CONTACT */
-.contact-phone {
+.contact-row {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 0.5rem;
   line-height: 0.8;
   font-size: 18px;
+}
+
+.phone-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.8;
 }
 
 .line {

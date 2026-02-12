@@ -181,7 +181,7 @@
 
 .วัตถุประสงค์ img {
   width: 28%;
-  max-height: 55vh;
+  max-height: 59vh;
   object-fit: cover;
 }
 
@@ -209,11 +209,13 @@
 
 /* แนวทางการเรียนรู้แต่ละชั้นปี */
 #section-4 {
-  padding: 3vh 40vh 0 40vh;
+  padding: 2em 40vh;
+  margin: 0;
 }
 
 .แนวทาง {
   text-align: center;
+  justify-content: center;
   margin-bottom: 3vh;
   width: 100%;
   border: none;
@@ -230,8 +232,8 @@
 .year-row {
   display: flex;
   align-items: center;
-  gap: 4em;
-  margin-bottom: 5vh;
+  justify-content: center;
+  margin-bottom: 2vh;
 }
 
 .year-row.reverse {
@@ -239,24 +241,22 @@
 }
 
 .year-row img {
-  width: 35vh;
-  max-height: 30%;
+  width: 45vh;
+  height: 45vh;
   object-fit: cover;
 }
 
 .year-box {
   width: 50%;
   text-align: left;
-  max-height: 100vh;
+  height: 45vh;
   background: #a72c32;
   color: #fff;
   padding: 3em;
-  list-style: decimal;
-  box-shadow: 0 1em 2em rgba(0, 0, 0, 0);
 }
 
 .year-box h3 {
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 2vh;
 }
@@ -283,10 +283,16 @@
 }
 
 .plo-head {
-  color: #434343;
+  color: #a72c32;
   margin: 1em;
   font-weight: 600;
   text-align: center;
+}
+
+.plo-underline {
+  display: inline-block;
+  padding-bottom: 1vh;
+  border-bottom: 4px solid #a72c32;
 }
 
 .container.swiper {

@@ -3,12 +3,25 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans Thai", sans-serif;
+  background-image: url(public\images\PEMCE-LOGO.png);
+}
+
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+#watermark {
+  position: fixed;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* mainpic */
 .carousel-wrapper {
   position: relative;
-  z-index: 1;
 }
 
 .carousel-inner img {
@@ -39,7 +52,6 @@
   justify-content: center;
   column-gap: 20px;
   position: relative;
-  z-index: 2;
 }
 
 .hp-button1-box {
@@ -92,11 +104,14 @@
   width: 25em;
   height: 25em;
   object-fit: cover;
+  object-position: center;
+  z-index: 1;
 }
 
 .hp-aboutus-box {
   width: 40%;
   padding-top: 3em;
+  z-index: 1;
 }
 
 .hp-aboutus-body {
@@ -107,8 +122,9 @@
 .aboutus-read-more {
   display: flex;
   flex-direction: row;
+  width: 10.2em;
   gap: 1em;
-  margin: 2em 27em 0 0;
+  margin: 2em 0 0 0;
   padding: 1em;
   border-radius: 10px;
   color: white;
@@ -147,7 +163,7 @@
 
 .reward-group {
   display: flex;
-  gap: 1em;
+  gap: 0.1em;
   padding-right: 1em;
   background: #a72c32;
 }
@@ -170,7 +186,7 @@
 .reward-card1 {
   flex: 0 0 5em;
   height: 20em;
-  padding: 1em;
+  padding: 1em 0.1em;
   text-align: center;
 }
 
@@ -233,7 +249,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 14em 0 14em;
+  padding: 2em 14em 0 14em;
   background: #fff;
 }
 
@@ -243,12 +259,16 @@
   color: #000000;
 }
 
-.news-header a {
+.news-header span {
   font-size: 20px;
   font-weight: 600;
+  transition: 0.2s;
+  z-index: 2;
+}
+
+.news-header a {
   color: #a72c32;
   text-decoration: none;
-  transition: 0.2s;
 }
 
 .news-header a:hover {
