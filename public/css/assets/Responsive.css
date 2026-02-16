@@ -111,6 +111,10 @@
   .hp-button1-name {
     font-size: 16px;
   }
+
+  .card-list .card-item .card-link {
+    height: 30em;
+  }
 }
 
 /* ข่าวสาร */
@@ -224,6 +228,7 @@
   .year-row img,
   .year-box {
     width: 100%;
+    height: auto;
   }
 
   .year-row img {

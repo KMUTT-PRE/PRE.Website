@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans Thai", sans-serif;
-  scroll-behavior: smooth;
 }
 
 .pre-layout {
@@ -16,7 +15,6 @@
 .pre-left {
   width: 60vh;
   padding: 2em 5em;
-  background: #fff;
 }
 
 .Breadcrumb {

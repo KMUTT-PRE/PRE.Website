@@ -59,6 +59,13 @@
         color: #fff;
       }
 
+      #watermark {
+        position: fixed;
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: -1;
+      }
+
       @media (max-width: 768px) {
         .scroll-up-btn {
           height: 7vh;
@@ -119,5 +126,6 @@
         smoothScrollToTop(1000);
       });
     </script>
+    <div id="watermark"><img src="/images/watermark.png" alt="" /></div>
   </body>
 </html>

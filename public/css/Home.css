@@ -3,20 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans Thai", sans-serif;
-  background-image: url(public\images\PEMCE-LOGO.png);
-}
-
-main,
-footer {
-  position: relative;
-  z-index: 1;
-}
-
-#watermark {
-  position: fixed;
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 0;
+  scroll-behavior: smooth;
 }
 
 /* mainpic */
@@ -250,13 +237,13 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 2em 14em 0 14em;
-  background: #fff;
 }
 
 .news-header h2 {
   font-size: 32px;
   font-weight: 600;
   color: #000000;
+  z-index: 2;
 }
 
 .news-header span {
@@ -281,10 +268,6 @@ footer {
 .swiper-wrapper {
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-
-.container-bg {
-  background: #fff;
 }
 
 .container.swiper {
