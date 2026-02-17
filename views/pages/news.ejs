@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="/css/assets/Responsive.css" />
   </head>
   <body>
+    <%- include('../partials/topbtn') %>
+
     <div class="news-layout">
-      <div class="btn-box">
+      <aside class="btn-box">
         <h2>หมวดหมู่ข่าว</h2>
         <h4>ประเภท</h4>
         <div
@@ -123,8 +125,8 @@
             >ปริญญาเอก</label
           >
         </div>
-      </div>
-      <div class="news-container flex-start">
+      </aside>
+      <div class="news-container">
         <h1>ข่าวและกิจกรรม</h1>
         <div
           id="carouselExampleDark"
@@ -184,7 +186,7 @@
                     ทะเบียนพร้อมช่วยหาทางออกไปด้วยกัน
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tag">ข่าวและกิจกรรม</div>
+                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
                   </div>
                 </div>
               </div>
@@ -209,9 +211,9 @@
                     “การออกแบบและพัฒนาระบบการเฝ้าติดตามสภาพเชิงโครงสร้างระยะยาวด้วยหลักการอะคูสติกอิมิชชั่น”
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tag">ข่าวและกิจกรรม</div>
-                    <div id="btnradio2" class="tag">รางวัล</div>
-                    <div id="btnradio6" class="tag">PRE</div>
+                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
+                    <div id="btnradio2" class="tags">รางวัล</div>
+                    <div id="btnradio6" class="tags">PRE</div>
                   </div>
                 </div>
               </div>
@@ -238,8 +240,8 @@
                     2569 ณ มหาวิทยาลัยแม่โจ้ จังหวัดเชียงใหม่
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tag">ข่าวและกิจกรรม</div>
-                    <div id="btnradio2" class="tag">รางวัล</div>
+                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
+                    <div id="btnradio2" class="tags">รางวัล</div>
                   </div>
                 </div>
               </div>
@@ -262,8 +264,8 @@
                     แต่ใจยังคุ้นเคยไปพร้อม ๆ กัน กับงาน “Reunion ครั้งที่ 13”
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tag">ข่าวและกิจกรรม</div>
-                    <div id="btnradio7" class="tag">MCE</div>
+                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
+                    <div id="btnradio7" class="tags">MCE</div>
                   </div>
                 </div>
               </div>
@@ -290,13 +292,18 @@
                     พร้อมส่งเสริมทักษะวิชาชีพและการแก้ไขปัญหาในอุตสาหกรรมจริง
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tag">ข่าวและกิจกรรม</div>
-                    <div id="btnradio6" class="tag">PRE</div>
+                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
+                    <div id="btnradio6" class="tags">PRE</div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+        </div>
+        <div class="card-container">
+          <ul class="card-list">
+            <%- include('../news/2569/02_06.ejs') %>
+          </ul>
         </div>
       </div>
       <%- include('../partials/bootstrapend') %>

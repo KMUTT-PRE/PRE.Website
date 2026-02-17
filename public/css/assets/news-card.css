@@ -1,0 +1,68 @@
+.card-item .card-link {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 65vh;
+  background-color: #fff;
+  padding: 1em;
+  border: 1px solid #cacaca;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.card-item .card-link:hover {
+  filter: brightness(0.95);
+}
+
+.card-item .card-link .card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+}
+
+.card-link .news-tags {
+  margin: 0.5em 0;
+  flex-wrap: wrap;
+}
+
+.card-link .tags {
+  flex-direction: row;
+  padding: 1vh 2vh;
+  border-radius: 50px;
+  background: #a72c32;
+  color: white;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+
+.card-link .card-title {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+
+.card-link .card-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  height: 35px;
+  width: 35px;
+  color: #a72c32;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  border: 2px solid #a72c32;
+  transform: rotate(-45deg);
+  transition: 0.4s ease;
+}
+
+.card-link:hover .card-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #a72c32;
+}
