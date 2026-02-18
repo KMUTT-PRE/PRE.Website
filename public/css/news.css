@@ -26,12 +26,12 @@
   z-index: 2;
 }
 
-.btn-box h2 {
+.filter-buttons h2 {
   margin: 0.3em 0.7em;
   color: #000;
 }
 
-.btn-box h4 {
+.filter-buttons h4 {
   margin: 0.5em 0.7em;
   color: #6e6e6e;
 }
