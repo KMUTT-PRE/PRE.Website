@@ -9,17 +9,17 @@
 .news-layout {
   display: flex;
   align-items: flex-start;
-  gap: 1em;
+  padding: 3em;
+  gap: 2em;
 }
 
-.btn-box {
+.filter-buttons {
   display: flex;
   flex-direction: column;
   position: sticky;
-  width: 18em;
-  height: 26em;
+  width: 24em;
+  height: 28em;
   top: 8em;
-  margin: 0 1em 2em 3em;
   border: 3px solid #a72c32;
   border-radius: 10px;
   background: #fff;
@@ -70,7 +70,7 @@
 }
 
 .news-container {
-  margin-top: 8em;
+  margin-top: 5em;
 }
 
 .carousel {
@@ -79,10 +79,6 @@
   width: 70em;
   height: 40vh;
   overflow: hidden;
-}
-
-.carousel-inner {
-  margin-right: 5em;
 }
 
 .carousel-item {
@@ -139,8 +135,13 @@
   border-radius: 50px;
   background: #a72c32;
   color: white;
+  font-size: 12px;
   font-weight: 600;
   flex: 0 0 auto;
+}
+
+.carousel {
+  margin: 0;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -158,7 +159,16 @@
   margin-top: 1em;
 }
 
-.card-list {
-  list-style: none;
+.card-wrapper {
+  max-width: 1200px;
   padding: 0;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: flex-start;
+  gap: 0.5em;
+  margin-bottom: 1em;
 }

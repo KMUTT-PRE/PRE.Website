@@ -10,7 +10,7 @@
     <%- include('../partials/topbtn') %>
 
     <div class="news-layout">
-      <aside class="btn-box">
+      <aside class="filter-buttons">
         <h2>หมวดหมู่ข่าว</h2>
         <h4>ประเภท</h4>
         <div
@@ -22,31 +22,32 @@
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio1"
+            id="all"
             autocomplete="off"
             checked=""
+            onclick="filterSelection('all')"
           />
-          <label class="btn btn-outline-primary" for="btnradio1"
-            >ข่าวและกิจกรรม</label
-          >
+          <label class="btn btn-outline-primary" for="all">ทั้งหมด</label>
 
           <input
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio2"
+            id="reward"
             autocomplete="off"
+            onclick="filterSelection('reward')"
           />
-          <label class="btn btn-outline-primary" for="btnradio2">รางวัล</label>
+          <label class="btn btn-outline-primary" for="reward">รางวัล</label>
 
           <input
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio3"
+            id="scholarships"
             autocomplete="off"
+            onclick="filterSelection('scholarships')"
           />
-          <label class="btn btn-outline-primary" for="btnradio3"
+          <label class="btn btn-outline-primary" for="scholarships"
             >ทุนการศึกษา</label
           >
 
@@ -54,21 +55,21 @@
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio4"
+            id="hiring"
             autocomplete="off"
+            onclick="filterSelection('hiring')"
           />
-          <label class="btn btn-outline-primary" for="btnradio4"
-            >รับสมัคร</label
-          >
+          <label class="btn btn-outline-primary" for="hiring">รับสมัคร</label>
 
           <input
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio5"
+            id="club"
             autocomplete="off"
+            onclick="filterSelection('club')"
           />
-          <label class="btn btn-outline-primary" for="btnradio5">ชมรมมด</label>
+          <label class="btn btn-outline-primary" for="club">ชมรมมด</label>
         </div>
         <h4>สาขา</h4>
         <div
@@ -80,52 +81,55 @@
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio6"
+            id="pre"
             autocomplete="off"
+            onclick="filterSelection('pre')"
           />
-          <label class="btn btn-outline-primary" for="btnradio6">PRE</label>
+          <label class="btn btn-outline-primary" for="pre">PRE</label>
 
           <input
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio7"
+            id="mce"
             autocomplete="off"
+            onclick="filterSelection('mce')"
           />
-          <label class="btn btn-outline-primary" for="btnradio7">MCE</label>
+          <label class="btn btn-outline-primary" for="mce">MCE</label>
 
           <input
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio8"
+            id="isee"
             autocomplete="off"
+            onclick="filterSelection('isee')"
           />
-          <label class="btn btn-outline-primary" for="btnradio8">ISEE</label>
+          <label class="btn btn-outline-primary" for="isee">ISEE</label>
 
           <input
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio9"
+            id="m-eng"
             autocomplete="off"
+            onclick="filterSelection('m-eng')"
           />
-          <label class="btn btn-outline-primary" for="btnradio9"
-            >ปริญญาโท</label
-          >
+          <label class="btn btn-outline-primary" for="m-eng">ปริญญาโท</label>
 
           <input
             type="radio"
             class="btn-check"
             name="btnradio"
-            id="btnradio10"
+            id="ph-d"
             autocomplete="off"
+            onclick="filterSelection('ph-d')"
           />
-          <label class="btn btn-outline-primary" for="btnradio10"
-            >ปริญญาเอก</label
-          >
+          <label class="btn btn-outline-primary" for="ph-d">ปริญญาเอก</label>
         </div>
       </aside>
+      <%- include('../partials/bootstrapend') %>
+      <script src="../js/filternews.js"></script>
       <div class="news-container">
         <h1>ข่าวและกิจกรรม</h1>
         <div
@@ -186,7 +190,7 @@
                     ทะเบียนพร้อมช่วยหาทางออกไปด้วยกัน
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
+                    <div id="all" class="tags">ข่าวสาร</div>
                   </div>
                 </div>
               </div>
@@ -211,9 +215,8 @@
                     “การออกแบบและพัฒนาระบบการเฝ้าติดตามสภาพเชิงโครงสร้างระยะยาวด้วยหลักการอะคูสติกอิมิชชั่น”
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
-                    <div id="btnradio2" class="tags">รางวัล</div>
-                    <div id="btnradio6" class="tags">PRE</div>
+                    <div id="reward" class="tags">รางวัล</div>
+                    <div id="pre" class="tags">PRE</div>
                   </div>
                 </div>
               </div>
@@ -240,8 +243,7 @@
                     2569 ณ มหาวิทยาลัยแม่โจ้ จังหวัดเชียงใหม่
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
-                    <div id="btnradio2" class="tags">รางวัล</div>
+                    <div id="reward" class="tags">รางวัล</div>
                   </div>
                 </div>
               </div>
@@ -264,8 +266,7 @@
                     แต่ใจยังคุ้นเคยไปพร้อม ๆ กัน กับงาน “Reunion ครั้งที่ 13”
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
-                    <div id="btnradio7" class="tags">MCE</div>
+                    <div id="mce" class="tags">MCE</div>
                   </div>
                 </div>
               </div>
@@ -292,8 +293,7 @@
                     พร้อมส่งเสริมทักษะวิชาชีพและการแก้ไขปัญหาในอุตสาหกรรมจริง
                   </p>
                   <div class="news-tags">
-                    <div id="btnradio1" class="tags">ข่าวและกิจกรรม</div>
-                    <div id="btnradio6" class="tags">PRE</div>
+                    <div id="pre" class="tags">PRE</div>
                   </div>
                 </div>
               </div>
@@ -301,8 +301,19 @@
           </section>
         </div>
         <div class="card-container">
-          <ul class="card-list">
-            <%- include('../news/2569/02_06.ejs') %>
+          <ul class="card-wrapper">
+            <div class="section">
+              <%- include('../news/2569/02-06.ejs') %> <%-
+              include('../news/2569/02-03.ejs') %> <%-
+              include('../news/2569/01-30.ejs') %> <%-
+              include('../news/2569/01-29.ejs') %>
+            </div>
+            <div class="section">
+              <%- include('../news/2569/02-06.ejs') %> <%-
+              include('../news/2569/02-06.ejs') %> <%-
+              include('../news/2569/02-06.ejs') %> <%-
+              include('../news/2569/02-06.ejs') %>
+            </div>
           </ul>
         </div>
       </div>

@@ -1,8 +1,17 @@
-.card-item .card-link {
+.card {
+  display: none;
+  border: none;
+}
+
+.show {
+  display: block;
+}
+
+.card .card-link {
   position: relative;
   display: block;
-  width: 20em;
-  height: 65vh;
+  width: 16em;
+  height: 50vh;
   background-color: #fff;
   padding: 1em;
   border: 1px solid #cacaca;
@@ -10,11 +19,11 @@
   text-decoration: none;
 }
 
-.card-item .card-link:hover {
+.card .card-link:hover {
   filter: brightness(0.95);
 }
 
-.card-item .card-link .card-image {
+.card .card-link .card-image {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -41,6 +50,11 @@
   font-size: 16px;
   color: #000;
   font-weight: 600;
+}
+
+.Dates {
+  font-size: 10;
+  font-weight: 400;
 }
 
 .card-link .card-button {
