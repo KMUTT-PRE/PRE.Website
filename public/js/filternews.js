@@ -1,49 +1,55 @@
-filterSelection("all");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const filterButtons = document.querySelectorAll(".btn");
+//   const cards = document.querySelectorAll(".card");
 
-function filterSelection(category) {
-  let cards = document.getElementsByClassName("card");
+//   filterButtons.forEach((button) => {
+//     button.addEventListener("click", () => {
+//       // ลบ active
+//       filterButtons.forEach((btn) => btn.classList.remove("active"));
+//       button.classList.add("active");
 
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].classList.remove("show");
+//       const filterValue = button.dataset.filter.toLowerCase();
 
-    if (category === "all" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
+//       cards.forEach((card) => {
+//         const cardTags = card.dataset.tag.toLowerCase().split(" ");
 
-    if (category === "reward" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
+//         if (filterValue === "all") {
+//           card.style.display = "block";
+//         } else {
+//           card.style.display = cardTags.includes(filterValue)
+//             ? "block"
+//             : "none";
+//         }
+//       });
+//     });
+//   });
+// });
 
-    if (category === "scholarships" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".btn");
 
-    if (category === "hiring" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // reset active
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
 
-    if (category === "club" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
+      const filterValue = this.dataset.filter.toLowerCase();
 
-    if (category === "pre" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
+      // ดึง card ใหม่ทุกครั้ง (กันกรณี DOM update)
+      const cards = document.querySelectorAll(".card");
 
-    if (category === "mce" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
+      cards.forEach((card) => {
+        const tags = card.dataset.tag.toLowerCase().split(" ");
 
-    if (category === "isee" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
-
-    if (category === "m-eng" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
-
-    if (category === "ph-d" || cards[i].classList.contains(category)) {
-      cards[i].classList.add("show");
-    }
-  }
-}
+        if (filterValue === "all") {
+          card.classList.remove("hide-card");
+        } else if (tags.includes(filterValue)) {
+          card.classList.remove("hide-card");
+        } else {
+          card.classList.add("hide-card");
+        }
+      });
+    });
+  });
+});

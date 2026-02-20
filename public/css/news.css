@@ -10,14 +10,14 @@
   display: flex;
   align-items: flex-start;
   padding: 3em;
-  gap: 2em;
+  gap: 1.5em;
 }
 
 .filter-buttons {
   display: flex;
   flex-direction: column;
   position: sticky;
-  width: 24em;
+  width: 26em;
   height: 28em;
   top: 8em;
   border: 3px solid #a72c32;
@@ -49,34 +49,28 @@
   color: #a72c32;
   background-color: #fff;
   border: 1px solid #a72c32;
+  cursor: pointer;
 }
 
-.btn-outline-primary {
-  background-color: transparent;
-  color: #a72c32;
-  border: 1px solid #a72c32;
-}
-
-.btn-check:checked + .btn-outline-primary {
-  background-color: #a72c32 !important;
-  border-color: #a72c32 !important;
-  color: #fff !important;
-}
-
-.btn-group .btn:hover {
-  background-color: #a72c32 !important;
-  color: #fff !important;
+.btn:hover {
+  background: #f0f0f0 !important;
   border: 1px solid #a72c32 !important;
+  color: #a72c32 !important;
+}
+
+.btn.active {
+  background: #a72c32 !important;
+  color: #fff !important;
 }
 
 .news-container {
   margin-top: 5em;
+  max-width: 1160px;
 }
 
 .carousel {
   display: flex;
   margin: auto;
-  width: 70em;
   height: 40vh;
   overflow: hidden;
 }
@@ -156,19 +150,21 @@
 }
 
 .card-container {
-  margin-top: 1em;
+  margin-top: 20px;
+  overflow: hidden;
+  width: auto;
 }
 
-.card-wrapper {
-  max-width: 1200px;
-  padding: 0;
+.card {
+  float: left;
+  border: none !important;
+  display: none;
 }
 
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: flex-start;
-  gap: 0.5em;
-  margin-bottom: 1em;
+.hide-card {
+  display: none !important;
+}
+
+.show {
+  display: block;
 }
