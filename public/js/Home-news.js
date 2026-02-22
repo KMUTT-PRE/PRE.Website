@@ -1,8 +1,10 @@
-const swiperEl = document.querySelector(".card-wrapper");
+const swiperEl = document.querySelector(".swiper");
 if (swiperEl) {
   new Swiper(swiperEl, {
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 25,
+    grabCursor: true,
+    autoHeight: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -15,7 +17,7 @@ if (swiperEl) {
     breakpoints: {
       0: { slidesPerView: 1 },
       768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
+      1200: { slidesPerView: 3 },
     },
   });
 }

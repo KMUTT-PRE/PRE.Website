@@ -11,15 +11,16 @@
   align-items: flex-start;
   padding: 3em;
   gap: 1.5em;
+  max-width: 1440px;
+  margin: 5em auto;
 }
 
 .filter-buttons {
   display: flex;
   flex-direction: column;
   position: sticky;
-  width: 26em;
-  height: 28em;
-  top: 8em;
+  flex: 0 0 240px;
+  height: 450px;
   border: 3px solid #a72c32;
   border-radius: 10px;
   background: #fff;
@@ -64,19 +65,18 @@
 }
 
 .news-container {
-  margin-top: 5em;
-  max-width: 1160px;
+  flex: 1;
 }
 
 .carousel {
   display: flex;
   margin: auto;
-  height: 40vh;
+  height: 250px;
   overflow: hidden;
 }
 
 .carousel-item {
-  height: 40vh;
+  height: 250px;
 }
 
 .carousel-flex {
@@ -134,10 +134,6 @@
   flex: 0 0 auto;
 }
 
-.carousel {
-  margin: 0;
-}
-
 .carousel-indicators [data-bs-target] {
   margin: 0 0 0.1vh 0;
   background-color: #000 !important;
@@ -151,20 +147,19 @@
 
 .card-container {
   margin-top: 20px;
-  overflow: hidden;
-  width: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .card {
-  float: left;
-  border: none !important;
-  display: none;
+  display: flex;
 }
 
-.hide-card {
+.card.hide {
   display: none !important;
 }
 
 .show {
-  display: block;
+  display: flex;
 }
