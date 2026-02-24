@@ -13,35 +13,28 @@
 
 /* LEFT */
 .pre-left {
-  width: 60vh;
+  width: 400px;
   padding: 2em 5em;
 }
 
-.Breadcrumb {
-  font-size: 14px;
-  margin-top: 15vh;
+.navigation-tab {
+  margin-top: 5em;
+  margin-left: 0em;
 }
 
-.Breadcrumb a {
-  color: #000;
+.navigation-tab a,
+.navigation-tab span {
+  padding-right: 0.5em;
+  font-size: 20px;
   text-decoration: none;
+  color: #000;
 }
 
-.Breadcrumb a:hover {
-  font-weight: 700;
+.navigation-tab a:hover {
+  color: #a72c32;
+  transition: 0.5s;
+  font-weight: 600;
 }
-
-.Breadcrumb span {
-  margin: 0 6px;
-}
-
-.Breadcrumb-underline {
-  display: block;
-  width: 250px;
-  border-bottom: 1px solid #000;
-  margin: 1vh 0 3vh;
-}
-
 /* left-navigation */
 .primary-navigation {
   font-size: 14px;

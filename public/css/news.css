@@ -6,13 +6,34 @@
   scroll-behavior: smooth;
 }
 
+.navigation-tab {
+  margin-top: 7em;
+  margin-left: 5em;
+  min-width: 1200px;
+}
+
+.navigation-tab a,
+.navigation-tab span {
+  padding: 0 0.5em;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation-tab a:hover {
+  color: #a72c32;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
 .news-layout {
   display: flex;
   align-items: flex-start;
   padding: 3em;
   gap: 1.5em;
   max-width: 1440px;
-  margin: 5em auto;
+  margin: 0 auto;
+  padding-top: 0.5em;
 }
 
 .filter-buttons {
@@ -150,16 +171,4 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-}
-
-.card {
-  display: flex;
-}
-
-.card.hide {
-  display: none !important;
-}
-
-.show {
-  display: flex;
 }
