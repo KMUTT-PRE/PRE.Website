@@ -57,6 +57,26 @@ app.get("/news", (req, res) => {
   res.render("pages/news");
 });
 
+app.get("/news/pos20250206-1", (req, res) => {
+  res.render("news/2569/news/pos20250206-1");
+});
+
+app.get("/news/pos20250203-1", (req, res) => {
+  res.render("news/2569/news/pos20250203-1");
+});
+
+app.get("/news/pos20250130-1", (req, res) => {
+  res.render("news/2569/news/pos20250130-1");
+});
+
+app.get("/news/pos20250129-1", (req, res) => {
+  res.render("news/2569/news/pos20250129-1");
+});
+
+app.get("/news/pos20250124-1", (req, res) => {
+  res.render("news/2569/news/pos20250124-1");
+});
+
 app.get("/myteam2", (req, res) => {
   res.render("pages/myteam2");
 });

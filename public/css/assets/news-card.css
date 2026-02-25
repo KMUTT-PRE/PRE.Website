@@ -40,6 +40,7 @@
 
 .card-link .news-tags {
   margin: 0.5em 0;
+  gap: 0.5vh;
   flex-wrap: wrap;
 }
 
