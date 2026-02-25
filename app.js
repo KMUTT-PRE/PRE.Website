@@ -57,24 +57,48 @@ app.get("/news", (req, res) => {
   res.render("pages/news");
 });
 
-app.get("/news/pos20250206-1", (req, res) => {
-  res.render("news/2569/news/pos20250206-1");
+app.get("/news/pos20260206-1", (req, res) => {
+  res.render("news/2569/news/pos20260206-1");
 });
 
-app.get("/news/pos20250203-1", (req, res) => {
-  res.render("news/2569/news/pos20250203-1");
+app.get("/news/pos20260203-1", (req, res) => {
+  res.render("news/2569/news/pos20260203-1");
 });
 
-app.get("/news/pos20250130-1", (req, res) => {
-  res.render("news/2569/news/pos20250130-1");
+app.get("/news/pos20260130-1", (req, res) => {
+  res.render("news/2569/news/pos20260130-1");
 });
 
-app.get("/news/pos20250129-1", (req, res) => {
-  res.render("news/2569/news/pos20250129-1");
+app.get("/news/pos20260129-1", (req, res) => {
+  res.render("news/2569/news/pos20260129-1");
 });
 
-app.get("/news/pos20250124-1", (req, res) => {
-  res.render("news/2569/news/pos20250124-1");
+app.get("/news/pos20260124-1", (req, res) => {
+  res.render("news/2569/news/pos20260124-1");
+});
+
+app.get("/news/pos20260121-1", (req, res) => {
+  res.render("news/2569/news/pos20260121-1");
+});
+
+app.get("/news/pos20260115-1", (req, res) => {
+  res.render("news/2569/news/pos20260115-1");
+});
+
+app.get("/news/pos20260114-1", (req, res) => {
+  res.render("news/2569/news/pos20260114-1");
+});
+
+app.get("/news/pos20260114-2", (req, res) => {
+  res.render("news/2569/news/pos20260114-2");
+});
+
+app.get("/news/pos20260112-1", (req, res) => {
+  res.render("news/2569/news/pos20260112-1");
+});
+
+app.get("/news/pos20260102-1", (req, res) => {
+  res.render("news/2569/news/pos20260102-1");
 });
 
 app.get("/myteam2", (req, res) => {

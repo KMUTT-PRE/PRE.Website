@@ -80,20 +80,42 @@
   color: #a72c32;
 }
 
-.container-pic {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-  height: auto;
+.content-text h5 {
+  font-size: 18px;
+  font-weight: 600;
   margin: 1vw 0;
-  padding: 0 5%;
-  gap: 0.5vw;
+}
+
+.container-pic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 30px;
 }
 
 .container-pic img {
-  max-width: 40%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.grid-item img {
+  cursor: pointer;
+}
+
+.grid-item img:hover {
+  transform: scale(1.03);
+}
+
+.container-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-banner img {
+  width: 100%;
   height: auto;
-  vertical-align: middle;
 }

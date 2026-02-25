@@ -13,7 +13,7 @@
   width: 100%;
   min-height: 360px;
   background-color: #fff;
-  padding: 1em;
+  padding: 1vw;
   border-radius: 12px;
   border: 1px solid #d4d4d4;
   cursor: pointer;
@@ -39,14 +39,14 @@
 }
 
 .card-link .news-tags {
-  margin: 0.5em 0;
-  gap: 0.5vh;
+  margin: 0.5vw 0;
+  gap: 0.5vw;
   flex-wrap: wrap;
 }
 
 .card-link .tags {
   flex-direction: row;
-  padding: 1vh 2vh;
+  padding: 0.5vw 1vw;
   border-radius: 50px;
   background: #a72c32;
   color: white;

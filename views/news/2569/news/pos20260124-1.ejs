@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../../../partials/navbar', { title : 'pos20250124-1'} ) %>
+    <%- include('../../../partials/navbar', { title : 'pos20260124-1'} ) %>
     <link rel="stylesheet" href="/css/news-page.css" />
     <link rel="stylesheet" href="/css/assets/Responsive.css" />
   </head>
@@ -22,7 +22,7 @@
         <div><i class="fa-regular fa-calendar"></i> 24 ม.ค. 2569</div>
       </div>
       <div class="banner">
-        <img src="/images/news/2569/Jan/24_01_(1).jpg" alt="20250124" />
+        <img src="/images/news/2569/Jan/24_01_(1).jpg" alt="20260124" />
       </div>
       <div class="content-text">
         <p>📅 วันที่: 27 – 29 มกราคม 2569</p>
@@ -62,11 +62,38 @@
         </p>
       </div>
       <div class="container-pic">
-        <img src="/images/news/2569/Jan/24_01_(1).jpg" alt="20250124" />
-        <img src="/images/news/2569/Jan/24_01_(2).jpg" alt="20250124-2" />
-        <img src="/images/news/2569/Jan/24_01_(3).jpg" alt="20250124-3" />
-        <img src="/images/news/2569/Jan/24_01_(4).jpg" alt="20250124-4" />
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Jan/24_01_(1).jpg"
+            onclick="openModal();currentSlide(1)"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Jan/24_01_(2).jpg"
+            onclick="openModal();currentSlide(2)"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Jan/24_01_(3).jpg"
+            onclick="openModal();currentSlide(3)"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Jan/24_01_(4).jpg"
+            onclick="openModal();currentSlide(4)"
+          />
+        </div>
       </div>
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <%- include('../../../partials/swiper') %>
+        </div>
+      </div>
+      <script src="/js/assets/news-grid.js"></script>
     </div>
     <%-include('../../../partials/footer')-%>
   </body>
