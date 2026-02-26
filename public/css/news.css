@@ -89,7 +89,7 @@
   flex: 1;
 }
 
-.carousel {
+.carousels .news {
   display: flex;
   margin: auto;
   height: 250px;

@@ -1,0 +1,420 @@
+/*------Homepage------ */
+
+/* ------MOBILE------ */
+@media (max-width: 768px) {
+  /* mainpic */
+  .carousel-inner img {
+    height: 45vh;
+  }
+
+  .mainpic-gradient {
+    height: 15vh;
+    margin-top: 30vh;
+  }
+
+  /* ปุ่มหลัก */
+  .hp-button1 {
+    gap: 1.5em;
+  }
+
+  .hp-button1-box {
+    width: 50vw;
+    padding: 1vw;
+    height: 100px !important;
+  }
+
+  .hp-button1-main {
+    font-size: 20px !important;
+  }
+
+  .hp-button1-name {
+    font-size: 14px !important;
+  }
+
+  .hp-aboutus {
+    margin-top: 5vw;
+  }
+
+  .hp-aboutus-box {
+    padding-top: 1vw;
+  }
+
+  .card-list .card-item .card-link {
+    height: 30em;
+  }
+
+  .news-header {
+    padding: 3vw 6vw !important;
+  }
+
+  .news-header h2 {
+    font-size: 20px;
+  }
+
+  .news-header a {
+    font-size: 16px;
+  }
+
+  .card-wrapper {
+    margin: 0 10px 25px;
+  }
+
+  .card-wrapper .swiper-slide-button {
+    display: none;
+  }
+}
+
+/* ------subject------ */
+
+@media (max-width: 768px) {
+  .pre-left {
+    padding: 1.5em;
+  }
+
+  .primary-navigation .Anchor {
+    font-size: 20px;
+  }
+
+  .primary-navigation li {
+    font-size: 16px;
+  }
+
+  .carousel-wrapper {
+    height: 45vh;
+  }
+
+  .carousel-inner img {
+    height: 45vh;
+  }
+
+  .namebox {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .Breadcrumb {
+    margin-top: 5em;
+  }
+
+  /* overlay */
+  .overlay-main {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: -40px 1.2em 0;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .overlay-main h3 {
+    font-size: 22px !important;
+  }
+
+  .overlay-main p {
+    font-size: 14px;
+  }
+
+  /* วัตถุประสงค์ */
+  .วัตถุประสงค์ {
+    padding: 5vh 2em;
+    gap: 3em;
+  }
+
+  .วัตถุประสงค์-underline h2 {
+    font-size: 24px;
+  }
+
+  .วัตถุประสงค์-box {
+    padding: 2.5vh 2em;
+  }
+
+  .วัตถุประสงค์-box li {
+    font-size: 18px;
+  }
+
+  /* แนวทางแต่ละชั้นปี */
+  #section-4 {
+    padding: 5vh 2em;
+    margin-top: 10em;
+  }
+
+  .year-row img {
+    max-height: 26vh;
+  }
+
+  .year-box {
+    padding: 2.5vh 2em;
+  }
+
+  .year-box p {
+    font-size: 18px;
+  }
+
+  /* จุดแข็งของหลักสูตร */
+  .course-underline h2 {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .strength-layout {
+    grid-template-columns: 1fr;
+    gap: 4vh;
+  }
+
+  .strength-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .strength-images img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .course-box {
+    padding: 2.5vh 1.8em;
+  }
+
+  .course-box h4 {
+    font-size: 18px;
+  }
+
+  .course-box p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* PLO */
+  #section-5.plo-section {
+    padding: 4vh 0;
+  }
+
+  .plo-title h1 {
+    font-size: 26px;
+  }
+
+  .plo-title h3 {
+    font-size: 18px;
+  }
+
+  .card-wrapper {
+    width: 100%;
+    margin: 4vh auto;
+  }
+
+  .card-plo {
+    height: auto;
+    min-height: 360px;
+    padding-left: 2vh;
+  }
+
+  .plo-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0.8em 1em 1em;
+  }
+
+  .plo-open {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .plo-modal-content {
+    width: 95%;
+    max-width: none;
+    max-height: 90vh;
+    padding: 1.5em;
+    border-radius: 14px;
+  }
+
+  .plo-modal-close {
+    font-size: 2.2em;
+    top: 8px;
+    right: 12px;
+  }
+
+  /* งานในอนาคต */
+  .work-underline h4 {
+    font-size: 1.3em;
+  }
+
+  .work-box li {
+    font-size: 1em;
+  }
+
+  #section-6 img {
+    width: 80%;
+  }
+
+  /* papers */
+  #section-7.papers {
+    padding: 5vh 6vw;
+  }
+}
+
+/* Myteam right sidebar */
+@media (max-width: 768px) {
+  .side-menu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    height: calc(100vh - 70px);
+    background-color: rgb(255, 128, 0);
+    padding: 1rem;
+    overflow-y: auto;
+    z-index: 1040;
+  }
+
+  .side-menu .nav-link {
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .content-with-sidebar {
+    margin-right: 240px;
+  }
+
+  .papers-box {
+    width: 100%;
+    height: 70px;
+    margin-right: 0;
+  }
+
+  .papers-box a {
+    font-size: 16px;
+  }
+}
+
+/* news */
+
+@media (max-width: 768px) {
+  .navigation-tab {
+    padding-top: 16vw;
+  }
+
+  .news-layout {
+    margin-top: 0;
+    flex-direction: column;
+    padding: 4vw;
+  }
+
+  .filter-buttons {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 5vw;
+  }
+
+  .filter-buttons h2 h4 {
+    margin: 2vw 0;
+  }
+
+  .btn-group {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .btn-group .btn {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+
+  .carousel-poster,
+  .carousel-text {
+    flex: none;
+    width: 100%;
+  }
+
+  .carousel-text {
+    padding: 4vw;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .card-link .card-title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .card-link .card-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .news-tags {
+    padding: 1vw;
+  }
+
+  .tags {
+    font-size: 12px;
+    padding: 5vw;
+  }
+
+  .Dates {
+    margin-bottom: 1vw;
+  }
+
+  .card-title {
+    font-size: 16px;
+    margin: 1vw 0;
+  }
+}
+
+/* news-page */
+@media (max-width: 768px) {
+  .layout {
+    padding: 3vw 5vw;
+  }
+
+  .bg-head,
+  .content-text {
+    padding: 5vw;
+    height: auto;
+  }
+
+  .content-head {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .line-dark {
+    width: 100px;
+    margin: 2vw 0;
+  }
+
+  .banner {
+    padding: 0;
+    margin: 4vw 0;
+  }
+
+  .banner img {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .content-text h5 {
+    font-size: 16px;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+
+  .container-pic {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
