@@ -110,12 +110,180 @@
 }
 
 .container-layout {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  margin-top: 50px;
   padding: 20px;
 }
 
 .main-banner img {
   width: 100%;
   height: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-img-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-icon {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reset-icon:hover {
+  color: #a72c32;
+  transform: rotate(90deg);
+}
+
+.modal-content-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-height: 70vh;
+}
+
+.modal-main-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.modal-main-image.zoomed {
+  cursor: grab;
+}
+
+/* ปุ่มเลื่อนซ้าย-ขวา ตามรูปที่ส่งมา */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.3s;
+  user-select: none;
+  text-decoration: none;
+  z-index: 2001;
+}
+
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+  color: #a72c32;
+  transform: scale(1.1);
+}
+
+/* แถบรูปด้านล่าง */
+.thumbnail-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 100px;
+  padding: 10px;
+  overflow-x: auto;
+  max-width: 80%;
+  scrollbar-width: none;
+}
+
+.demo {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  opacity: 0.5; /* รูปที่ไม่ถูกเลือกจะจาง */
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+/* รูปที่ถูกเลือกจะชัดเจนและมีขอบ */
+.demo.active {
+  opacity: 1;
+  border-color: #fff;
+  transform: translateY(-5px);
+}
+
+.demo:hover {
+  opacity: 1;
+}
+/* กลุ่มปุ่มควบคุมขวาบน */
+.modal-controls {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px; /* ระยะห่างระหว่างปุ่มซูมกับปุ่มปิด */
+  z-index: 2200;
+}
+
+.close,
+.zoom-icon {
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+  line-height: 1;
+}
+
+.zoom-icon {
+  font-size: 24px; /* ขนาดไอคอนแว่นขยายจะเล็กกว่าตัว X เล็กน้อย */
+}
+
+.close:hover,
+.zoom-icon:hover {
+  color: #a72c32;
+  transform: scale(1.1);
+}
+
+/* พื้นที่แสดงรูปภาพหลัก */
+.modal-main-image {
+  transition: transform 0.3s ease-out; /* ปรับความเร็วให้ไวขึ้นเล็กน้อยเพื่อให้ตามเมาส์ทัน */
+  cursor: grab;
+  position: relative;
+  user-select: none;
+  -webkit-user-drag: none;
+  transform-origin: center; /* จุดหมุนเริ่มต้น */
+}
+
+/* ระดับการซูม 3 ขั้น */
+.modal-main-image.zoom-1 {
+  transform: scale(1.8);
+  cursor: zoom-in; /* เปลี่ยนเป็นรูปแว่นขยายเมื่อซูมระดับ 1 */
+}
+
+.modal-main-image.zoom-2 {
+  transform: scale(3);
+  cursor: zoom-out; /* เปลี่ยนเป็นรูปแว่นขยายเมื่อซูมสุดเพื่อให้รู้ว่าลากได้ */
+}
+
+.modal-main-image.zoom-2:active {
+  cursor: grabbing;
 }

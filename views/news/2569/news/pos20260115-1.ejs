@@ -66,11 +66,49 @@
         <p>จบการศึกษาจาก Kanazawa University ประเทศญี่ปุ่น</p>
       </div>
       <div class="container-pic">
-        <img src="/images/news/2569/Jan/15_01_(1).jpg" alt="20260115-1" />
-        <img src="/images/news/2569/Jan/15_01_(2).jpg" alt="20260115-2" />
-        <img src="/images/news/2569/Jan/15_01_(3).jpg" alt="20260115-3" />
-        <img src="/images/news/2569/Jan/15_01_(4).jpg" alt="20260115-4" />
+        <% for(let i=1; i<=4; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Jan/15_01_(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
       </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=4; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/Jan/15_01_(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+      </div>
+      <script src="/js/assets/news-grid.js"></script>
     </div>
     <%-include('../../../partials/footer')-%>
   </body>

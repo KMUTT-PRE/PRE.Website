@@ -78,25 +78,49 @@
         </p>
       </div>
       <div class="container-pic">
-        <img src="/images/news/2569/Feb/03_02_(2).jpg" alt="20260203(2)" />
-        <img src="/images/news/2569/Feb/03_02_(3).jpg" alt="20260203(3)" />
-        <img src="/images/news/2569/Feb/03_02_(4).jpg" alt="20260203(4)" />
-        <img src="/images/news/2569/Feb/03_02_(5).jpg" alt="20260203(5)" />
-        <img src="/images/news/2569/Feb/03_02_(6).jpg" alt="20260203(6)" />
-        <img src="/images/news/2569/Feb/03_02_(7).jpg" alt="20260203(7)" />
-        <img src="/images/news/2569/Feb/03_02_(8).jpg" alt="20260203(8)" />
-        <img src="/images/news/2569/Feb/03_02_(9).jpg" alt="20260203(9)" />
-        <img src="/images/news/2569/Feb/03_02_(10).jpg" alt="20260203(10)" />
-        <img src="/images/news/2569/Feb/03_02_(11).jpg" alt="20260203(11)" />
-        <img src="/images/news/2569/Feb/03_02_(12).jpg" alt="20260203(12)" />
-        <img src="/images/news/2569/Feb/03_02_(13).jpg" alt="20260203(13)" />
-        <img src="/images/news/2569/Feb/03_02_(14).jpg" alt="20260203(14)" />
-        <img src="/images/news/2569/Feb/03_02_(15).jpg" alt="20260203(15)" />
-        <img src="/images/news/2569/Feb/03_02_(16).jpg" alt="20260203(16)" />
-        <img src="/images/news/2569/Feb/03_02_(17).jpg" alt="20260203(17)" />
-        <img src="/images/news/2569/Feb/03_02_(18).jpg" alt="20260203(18)" />
-        <img src="/images/news/2569/Feb/03_02_(19).jpg" alt="20260203(19)" />
+        <% for(let i=1; i<=19; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Feb/03_02_(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
       </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=19; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/Feb/03_02_(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+      </div>
+      <script src="/js/assets/news-grid.js"></script>
     </div>
     <%-include('../../../partials/footer')-%>
   </body>
