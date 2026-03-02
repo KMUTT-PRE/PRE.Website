@@ -2,25 +2,14 @@
 
 /* ------MOBILE------ */
 @media (max-width: 768px) {
-  /* mainpic */
-  .carousel-inner img {
-    height: 45vh;
-  }
-
-  .mainpic-gradient {
-    height: 15vh;
-    margin-top: 30vh;
-  }
-
   /* ปุ่มหลัก */
   .hp-button1 {
-    gap: 1.5em;
+    gap: 3vw !important;
   }
 
   .hp-button1-box {
-    width: 50vw;
-    padding: 1vw;
-    height: 100px !important;
+    width: 100px !important;
+    height: 80px !important;
   }
 
   .hp-button1-main {
@@ -28,7 +17,7 @@
   }
 
   .hp-button1-name {
-    font-size: 14px !important;
+    display: none;
   }
 
   .hp-aboutus {

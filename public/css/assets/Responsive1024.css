@@ -9,9 +9,9 @@
   }
 
   .hp-button1-box {
-    width: 40vw;
-    height: 10vw;
-    margin-top: -2vh;
+    width: 280px;
+    height: 120px;
+    margin-top: -2vw;
   }
 
   .hp-button1-main {
@@ -57,12 +57,6 @@
   .reward-card1 img {
     width: 30vh;
     height: 25vh;
-  }
-
-  .modal-content {
-    width: 90%;
-    max-width: 600px;
-    max-height: 80vh;
   }
 
   /* news */
