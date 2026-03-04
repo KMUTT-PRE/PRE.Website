@@ -82,8 +82,12 @@
 
 .content-text h5 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 1vw 0;
+}
+
+.content-text p {
+  font-size: 18px;
 }
 
 .container-pic {
@@ -173,7 +177,6 @@
   cursor: grab;
 }
 
-/* ปุ่มเลื่อนซ้าย-ขวา ตามรูปที่ส่งมา */
 .prev,
 .next {
   cursor: pointer;
@@ -201,7 +204,6 @@
   transform: scale(1.1);
 }
 
-/* แถบรูปด้านล่าง */
 .thumbnail-bar {
   display: flex;
   gap: 10px;
@@ -216,13 +218,12 @@
   width: 80px;
   height: 60px;
   object-fit: cover;
-  opacity: 0.5; /* รูปที่ไม่ถูกเลือกจะจาง */
+  opacity: 0.5;
   cursor: pointer;
   transition: 0.3s;
   border: 2px solid transparent;
 }
 
-/* รูปที่ถูกเลือกจะชัดเจนและมีขอบ */
 .demo.active {
   opacity: 1;
   border-color: #fff;
@@ -232,14 +233,14 @@
 .demo:hover {
   opacity: 1;
 }
-/* กลุ่มปุ่มควบคุมขวาบน */
+
 .modal-controls {
   position: absolute;
   top: 20px;
   right: 30px;
   display: flex;
   align-items: center;
-  gap: 25px; /* ระยะห่างระหว่างปุ่มซูมกับปุ่มปิด */
+  gap: 25px;
   z-index: 2200;
 }
 
@@ -253,7 +254,7 @@
 }
 
 .zoom-icon {
-  font-size: 24px; /* ขนาดไอคอนแว่นขยายจะเล็กกว่าตัว X เล็กน้อย */
+  font-size: 24px;
 }
 
 .close:hover,
@@ -262,25 +263,22 @@
   transform: scale(1.1);
 }
 
-/* พื้นที่แสดงรูปภาพหลัก */
 .modal-main-image {
-  transition: transform 0.3s ease-out; /* ปรับความเร็วให้ไวขึ้นเล็กน้อยเพื่อให้ตามเมาส์ทัน */
-  cursor: grab;
+  transition: transform 0.3s ease-out;
   position: relative;
   user-select: none;
   -webkit-user-drag: none;
-  transform-origin: center; /* จุดหมุนเริ่มต้น */
+  transform-origin: center;
 }
 
-/* ระดับการซูม 3 ขั้น */
 .modal-main-image.zoom-1 {
   transform: scale(1.8);
-  cursor: zoom-in; /* เปลี่ยนเป็นรูปแว่นขยายเมื่อซูมระดับ 1 */
+  cursor: zoom-in;
 }
 
 .modal-main-image.zoom-2 {
   transform: scale(3);
-  cursor: zoom-out; /* เปลี่ยนเป็นรูปแว่นขยายเมื่อซูมสุดเพื่อให้รู้ว่าลากได้ */
+  cursor: zoom-out;
 }
 
 .modal-main-image.zoom-2:active {

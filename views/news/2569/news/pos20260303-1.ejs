@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <%- include('../../../partials/navbar', { title : 'pos20260303-1'} ) %>
+      <link rel="stylesheet" href="/css/news-page.css" />
+      <%- include('../../../partials/Responsive') %>
+    </head>
+  </head>
+  <body>
+    <%- include('../../../partials/topbtn') %>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/ <a href="/news">ข่าวสาร</a>/
+      <span>ขอแสดงความยินดีอย่างยิ่งกับ...</span>
+    </div>
+    <div class="layout">
+      <div class="bg-head">
+        <h2 class="content-head">
+          ขอแสดงความยินดีอย่างยิ่งกับ รองศาสตราจารย์ ดร.บวรโชค ผู้พัฒน์
+        </h2>
+        <p class="tag">#รางวัลด</p>
+        <div class="line-dark"></div>
+        <div><i class="fa-regular fa-calendar"></i> 03 มี.ค. 2569</div>
+      </div>
+      <div class="banner">
+        <img src="/images/news/2569/Mar/03_03_(1).jpg" alt="20260303" />
+      </div>
+      <div class="content-text">
+        <p>ภาควิชาวิศวกรรมอุตสาหการ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+        <p>ขอแสดงความยินดีอย่างยิ่งกับ</p>
+        <h5>รองศาสตราจารย์ ดร.บวรโชค ผู้พัฒน์</h5>
+        <p>ในโอกาสได้รับการคัดเลือกเป็น นักศึกษาเก่าดีเด่น ประจำปี พ.ศ. 2568</p>
+        <p>สาขาความเป็นเลิศทางวิชาการและการพัฒนาการศึกษา</p>
+        <p>
+          จากสมาคมนักศึกษาเก่ามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
+          ในพระบรมราชูปถัมภ์ ความสำเร็จในครั้งนี้
+          นับเป็นเกียรติประวัติอันน่าภาคภูมิใจของภาควิชาวิศวกรรมอุตสาหการ
+          และเป็นแบบอย่างที่ดีแก่คณาจารย์ นักศึกษา และศิษย์เก่าทุกคน
+        </p>
+        <h5>ภาควิชาวิศวกรรมอุตสาหการ</h5>
+        <p>
+          ขอร่วมแสดงความยินดีและขออำนวยพรให้ท่านประสบความสำเร็จยิ่ง ๆ ขึ้นไป
+          ในการสร้างคุณูปการต่อวงการวิศวกรรมและการศึกษาของประเทศสืบไป
+        </p>
+      </div>
+      <div class="container-pic">
+        <% for(let i=1; i<=5; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Mar/03_03_(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
+      </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=5; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/Mar/03_03_(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+      </div>
+      <script src="/js/assets/news-grid.js"></script>
+    </div>
+    <%-include('../../../partials/footer')-%>
+  </body>
+</html>

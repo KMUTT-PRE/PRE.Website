@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Thai", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navigation-tab {
+  margin: 7vw 0 0 3vw;
+  width: fit-content;
+}
+
+.navigation-tab a,
+.navigation-tab span {
+  padding: 0 0.5vw;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation-tab a:hover {
+  color: #a72c32;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.scholarship-layout {
+  justify-content: space-between;
+  display: flex;
+}
+
+.scholarship-content {
+  width: 900px;
+  height: auto;
+  margin: 0 0 3vw 10vw;
+  padding: 3vw;
+  background: #fff;
+}
+
+.scholarship-container h2 {
+  font-weight: 700;
+}
+
+.scholarship-container h3 {
+  font-weight: 600;
+}
+
+.scholarship-container h2,
+.scholarship-container h4 {
+  color: #a72c32;
+  line-height: 1.8;
+}
+
+.scholarship-container a {
+  color: #a72c32;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.table-responsive {
+  width: 500px;
+  overflow-x: auto;
+  margin: 1.5vw 0;
+  border-radius: 8px;
+}
+
+.custom-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+}
+
+.custom-schedule-table th,
+.custom-schedule-table td {
+  padding: 0.5vw;
+  text-align: center;
+  border: 1px solid #d4d4d4;
+  font-size: 16px;
+}
+
+.custom-schedule-table thead tr {
+  background-color: #f8f8f8;
+  color: #a72c32;
+}
+
+.custom-schedule-table tbody tr:hover {
+  background-color: #fcfcfc;
+}
+
+.scholarship-container i {
+  font-size: 14px;
+}
+
+.scholarship-container a:hover {
+  color: #7d7d7d;
+}
+
+.scholarship-news {
+  flex: 0 0 240px;
+  margin: 0 10vw 3vw 0;
+  padding-top: 3vw;
+  background: #fff;
+}
+
+.right-news {
+  margin: 1vw 0;
+}
+
+.news-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+.tags {
+  flex-direction: column;
+  padding: 0.5vw 1vw;
+  border-radius: 50px;
+  background: #a72c32;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
