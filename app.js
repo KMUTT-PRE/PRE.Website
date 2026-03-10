@@ -57,6 +57,14 @@ app.get("/news", (req, res) => {
   res.render("pages/news");
 });
 
+app.get("/news/pos20260305-1", (req, res) => {
+  res.render("news/2569/news/pos20260305-1");
+});
+
+app.get("/news/pos20260304-1", (req, res) => {
+  res.render("news/2569/news/pos20260304-1");
+});
+
 app.get("/news/pos20260303-1", (req, res) => {
   res.render("news/2569/news/pos20260303-1");
 });

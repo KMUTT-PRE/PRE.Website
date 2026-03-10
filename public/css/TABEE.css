@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Thai", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navigation-tab {
+  margin: 7vw 0 0 3vw;
+  width: fit-content;
+}
+
+.navigation-tab a,
+.navigation-tab span {
+  padding: 0 0.5vw;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation-tab a:hover {
+  color: #a72c32;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.tabee-nav {
+  position: sticky;
+  top: 150px;
+  right: 0;
+  z-index: 100;
+  float: right;
+  margin-right: 0;
+}
+
+.nav-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #a72c32;
+  width: 140px;
+  position: relative;
+  padding: 1vw;
+  border-radius: 10px 0 0 10px;
+}
+
+.nav-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-box li a {
+  line-height: 2;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.nav-box li a:hover {
+  color: #afafaf;
+  font-weight: 600;
+}
+
+.tabee-head {
+  justify-self: center;
+  margin-top: 1vw;
+}
+
+.tabee-head h3 {
+  color: #a72c32;
+  font-weight: 800;
+}
+
+.tabee-body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5vw;
+}
+
+.tabee-bodybox {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tabee-body h4 {
+  margin-left: 2.5vw;
+  font-weight: 700;
+  color: #a72c32;
+}
+
+.tabee-body a {
+  font-size: 16px;
+  color: #0000ff;
+}
+
+.tabee-body h5 {
+  font-size: 18px;
+  margin-left: 2.5vw;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-height: 80vh;
+}
+
+.modal-main-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.modal-controls {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  z-index: 2200;
+}
+
+.close {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  line-height: 1;
+}
+
+.close:hover {
+  color: #a72c32;
+  transform: scale(1.1);
+}
+
+#section-1 {
+  justify-self: center;
+}
+
+.tabee-content {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2vw;
+  background: #fff;
+}
+
+.tabee-content h5 {
+  color: #a72c32;
+  font-weight: 800;
+}
+
+.tabee-content a {
+  color: #0000ff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.tabee-content ol {
+  justify-content: left;
+  color: black;
+  align-items: left;
+  font-weight: normal;
+  color: black;
+}
+
+.tabee-content li {
+  margin-left: 1vw;
+  font-size: 18px;
+}
+
+.tabee-plo {
+  justify-self: center;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tabee-plo-head {
+  padding: 2vw;
+  color: #a72c32;
+  font-weight: 700;
+}
+
+.tabee-plo-head a {
+  color: #0000ff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.tabee-subplo {
+  display: flex;
+  flex-direction: row;
+  margin: 1vw 0;
+}
+
+.card-head {
+  width: 300px;
+  height: 300px;
+  padding: 1vw;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.card-head h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #a72c32;
+  font-weight: 700;
+}
+
+.card-head p {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.tabee-bodycard {
+  width: 800px;
+  height: 300px;
+  padding: 1vw;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.tabee-bodycard p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #a72c32;
+}
+
+.tabee-bodycard span {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tabee-history {
+  justify-self: center;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2vw;
+}
+
+.tabee-history h5 {
+  margin-left: 2vw;
+  color: #a72c32;
+  font-weight: 700;
+}
+
+.tabee-history-box {
+  display: flex;
+  flex-direction: row;
+  margin: 1vw 0;
+}
+
+.tabee-history-head {
+  width: 260px;
+  max-height: 1100px;
+  border: 1px solid #cacaca;
+  border-radius: 10px 0 0 10px;
+  background-color: #fff;
+  padding: 1vw;
+}
+
+.history-headcard p {
+  margin: 0;
+  line-height: 1;
+  color: #a72c32;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tabee-history-body {
+  padding: 1vw;
+  width: 720px;
+  max-height: 1100px;
+  border: 1px solid #cacaca;
+  border-radius: 0 10px 10px 0;
+  background-color: #fff;
+}
+
+.history-bodycard p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.history-headcard span {
+  font-size: 16px;
+  color: #a85257;
+}
+
+.history-bodycard a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #a72c32;
+}

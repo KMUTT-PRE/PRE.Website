@@ -280,7 +280,7 @@
   }
 }
 
-/* ืnews */
+/* news */
 
 @media (max-width: 1024px) {
   .navigation-tab {
@@ -335,5 +335,53 @@
 
   .content-text {
     width: 100% !important;
+  }
+}
+
+/* scholarship */
+@media (max-width: 1024px) {
+}
+
+/* TABEE */
+@media (max-width: 1024px) {
+  .tabee-nav {
+    float: right;
+    right: 0;
+  }
+
+  .tabee-history h5 {
+    margin: 0 4vw;
+    padding: 2vw;
+  }
+
+  .tabee-bodycard,
+  .tabee-history-body {
+    width: 90% !important;
+    height: auto !important;
+  }
+
+  .tabee-subplo,
+  .tabee-history-box {
+    flex-direction: column;
+    width: 90% !important;
+    justify-self: center !important;
+  }
+
+  .tabee-history-box {
+    align-items: center;
+  }
+
+  .card-head,
+  .tabee-history-head {
+    width: 90% !important;
+    height: auto !important;
+    justify-self: center;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .tabee-bodycard,
+  .tabee-history-body {
+    border-radius: 0 0 10px 10px;
+    justify-self: center;
   }
 }

@@ -407,3 +407,39 @@
     gap: 10px;
   }
 }
+
+/* scholarship */
+@media (max-width: 768px) {
+  .scholarship-content {
+    margin: 1vw;
+    width: 100%;
+  }
+
+  .custom-schedule-table {
+    width: 300px;
+  }
+
+  .table-responsive {
+    width: 100%;
+  }
+
+  .scholarship-news {
+    display: none;
+  }
+}
+
+/* TABEE */
+@media screen and (max-width: 768px) {
+  .tabee-nav {
+    display: none;
+  }
+
+  .tabee-head h3 {
+    padding: 3vw;
+  }
+
+  .tabee-subplo-body,
+  .tabee-history-box {
+    margin-bottom: 3vw;
+  }
+}
