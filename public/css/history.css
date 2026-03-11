@@ -61,9 +61,8 @@
 
 .history-container {
   display: flex;
-  gap: 0; /* เปลี่ยนจาก 30px เป็น 0 เพื่อให้ชิดกัน */
   max-width: 1300px;
-  align-items: stretch; /* เปลี่ยนจาก flex-start เป็น stretch เพื่อให้ความสูงเท่ากัน */
+  align-items: stretch;
 }
 
 /* --- ฝั่งซ้าย: Sidebar --- */
@@ -71,64 +70,57 @@
   flex: 0 0 320px;
   background: #fdfdfd;
   border: 1px solid #cacaca;
-  /* ปรับมุมมนให้มนเฉพาะฝั่งซ้าย */
   border-radius: 12px 0 0 12px;
-  padding: 20px;
-  /* ลบเงาฝั่งขวาออกเพื่อให้ดูติดกับแผ่นข้างๆ */
-  box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.05);
-  border-right: none; /* ลบเส้นขอบฝั่งขวาเพื่อไม่ให้เส้นซ้อนกัน */
+  padding: 1vw;
+  border-right: none;
 }
 
 .history-heads-sidebar h3 {
   color: #a72c32;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 1vw;
   border-bottom: 2px solid #a72c32;
-  padding-bottom: 10px;
+  padding-bottom: 0.5vw;
 }
 
 .head-item {
-  margin-bottom: 20px;
+  margin-bottom: 1vw;
 }
 
 .head-img {
-  width: 80px;
+  width: 120px;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 0.5vw;
 }
 
 .head-name {
-  color: #9d696c; /* สีน้ำเงินตามต้นฉบับ [cite: 64] */
-  font-weight: bold;
-  font-size: 1.1rem;
+  color: #9d696c;
+  font-weight: 700;
+  font-size: 18px;
   margin: 5px 0;
 }
 
 .head-term {
-  font-size: 0.9rem;
+  font-size: 16px;
   color: #000;
 }
 
 /* --- ฝั่งขวา: Details --- */
 .history-details-main {
-  flex: 1; /* ขยายพื้นที่ที่เหลือ */
 }
 
 .details-card {
   background: #fff;
   border: 1px solid #cacaca;
-  /* ปรับมุมมนให้มนเฉพาะฝั่งขวา */
   border-radius: 0 12px 12px 0;
-  padding: 30px;
-  /* ปรับเงาให้ต่อเนื่องกัน */
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.05);
-  height: 100%; /* บังคับให้สูงเต็มพื้นที่ */
+  padding: 2vw;
+  height: 100%;
 }
 
 .year-block {
-  margin-bottom: 40px;
+  margin-bottom: 2vw;
   border-bottom: 1px solid #cacaca;
-  padding-bottom: 20px;
+  padding-bottom: 1vw;
 }
 
 .year-block:last-child {
@@ -136,26 +128,25 @@
 }
 
 .year-title {
-  color: #a72c32; /* สีส้มตามต้นฉบับ [cite: 102] */
-  font-size: 1.4rem;
+  color: #a72c32;
+  font-size: 20px;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 0.5vw;
 }
 
 .leader-in-year {
   color: #9d696c;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.5vw;
 }
 
 .event-list {
-  padding-left: 20px;
+  padding-left: 1vw;
   line-height: 1.7;
 }
 
 .event-list li {
-  margin-bottom: 12px;
-  text-align: justify;
+  margin-bottom: 1vw;
 }
 
 .modal {
