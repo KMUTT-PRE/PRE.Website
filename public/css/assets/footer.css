@@ -37,6 +37,10 @@
   margin-top: 1em;
 }
 
+.footer-brand a {
+  text-decoration: none;
+}
+
 .brand1 img {
   border-right: 1px solid #686868;
 }

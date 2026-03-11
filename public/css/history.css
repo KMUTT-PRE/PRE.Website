@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Thai", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navigation-tab {
+  margin: 7vw 0 0 3vw;
+  width: fit-content;
+}
+
+.navigation-tab a,
+.navigation-tab span {
+  padding: 0 0.5vw;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation-tab a:hover {
+  color: #a72c32;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.history-layout {
+  justify-self: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 1vw 12vw;
+}
+
+.history-head h2 {
+  color: #a72c32;
+}
+
+.history-head1 h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #a72c32;
+}
+
+.history-head1 p {
+  font-size: 18px;
+  margin: 0 2vw;
+}
+
+.history-head1 img {
+  margin-left: 10%;
+  width: 80%;
+  height: auto;
+}
+
+.container-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.history-container {
+  display: flex;
+  gap: 0; /* เปลี่ยนจาก 30px เป็น 0 เพื่อให้ชิดกัน */
+  max-width: 1300px;
+  align-items: stretch; /* เปลี่ยนจาก flex-start เป็น stretch เพื่อให้ความสูงเท่ากัน */
+}
+
+/* --- ฝั่งซ้าย: Sidebar --- */
+.history-heads-sidebar {
+  flex: 0 0 320px;
+  background: #fdfdfd;
+  border: 1px solid #cacaca;
+  /* ปรับมุมมนให้มนเฉพาะฝั่งซ้าย */
+  border-radius: 12px 0 0 12px;
+  padding: 20px;
+  /* ลบเงาฝั่งขวาออกเพื่อให้ดูติดกับแผ่นข้างๆ */
+  box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.05);
+  border-right: none; /* ลบเส้นขอบฝั่งขวาเพื่อไม่ให้เส้นซ้อนกัน */
+}
+
+.history-heads-sidebar h3 {
+  color: #a72c32;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #a72c32;
+  padding-bottom: 10px;
+}
+
+.head-item {
+  margin-bottom: 20px;
+}
+
+.head-img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.head-name {
+  color: #9d696c; /* สีน้ำเงินตามต้นฉบับ [cite: 64] */
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.head-term {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+/* --- ฝั่งขวา: Details --- */
+.history-details-main {
+  flex: 1; /* ขยายพื้นที่ที่เหลือ */
+}
+
+.details-card {
+  background: #fff;
+  border: 1px solid #cacaca;
+  /* ปรับมุมมนให้มนเฉพาะฝั่งขวา */
+  border-radius: 0 12px 12px 0;
+  padding: 30px;
+  /* ปรับเงาให้ต่อเนื่องกัน */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.05);
+  height: 100%; /* บังคับให้สูงเต็มพื้นที่ */
+}
+
+.year-block {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #cacaca;
+  padding-bottom: 20px;
+}
+
+.year-block:last-child {
+  border-bottom: none;
+}
+
+.year-title {
+  color: #a72c32; /* สีส้มตามต้นฉบับ [cite: 102] */
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.leader-in-year {
+  color: #9d696c;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.event-list {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.event-list li {
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-height: 80vh;
+}
+
+.modal-main-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.modal-controls {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  z-index: 2200;
+}
+
+.close {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  line-height: 1;
+}
+
+.close:hover {
+  color: #a72c32;
+  transform: scale(1.1);
+}
