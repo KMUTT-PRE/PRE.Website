@@ -493,7 +493,7 @@
 @media (max-width: 768px) {
   .nav-sidebar {
     position: fixed;
-    top: 30%;
+    top: 50%;
     transform: translateY(-50%) translateX(100%);
     float: none;
     margin-right: 0;
