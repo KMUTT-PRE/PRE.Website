@@ -23,6 +23,18 @@ function smoothScrollTo(targetY, duration = 900) {
   requestAnimationFrame(animation);
 }
 
+function toggleNav() {
+  const sidebar = document.querySelector(".nav-sidebar");
+  sidebar.classList.toggle("active");
+
+  const arrow = document.querySelector(".arrow-icon");
+  if (sidebar.classList.contains("active")) {
+    arrow.innerText = "❯";
+  } else {
+    arrow.innerText = "❮";
+  }
+}
+
 document.querySelectorAll(".primary-navigation a").forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();

@@ -443,3 +443,84 @@
     margin-bottom: 3vw;
   }
 }
+
+/* history */
+@media (max-width: 768px) {
+  .history-layout {
+    margin: 2vw 3vw;
+  }
+
+  .container-layout {
+    flex-direction: column;
+  }
+
+  .history-container {
+    flex-direction: column;
+  }
+
+  .history-heads-sidebar {
+    flex: none;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    border-right: 1px solid #cacaca;
+    border-bottom: none;
+  }
+
+  .details-card {
+    border-radius: 0 0 12px 12px;
+    border-top: 1px solid #cacaca;
+    padding: 4vw;
+  }
+
+  .history-head1 h4 {
+    font-size: 18px;
+  }
+
+  .history-head1 p {
+    font-size: 16px;
+  }
+
+  .year-title {
+    font-size: 18px;
+  }
+
+  .event-list {
+    padding-left: 4vw;
+  }
+}
+
+/* mayteam */
+@media (max-width: 768px) {
+  .nav-sidebar {
+    position: fixed;
+    top: 30%;
+    transform: translateY(-50%) translateX(100%);
+    float: none;
+    margin-right: 0;
+  }
+
+  .nav-sidebar.active {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  .nav-toggle {
+    display: flex;
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 40px;
+    height: 50px;
+    background-color: #a72c32;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-box {
+    width: 180px !important;
+    border-radius: 0 0 0 10px !important;
+  }
+}

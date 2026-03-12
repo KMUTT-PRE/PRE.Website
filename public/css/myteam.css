@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Thai", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navigation-tab {
+  margin: 7vw 0 0 3vw;
+  width: fit-content;
+}
+
+.navigation-tab a,
+.navigation-tab span {
+  padding: 0 0.5vw;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation-tab a:hover {
+  color: #a72c32;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.nav-sidebar {
+  position: sticky;
+  top: 150px;
+  right: 0;
+  z-index: 100;
+  float: right;
+  transition: transform 0.3s ease; /* เพิ่มแอนิเมชันการเลื่อน */
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #a72c32;
+  width: 200px;
+  position: relative;
+  padding: 1vw;
+  border-radius: 10px 0 0 10px;
+}
+
+.nav-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-box hr {
+  margin: 0.1vw 0;
+  color: #fff;
+}
+
+.nav-box li a {
+  line-height: 2;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.nav-box li a:hover {
+  color: #afafaf;
+  font-weight: 600;
+}

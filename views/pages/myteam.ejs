@@ -1,59 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <%- include('../partials/navbar', { title : 'myteam'} ) %>
 
-    <%- include('../partials/navbar', { title : 'Workshop'} ) %>
+    <link rel="stylesheet" href="/css/myteam.css" />
+    <%- include('../partials/Responsive') %>
   </head>
   <body>
     <%- include('../partials/topbtn') %>
 
-    <!-- Desktop right-side sidebar (visible on lg+) -->
-    <nav
-      class="side-menu d-none d-lg-block"
-      aria-label="sidebar"
-      style="
-        background-color: #a72c32;
-        width: 18%;
-        margin-bottom: 10px;
-        position: fixed;
-        top: 120px;
-        right: 0;
-        padding: 10px;
-        border-radius: 8px;
-      "
-    >
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a href="#top" class="nav-link" style="color: black">ผู้บริหาร</a>
-        </li>
-        <li class="nav-item">
-          <a href="#subhead" class="nav-link" style="color: black"
-            >หัวหน้าสาขา</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#lecturer" class="nav-link" style="color: black"
-            >อาจารย์ประจำภาควิชา</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="\myteam2" class="nav-link" style="color: black"
-            >อาจารย์พิเศษ</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#support" class="nav-link" style="color: black"
-            >นายช่างเทคนิค-เจ้าหน้าที่</a
-          >
-        </li>
-      </ul>
-    </nav>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/
+      <span>บุคลากร</span>
+    </div>
+    <nav class="nav-sidebar nav-bottom">
+      <div class="nav-toggle" onclick="toggleNav()">
+        <span class="arrow-icon">❮</span>
+      </div>
 
-    <div class="container team content-with-sidebar" style="margin-top: 120px">
+      <div class="nav-box nav-bottom-box">
+        <ul>
+          <li><a href="#section-1">ผู้บริหาร</a></li>
+          <hr />
+          <li><a href="#section-2">หัวหน้าสาขา</a></li>
+          <hr />
+          <li><a href="#section-3">อาจารย์ประจะภาควิชา</a></li>
+          <hr />
+          <li><a href="/myteam2">อาจารย์พิเศษ</a></li>
+          <hr />
+          <li><a href="#section-4">นายช่างเทคนิค-เจ้าหน้าที่</a></li>
+        </ul>
+      </div>
+    </nav>
+    <script src="/js/assets/Navigation.js"></script>
+
+    <div class="container team content-with-sidebar" style="margin-top: 2vw">
       <!-- Use Bootstrap flex utilities to arrange cards horizontally; g-3 adds gap -->
 
       <!-- row 0.0 หัวหน้าภาควิชา -->
+      <section id="section-1"></section>
       <div class="row g-2 align-items-stretch d-flex align-items-center">
         <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
           <div class="card h-100 mx-1 border-0">
@@ -343,10 +328,13 @@
         </div>
       </div>
 
-      <section id="subhead"></section>
+      <section id="section-2"></section>
 
       <!-- row 3.0 หัวหน้าสาขา -->
-      <div class="row g-2 align-items-stretch d-flex align-items-center">
+      <div
+        id="#section-3"
+        class="row g-2 align-items-stretch d-flex align-items-center"
+      >
         <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-2">
           <div class="card h-100 mx-1 border-0">
             <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
@@ -455,7 +443,7 @@
         </div>
       </div>
 
-      <section id="lecturer"></section>
+      <section id="section-3"></section>
 
       <!-- row 4.0 อาจารย์ประจำภาควิชา -->
       <div class="row g-2 align-items-stretch d-flex align-items-center">
@@ -464,8 +452,8 @@
             <!-- <a href="#"><img class="card-img-top pers-card-img" src="../images/pers_pic/blank.jpg" alt="" /></a> -->
             <h5 class="section-title">อาจารย์ประจำภาควิชา</h5>
             <a
-              href="#"
-              onclick="window.open('/images/pers_pic/Year-level advisor.pdf', '_blank', 'width=1000,height=800,noopener'); return false;"
+              href="/images/pers_pic/Year-level advisor.pdf"
+              target="_blank"
               style="font-size: medium"
               >อาจารย์ที่ปรึกษา</a
             >
@@ -898,7 +886,7 @@
                         </div>
                     </div> -->
 
-        <section id="support"></section>
+        <section id="section-4"></section>
 
         <!-- row 8.0 นายช่างเทคนิค -->
         <div class="row g-2 align-items-stretch d-flex align-items-center">

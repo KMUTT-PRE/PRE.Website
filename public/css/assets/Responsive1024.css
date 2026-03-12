@@ -385,3 +385,23 @@
     justify-self: center;
   }
 }
+
+/* history */
+@media (max-width: 1024px) {
+  .history-layout {
+    padding: 1vw 10vw;
+    max-width: 100%;
+  }
+
+  .history-heads-sidebar {
+    flex: 0 0 280px;
+  }
+
+  .head-img {
+    width: 100px;
+  }
+
+  .history-head1 p {
+    margin: 0 1vw;
+  }
+}
