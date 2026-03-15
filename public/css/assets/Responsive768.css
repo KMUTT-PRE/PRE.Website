@@ -524,3 +524,49 @@
     border-radius: 0 0 0 10px !important;
   }
 }
+
+/* document */
+@media (max-width: 768px) {
+  .request-forms,
+  .Internship-form,
+  .form-body {
+    width: 95%;
+    padding: 1vw 2vw;
+  }
+
+  .form-head {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .form-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2vw;
+    gap: 10px;
+  }
+
+  .form-link {
+    align-self: flex-end;
+    background: #f4f4f4;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+
+  .Internship-form h4,
+  .Internship-body {
+    padding: 0 2vw;
+  }
+
+  .Internship-body ul {
+    padding-left: 6vw;
+  }
+
+  .form-body {
+    font-size: 16px;
+  }
+
+  .form-body img {
+    max-width: 100%;
+  }
+}

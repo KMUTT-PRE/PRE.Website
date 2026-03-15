@@ -405,3 +405,23 @@
     margin: 0 1vw;
   }
 }
+
+/* document */
+@media (max-width: 1024px) {
+  .navigation-tab {
+    margin: 10vw 0 0 5vw;
+  }
+
+  .request-forms,
+  .Internship-form,
+  .form-body {
+    width: 90%;
+    margin: 2vw auto;
+  }
+
+  .form-container,
+  .Internship-form h4,
+  .Internship-body {
+    padding: 0 4vw;
+  }
+}
