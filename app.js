@@ -250,6 +250,14 @@ app.get("/personel/z06_Tuanjai", (req, res) => {
   res.render("pages/personel/z06_Tuanjai");
 });
 
+app.get("/personel/z07_Pongsak", (req, res) => {
+  res.render("pages/personel/z07_Pongsak");
+});
+
+app.get("/personel/z08_Pitoon", (req, res) => {
+  res.render("pages/personel/z08_Pitoon");
+});
+
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
 });
