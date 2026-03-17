@@ -23,9 +23,8 @@
             <li><a href="#section-1">ปริญญาโท</a></li>
             <li><a href="#section-2">ชื่อหลักสูตร</a></li>
             <li><a href="#section-3">เป้าหมายการเรียนรู้</a></li>
-            <li><a href="#section-4">แนวทางการเรียนรู้แต่ละชั้นปี</a></li>
-            <li><a href="#section-5">PLO แบบวิชาการ</a></li>
-            <li><a href="#section-6">PLO แบบวิชาชีพ</a></li>
+            <li><a href="#section-4">จุดแข็งของหลักสูตร</a></li>
+            <li><a href="#section-5">PLO</a></li>
             <li><a href="#section-7">อาชีพในอนาคต</a></li>
             <li><a href="#section-8">เอกสาร</a></li>
           </ul>
@@ -210,33 +209,33 @@
           <h3>(Program Learning Outcome: PLOs)</h3>
         </div>
       </div>
-      <div class="container swiper">
-        <ul class="card-list swiper-wrapper" style="justify-items: center">
+      <div class="plo-box container swiper">
+        <ul class="card-list swiper-wrapper">
           <%- include('../partials/PLOs/PLO-MEng/1PLO-1.ejs') %> <%-
           include('../partials/PLOs/PLO-MEng/1PLO-2.ejs') %> <%-
           include('../partials/PLOs/PLO-MEng/1PLO-3.ejs') %>
         </ul>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev plo-arrow"></div>
-        <div class="swiper-button-next plo-arrow"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
       </div>
     </div>
-    <div id="section-6" class="plo-section">
+    <div id="section-5" class="plo-section">
       <div class="plo-title">
         <div class="plo-underline">
           <h1>ผลลัพธ์การเรียนรู้ระดับหลักสูตร แบบวิชาชีพ (การค้นคว้าอิสระ)</h1>
           <h3>(Program Learning Outcome: PLOs)</h3>
         </div>
       </div>
-      <div class="container swiper">
+      <div class="plo-box container swiper">
         <ul class="card-list swiper-wrapper">
           <%- include('../partials/PLOs/PLO-MEng/2PLO-1.ejs') %> <%-
           include('../partials/PLOs/PLO-MEng/2PLO-2.ejs') %> <%-
           include('../partials/PLOs/PLO-MEng/2PLO-3.ejs') %>
         </ul>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev plo-arrow"></div>
-        <div class="swiper-button-next plo-arrow"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
       </div>
     </div>
     <div id="plo-modal" class="plo-modal">
@@ -250,7 +249,7 @@
     <script src="/js/assets/PLO-degree.js"></script>
 
     <!-- อาชีพอนาคต -->
-    <div id="section-7" class="work">
+    <div id="section-6" class="work">
       <div>
         <div>
           <h4>อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา</h4>
@@ -271,7 +270,7 @@
     </div>
 
     <!-- เอกสารเพิ่มเติม -->
-    <div id="section-8" class="papers">
+    <div id="section-7" class="papers">
       <div>
         <h4>เอกสารหลักสูตรเพิ่มเติม(2568)</h4>
 

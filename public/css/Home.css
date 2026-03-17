@@ -153,6 +153,7 @@
   gap: 0.1em;
   padding-right: 1em;
   background: #a72c32;
+  height: 300px;
 }
 
 .reward-group:hover {

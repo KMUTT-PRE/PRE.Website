@@ -144,9 +144,66 @@
     justify-items: center !important;
   }
 
+  .card-plo {
+    height: 400px;
+  }
+
+  .subplo-hidden {
+    height: auto;
+  }
+
+  .plo-modal-content {
+    width: 95%;
+    max-width: none;
+    max-height: 85vh;
+    padding: 2.5em 1.5em 1.5em;
+    border-radius: 14px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  .plo-modal-close {
+    position: absolute;
+    font-size: 2em;
+    top: 10px;
+    right: 15px;
+    z-index: 100;
+    color: #000;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .plo-modal-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  .plo-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+
+  .subplo-item h3 {
+    font-size: 18px;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     display: none !important;
+  }
+
+  /* อาชีพอนาคต */
+  #section-6.work {
+    padding: 1vw;
+  }
+
+  .work h4,
+  .work-box {
+    padding: 0 5vw;
+  }
+
+  .work-box {
+    width: 90%;
+    justify-self: center;
   }
 
   /* papers */
@@ -163,7 +220,6 @@
     right: 0;
     width: 220px;
     height: calc(100vh - 70px);
-    background-color: rgb(255, 128, 0);
     padding: 1rem;
     overflow-y: auto;
     z-index: 1040;

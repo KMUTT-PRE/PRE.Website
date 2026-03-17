@@ -311,12 +311,23 @@
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 2vw;
+}
+
+.card-plo {
+  height: 400px !important;
+}
+
+.card-list {
+  padding: 0;
+  justify-self: center;
+}
+
+.plo-box {
+  height: 430px;
 }
 
 .card-wrapper .swiper-slide-button {
   color: #c3c3c3;
-  margin-top: -35px;
 }
 
 .card-wrapper:hover .swiper-slide-button:hover {
@@ -341,7 +352,7 @@
 }
 
 /* Work */
-#section-7.work {
+#section-6.work {
   width: 100%;
   padding: 0 1em;
   display: flex;
@@ -379,7 +390,7 @@
   margin-bottom: 0.6em;
 }
 
-#section-7 img {
+#section-6 img {
   width: 60vh;
   margin-top: 5em;
   height: auto;
@@ -387,14 +398,14 @@
 }
 
 /* เอกสาร */
-#section-8.papers {
+#section-7.papers {
   width: 100%;
   padding: 6vh 8vw;
   display: flex;
   justify-content: center;
 }
 
-#section-8.papers > div {
+#section-7.papers > div {
   width: 100%;
   max-width: 1000px;
 }

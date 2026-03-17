@@ -50,13 +50,19 @@
 
   /* reward */
   .reward-group {
-    height: 28vh;
+    height: 320px;
   }
 
   .reward-card img,
   .reward-card1 img {
-    width: 30vh;
-    height: 25vh;
+    width: auto;
+    height: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
   }
 
   /* news */
@@ -221,6 +227,16 @@
     max-width: 720px;
     max-height: 85vh;
     padding: 2em;
+  }
+
+  .plo-box {
+    height: 480px;
+  }
+
+  .subplo-hidden {
+    width: 90%;
+    max-width: 900px;
+    height: auto;
   }
 
   /* งานอนาคต */

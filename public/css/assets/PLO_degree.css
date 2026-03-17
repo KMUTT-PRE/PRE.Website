@@ -1,12 +1,6 @@
-.card-plo {
-  list-style: none;
-  width: 270px;
-}
-
 /* main card */
-.card-plo > div:first-child {
+.card-plo {
   background: #fff;
-  height: 400px;
   border-radius: 22px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   display: flex;

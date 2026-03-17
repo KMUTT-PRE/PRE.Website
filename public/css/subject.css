@@ -296,9 +296,12 @@
   width: 80%;
 }
 
+.card-plo {
+  height: 400px !important;
+}
+
 .card-wrapper .swiper-slide-button {
   color: #5d5d5d;
-  margin-top: -35px;
 }
 
 .card-wrapper:hover .swiper-slide-button:hover {
