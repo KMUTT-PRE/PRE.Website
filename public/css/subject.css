@@ -362,9 +362,10 @@
 }
 
 #section-6 img {
-  width: 60vh;
-  margin-top: 5em;
-  height: 50vh;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 5vw;
+  height: auto;
   object-fit: cover;
 }
 
