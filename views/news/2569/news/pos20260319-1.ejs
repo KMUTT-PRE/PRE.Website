@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <%- include('../../../partials/navbar', { title : 'pos20260319-1'} ) %>
+      <link rel="stylesheet" href="/css/news-page.css" />
+      <%- include('../../../partials/Responsive') %>
+    </head>
+  </head>
+  <body>
+    <%- include('../../../partials/topbtn') %>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/ <a href="/news">ข่าวสาร</a>/
+      <span>TCAS69 รอบ 2 มาแล้ว!...</span>
+    </div>
+    <div class="layout">
+      <div class="bg-head">
+        <h2 class="content-head">🔥 TCAS69 รอบ 2 มาแล้ว!</h2>
+        <p class="tag">#รับสมัคร #ISEE</p>
+        <div class="line-dark"></div>
+        <div><i class="fa-regular fa-calendar"></i> 19 มี.ค. 2569</div>
+      </div>
+      <span class="banner">
+        <img src="/images/news/2569/Mar/19_03_01(1).jpg" alt="20260319" />
+      </span>
+      <div class="content-text">
+        <p>อยากเรียนวิศวะ…แต่ก็อยากมีธุรกิจของตัวเอง?</p>
+        <h5>มาเลย 👉 ISEE</h5>
+        <p>วิศวกรรมระบบอุตสาหกรรม + การประกอบการธุรกิจ</p>
+        <h5>⚙️ เรียนวิศวะ</h5>
+        <h5>📈 เข้าใจธุรกิจ</h5>
+        <h5>🚀 สร้างโอกาสได้ตั้งแต่เรียน</h5>
+      </div>
+      <div class="container-pic">
+        <% for(let i=1; i<=3; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Mar/19_03_01(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
+      </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=3; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/Mar/19_03_01(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+        <script src="/js/assets/news-grid.js"></script>
+      </div>
+    </div>
+    <%-include('../../../partials/footer')-%>
+  </body>
+</html>
