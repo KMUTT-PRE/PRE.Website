@@ -76,6 +76,10 @@
   transition: 0.3s;
 }
 
+.content-text li {
+  list-style: none;
+}
+
 .content-text a:hover {
   color: #a72c32;
 }
