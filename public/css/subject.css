@@ -100,7 +100,7 @@
   opacity: 0.95;
   background: #eeeeee;
   padding: 28px 32px;
-  max-width: 520px;
+  width: 520px;
 }
 
 .overlay-main h3:first-child {
@@ -129,15 +129,15 @@
 /* name section */
 .namebox {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 60px;
-  padding: 1em 20em;
+  padding: 1em 12em;
   background: #a72c32;
   color: #fff;
 }
 
 .namebox span {
-  width: 50%;
+  width: fit-content;
 }
 
 .name1-underline h4,
@@ -153,6 +153,7 @@
 .namebox h5 {
   font-size: 18px;
   margin-bottom: 6px;
+  width: fit-content;
 }
 
 /* วัตถุประสงค์ */
