@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <%- include('../../../partials/navbar', { title : 'pos20260425-1'} ) %>
+      <link rel="stylesheet" href="/css/news-page.css" />
+      <%- include('../../../partials/Responsive') %>
+    </head>
+  </head>
+  <body>
+    <%- include('../../../partials/topbtn') %>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/ <a href="/news">ข่าวสาร</a>/
+      <span>ขอชื่นชมและแสดงความยินดี...</span>
+    </div>
+    <div class="layout">
+      <div class="bg-head">
+        <h2 class="content-head">
+          ขอชื่นชมและแสดงความยินดี
+          ได้รับการตีพิมพ์ผลงานวิจัยในวารสารวิชาการระดับนานาชาติ Nondestructive
+          Testing and Evaluation
+        </h2>
+        <p class="tag">#รางวัล</p>
+        <div class="line-dark"></div>
+        <div><i class="fa-regular fa-calendar"></i> 25 เมษายน 2569</div>
+      </div>
+      <span class="banner">
+        <img src="/images/news/2569/Apr/25_04(1).jpg" alt="20260425-1" />
+      </span>
+      <div class="content-text">
+        <p>
+          มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี 🎊👍ขอชื่นชมและแสดงความยินดีกับ
+        </p>
+        <ul>
+          <li>
+            นิโค บริเอนซ่า | บัณฑิตปีการศึกษา 2567 วศ.บ. วิศวกรรมเมคคาทรอนิกส์
+            ภาควิชาวิศวกรรมอุตสาหการ
+          </li>
+          <li>
+            ณรงค์ฤทธิ์ คุณสมบัติเจริญ | บัณฑิตปีการศึกษา 2567 วศ.บ.
+            วิศวกรรมเมคคาทรอนิกส์ ภาควิชาวิศวกรรมอุตสาหการ
+          </li>
+          <li>
+            Htet Myat Aung | Class of 2024 B.Eng. in Automation Engineering,
+            Control Systems and Instrumentation Department
+          </li>
+        </ul>
+        <br />
+        <p>
+          ได้รับการตีพิมพ์ผลงานวิจัยในวารสารวิชาการระดับนานาชาติ Nondestructive
+          Testing and Evaluation ซึ่งอยู่ในฐานข้อมูล Web of Science ระดับ
+          Quartile 1 (Q1)
+        </p>
+        <p>
+          ผลงานเรื่อง
+          การพัฒนาเทคนิคตรวจสอบความเสียหายพื้นผิวรางรถไฟแบบความเร็วสูงโดยหลักการเหนี่ยวนำกระแสไหลวนแบบเคลื่อนที่
+          (Development of high-speed inspection technique based on
+          motion-induced eddy current testing for surface railway defects)
+        </p>
+        <h5>อาจารย์ที่ปรึกษา</h5>
+        <p>
+          รศ. ดร.บวรโชค ผู้พัฒน์ | ผศ. ดร.เชษฐพงษ์ จรรยาอนุรักษ์ | ผศ.
+          ดร.เชิดพงษ์ จอมเดช | ผศ.เฉลิมเกียรติ จิระรุ่งเสถียร | ร.ท. รภัสสิทธิ์
+          มัดธนู
+        </p>
+        <h5>ผลงานตีพิมพ์</h5>
+        <p>
+          Brienza, N., N. Khunsombutcharoen, B. Poopat, C. Janya-anurak, C.
+          Jirarunsatian, R. Mutthanu, H. M. Aung, and C. Jomdecha. 2026.
+          “Development of High-Speed Inspection Technique Based on
+          Motion-Induced Eddy Current Testing for Surface Railway Defects.”
+          Nondestructive Testing and Evaluation, March, 1–22.
+        </p>
+        <a
+          href="https://www.tandfonline.com/doi/full/10.1080/10589759.2026.2638558"
+          >https://doi.org/10.1080/10589759.2026.2638558.</a
+        >
+      </div>
+      <div class="container-pic">
+        <% for(let i=1; i<=4; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Apr/25_04(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
+      </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=4; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/Apr/25_04(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+        <script src="/js/assets/news-grid.js"></script>
+      </div>
+    </div>
+    <%-include('../../../partials/footer')-%>
+  </body>
+</html>

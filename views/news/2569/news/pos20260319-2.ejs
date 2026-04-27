@@ -57,9 +57,51 @@
         <a href="https://join.kmutt.ac.th/degree" target="_blank"
           >https://join.kmutt.ac.th/degree</a
         >
-        <p>"Engineer the System, Build the Business"</p>
       </div>
-      <div class="container-pic" style="position: absolute"></div>
+      <div class="container-pic">
+        <% for(let i=1; i<=4; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/Apr/25_04(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
+      </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=4; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/Apr/25_04(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+        <script src="/js/assets/news-grid.js"></script>
+      </div>
     </div>
     <%-include('../../../partials/footer')-%>
   </body>
