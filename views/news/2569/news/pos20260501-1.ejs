@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <%- include('../../../partials/navbar', { title : 'pos20260501-1'} ) %>
+      <link rel="stylesheet" href="/css/news-page.css" />
+      <%- include('../../../partials/Responsive') %>
+    </head>
+  </head>
+  <body>
+    <%- include('../../../partials/topbtn') %>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/ <a href="/news">ข่าวสาร</a>/
+      <span>แผนผังนิทรรศการ...</span>
+    </div>
+    <div class="layout">
+      <div class="bg-head">
+        <h2 class="content-head">แผนผังนิทรรศการ Project Day 2026 ⚙️</h2>
+        <p class="tag">#กิจกรรม</p>
+        <div class="line-dark"></div>
+        <div><i class="fa-regular fa-calendar"></i> 1 พฤษภาคม 2569</div>
+      </div>
+      <span class="banner">
+        <img src="/images/news/2569/May/01_05(1).jpg" alt="20260501-1" />
+      </span>
+      <div class="content-text">
+        <p>แผนผังนิทรรศการ Project Day 2026 ⚙️</p>
+        <p>
+          รวมสุดยอด Project ตัวท็อป สิ่งประดิษฐ์สุดล้ำจากไอเดียเด็กวิศวะ มจธ.
+        </p>
+        <p>บอกเลยว่าไม่ได้มีแค่หุ่นยนต์ แต่ยังมีนวัตกรรมที่คุณคาดไม่ถึง!</p>
+        <br />
+        <h5>📍 เจอกันที่: อาคารการเรียนรู้พหุวิทยาการ (LX) ชั้น 2 - ชั้น 4</h5>
+        <h5>🗓 วันจันทร์ที่ 11 พฤษภาคม 2569</h5>
+        <h5>⏰ 08.00 - 16.30 น.</h5>
+        <br />
+        <p>
+          มาดูให้เห็นกับตาว่า "วิศวะบางมด" เขาทำอะไรกัน?
+          ใครกำลังหาแรงบันดาลใจทำโปรเจกต์ หรืออยากรู้ว่าพี่ๆ เขาเรียนอะไร
+          ห้ามพลาด!
+        </p>
+      </div>
+      <div class="container-pic">
+        <% for(let i=1; i<=3; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/May/01_05(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
+      </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=3; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/May/01_05(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+        <script src="/js/assets/news-grid.js"></script>
+      </div>
+    </div>
+    <%-include('../../../partials/footer')-%>
+  </body>
+</html>
