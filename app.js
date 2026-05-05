@@ -1,12 +1,37 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const fs = require("fs");
+const path = require("path");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("pages/Homepage");
+  // พิมพ์ตรวจสอบ Path ใน Terminal
+  console.log("Current Directory:", __dirname);
+
+  const newsDir = path.join(__dirname, "views", "news", "2569");
+  let latestNews = [];
+
+  try {
+    if (fs.existsSync(newsDir)) {
+      latestNews = fs
+        .readdirSync(newsDir)
+        .filter((file) => file.endsWith(".ejs"))
+        .map((file) => file.replace(".ejs", ""))
+        .sort()
+        .reverse()
+        .slice(0, 6);
+      console.log("Found News Files:", latestNews);
+    } else {
+      console.error("Path NOT Found:", newsDir);
+    }
+  } catch (err) {
+    console.error("Error reading directory:", err);
+  }
+
+  res.render("pages/Homepage", { latestNews: latestNews });
 });
 
 app.get("/pre", (req, res) => {
@@ -54,7 +79,21 @@ app.get("/scholarship", (req, res) => {
 });
 
 app.get("/news", (req, res) => {
-  res.render("pages/news");
+  const newsDir = path.join(__dirname, "views/news/2569");
+
+  let newsFiles = [];
+  try {
+    newsFiles = fs
+      .readdirSync(newsDir)
+      .filter((file) => file.endsWith(".ejs"))
+      .map((file) => file.replace(".ejs", ""))
+      .sort()
+      .reverse();
+  } catch (err) {
+    console.error("Error reading news directory:", err);
+  }
+
+  res.render("pages/news", { newsFiles: newsFiles });
 });
 
 app.get("/news/:postID", (req, res) => {

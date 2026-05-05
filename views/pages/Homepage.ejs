@@ -225,35 +225,20 @@
     </div>
     <div class="container-bg">
       <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <%- include('../news/2569/04-21.ejs') %>
-          </div>
-          <div class="swiper-slide">
-            <%- include('../news/2569/04-14.ejs') %>
-          </div>
-          <div class="swiper-slide">
-            <%- include('../news/2569/04-10-2.ejs') %>
-          </div>
-          <div class="swiper-slide">
-            <%- include('../news/2569/04-10-1.ejs') %>
-          </div>
-          <div class="swiper-slide">
-            <%- include('../news/2569/04-07.ejs') %>
-          </div>
-          <div class="swiper-slide">
-            <%- include('../news/2569/03-30.ejs') %>
-          </div>
-          <div class="swiper-slide">
-            <%- include('../news/2569/03-27.ejs') %>
-          </div>
-          <div class="swiper-slide">
-            <%- include('../news/2569/03-26-2.ejs') %>
-          </div>
-          <div class="swiper-slide">
-            <%- include('../news/2569/03-26-1.ejs') %>
-          </div>
-        </div>
+        <!-- ค้นหาส่วน <div class="swiper-wrapper"> ในไฟล์ Homepage.ejs -->
+<div class="swiper-wrapper">
+  <% if (typeof latestNews !== 'undefined' && latestNews.length > 0) { %>
+    <% latestNews.forEach(function(file) { %>
+      <div class="swiper-slide">
+        <%- include('../news/2569/' + file) %>
+      </div>
+    <% }); %>
+  <% } else { %>
+    <div class="swiper-slide">
+      <p>ไม่มีข่าวสารล่าสุดในขณะนี้</p>
+    </div>
+  <% } %>
+</div>
         <div class="swiper-pagination"></div>
         <div class="swiper-slide-button swiper-button-prev"></div>
         <div class="swiper-slide-button swiper-button-next"></div>

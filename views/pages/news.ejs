@@ -183,44 +183,11 @@
           </section>
         </div>
         <div class="card-container">
-          <%- include('../news/2569/05-01.ejs') %> <%-
-          include('../news/2569/04-25.ejs') %> <%-
-          include('../news/2569/04-21.ejs') %> <%-
-          include('../news/2569/04-14.ejs') %> <%-
-          include('../news/2569/04-10-2.ejs') %> <%-
-          include('../news/2569/04-10-1.ejs') %> <%-
-          include('../news/2569/04-07.ejs') %> <%-
-          include('../news/2569/03-30.ejs') %> <%-
-          include('../news/2569/03-27.ejs') %> <%-
-          include('../news/2569/03-26-2.ejs') %> <%-
-          include('../news/2569/03-26-1.ejs') %> <%-
-          include('../news/2569/03-25-2.ejs') %> <%-
-          include('../news/2569/03-25.ejs') %> <%-
-          include('../news/2569/03-23.ejs') %> <%-
-          include('../news/2569/03-22.ejs') %> <%-
-          include('../news/2569/03-19-3.ejs') %> <%-
-          include('../news/2569/03-19-2.ejs') %> <%-
-          include('../news/2569/03-19-1.ejs') %> <%-
-          include('../news/2569/03-18.ejs') %> <%-
-          include('../news/2569/03-17-2.ejs') %> <%-
-          include('../news/2569/03-17-1.ejs') %> <%-
-          include('../news/2569/03-16-3.ejs') %> <%-
-          include('../news/2569/03-16-2.ejs') %> <%-
-          include('../news/2569/03-16-1.ejs') %> <%-
-          include('../news/2569/03-05.ejs') %> <%-
-          include('../news/2569/03-04.ejs') %> <%-
-          include('../news/2569/03-03.ejs') %> <%-
-          include('../news/2569/02-06.ejs') %> <%-
-          include('../news/2569/02-03.ejs') %> <%-
-          include('../news/2569/01-30.ejs') %> <%-
-          include('../news/2569/01-29.ejs') %> <%-
-          include('../news/2569/01-24.ejs') %> <%-
-          include('../news/2569/01-21.ejs') %> <%-
-          include('../news/2569/01-15.ejs') %> <%-
-          include('../news/2569/01-14-1.ejs') %> <%-
-          include('../news/2569/01-14-2.ejs') %> <%-
-          include('../news/2569/01-12.ejs') %> <%-
-          include('../news/2569/01-02.ejs') %>
+          <% if (newsFiles && newsFiles.length > 0) { %> <%
+          newsFiles.forEach(function(file) { %> <%- include('../news/2569/' +
+          file) %> <% }); %> <% } else { %>
+          <p>ไม่มีข่าวสารในขณะนี้</p>
+          <% } %>
         </div>
       </div>
     </div>
