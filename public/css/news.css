@@ -100,48 +100,6 @@
   height: 250px;
 }
 
-.carousel-item a {
-  text-decoration: none;
-}
-
-.carousel-flex {
-  display: flex;
-  height: 100%;
-}
-
-.carousel-poster {
-  flex: 1.2;
-}
-
-.carousel-poster img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-
-.carousel-text {
-  flex: 1;
-  padding: 3vw 2vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: right;
-  background: #9c9c9c;
-}
-
-.carousel-text h4 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.carousel-text p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #e9e9e9;
-}
-
 .news-tags {
   display: flex;
   flex-wrap: nowrap;

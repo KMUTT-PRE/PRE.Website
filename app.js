@@ -80,8 +80,9 @@ app.get("/scholarship", (req, res) => {
 
 app.get("/news", (req, res) => {
   const newsDir = path.join(__dirname, "views/news/2569");
-
   let newsFiles = [];
+  let carouselNews = [];
+
   try {
     newsFiles = fs
       .readdirSync(newsDir)
@@ -89,16 +90,16 @@ app.get("/news", (req, res) => {
       .map((file) => file.replace(".ejs", ""))
       .sort()
       .reverse();
+
+    carouselNews = newsFiles.slice(0, 5);
   } catch (err) {
-    console.error("Error reading news directory:", err);
+    console.error("Error:", err);
   }
 
-  res.render("pages/news", { newsFiles: newsFiles });
-});
-
-app.get("/news/:postID", (req, res) => {
-  const postID = req.params.postID;
-  res.render(`news/2569/news/${postID}`);
+  res.render("pages/news", {
+    newsFiles: newsFiles,
+    carouselNews: carouselNews,
+  });
 });
 
 app.get("/myteam2", (req, res) => {

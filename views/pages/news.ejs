@@ -34,154 +34,47 @@
         </div>
       </aside>
       <div class="news-container">
-        <h1>ข่าวและกิจกรรม</h1>
-        <div
-          id="carouselExampleDark"
-          class="carousel slide carousel-news"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
+  <h1>ข่าวและกิจกรรม</h1>
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <% if (typeof carouselNews !== 'undefined' && carouselNews.length > 0) { %>
+        <% carouselNews.forEach(function(file, index) { %>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="<%= index %>"
+            class="<%= index === 0 ? 'active' : '' %>"
+            aria-current="<%= index === 0 ? 'true' : 'false' %>"
+            aria-label="Slide <%= index + 1 %>"
+          ></button>
+        <% }); %>
+      <% } %>
+    </div>
+
+    <div class="carousel-inner">
+      <% if (typeof carouselNews !== 'undefined' && carouselNews.length > 0) { %>
+        <% carouselNews.forEach(function(file, index) { %>
+          <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="5000">
+            <%- include('../news/2569/' + file) %>
           </div>
-          <section class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-              <a href="/news/pos20260326-2"
-                ><div class="carousel-flex">
-                  <div class="carousel-poster">
-                    <img
-                      src="/images/news/2569/Mar/26_03_02(1).jpg"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-text">
-                    <h4>
-                      ถามกันเข้ามาเยอะ! วันนี้แอดมินมัดรวม Q&A
-                      ที่หลายคนอยากรู้เกี่ยวกับหลักสูตรมาฝากกัน 📌
-                    </h4>
-                    <div class="news-tags">
-                      <div class="tags">รับสมัคร</div>
-                      <div class="tags">ISEE</div>
-                    </div>
-                  </div>
-                  >
-                </div></a
-              >
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <a href="/news/pos20260325-2">
-                <div class="carousel-flex">
-                  <div class="carousel-poster">
-                    <img
-                      src="/images/news/2569/Mar/25_03_02(1).jpg"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-text">
-                    <h4>ISEE มีเรียนวิชาอะไรบ้าง?</h4>
-                    <div class="news-tags">
-                      <div class="tags">ISEE</div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <a href="/news/pos20260323-1">
-                <div class="carousel-flex">
-                  <div class="carousel-poster">
-                    <img
-                      src="/images/news/2569/Mar/23_03.jpg"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-text">
-                    <h4>วิศวะอุตสาหการ (IE) ที่ ISEE มจธ. เรียนอะไรบ้าง</h4>
-                    <div class="news-tags">
-                      <div class="tags">รับสมัคร</div>
-                      <div class="tags">ISEE</div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <a href="/news/pos20260319-1">
-                <div class="carousel-flex">
-                  <div class="carousel-poster">
-                    <img
-                      src="/images/news/2569/Mar/19_03_01(1).jpg"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-text">
-                    <h4>🔥 TCAS69 รอบ 2 มาแล้ว!</h4>
-                    <div class="news-tags">
-                      <div class="tags">รับสมัคร</div>
-                      <div class="tags">ISEE</div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <a
-                href="https://www.dek-d.com/tcas/68150/?fbclid=IwY2xjawQrPPRleHRuA2FlbQIxMQBicmlkETFoZ0FBNkhsczNZZnBRck1Kc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHtitrleUBGXRATvAPOwEO6dpMDSgI2a30w3y4I18Z7QhMo6JuWJT7iNSTwAs_aem_ttcb-xRhGoXFV2xFcrXVRw"
-                target="_blank"
-              >
-                <div class="carousel-flex">
-                  <div class="carousel-poster">
-                    <img
-                      src="/images/news/2569/Mar/19_03_03.jpg"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-text">
-                    <h4>Quata ทายาททางวิชาชีพและธุรกิจ</h4>
-                    <div class="news-tags">
-                      <div class="tags">รับสมัคร</div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </section>
+        <% }); %>
+      <% } else { %>
+        <div class="carousel-item active">
+          <p class="text-center">ไม่มีข่าวไฮไลท์ในขณะนี้</p>
         </div>
+      <% } %>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
         <div class="card-container">
           <% if (newsFiles && newsFiles.length > 0) { %> <%
           newsFiles.forEach(function(file) { %> <%- include('../news/2569/' +
