@@ -102,6 +102,21 @@ app.get("/news", (req, res) => {
   });
 });
 
+app.get("/news/:postID", (req, res) => {
+  const postID = req.params.postID;
+
+  const viewPath = `news/2569/news/${postID}`;
+
+  res.render(viewPath, (err, html) => {
+    if (err) {
+      console.error("หาไฟล์ไม่พบที่ Path:", viewPath);
+      res.status(404).send("404 Not Found");
+    } else {
+      res.send(html);
+    }
+  });
+});
+
 app.get("/myteam2", (req, res) => {
   res.render("pages/myteam2");
 });
