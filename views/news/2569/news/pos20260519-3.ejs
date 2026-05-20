@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <%- include('../../../partials/navbar', { title : 'pos20260519-3'} ) %>
+      <link rel="stylesheet" href="/css/news-page.css" />
+      <%- include('../../../partials/Responsive') %>
+    </head>
+  </head>
+  <body>
+    <%- include('../../../partials/topbtn') %>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/ <a href="/news">ข่าวสาร</a>/
+      <span>ภาพบรรยากาศความ...</span>
+    </div>
+    <div class="layout">
+      <div class="bg-head">
+        <h2 class="content-head">
+          ภาพบรรยากาศความอบอุ่นยามค่ำคืน ครอบครัววิศวกรรมอุตสาหการร่วมแสดงความยินดีกับน้อง ๆ รุ่นที่ 63 ในงานเลี้ยงปัจฉิมนิเทศ
+        </h2>
+        <p class="tag">#กิจกรรม</p>
+        <div class="line-dark"></div>
+        <div><i class="fa-regular fa-calendar"></i> 19 พฤษภาคม 2569</div>
+      </div>
+      <span class="banner">
+        <img src="/images/news/2569/May/19_05_03(1).jpg" alt="20260519-3" />
+      </span>
+      <div class="content-text">
+        <p>
+          ก้าวสู่เส้นทางใหม่อย่างงดงามและเปี่ยมด้วยกำลังใจ! 💕✨ หลังจากร่วมฟังบรรยายและถ่ายภาพหมู่ร่วมกันในช่วงกลางวันแล้ว ในช่วงเย็นได้มีการจัดงานเลี้ยงสังสรรค์ปัจฉิมนิเทศขึ้น เพื่อส่งท้ายและร่วมยินดีกับว่าที่บัณฑิตใหม่ทุกคน
+        </p>
+        <br />
+        <p>บรรยากาศภายในงานเต็มไปด้วยความซาบซึ้งและอบอุ่น โดยได้รับเกียรติจากคณาจารย์ของภาควิชาฯ ร่วมกล่าวให้โอวาท อวยพร และส่งมอบข้อคิดดี ๆ ในการดำเนินชีวิตและการทำงาน เพื่อเป็นแนวทางและกำลังใจสำคัญให้น้อง ๆ ก้าวสู่โลกการทำงานจริงได้อย่างมั่นคง</p>
+        <br />
+        <p>นอกจากนี้ อีกหนึ่งไฮไลต์สำคัญของค่ำคืนนี้คือ พิธีมอบรางวัลให้แก่นักศึกษาผู้มีผลการเรียนยอดเยี่ยม เพื่อเชิดชูเกียรติและเป็นรางวัลแห่งความมุ่งมั่นทุ่มเทตลอดระยะเวลา 4 ปีในรั้วมหาวิทยาลัย ทางภาควิชาฯ ขอปรบมือและแสดงความยินดีกับคนเก่งทุกคนมา ณ ที่นี้ด้วยครับ 🏆👏</p>
+        <br />
+        <p>ขอบคุณคณาจารย์และน้อง ๆ ทุกคนที่มาร่วมสร้างความทรงจำยามเย็นอันแสนพิเศษนี้ร่วมกัน ขอให้น้อง ๆ รุ่นที่ 63 ทุกคนประสบความสำเร็จในชีวิต มีอนาคตที่สดใส และอย่าลืมว่าประตูภาควิชาวิศวกรรมอุตสาหการแห่งนี้พร้อมต้อนรับน้อง ๆ กลับบ้านเสมอครับ 🎓❤️</p>
+        <br />
+      </div>
+      <div class="container-pic">
+        <% for(let i=1; i<=31; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/May/19_05_03(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
+      </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=31; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/May/19_05_03(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+        <script src="/js/assets/news-grid.js"></script>
+      </div>
+    </div>
+    <%-include('../../../partials/footer')-%>
+  </body>
+</html>
