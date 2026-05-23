@@ -74,6 +74,10 @@ app.get("/document", (req, res) => {
   res.render("pages/document");
 });
 
+app.get("/cdp", (req, res) => {
+  res.render("pages/cdp");
+});
+
 app.get("/scholarship", (req, res) => {
   res.render("pages/scholarship");
 });
