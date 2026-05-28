@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <%- include('../../../partials/navbar', { title : 'pos20260527-1'} ) %>
+      <link rel="stylesheet" href="/css/news-page.css" />
+      <%- include('../../../partials/Responsive') %>
+    </head>
+  </head>
+  <body>
+    <%- include('../../../partials/topbtn') %>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/ <a href="/news">ข่าวสาร</a>/
+      <span>การประชุมวิชาการด้านการพัฒนา...</span>
+    </div>
+    <div class="layout">
+      <div class="bg-head">
+        <h2 class="content-head">
+          การประชุมวิชาการด้านการพัฒนาการดำเนินงานทางอุตสาหกรรมแห่งชาติ ครั้งที่ 17 (CIOD 2026)
+        </h2>
+        <p class="tag">#กิจกรรม #รางวัล #PRE #MCE</p>
+        <div class="line-dark"></div>
+        <div><i class="fa-regular fa-calendar"></i> 27 พฤษภาคม 2569</div>
+      </div>
+      <span class="banner">
+        <img src="/images/news/2569/May/27_05(1).jpg" alt="20260527-1" />
+      </span>
+      <div class="content-text">
+        <p>
+          เมื่อวันที่ 25 พฤษภาคม 2569 นักศึกษารายวิชาสหกิจศึกษา สาขาวิชาวิศวกรรมอุตสาหการ และสาขาวิชาวิศวกรรมเมคคาทรอนิกส์ ภาควิชาวิศวกรรมอุตสาหการ คณะวิศวกรรมศาสตร์ มจธ. เข้าร่วมนำเสนอผลงานวิจัยและบทความวิชาการใน การประชุมวิชาการด้านการพัฒนาการดำเนินงานทางอุตสาหกรรมแห่งชาติ ครั้งที่ 17 (CIOD 2026) ซึ่งในปีนี้มีผลงานจากนักศึกษาได้รับคัดเลือกให้นำเสนอรวมทั้งสิ้น 34 บทความ
+        </p>
+        <br />
+        <p>ผลงานของนักศึกษาจาก มจธ. สามารถคว้ารางวัล Best Paper Award มาได้ 1 รางวัล จากบทความเรื่อง:</p>
+        <h5>"การประยุกต์ใช้ระบบตรวจสอบด้วยภาพร่วมกับหุ่นยนต์ร่วมปฏิบัติงานเพื่อลดความเสี่ยงด้านการยศาสตร์: กรณีศึกษากระบวนการประกอบยานยนต์"</h5>
+        <br />
+        <p>ผู้เขียน: นายธีร์ธวัช แย้มวงษ์ นายณัฐดนัย ทัศนาการไพศาล สาขาวิศวกรรมเมคคาทรอนิกส์ อาจารย์ที่ปรึกษา ผศ.ดร.เชษฐพงษ์ จรรยาอนุรักษ์</p>
+        <br />
+        <p>การได้รับรางวัลในครั้งนี้ไม่เพียงแต่สะท้อนถึงศักยภาพของตัวนักศึกษา แต่ยังแสดงถึงความสำเร็จของหลักสูตรที่เน้นการเรียนรู้แบบ Work-Integrated Learning หรือการเรียนรู้ร่วมกับการทำงานจริง ซึ่งทำให้นักศึกษาสามารถนำทฤษฎีทางวิศวกรรมไปแก้ไขปัญหาในโรงงานอุตสาหกรรมได้อย่างเป็นรูปธรรม</p>
+        <br />
+        <p>นอกจากรางวัลบทความดีเด่นแล้ว การที่มีบทความจากรายวิชาสหกิจศึกษาได้รับคัดเลือกให้นำเสนอในที่ประชุมวิชาการ CIOD2026 ถึง 34 บทความ ยังเป็นเครื่องยืนยันถึงมาตรฐานทางวิชาการที่เข้มแข็งของนักศึกษา มจธ. ที่พร้อมจะก้าวออกไปเป็นวิศวกรนักปฏิบัติที่มีคุณภาพสู่ตลาดแรงงานสากลต่อไป</p>
+      </div>
+      <div class="container-pic">
+        <% for(let i=1; i<=11; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/May/27_05(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
+      </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=11; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/May/27_05(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+        <script src="/js/assets/news-grid.js"></script>
+      </div>
+    </div>
+    <%-include('../../../partials/footer')-%>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <%- include('../../../partials/navbar', { title : 'pos20260526-1'} ) %>
+      <link rel="stylesheet" href="/css/news-page.css" />
+      <%- include('../../../partials/Responsive') %>
+    </head>
+  </head>
+  <body>
+    <%- include('../../../partials/topbtn') %>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/ <a href="/news">ข่าวสาร</a>/
+      <span>ขอแสดงความยินดีและร่วม...</span>
+    </div>
+    <div class="layout">
+      <div class="bg-head">
+        <h2 class="content-head">
+          ขอแสดงความยินดีและร่วมฉลองความสำเร็จของ นายกันต์พจน์ วัฒนชลสิทธิ์ นักศึกษาชั้นปีที่ 3 สมาชิกคนสำคัญของทีม "ONEPUT"
+        </h2>
+        <p class="tag">#รางวัล</p>
+        <div class="line-dark"></div>
+        <div><i class="fa-regular fa-calendar"></i> 26 พฤษภาคม 2569</div>
+      </div>
+      <span class="banner">
+        <img src="/images/news/2569/May/26_05(1).jpg" alt="20260526-1" />
+      </span>
+      <div class="content-text">
+        <p>
+          ภาควิชาวิศวกรรมอุตสาหการ คณะวิศวกรรมศาสตร์ มจธ. ขอแสดงความยินดีและร่วมฉลองความสำเร็จของ นายกันต์พจน์ วัฒนชลสิทธิ์ นักศึกษาชั้นปีที่ 3 สมาชิกคนสำคัญของทีม "ONEPUT" ในโอกาสโชว์ศักยภาพและวิสัยทัศน์ทางธุรกิจ จนสามารถผ่านเข้ารอบสุดท้ายในรายการแข่งขันแผนธุรกิจระดับโลก Bangkok Business Challenge (BBC) ประจำปี 2026 เพื่อชิงรางวัลชนะเลิศสูงสุด Grand Prize – H.M. The King’s Award ซึ่งจัดโดยสถาบันบัณฑิตบริหารธุรกิจศศินทร์แห่งจุฬาลงกรณ์มหาวิทยาลัย
+        </p>
+        <br />
+        <p>การแข่งขันในครั้งนี้ถือเป็นเวทีระดับนานาชาติอันทรงเกียรติสูงสุดที่รวมสุดยอดไอเดียธุรกิจและการสร้างนวัตกรรมจากคนรุ่นใหม่ โดยในปีนี้มีทีมส่งผลงานเข้าร่วมแข่งขันอย่างล้นหลามถึง 389 ทีม จาก 20 ประเทศทั่วโลก แต่ด้วยความสามารถและการเตรียมตัวอย่างเข้มข้น ทีม ONEPUT สามารถฝ่าฟันโจทย์ที่ท้าทายและได้รับการคัดเลือกให้เป็น 1 ใน 20 ทีมสุดท้าย ที่ได้สิทธิ์เข้าไปในรอบชิงชนะเลิศเมื่อวันที่ 21-23 พฤษภาคม 2569 ที่ผ่านมา</p>
+        <br />
+        <p>ความสำเร็จครั้งนี้ ไม่เพียงแต่สร้างชื่อเสียงให้กับมหาวิทยาลัยในระดับสากลเท่านั้น แต่ยังสะท้อนให้เห็นถึงศักยภาพของนักศึกษาวิศวกรรมอุตสาหการ มจธ. ที่สามารถนำทักษะกระบวนการคิดเชิงวิศวกรรมมาประยุกต์ใช้ในการขับเคลื่อนและแก้ไขปัญหาทางธุรกิจได้อย่างมีประสิทธิภาพในระดับสากล</p>
+      </div>
+      <div class="container-pic">
+        <% for(let i=1; i<=4; i++) { %>
+        <div class="grid-item">
+          <img
+            src="/images/news/2569/May/26_05(<%= i %>).jpg"
+            onclick="openModal(); currentSlide(<%= i %>)"
+            alt="Image <%= i %>"
+          />
+        </div>
+        <% } %>
+      </div>
+
+      <div id="myModal" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-controls">
+          <span class="zoom-icon" onclick="toggleZoom()" title="ซูมรูปภาพ">
+          </span>
+          <span class="reset-icon" onclick="resetZoom()" title="รีเซ็ตการซูม">
+            <i class="fa-solid fa-rotate-right"></i>
+          </span>
+          <span class="close" onclick="closeModal()" title="ปิด">&times;</span>
+        </div>
+
+        <div class="modal-content-wrapper">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+          <div class="main-img-container">
+            <img id="mainImg" src="" class="modal-main-image" />
+          </div>
+
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="thumbnail-bar">
+          <% for(let i=1; i<=4; i++) { %>
+          <img
+            class="demo"
+            src="/images/news/2569/May/26_05(<%= i %>).jpg"
+            onclick="currentSlide(<%= i %>)"
+            alt="Thumb <%= i %>"
+          />
+          <% } %>
+        </div>
+        <script src="/js/assets/news-grid.js"></script>
+      </div>
+    </div>
+    <%-include('../../../partials/footer')-%>
+  </body>
+</html>
