@@ -69,9 +69,9 @@ app.get("/myteam", (req, res) => {
   res.render("pages/myteam");
 });
 
-app.get("/myteam5", (req, res) => {
-  res.render("pages/myteam5");
-});
+// app.get("/myteam5", (req, res) => {
+//   res.render("pages/myteam5");
+// });
 
 app.get("/document", (req, res) => {
   res.render("pages/document");
