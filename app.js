@@ -8,7 +8,6 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  // พิมพ์ตรวจสอบ Path ใน Terminal
   console.log("Current Directory:", __dirname);
 
   const newsDir = path.join(__dirname, "views", "news", "2569");
@@ -68,6 +67,10 @@ app.get("/instrument", (req, res) => {
 
 app.get("/myteam", (req, res) => {
   res.render("pages/myteam");
+});
+
+app.get("/myteam5", (req, res) => {
+  res.render("pages/myteam5");
 });
 
 app.get("/document", (req, res) => {
