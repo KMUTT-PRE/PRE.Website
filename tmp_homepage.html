@@ -1,0 +1,1040 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRE&amp;MCE</title>
+    <link rel="icon" type="image/png" href="/images/PEMCE-LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+    rel="stylesheet">
+    
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/assets/navbar.css" />
+    <link rel="stylesheet" href="/css/assets/search.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <div id="kmutt" class="kmutt-link">
+          <a href="https://www.kmutt.ac.th/" target="_blank"
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i>King Mongkut's
+            University of Technology Thonburi</a
+          >
+        </div>
+
+        <a class="navbar-brand" href="/"
+          ><img src="/images/PEMCE-LOGO.png" alt="prelogo"
+        /></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Desktop circular search (right of menu) -->
+        <div class="nav-search-wrapper d-none d-lg-flex align-items-center ms-auto">
+          <div class="search-toggle" id="desktopSearch">
+            <button type="button" class="search-circle" aria-label="ค้นหา">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div class="search-expand">
+              <div class="search-box">
+                <input id="searchInputDesktop" class="search-input" type="text" placeholder="ค้นหา..." autocomplete="off" />
+              </div>
+              <div id="searchResultsDesktop" class="search-results"></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <div class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="../images/PEMCE-LOGO.png" alt="prelogo" />
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content flex-grow-1 pe-3">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link mx-lg-2 dropdown-toggle"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  โปรไฟล์
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-path="/history_dep"
+                      href="/history_dep"
+                      >ประวัติภาควิชา</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="/myteam" href="/myteam"
+                      >บุคลากร</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-path="/instrument"
+                      href="/instrument"
+                      >ห้องLab อุปกรณ์</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-path="/research"
+                      href="/research"
+                      >งานวิจัยและบริการวิชาการ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://www.pemce.com/"
+                      target="_blank"
+                      >ชมรมมด</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link mx-lg-2 dropdown-toggle"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  หลักสูตร
+                </a>
+                <ul class="dropdown-menu">
+                  <li><div class="dropdown-item">ปริญญาตรี</div></li>
+                  <li>
+                    <a class="dropdown-item" data-path="/pre" href="/pre"
+                      >PRE</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="/mce" href="/mce"
+                      >MCE</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="/isee" href="/isee"
+                      >ISEE</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="/m_eng" href="/m_eng"
+                      >ปริญญาโท</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="/ph_d" href="/ph_d"
+                      >ปริญญาเอก</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" data-path="/TABEE" href="/TABEE"
+                  >TABEE</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link mx-lg-2 dropdown-toggle"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  นักศึกษา
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-path="/document"
+                      href="/document"
+                      >เอกสาร</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-path="/cdp" href="/cdp"
+                      >โครงานวิศวกรรม</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      data-path="/scholarship"
+                      href="/scholarship"
+                      >ทุนการศึกษา</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-lg-2"
+                  href="https://join.kmutt.ac.th/degree"
+                  target="_blank"
+                  >สมัครเรียน</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" data-path="/news" href="/news"
+                  >ข่าวสาร</a
+                >
+              </li>
+
+            </ul>
+
+            <!-- Mobile search inside offcanvas -->
+            <div class="navbar-search-container d-lg-none mt-3">
+              <div class="search-box">
+                <input id="searchInputMobile" class="search-input" type="text" placeholder="ค้นหา..." autocomplete="off" />
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              </div>
+              <div id="searchResultsMobile" class="search-results"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/assets/navbar.js"></script>
+    <script src="/js/assets/navbar-active.js"></script>
+    <script src="/js/search.js"></script>
+  </body>
+</html>
+
+
+    <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive320.css" />
+<link rel="stylesheet" href="/css/assets/Responsive768.css" />
+<link rel="stylesheet" href="/css/assets/Responsive1024.css" />
+<link rel="stylesheet" href="/css/assets/Responsive.css" />
+
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>topbtn</title>
+    <link rel="icon" type="image/png" href="/images/PEMCE-LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+    rel="stylesheet">
+    
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+    <style>
+      .body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .scroll-up-btn {
+        z-index: 9999;
+        position: fixed;
+        bottom: 4vh;
+        right: 3vh;
+        height: 9vh;
+        width: 9vh;
+        max-height: 90px;
+        max-width: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 1px solid #a72c32;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.8);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+      }
+
+      .scroll-up-btn.show {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+
+      .scroll-up-btn i {
+        color: #a72c32;
+        font-size: 40px;
+        line-height: 8vh;
+        text-align: center;
+        display: block;
+      }
+
+      .scroll-up-btn::before,
+      .scroll-up-btn::after {
+        content: none;
+      }
+
+      .scroll-up-btn:hover {
+        transform: scale(1.08);
+        background-color: #a72c32;
+      }
+
+      .scroll-up-btn:hover i {
+        color: #fff;
+      }
+
+      #watermark {
+        position: fixed;
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      @media (max-width: 768px) {
+        .scroll-up-btn {
+          height: 7vh;
+          width: 7vh;
+          max-height: 70px;
+          max-width: 70px;
+        }
+
+        .scroll-up-btn i {
+          font-size: 30px;
+          line-height: 6vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="scroll-up-btn">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <script>
+      const btn = document.querySelector(".scroll-up-btn");
+
+      window.addEventListener("scroll", () => {
+        const showAfterVH = 20;
+        const trigger = (window.innerHeight * showAfterVH) / 100;
+
+        if (window.scrollY > trigger) {
+          btn.classList.add("show");
+        } else {
+          btn.classList.remove("show");
+        }
+      });
+
+      function smoothScrollToTop(duration = 900) {
+        const start = window.pageYOffset;
+        let startTime = null;
+
+        function easeInOutCubic(t) {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function animation(currentTime) {
+          if (!startTime) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+
+          window.scrollTo(0, start * (1 - easeInOutCubic(progress)));
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        }
+
+        requestAnimationFrame(animation);
+      }
+
+      btn.addEventListener("click", () => {
+        smoothScrollToTop(1000);
+      });
+    </script>
+    <div id="watermark"><img src="/images/watermark.png" alt="" /></div>
+  </body>
+</html>
+
+    <!-- picture-main -->
+    <div class="carousel-wrapper">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img
+              src="../images/Homepage/Homepage-mainpic1.png"
+              class="d-block w-100"
+              alt="HomepagePic1"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="../images/Homepage/Homepage-mainpic2.png"
+              class="d-block w-100"
+              alt="HomepagePic2"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="../images/Homepage/Homepage-mainpic3.png"
+              class="d-block w-100"
+              alt="HomepagePic3"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="../images/Homepage/Homepage-mainpic4.png"
+              class="d-block w-100"
+              alt="HomepagePic4"
+            />
+          </div>
+        </div>
+        <div class="mainpic-gradient"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/Home-mainpic.js"></script>
+    <!-- button-main -->
+    <div class="hp-button1">
+      <a href="/pre">
+        <button class="hp-button1-box">
+          <div class="hp-button1-main">PRE</div>
+          <div class="hp-button1-name">วศ.บ.วิศวกรรมอุตสาหกาาร</div>
+        </button>
+      </a>
+      <a href="/mce">
+        <button class="hp-button1-box">
+          <div class="hp-button1-main">MCE</div>
+          <div class="hp-button1-name">วศ.บ.วิศวกรรมเมคคาทรอนิกส์</div>
+        </button>
+      </a>
+      <a href="/isee">
+        <button class="hp-button1-box">
+          <div class="hp-button1-main">ISEE</div>
+          <div class="hp-button1-name">
+            วศ.บ.วิศวกรรมระบบอุตสาหกรรม และการประกอบการธุรกิจ
+          </div>
+        </button>
+      </a>
+      <a href="/m_eng">
+        <button class="hp-button1-box">
+          <div class="hp-button1-main">M.Eng. ISE</div>
+          <div class="hp-button1-name">
+            วศ.ม.วิศวกรรมอุตสาหการ และระบบการผลิต
+          </div>
+        </button>
+      </a>
+      <a href="/ph_d">
+        <button class="hp-button1-box">
+          <div class="hp-button1-main">Ph.D. ISE</div>
+          <div class="hp-button1-name">
+            ปร.ด.วิศวกรรมอุตสาหการ และระบบการผลิต
+          </div>
+        </button>
+      </a>
+    </div>
+    <!-- picture-aboutus -->
+    <div class="hp-aboutus">
+      <img src="../images/Homepage/Homepage-About.png" alt="AboutusPic" />
+      <div class="hp-aboutus-box">
+        <h1 class="hp-aboutus-head">เกี่ยวกับเรา</h1>
+        <div class="hp-aboutus-body">
+          การจัดการเรียนการสอนของภาควิชาวิศวกรรมอุตสาหการ ในทุกหลักสูตร
+          ถือว่ามีคุณภาพในลำดับต้นๆ ของประเทศ ผลิตบัณฑิตประมาณ ปีละ 120 คน
+          มหาบัณฑิตประมาณปีละ 80 คน ดุษฎีบัณฑิตปีละประมาณ 3-5 คน มีผลงาน
+          วิจัยและวิชาการเป็นที่ยอมรับ โดยได้รับการตีพิมพ์ในวารสารวิชาการ
+        </div>
+        <div>
+          <a href="/history_dep" class="aboutus-read-more"
+            >อ่านเพิ่มเติม <span><i class="fa-solid fa-arrow-right"></i></span
+          ></a>
+        </div>
+      </div>
+    </div>
+    <!-- ผลงาน -->
+    <div class="reward-carousel">
+      <div class="reward-track">
+        <div aria-hidden class="reward-group">
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward1.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward2.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card1">
+            <img
+              src="../images/Homepage/Homepage-reward3.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward4.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card1">
+            <img
+              src="../images/Homepage/Homepage-reward5.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward6.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card1">
+            <img
+              src="../images/Homepage/Homepage-reward7.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward8.jpg"
+              class="reward-img"
+            />
+          </div>
+        </div>
+        <div aria-hidden class="reward-group">
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward1.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward2.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card1">
+            <img
+              src="../images/Homepage/Homepage-reward3.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward4.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card1">
+            <img
+              src="../images/Homepage/Homepage-reward5.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward6.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card1">
+            <img
+              src="../images/Homepage/Homepage-reward7.jpg"
+              class="reward-img"
+            />
+          </div>
+          <div class="reward-card">
+            <img
+              src="../images/Homepage/Homepage-reward8.jpg"
+              class="reward-img"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" />
+        <div id="caption"></div>
+      </div>
+    </div>
+    <script src="../js/reward.js"></script>
+    <!-- ข่าวสาร -->
+    <div class="news-header">
+      <h2>ข่าวสารและกิจกรรม</h2>
+      <span><a href="/news">ดูทั้งหมด</a></span>
+    </div>
+    <div class="container-bg">
+      <div class="swiper mySwiper">
+        <!-- ค้นหาส่วน <div class="swiper-wrapper"> ในไฟล์ Homepage.ejs -->
+<div class="swiper-wrapper">
+  
+    
+      <div class="swiper-slide">
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/assets/news-card.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive320.css" />
+<link rel="stylesheet" href="/css/assets/Responsive768.css" />
+<link rel="stylesheet" href="/css/assets/Responsive1024.css" />
+<link rel="stylesheet" href="/css/assets/Responsive.css" />
+
+    <title>pos20260612-1</title>
+  </head>
+  <body>
+    <li class="card" data-tag="news">
+      <a
+        class="card-link"
+        data-path="/news/pos20260612-1"
+        href="/news/pos20260612-1"
+      >
+        <img
+          src="/images/news/2569/Jun/06_12.jpg"
+          alt="06_12"
+          class="card-image"
+        />
+        <div class="news-tags">
+          <div class="tags">ข่าวสาร</div>
+        </div>
+        <p class="Dates">12 มิถุนายน 2569</p>
+        <h2 class="card-title">น้อมสํานึกในพระกรุณาธิคุณอันหาที่สุดมิได้</h2>
+        <button class="card-button material-symbols-rounded">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+    </li>
+  </body>
+</html>
+
+      </div>
+    
+      <div class="swiper-slide">
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/assets/news-card.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive320.css" />
+<link rel="stylesheet" href="/css/assets/Responsive768.css" />
+<link rel="stylesheet" href="/css/assets/Responsive1024.css" />
+<link rel="stylesheet" href="/css/assets/Responsive.css" />
+
+    <title>pos20260610-1</title>
+  </head>
+  <body>
+    <li class="card" data-tag="news">
+      <a
+        class="card-link"
+        data-path="/news/pos20260610-1"
+        href="/news/pos20260610-1"
+      >
+        <img
+          src="/images/news/2569/Jun/06_10.jpg"
+          alt="06_10"
+          class="card-image"
+        />
+        <div class="news-tags">
+          <div class="tags">ข่าวสาร</div>
+        </div>
+        <p class="Dates">10 มิถุนายน 2569</p>
+        <h2 class="card-title">
+          คณะวิศวกรรมศาสตร์ มจธ. ขอแนะนำทีมพี่ ๆ
+          เจ้าหน้าที่บริหารงานทั่วไปประจำสำนักงานภาควิชาฯ
+        </h2>
+        <button class="card-button material-symbols-rounded">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+    </li>
+  </body>
+</html>
+
+      </div>
+    
+      <div class="swiper-slide">
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/assets/news-card.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive320.css" />
+<link rel="stylesheet" href="/css/assets/Responsive768.css" />
+<link rel="stylesheet" href="/css/assets/Responsive1024.css" />
+<link rel="stylesheet" href="/css/assets/Responsive.css" />
+
+    <title>pos20260608-1</title>
+  </head>
+  <body>
+    <li class="card" data-tag="scholarships">
+      <a
+        class="card-link"
+        data-path="/news/pos20260608-1"
+        href="/news/pos20260608-1"
+      >
+        <img
+          src="/images/news/2569/Jun/06_08.jpg"
+          alt="06_08"
+          class="card-image"
+        />
+        <div class="news-tags">
+          <div class="tags">ทุนการศึกษา</div>
+        </div>
+        <p class="Dates">8 มิถุนายน 2569</p>
+        <h2 class="card-title">
+          เปิดรับสมัครนักศึกษาเพื่อเข้ารับการพิจารณาทุนการศึกษา ประจำปีการศึกษา
+          2569 จำนวนทั้งสิ้น 15 ทุน
+        </h2>
+        <button class="card-button material-symbols-rounded">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+    </li>
+  </body>
+</html>
+
+      </div>
+    
+      <div class="swiper-slide">
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/assets/news-card.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive320.css" />
+<link rel="stylesheet" href="/css/assets/Responsive768.css" />
+<link rel="stylesheet" href="/css/assets/Responsive1024.css" />
+<link rel="stylesheet" href="/css/assets/Responsive.css" />
+
+    <title>pos20260604-1</title>
+  </head>
+  <body>
+    <li class="card" data-tag="reward">
+      <a
+        class="card-link"
+        data-path="/news/pos20260604-1"
+        href="/news/pos20260604-1"
+      >
+        <img
+          src="/images/news/2569/Jun/06_04.jpg"
+          alt="06_04"
+          class="card-image"
+        />
+        <div class="news-tags">
+          <div class="tags">รางวัล</div>
+        </div>
+        <p class="Dates">4 มิถุนายน 2569</p>
+        <h2 class="card-title">
+          ลำดับที่ 8 🏆 ดร.สุริยพงศ์ นิลสังข์ อาจารย์ประจำภาควิชาวิศวกรรมอุตสาหการ
+        </h2>
+        <button class="card-button material-symbols-rounded">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+    </li>
+  </body>
+</html>
+
+      </div>
+    
+      <div class="swiper-slide">
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/assets/news-card.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive320.css" />
+<link rel="stylesheet" href="/css/assets/Responsive768.css" />
+<link rel="stylesheet" href="/css/assets/Responsive1024.css" />
+<link rel="stylesheet" href="/css/assets/Responsive.css" />
+
+    <title>pos20260530-1</title>
+  </head>
+  <body>
+    <li class="card" data-tag="event">
+      <a
+        class="card-link"
+        data-path="/news/pos20260530-1"
+        href="/news/pos20260530-1"
+      >
+        <img
+          src="/images/news/2569/May/30_05(1).jpg"
+          alt="30_05"
+          class="card-image"
+        />
+        <div class="news-tags">
+          <div class="tags">กิจกรรม</div>
+        </div>
+        <p class="Dates">30 พฤษภาคม 2569</p>
+        <h2 class="card-title">
+          การสอบรายงานความก้าวหน้าการศึกษา สำหรับนักศึกษาระดับบัณฑิตศึกษา 
+        </h2>
+        <button class="card-button material-symbols-rounded">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+    </li>
+  </body>
+</html>
+
+      </div>
+    
+      <div class="swiper-slide">
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/assets/news-card.css" />
+    <link rel="stylesheet" href="/css/assets/Responsive320.css" />
+<link rel="stylesheet" href="/css/assets/Responsive768.css" />
+<link rel="stylesheet" href="/css/assets/Responsive1024.css" />
+<link rel="stylesheet" href="/css/assets/Responsive.css" />
+
+    <title>pos20260528-2</title>
+  </head>
+  <body>
+    <li class="card" data-tag="hiring pre mce isee">
+      <a
+        class="card-link"
+        data-path="/news/pos20260528-2"
+        href="/news/pos20260528-2"
+      >
+        <img
+          src="/images/news/2569/May/28_05_02.jpg"
+          alt="28_05"
+          class="card-image"
+        />
+        <div class="news-tags">
+          <div class="tags">รับสมัคร</div>
+            <div class="tags">PRE</div>
+            <div class="tags">MCE</div>
+            <div class="tags">ISEE</div>
+        </div>
+        <p class="Dates">28 พฤษภาคม 2569</p>
+        <h2 class="card-title">
+          📌 รอบที่ 4 Direct Admission ปี 2569 คณะวิศวฯ มจธ. ⚙️
+        </h2>
+        <button class="card-button material-symbols-rounded">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+    </li>
+  </body>
+</html>
+
+      </div>
+    
+  
+</div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="../js/Home-news.js"></script>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>footer</title>
+    <link rel="icon" type="image/png" href="/images/PEMCE-LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+    rel="stylesheet">
+    
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+
+    <script
+      src="https://kit.fontawesome.com/f7cbfce543.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/assets/footer.css" />
+    <link rel="stylesheet" href="../css/assets/Responsive.css" />
+  </head>
+  <body>
+    <footer id="footer" class="footer">
+      <div class="footer-content">
+        <!-- LEFT SECTION -->
+        <div class="footer-link">
+          <span class="footer-brand">
+            <a href="https://www.kmutt.ac.th/" target="_blank" class="brand1">
+              <img src="../images/KMUTT_Logo.png" alt="kmuttlogo" />
+            </a>
+
+            <span href="#" class="brand2">
+              <img src="../images/PEMCE-LOGO.png" alt="prelogo" />
+            </span>
+          </span>
+        </div>
+        <div>
+          <!-- ลิงก์ด่วน -->
+          <h3>QuickLinks</h3>
+          <ul class="footer-ul">
+            <li><a href="https://www.leb2.org/" target="_blank">LEB2</a></li>
+            <li>
+              <a href="https://sinfo.kmutt.ac.th/" target="_blank">NewAcis</a>
+            </li>
+          </ul>
+        </div>
+        <!-- socialmedia -->
+        <div class="social">
+          <h3>Social Media</h3>
+          <div class="social-row">
+            <i class="fa-brands fa-facebook"></i>
+            <div class="social-text">
+              <a
+                href="https://www.facebook.com/profile.php?id=100063531941398&locale=bg_BG#"
+                target="_blank"
+                class="social"
+                >ภาควิชาวิศวกรรมอุตสาหการ</a
+              >
+              <a
+                href="https://www.facebook.com/prekmutt"
+                target="_blank"
+                class="social"
+                >บัณฑิตศึกษาอุตสาหการ</a
+              >
+              <a
+                href="https://www.facebook.com/modpemce"
+                target="_blank"
+                class="social"
+                >ชมรมมดอุตสาหการและเมคคาทรอนิกส์</a
+              >
+            </div>
+          </div>
+          <div class="social-row">
+            <i class="fa-brands fa-youtube"></i>
+            <div class="social-text">
+              <a
+                href="https://www.youtube.com/results?search_query=%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%B2%E0%B8%A3+%E0%B8%A1%E0%B8%88%E0%B8%98"
+                target="_blank"
+                class="social"
+                >วิศวกรรมอุตสาหการ มจธ</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER SECTION -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <div class="footer-body">
+            <p>
+              King Mongkut's University of Technology Thonburi<br />
+              อาคารวิศววัฒนะ ชั้น8 126 ถนนประชาอุทิศ <br />
+              แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140
+            </p>
+
+            <div class="contact">
+              <div class="contact-row">
+                <i class="fa-solid fa-phone"></i>
+                <div class="phone-group">
+                  <p class="contact-number">+66 2-470-9175-7</p>
+                  <p>2-470-9179</p>
+                </div>
+              </div>
+              <div class="contact-row">
+                <i class="fa-regular fa-envelope"></i>
+                <p class="contact-email">production_engineering@kmutt.ac.th</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <hr class="line" />
+        <div class="text-center">Copyright © 2026 PE&MCE&ISEE KMUTT.</div>
+      </div>
+    </footer>
+  </body>
+</html>
+  </body>
+</html>
+

@@ -34,51 +34,15 @@
         </div>
       </aside>
       <div class="news-container">
-  <h1>ข่าวและกิจกรรม</h1>
-
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <% if (typeof carouselNews !== 'undefined' && carouselNews.length > 0) { %>
-        <% carouselNews.forEach(function(file, index) { %>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="<%= index %>"
-            class="<%= index === 0 ? 'active' : '' %>"
-            aria-current="<%= index === 0 ? 'true' : 'false' %>"
-            aria-label="Slide <%= index + 1 %>"
-          ></button>
-        <% }); %>
-      <% } %>
-    </div>
-
-    <div class="carousel-inner">
-      <% if (typeof carouselNews !== 'undefined' && carouselNews.length > 0) { %>
-        <% carouselNews.forEach(function(file, index) { %>
-          <div class="carousel-item <%= index === 0 ? 'active' : '' %>" data-bs-interval="5000">
-            <%- include('../news/2569/' + file) %>
-          </div>
-        <% }); %>
-      <% } else { %>
-        <div class="carousel-item active">
-          <p class="text-center">ไม่มีข่าวไฮไลท์ในขณะนี้</p>
-        </div>
-      <% } %>
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+        <h1>ข่าวและกิจกรรม</h1>
         <div class="card-container">
-          <% if (newsFiles && newsFiles.length > 0) { %> <%
-          newsFiles.forEach(function(file) { %> <%- include('../news/2569/' +
-          file) %> <% }); %> <% } else { %>
+          <% if (newsFiles && newsFiles.length > 0) { %>
+          <%
+          newsFiles.forEach(function(file) { %>
+          <%- include('../news/2569/' +
+          file) %>
+          <% }); %>
+          <% } else { %>
           <p>ไม่มีข่าวสารในขณะนี้</p>
           <% } %>
         </div>

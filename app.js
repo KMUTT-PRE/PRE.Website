@@ -137,6 +137,52 @@ app.get("/personel/:name", (req, res) => {
   res.render(`pages/personel/${name}`);
 });
 
+// Search functionality
+const searchContent = () => {
+  const content = [
+    // Pages
+    { title: "หน้าแรก", url: "/", category: "หน้า" },
+    { title: "หลักสูตร PRE", url: "/pre", category: "หลักสูตร" },
+    { title: "หลักสูตร MCE", url: "/mce", category: "หลักสูตร" },
+    { title: "หลักสูตร ISEE", url: "/isee", category: "หลักสูตร" },
+    { title: "หลักสูตร M.Eng", url: "/m_eng", category: "หลักสูตร" },
+    { title: "หลักสูตร Ph.D", url: "/ph_d", category: "หลักสูตร" },
+    { title: "หลักสูตร TABEE", url: "/TABEE", category: "หลักสูตร" },
+    { title: "ประวัติภาควิชา", url: "/history_dep", category: "โปรไฟล์" },
+    { title: "บุคลากร", url: "/myteam", category: "โปรไฟล์" },
+    { title: "ห้องLab อุปกรณ์", url: "/instrument", category: "โปรไฟล์" },
+    { title: "งานวิจัย", url: "/research", category: "โปรไฟล์" },
+    { title: "เอกสาร", url: "/document", category: "นักศึกษา" },
+    { title: "ข่าวสาร", url: "/news", category: "ข่าว" },
+    { title: "ทุนการศึกษา", url: "/scholarship", category: "นักศึกษา" },
+    { title: "CDP", url: "/cdp", category: "นักศึกษา" },
+  ];
+
+  return content;
+};
+
+app.get("/search", (req, res) => {
+  const query = req.query.q || "";
+
+  if (!query || query.length < 2) {
+    return res.json([]);
+  }
+
+  const allContent = searchContent();
+  const lowerQuery = query.toLowerCase();
+
+  // Search in title and category
+  const results = allContent
+    .filter(
+      (item) =>
+        item.title.toLowerCase().includes(lowerQuery) ||
+        item.category.toLowerCase().includes(lowerQuery),
+    )
+    .slice(0, 10); // Limit to 10 results
+
+  res.json(results);
+});
+
 app.listen(port, () => {
   console.log(`App listening at port ${port}`);
 });

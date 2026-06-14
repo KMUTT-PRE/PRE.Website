@@ -3,17 +3,23 @@
   <head>
     <%- include('head', { title : 'PRE&MCE' }) %>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C01RQ9RRYH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C01RQ9RRYH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-C01RQ9RRYH');
-</script>
+      gtag("config", "G-C01RQ9RRYH");
+    </script>
 
     <link rel="stylesheet" href="/css/assets/navbar.css" />
+    <link rel="stylesheet" href="/css/assets/search.css" />
     <link rel="stylesheet" href="/css/assets/Responsive.css" />
   </head>
   <body>
@@ -178,10 +184,7 @@
                     >
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item"
-                      data-path="/cdp"
-                      href="/cdp"
+                    <a class="dropdown-item" data-path="/cdp" href="/cdp"
                       >โครงานวิศวกรรม</a
                     >
                   </li>
@@ -209,17 +212,19 @@
                 >
               </li>
             </ul>
-            <!-- <form class="d-flex mt-3" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn-search" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form> -->
+            <div class="search-container">
+              <div class="search-box">
+                <input
+                  id="searchInput"
+                  class="search-input"
+                  type="text"
+                  placeholder="ค้นหา..."
+                  autocomplete="off"
+                />
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              </div>
+              <div id="searchResults" class="search-results"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -227,5 +232,6 @@
     <%- include('../partials/bootstrapend') %>
     <script src="/js/assets/navbar.js"></script>
     <script src="/js/assets/navbar-active.js"></script>
+    <script src="/js/search.js"></script>
   </body>
 </html>
