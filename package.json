@@ -1,0 +1,31 @@
+{
+  "name": "preweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.19.0",
+    "multer": "^2.2.0",
+    "nodemon": "^3.1.11",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "swiper": "^12.0.3"
+  },
+  "devDependencies": {
+    "prettier-plugin-ejs": "^1.0.3",
+    "vite": "^8.0.10"
+  }
+}
