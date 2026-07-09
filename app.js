@@ -12,7 +12,7 @@ const {
 } = require("./lib/news");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 fs.mkdirSync(path.join(__dirname, "data"), { recursive: true });
 fs.mkdirSync(path.join(__dirname, "public", "uploads", "news"), {
