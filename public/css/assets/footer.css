@@ -178,7 +178,7 @@
   right: auto;
   bottom: 24px;
   left: 24px;
-  z-index: 2999;
+  z-index: 3001;
   display: none;
   grid-template-columns: minmax(0, 1fr) 170px;
   gap: 16px;

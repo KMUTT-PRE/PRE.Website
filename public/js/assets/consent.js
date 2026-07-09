@@ -16,6 +16,9 @@
     popup.classList.toggle("is-open", isOpen);
     popup.setAttribute("aria-hidden", isOpen ? "false" : "true");
     openButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    if (isOpen) {
+      setButtonVisible(false);
+    }
   }
 
   function setButtonVisible(isVisible) {
@@ -32,7 +35,7 @@
   setButtonVisible(!localStorage.getItem(storageKey));
 
   openButton.addEventListener("click", function () {
-    setOpen(!popup.classList.contains("is-open"));
+    setOpen(true);
   });
 
   languageButtons.forEach(function (button) {
