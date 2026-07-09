@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body class="admin-page admin-login-page">
+    <main class="admin-login">
+      <h1>เข้าสู่ระบบผู้ดูแล</h1>
+      <% if (error) { %>
+        <p class="admin-alert"><%= error %></p>
+      <% } %>
+      <form method="post" action="/admin/login">
+        <label>
+          รหัสผ่าน
+          <input type="password" name="password" required autofocus />
+        </label>
+        <button type="submit">เข้าสู่ระบบ</button>
+      </form>
+      <p class="admin-note">ค่าเริ่มต้น: admin123 และควรเปลี่ยนผ่าน ADMIN_PASSWORD ตอนใช้งานจริง</p>
+    </main>
+  </body>
+</html>

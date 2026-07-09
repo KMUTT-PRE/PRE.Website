@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <%- include('../partials/navbar', { title : post.title } ) %>
+    <link rel="stylesheet" href="/css/news-page.css" />
+    <%- include('../partials/Responsive') %>
+  </head>
+  <body>
+    <%- include('../partials/topbtn') %>
+    <div class="navigation-tab">
+      <a href="/">หน้าแรก</a>/ <a href="/news">ข่าวสาร</a>/
+      <span><%= post.title %></span>
+    </div>
+    <div class="layout">
+      <div class="bg-head">
+        <h2 class="content-head"><%= post.title %></h2>
+        <p class="tag">#<%= post.category_label %></p>
+        <div class="line-dark"></div>
+        <div><i class="fa-regular fa-calendar"></i> <%= formatThaiDate(post.published_date) %></div>
+      </div>
+      <% if (post.cover_image) { %>
+        <span class="banner">
+          <img src="<%= post.cover_image %>" alt="<%= post.title %>" />
+        </span>
+      <% } %>
+      <div class="content-text">
+        <% if (post.summary) { %>
+          <p><strong><%= post.summary %></strong></p>
+          <br />
+        <% } %>
+        <% post.content.split(/\r?\n/).forEach(function(line) { %>
+          <% if (line.trim()) { %>
+            <p><%= line %></p>
+          <% } else { %>
+            <br />
+          <% } %>
+        <% }); %>
+      </div>
+      <% const galleryImages = typeof images !== 'undefined' ? images : []; %>
+      <% if (galleryImages.length > 0) { %>
+        <div class="news-gallery">
+          <% galleryImages.forEach(function(image) { %>
+            <img src="<%= image.image_path %>" alt="<%= image.alt_text || post.title %>" />
+          <% }); %>
+        </div>
+      <% } %>
+    </div>
+    <%-include('../partials/footer')-%>
+  </body>
+</html>

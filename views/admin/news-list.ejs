@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>จัดการข่าว</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body class="admin-page">
+    <%- include('partials/nav') %>
+    <main class="admin-shell">
+      <div class="admin-title-row">
+        <h1>จัดการข่าว</h1>
+        <a class="admin-button" href="/admin/news/new">เพิ่มข่าว</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>วันที่</th>
+            <th>หัวข้อ</th>
+            <th>หมวด</th>
+            <th>สถานะ</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% posts.forEach(function(post) { %>
+            <tr>
+              <td><%= formatThaiDate(post.published_date) %></td>
+              <td>
+                <a href="/news/<%= post.slug %>" target="_blank"><%= post.title %></a>
+              </td>
+              <td><%= post.category_label %></td>
+              <td><%= post.status %></td>
+              <td class="admin-actions">
+                <a href="/admin/news/<%= post.id %>/edit">แก้ไข</a>
+                <form method="post" action="/admin/news/<%= post.id %>/delete">
+                  <button type="submit" onclick="return confirm('ลบข่าวนี้?')">ลบ</button>
+                </form>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

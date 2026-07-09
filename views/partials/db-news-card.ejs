@@ -1,0 +1,18 @@
+<li class="card" data-tag="<%= post.category %> <%= post.branches %>">
+  <a class="card-link" data-path="/news/<%= post.slug %>" href="/news/<%= post.slug %>">
+    <% if (post.cover_image) { %>
+      <img src="<%= post.cover_image %>" alt="<%= post.title %>" class="card-image" />
+    <% } %>
+    <div class="news-tags">
+      <div class="tags"><%= post.category_label %></div>
+      <% (post.branches || '').split(',').filter(Boolean).forEach(function(branch) { %>
+        <div class="tags"><%= branch.toUpperCase() %></div>
+      <% }); %>
+    </div>
+    <p class="Dates"><%= formatThaiDate(post.published_date) %></p>
+    <h2 class="card-title"><%= post.title %></h2>
+    <button class="card-button material-symbols-rounded">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </a>
+</li>

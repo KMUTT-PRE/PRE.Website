@@ -24,6 +24,16 @@
               <img src="../images/PEMCE-LOGO.png" alt="prelogo" />
             </span>
           </span>
+          <div class="footer-visit-stats">
+            <div>
+              <span>เดือนนี้</span>
+              <strong class="fw-normal"><%= typeof analyticsSummary !== 'undefined' ? analyticsSummary.monthViews : 0 %></strong>
+            </div>
+            <div>
+              <span>ปีนี้</span>
+              <strong class="fw-normal"><%= typeof analyticsSummary !== 'undefined' ? analyticsSummary.yearViews : 0 %></strong>
+            </div>
+          </div>
         </div>
         <div>
           <!-- ลิงก์ด่วน -->
@@ -102,8 +112,64 @@
       </div>
       <div>
         <hr class="line" />
-        <div class="text-center">Copyright © 2026 PE&MCE&ISEE KMUTT.</div>
+        <div class="text-center">Copyright © 2026 PE KMUTT.</div>
       </div>
     </footer>
+    <button
+      type="button"
+      class="consent-floating-button"
+      id="consentOpenButton"
+      aria-controls="consentPopup"
+      aria-expanded="false"
+    >
+      ขอความยินยอม/Request for Consent
+    </button>
+    <div class="consent-popup" id="consentPopup" aria-hidden="true">
+      <div class="consent-copy consent-copy-en">
+        <div class="consent-title-row">
+          <img src="../images/KMUTT_Logo.png" alt="KMUTT" />
+          <h2>Cookie Consent</h2>
+        </div>
+        <p>
+          This website uses cookies to improve user experience. By using our
+          website you consent to all cookies in accordance with our Cookie
+          Policy.
+        </p>
+        <p class="consent-links">
+          <a href="https://www.kmutt.ac.th/privacy/" target="_blank">Privacy policy</a>
+          <span>-</span>
+          <a href="https://www.kmutt.ac.th/website-policy/" target="_blank">Terms and condition</a>
+        </p>
+      </div>
+      <div class="consent-copy consent-copy-th">
+        <div class="consent-title-row">
+          <img src="../images/KMUTT_Logo.png" alt="KMUTT" />
+          <h2>การขอความยินยอมแบบคุกกี้</h2>
+        </div>
+        <p>
+          เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของผู้ใช้งานเว็บไซต์นี้จะถือว่าคุณให้ความยินยอมในการใช้คุกกี้ภายใต้นโยบายการใช้คุกกี้ของเรา
+        </p>
+        <p class="consent-links">
+          <a href="https://www.kmutt.ac.th/privacy/" target="_blank">นโยบายความเป็นส่วนตัว</a>
+          <span>-</span>
+          <a href="https://www.kmutt.ac.th/website-policy/" target="_blank">ข้อกำหนดและเงื่อนไข</a>
+        </p>
+      </div>
+      <div class="consent-actions">
+        <div class="consent-language">
+          <button type="button" data-consent-lang="en">EN</button>
+          <button type="button" data-consent-lang="th">TH</button>
+        </div>
+        <button type="button" class="consent-accept" id="consentAccept">
+          <span class="consent-en">Accept all</span>
+          <span class="consent-th">ยอมรับทั้งหมด</span>
+        </button>
+        <button type="button" class="consent-reject" id="consentReject">
+          <span class="consent-en">Reject all</span>
+          <span class="consent-th">ปฏิเสธทั้งหมด</span>
+        </button>
+      </div>
+    </div>
+    <script src="/js/assets/consent.js"></script>
   </body>
 </html>

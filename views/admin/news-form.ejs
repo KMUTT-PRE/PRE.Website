@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= post ? 'แก้ไขข่าว' : 'เพิ่มข่าว' %></title>
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body class="admin-page">
+    <%- include('partials/nav') %>
+    <main class="admin-shell admin-form-shell">
+      <h1><%= post ? 'แก้ไขข่าว' : 'เพิ่มข่าว' %></h1>
+      <form method="post" action="<%= action %>" enctype="multipart/form-data" class="admin-form">
+        <label>
+          หัวข้อข่าว
+          <input type="text" name="title" value="<%= post ? post.title : '' %>" required />
+        </label>
+        <label>
+          Slug URL
+          <input type="text" name="slug" value="<%= post ? post.slug : '' %>" placeholder="เช่น pos20260709-1" />
+        </label>
+        <div class="admin-form-row">
+          <label>
+            วันที่เผยแพร่
+            <input type="date" name="published_date" value="<%= post ? post.published_date : new Date().toISOString().slice(0, 10) %>" required />
+          </label>
+          <label>
+            หมวดหมู่
+            <select name="category">
+              <% Object.keys(categories).forEach(function(key) { %>
+                <option value="<%= key %>" <%= post && post.category === key ? 'selected' : '' %>><%= categories[key] %></option>
+              <% }); %>
+            </select>
+          </label>
+          <label>
+            สถานะ
+            <select name="status">
+              <option value="published" <%= !post || post.status === 'published' ? 'selected' : '' %>>เผยแพร่</option>
+              <option value="draft" <%= post && post.status === 'draft' ? 'selected' : '' %>>ฉบับร่าง</option>
+            </select>
+          </label>
+        </div>
+        <fieldset>
+          <legend>สาขา</legend>
+          <% ['pre', 'mce', 'isee', 'm-eng', 'ph-d'].forEach(function(branch) { %>
+            <label class="admin-check">
+              <input type="checkbox" name="branches" value="<%= branch %>" <%= post && (post.branches || '').split(',').includes(branch) ? 'checked' : '' %> />
+              <%= branch.toUpperCase() %>
+            </label>
+          <% }); %>
+        </fieldset>
+        <label>
+          รูปปก
+          <input type="file" name="cover_image" accept="image/*" />
+          <input type="hidden" name="current_cover_image" value="<%= post ? post.cover_image : '' %>" />
+        </label>
+        <% if (post && post.cover_image) { %>
+          <img class="admin-preview" src="<%= post.cover_image %>" alt="<%= post.title %>" />
+        <% } %>
+        <label>
+          รูปประกอบเพิ่มเติม
+          <input type="file" name="gallery_images" accept="image/*" multiple />
+        </label>
+        <% const galleryImages = typeof images !== 'undefined' ? images : []; %>
+        <% if (galleryImages.length > 0) { %>
+          <div class="admin-gallery-preview">
+            <% galleryImages.forEach(function(image) { %>
+              <figure>
+                <img src="<%= image.image_path %>" alt="<%= image.alt_text || post.title %>" />
+                <form method="post" action="/admin/news-image/<%= image.id %>/delete">
+                  <button type="submit" onclick="return confirm('ลบรูปนี้?')">ลบรูป</button>
+                </form>
+              </figure>
+            <% }); %>
+          </div>
+        <% } %>
+        <label>
+          สรุปข่าว
+          <textarea name="summary" rows="3"><%= post ? post.summary : '' %></textarea>
+        </label>
+        <label>
+          รายละเอียดข่าว
+          <textarea name="content" rows="12" required><%= post ? post.content : '' %></textarea>
+        </label>
+        <div class="admin-form-actions">
+          <button type="submit">บันทึก</button>
+          <a href="/admin/news">ยกเลิก</a>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

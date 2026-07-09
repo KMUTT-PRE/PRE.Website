@@ -12,6 +12,7 @@
       <span>ข่าวสาร</span>
     </div>
     <div class="news-layout">
+      <div class="news-sidebar">
       <aside id="myBtnContainer" class="filter-buttons">
         <h2>หมวดหมู่ข่าว</h2>
         <h4>ประเภท</h4>
@@ -33,16 +34,23 @@
           ><button class="btn" data-filter="ph-d">ปริญญาเอก</button>
         </div>
       </aside>
+      <a class="admin-login-link" href="/admin/login">เข้าสู่ระบบผู้ดูแล</a>
+      </div>
       <div class="news-container">
         <h1>ข่าวและกิจกรรม</h1>
         <div class="card-container">
+          <% if (dbNews && dbNews.length > 0) { %>
+            <% dbNews.forEach(function(post) { %>
+              <%- include('../partials/db-news-card', { post: post, formatThaiDate: formatThaiDate }) %>
+            <% }); %>
+          <% } %>
           <% if (newsFiles && newsFiles.length > 0) { %>
           <%
           newsFiles.forEach(function(file) { %>
           <%- include('../news/2569/' +
           file) %>
           <% }); %>
-          <% } else { %>
+          <% } else if (!dbNews || dbNews.length === 0) { %>
           <p>ไม่มีข่าวสารในขณะนี้</p>
           <% } %>
         </div>

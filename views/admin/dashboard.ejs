@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body class="admin-page">
+    <%- include('partials/nav') %>
+    <main class="admin-shell">
+      <section class="admin-metrics">
+        <article>
+          <span>Page views</span>
+          <strong><%= totalViews %></strong>
+        </article>
+        <article>
+          <span>ข่าวในฐานข้อมูล</span>
+          <strong><%= totalNews %></strong>
+        </article>
+      </section>
+
+      <section class="admin-grid">
+        <div>
+          <h2>หน้าที่มีคนเข้ามากที่สุด</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Views</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% topPages.forEach(function(row) { %>
+                <tr>
+                  <td>
+                    <strong><%= row.page_label %></strong>
+                    <small><%= row.path %></small>
+                  </td>
+                  <td><%= row.views %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h2>การเข้าชมล่าสุด</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>เวลา</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% recentViews.forEach(function(row) { %>
+                <tr>
+                  <td>
+                    <strong><%= row.page_label %></strong>
+                    <small><%= row.path %></small>
+                  </td>
+                  <td><%= row.visited_at_display || row.visited_at %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
