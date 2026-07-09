@@ -13,6 +13,13 @@ const {
 
 const app = express();
 const port = process.env.PORT || 3000;
+const hasAdminPassword = Boolean(process.env.ADMIN_PASSWORD?.trim());
+
+console.log(
+  hasAdminPassword
+    ? "Admin password source: ADMIN_PASSWORD environment variable"
+    : "Admin password source: default fallback admin123",
+);
 
 fs.mkdirSync(path.join(__dirname, "data"), { recursive: true });
 fs.mkdirSync(path.join(__dirname, "public", "uploads", "news"), {
@@ -352,9 +359,9 @@ app.get("/admin/login", (req, res) => {
 });
 
 app.post("/admin/login", (req, res) => {
-  const password = process.env.ADMIN_PASSWORD || "admin123";
+  const password = process.env.ADMIN_PASSWORD?.trim() || "admin123";
 
-  if (req.body.password === password) {
+  if (req.body.password?.trim() === password) {
     req.session.isAdmin = true;
     return res.redirect("/admin");
   }
