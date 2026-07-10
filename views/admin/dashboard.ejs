@@ -23,6 +23,22 @@
       <section class="admin-grid">
         <div>
           <h2>หน้าที่มีคนเข้ามากที่สุด</h2>
+          <div class="admin-bar-chart" aria-label="Top page views chart">
+            <% chartRows.forEach(function(row) { %>
+              <div class="admin-bar-row">
+                <div class="admin-bar-label">
+                  <strong><%= row.page_label %></strong>
+                  <% if (row.path !== "__other__") { %>
+                    <small><%= row.path %></small>
+                  <% } %>
+                </div>
+                <div class="admin-bar-track">
+                  <span style="width: <%= Math.max(3, Math.round((Number(row.views || 0) / maxChartViews) * 100)) %>%"></span>
+                </div>
+                <strong class="admin-bar-value"><%= row.views %></strong>
+              </div>
+            <% }); %>
+          </div>
           <table>
             <thead>
               <tr>

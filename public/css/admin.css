@@ -103,6 +103,50 @@ table {
   padding: 20px;
 }
 
+.admin-bar-chart {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0 20px;
+}
+
+.admin-bar-row {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(150px, 1.1fr) minmax(160px, 2fr) 56px;
+}
+
+.admin-bar-label strong {
+  display: block;
+  line-height: 1.25;
+}
+
+.admin-bar-label small {
+  color: #6f7780;
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.admin-bar-track {
+  background: #eef1f4;
+  border-radius: 999px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.admin-bar-track span {
+  background: #ad2f37;
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+}
+
+.admin-bar-value {
+  font-size: 16px;
+  text-align: right;
+}
+
 table {
   border-collapse: collapse;
   overflow: hidden;
@@ -265,6 +309,14 @@ fieldset {
   .admin-grid,
   .admin-form-row {
     grid-template-columns: 1fr;
+  }
+
+  .admin-bar-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-bar-value {
+    text-align: left;
   }
 
   .admin-nav,

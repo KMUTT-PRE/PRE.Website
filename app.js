@@ -14,19 +14,20 @@ const {
 const app = express();
 const port = process.env.PORT || 3000;
 const hasAdminPassword = Boolean(process.env.ADMIN_PASSWORD?.trim());
+const pageViewDedupMinutes = 10;
 
 console.log(
   hasAdminPassword
     ? "Admin password source: ADMIN_PASSWORD environment variable"
     : "Admin password source: default fallback admin123",
 );
-
 fs.mkdirSync(path.join(__dirname, "data"), { recursive: true });
 fs.mkdirSync(path.join(__dirname, "public", "uploads", "news"), {
   recursive: true,
 });
 
 app.set("view engine", "ejs");
+app.set("trust proxy", true);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -132,6 +133,10 @@ function stripQuery(value) {
 async function pageLabel(db, rawPath) {
   const cleanPath = stripQuery(rawPath);
 
+  if (cleanPath === "__other__") {
+    return "อื่นๆ";
+  }
+
   if (PAGE_LABELS[cleanPath]) {
     return PAGE_LABELS[cleanPath];
   }
@@ -226,16 +231,45 @@ async function trackPageView(req, res, next) {
     }
 
     try {
+      const userAgent = req.get("user-agent") || "";
+      const isBot = /bot|crawler|spider|preview|monitor|healthcheck|uptime|pingdom|headless|lighthouse/i.test(
+        userAgent,
+      );
+
+      if (isBot) {
+        return;
+      }
+
       const db = await getDb();
+      const pathOnly = req.path;
+      const ipHash = hashIp(req.ip);
+      const duplicate = await db.get(
+        `SELECT id
+         FROM page_views
+         WHERE path = ?
+           AND ip_hash = ?
+           AND user_agent = ?
+           AND visited_at >= datetime('now', ?)
+         LIMIT 1`,
+        pathOnly,
+        ipHash,
+        userAgent,
+        `-${pageViewDedupMinutes} minutes`,
+      );
+
+      if (duplicate) {
+        return;
+      }
+
       await db.run(
         `INSERT INTO page_views
           (path, page_title, referrer, user_agent, ip_hash)
          VALUES (?, ?, ?, ?, ?)`,
-        req.originalUrl,
+        pathOnly,
         res.locals.pageTitle || "",
         req.get("referer") || "",
-        req.get("user-agent") || "",
-        hashIp(req.ip),
+        userAgent,
+        ipHash,
       );
     } catch (err) {
       console.error("Page view tracking error:", err);
@@ -377,7 +411,7 @@ app.post("/admin/logout", requireAdmin, (req, res) => {
 
 app.get("/admin", requireAdmin, async (req, res) => {
   const db = await getDb();
-  const [totalViews, totalNews, topPagesRaw, recentViewsRaw] = await Promise.all([
+  const [totalViews, totalNews, topPagesRaw, chartPagesRaw, recentViewsRaw] = await Promise.all([
     db.get("SELECT COUNT(*) AS count FROM page_views"),
     db.get("SELECT COUNT(*) AS count FROM news_posts"),
     db.all(
@@ -386,6 +420,12 @@ app.get("/admin", requireAdmin, async (req, res) => {
        GROUP BY path
        ORDER BY views DESC
        LIMIT 10`,
+    ),
+    db.all(
+      `SELECT path, COUNT(*) AS views
+       FROM page_views
+       GROUP BY path
+       ORDER BY views DESC`,
     ),
     db.all(
       `SELECT path, visited_at
@@ -398,11 +438,25 @@ app.get("/admin", requireAdmin, async (req, res) => {
     withPageLabels(db, topPagesRaw),
     withPageLabels(db, recentViewsRaw),
   ]);
+  const chartTopRows = chartPagesRaw.slice(0, 6);
+  const otherViews = chartPagesRaw
+    .slice(6)
+    .reduce((sum, row) => sum + Number(row.views || 0), 0);
+  const chartRowsRaw = otherViews
+    ? [...chartTopRows, { path: "__other__", views: otherViews }]
+    : chartTopRows;
+  const chartRows = await withPageLabels(db, chartRowsRaw);
+  const maxChartViews = Math.max(
+    1,
+    ...chartRows.map((row) => Number(row.views || 0)),
+  );
 
   res.render("admin/dashboard", {
     totalViews: totalViews.count,
     totalNews: totalNews.count,
     topPages,
+    chartRows,
+    maxChartViews,
     recentViews,
   });
 });
