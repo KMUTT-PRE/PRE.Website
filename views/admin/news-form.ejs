@@ -67,9 +67,7 @@
             <% galleryImages.forEach(function(image) { %>
               <figure>
                 <img src="<%= image.image_path %>" alt="<%= image.alt_text || post.title %>" />
-                <form method="post" action="/admin/news-image/<%= image.id %>/delete">
-                  <button type="submit" onclick="return confirm('ลบรูปนี้?')">ลบรูป</button>
-                </form>
+                <button type="submit" form="delete-image-<%= image.id %>" onclick="return confirm('ลบรูปนี้?')">ลบรูป</button>
               </figure>
             <% }); %>
           </div>
@@ -87,6 +85,11 @@
           <a href="/admin/news">ยกเลิก</a>
         </div>
       </form>
+      <% if (galleryImages.length > 0) { %>
+        <% galleryImages.forEach(function(image) { %>
+          <form id="delete-image-<%= image.id %>" method="post" action="/admin/news-image/<%= image.id %>/delete" class="admin-hidden-form"></form>
+        <% }); %>
+      <% } %>
     </main>
   </body>
 </html>

@@ -277,6 +277,10 @@ fieldset {
   width: 100%;
 }
 
+.admin-hidden-form {
+  display: none;
+}
+
 .admin-login-page {
   display: grid;
   min-height: 100vh;
