@@ -59,8 +59,10 @@
         <% } %>
         <label>
           รูปประกอบเพิ่มเติม
-          <input type="file" name="gallery_images" accept="image/*" multiple />
+          <input id="galleryImagesInput" type="file" name="gallery_images" accept="image/*" multiple />
+          <small class="admin-field-help">เลือกได้หลายรูปพร้อมกัน โดยลากคลุมหรือกด Ctrl/Shift ขณะเลือกไฟล์</small>
         </label>
+        <div id="selectedGalleryPreview" class="admin-selected-gallery" aria-live="polite"></div>
         <% const galleryImages = typeof images !== 'undefined' ? images : []; %>
         <% if (galleryImages.length > 0) { %>
           <div class="admin-gallery-preview">
@@ -91,5 +93,36 @@
         <% }); %>
       <% } %>
     </main>
+    <script>
+      const galleryInput = document.getElementById("galleryImagesInput");
+      const selectedGalleryPreview = document.getElementById("selectedGalleryPreview");
+
+      if (galleryInput && selectedGalleryPreview) {
+        galleryInput.addEventListener("change", function () {
+          selectedGalleryPreview.innerHTML = "";
+
+          Array.from(galleryInput.files || []).forEach(function (file) {
+            if (!file.type.startsWith("image/")) {
+              return;
+            }
+
+            const figure = document.createElement("figure");
+            const image = document.createElement("img");
+            const caption = document.createElement("figcaption");
+
+            image.src = URL.createObjectURL(file);
+            image.alt = file.name;
+            image.onload = function () {
+              URL.revokeObjectURL(image.src);
+            };
+            caption.textContent = file.name;
+
+            figure.appendChild(image);
+            figure.appendChild(caption);
+            selectedGalleryPreview.appendChild(figure);
+          });
+        });
+      }
+    </script>
   </body>
 </html>
