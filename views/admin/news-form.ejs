@@ -22,7 +22,7 @@
         <div class="admin-form-row">
           <label>
             วันที่เผยแพร่
-            <input type="date" name="published_date" value="<%= post ? post.published_date : new Date().toISOString().slice(0, 10) %>" required />
+            <input type="date" name="published_date" value="<%= post ? post.published_date : defaultDate %>" required />
           </label>
           <label>
             หมวดหมู่

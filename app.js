@@ -9,6 +9,7 @@ const {
   formatThaiDate,
   hashIp,
   normalizeNewsInput,
+  todayBangkokDate,
 } = require("./lib/news");
 
 const app = express();
@@ -475,6 +476,7 @@ app.get("/admin/news/new", requireAdmin, (req, res) => {
     post: null,
     images: [],
     categories: CATEGORY_LABELS,
+    defaultDate: todayBangkokDate(),
     action: "/admin/news",
   });
 });
@@ -517,6 +519,7 @@ app.get("/admin/news/:id/edit", requireAdmin, async (req, res) => {
     post,
     images,
     categories: CATEGORY_LABELS,
+    defaultDate: todayBangkokDate(),
     action: `/admin/news/${post.id}`,
   });
 });
