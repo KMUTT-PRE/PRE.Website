@@ -244,18 +244,24 @@ async function trackPageView(req, res, next) {
       const db = await getDb();
       const pathOnly = req.path;
       const ipHash = hashIp(req.ip);
+      const duplicateCutoff = new Date(
+        Date.now() - pageViewDedupMinutes * 60 * 1000,
+      )
+        .toISOString()
+        .slice(0, 19)
+        .replace("T", " ");
       const duplicate = await db.get(
         `SELECT id
          FROM page_views
          WHERE path = ?
            AND ip_hash = ?
            AND user_agent = ?
-           AND visited_at >= datetime('now', ?)
+           AND visited_at >= ?
          LIMIT 1`,
         pathOnly,
         ipHash,
         userAgent,
-        `-${pageViewDedupMinutes} minutes`,
+        duplicateCutoff,
       );
 
       if (duplicate) {
