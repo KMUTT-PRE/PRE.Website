@@ -439,9 +439,10 @@ app.get("/admin", requireAdmin, async (req, res) => {
     withPageLabels(db, topPagesRaw),
     withPageLabels(db, recentViewsRaw),
   ]);
-  const chartTopRows = chartPagesRaw.slice(0, 6);
-  const otherViews = chartPagesRaw
-    .slice(6)
+  const chartPagesWithoutHome = chartPagesRaw.filter((row) => row.path !== "/");
+  const chartTopRows = chartPagesWithoutHome.slice(0, 8);
+  const otherViews = chartPagesWithoutHome
+    .slice(8)
     .reduce((sum, row) => sum + Number(row.views || 0), 0);
   const chartRowsRaw = otherViews
     ? [...chartTopRows, { path: "__other__", views: otherViews }]
