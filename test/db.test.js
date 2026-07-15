@@ -27,18 +27,18 @@ test("production requires DATABASE_URL instead of falling back to SQLite", () =>
   assert.match(output, /DATABASE_URL is required/);
 });
 
-test("production rejects malformed Render database URLs", () => {
+test("production rejects values that are not database URLs", () => {
   const output = execFileSync(
     process.execPath,
     [
       "-e",
       [
         "process.env.NODE_ENV = 'production';",
-        "process.env.DATABASE_URL = 'postgres://user:pass@base:5432/base';",
+        "process.env.DATABASE_URL = 'base';",
         "const { getDb } = require('./lib/db');",
         "getDb().then(() => process.exit(1)).catch((err) => {",
         "  console.log(err.message);",
-        "  process.exit(err.message.includes('hostname') ? 0 : 1);",
+        "  process.exit(err.message.includes('DATABASE_URL is invalid') ? 0 : 1);",
         "});",
       ].join(" "),
     ],
@@ -48,5 +48,5 @@ test("production rejects malformed Render database URLs", () => {
     },
   );
 
-  assert.match(output, /hostname "base" does not look valid/);
+  assert.match(output, /DATABASE_URL is invalid/);
 });
