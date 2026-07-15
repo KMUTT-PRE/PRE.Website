@@ -25,12 +25,12 @@
       <% } %>
       <div class="content-text">
         <% if (post.summary) { %>
-          <p><strong><%= post.summary %></strong></p>
+          <p><strong><%- linkifyText(post.summary) %></strong></p>
           <br />
         <% } %>
         <% post.content.split(/\r?\n/).forEach(function(line) { %>
           <% if (line.trim()) { %>
-            <p><%= line %></p>
+            <p><%- linkifyText(line) %></p>
           <% } else { %>
             <br />
           <% } %>

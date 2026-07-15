@@ -8,6 +8,7 @@ const {
   CATEGORY_LABELS,
   formatThaiDate,
   hashIp,
+  linkifyText,
   normalizeNewsInput,
   todayBangkokDate,
 } = require("./lib/news");
@@ -381,7 +382,12 @@ app.get("/news/:postID", async (req, res) => {
   if (post) {
     res.locals.pageTitle = post.title;
     const images = await getPostImages(db, post.id);
-    return res.render("pages/news-detail", { post, images, formatThaiDate });
+    return res.render("pages/news-detail", {
+      post,
+      images,
+      formatThaiDate,
+      linkifyText,
+    });
   }
 
   const viewPath = `news/2569/news/${postID}`;
