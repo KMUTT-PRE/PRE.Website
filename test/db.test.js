@@ -26,3 +26,27 @@ test("production requires DATABASE_URL instead of falling back to SQLite", () =>
 
   assert.match(output, /DATABASE_URL is required/);
 });
+
+test("production rejects malformed Render database URLs", () => {
+  const output = execFileSync(
+    process.execPath,
+    [
+      "-e",
+      [
+        "process.env.NODE_ENV = 'production';",
+        "process.env.DATABASE_URL = 'postgres://user:pass@base:5432/base';",
+        "const { getDb } = require('./lib/db');",
+        "getDb().then(() => process.exit(1)).catch((err) => {",
+        "  console.log(err.message);",
+        "  process.exit(err.message.includes('hostname') ? 0 : 1);",
+        "});",
+      ].join(" "),
+    ],
+    {
+      cwd: path.join(__dirname, ".."),
+      encoding: "utf8",
+    },
+  );
+
+  assert.match(output, /hostname "base" does not look valid/);
+});
