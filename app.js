@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
 const session = require("express-session");
-const { getDb, initDb } = require("./lib/db");
+const { getDb, getDbInfo, initDb } = require("./lib/db");
 const {
   CATEGORY_LABELS,
   formatThaiDate,
@@ -632,8 +632,15 @@ app.get("/search", (req, res) => {
 
 initDb()
   .then(() => {
+    const dbInfo = getDbInfo();
+
     app.listen(port, () => {
       console.log(`App listening at port ${port}`);
+      console.log(
+        dbInfo.provider === "postgres"
+          ? `Database provider: PostgreSQL schema=${dbInfo.schema}`
+          : `Database provider: SQLite file=${dbInfo.filename}`,
+      );
       console.log("Admin: http://localhost:3000/admin");
     });
   })
