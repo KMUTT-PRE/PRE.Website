@@ -4,6 +4,7 @@
     <%- include('../partials/navbar', { title : 'Homepage'} ) %>
 
     <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="stylesheet" href="/css/assets/news-card.css" />
     <%- include('../partials/Responsive') %>
   </head>
   <body>
@@ -227,7 +228,13 @@
       <div class="swiper mySwiper">
         <!-- ค้นหาส่วน <div class="swiper-wrapper"> ในไฟล์ Homepage.ejs -->
 <div class="swiper-wrapper">
-  <% if (typeof latestNews !== 'undefined' && latestNews.length > 0) { %>
+  <% if (typeof latestDbNews !== 'undefined' && latestDbNews.length > 0) { %>
+    <% latestDbNews.forEach(function(post) { %>
+      <div class="swiper-slide">
+        <%- include('../partials/db-news-card', { post: post, formatThaiDate: formatThaiDate }) %>
+      </div>
+    <% }); %>
+  <% } else if (typeof latestNews !== 'undefined' && latestNews.length > 0) { %>
     <% latestNews.forEach(function(file) { %>
       <div class="swiper-slide">
         <%- include('../news/2569/' + file) %>
