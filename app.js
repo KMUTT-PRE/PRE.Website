@@ -202,10 +202,13 @@ function formatBangkokDateTime(value) {
     return "";
   }
 
-  const date = new Date(`${value.replace(" ", "T")}Z`);
+  const date =
+    value instanceof Date
+      ? value
+      : new Date(`${String(value).replace(" ", "T")}Z`);
 
   if (Number.isNaN(date.getTime())) {
-    return value;
+    return String(value);
   }
 
   return new Intl.DateTimeFormat("th-TH", {
