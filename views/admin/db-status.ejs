@@ -55,6 +55,28 @@
                 <th>SQLite file</th>
                 <td><%= dbInfo.filename || '-' %></td>
               </tr>
+              <% if (dbDebug && dbInfo.provider === 'postgres') { %>
+                <tr>
+                  <th>Current schema</th>
+                  <td><%= dbDebug.currentSchema || '-' %></td>
+                </tr>
+                <tr>
+                  <th>Search path</th>
+                  <td><%= dbDebug.searchPath || '-' %></td>
+                </tr>
+                <tr>
+                  <th>Table schema(s)</th>
+                  <td>
+                    <% if (dbDebug.tableSchemas.length > 0) { %>
+                      <%= dbDebug.tableSchemas.map(function(row) {
+                            return row.table_name + ' (' + row.table_schema + ')';
+                          }).join(', ') %>
+                    <% } else { %>
+                      -
+                    <% } %>
+                  </td>
+                </tr>
+              <% } %>
             </tbody>
           </table>
         </div>

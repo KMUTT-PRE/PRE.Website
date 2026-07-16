@@ -480,6 +480,7 @@ app.get("/admin", requireAdmin, async (req, res) => {
 
 app.get("/admin/db-status", requireAdmin, async (req, res) => {
   const db = await getDb();
+  const dbInfo = getDbInfo();
   const [totalNews, publishedNews, totalImages, latestPosts] = await Promise.all([
     db.get("SELECT COUNT(*) AS count FROM news_posts"),
     db.get("SELECT COUNT(*) AS count FROM news_posts WHERE status = 'published'"),
@@ -492,13 +493,36 @@ app.get("/admin/db-status", requireAdmin, async (req, res) => {
     ),
   ]);
 
+  const dbDebug = {
+    currentSchema: null,
+    searchPath: null,
+    tableSchemas: [],
+  };
+
+  if (dbInfo.provider === "postgres") {
+    const schemaInfo = await db.get(
+      `SELECT current_schema() AS current_schema, current_setting('search_path') AS search_path`,
+    );
+    const tableSchemas = await db.all(
+      `SELECT table_schema, table_name
+       FROM information_schema.tables
+       WHERE table_name IN ('news_posts', 'news_images')
+       ORDER BY table_schema, table_name`,
+    );
+
+    dbDebug.currentSchema = schemaInfo?.current_schema || null;
+    dbDebug.searchPath = schemaInfo?.search_path || null;
+    dbDebug.tableSchemas = tableSchemas || [];
+  }
+
   res.render("admin/db-status", {
-    dbInfo: getDbInfo(),
+    dbInfo,
     totalNews: totalNews.count,
     publishedNews: publishedNews.count,
     totalImages: totalImages.count,
     latestPosts,
     formatThaiDate,
+    dbDebug,
   });
 });
 
