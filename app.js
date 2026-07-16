@@ -475,6 +475,30 @@ app.get("/admin", requireAdmin, async (req, res) => {
   });
 });
 
+app.get("/admin/db-status", requireAdmin, async (req, res) => {
+  const db = await getDb();
+  const [totalNews, publishedNews, totalImages, latestPosts] = await Promise.all([
+    db.get("SELECT COUNT(*) AS count FROM news_posts"),
+    db.get("SELECT COUNT(*) AS count FROM news_posts WHERE status = 'published'"),
+    db.get("SELECT COUNT(*) AS count FROM news_images"),
+    db.all(
+      `SELECT id, title, slug, status, published_date, created_at, updated_at
+       FROM news_posts
+       ORDER BY published_date DESC, id DESC
+       LIMIT 10`,
+    ),
+  ]);
+
+  res.render("admin/db-status", {
+    dbInfo: getDbInfo(),
+    totalNews: totalNews.count,
+    publishedNews: publishedNews.count,
+    totalImages: totalImages.count,
+    latestPosts,
+    formatThaiDate,
+  });
+});
+
 app.get("/admin/news", requireAdmin, async (req, res) => {
   const db = await getDb();
   const posts = await db.all(

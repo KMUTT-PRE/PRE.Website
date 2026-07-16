@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database Status</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body class="admin-page">
+    <%- include('partials/nav') %>
+    <main class="admin-shell">
+      <h1>Database Status</h1>
+
+      <section class="admin-metrics">
+        <article>
+          <span>Provider</span>
+          <strong><%= dbInfo.provider %></strong>
+        </article>
+        <article>
+          <span>Schema</span>
+          <strong><%= dbInfo.schema || '-' %></strong>
+        </article>
+        <article>
+          <span>News posts</span>
+          <strong><%= totalNews %></strong>
+        </article>
+        <article>
+          <span>Published</span>
+          <strong><%= publishedNews %></strong>
+        </article>
+        <article>
+          <span>Images</span>
+          <strong><%= totalImages %></strong>
+        </article>
+      </section>
+
+      <section class="admin-grid">
+        <div>
+          <h2>Connection</h2>
+          <table>
+            <tbody>
+              <tr>
+                <th>Host</th>
+                <td><%= dbInfo.host || '-' %></td>
+              </tr>
+              <tr>
+                <th>Database</th>
+                <td><%= dbInfo.database || '-' %></td>
+              </tr>
+              <tr>
+                <th>Username</th>
+                <td><%= dbInfo.username || '-' %></td>
+              </tr>
+              <tr>
+                <th>SQLite file</th>
+                <td><%= dbInfo.filename || '-' %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <h2>Latest News Rows</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (latestPosts.length > 0) { %>
+                <% latestPosts.forEach(function(post) { %>
+                  <tr>
+                    <td><%= post.id %></td>
+                    <td>
+                      <strong><%= post.title %></strong>
+                      <small>/news/<%= post.slug %></small>
+                    </td>
+                    <td><%= post.status %></td>
+                    <td><%= formatThaiDate(post.published_date) %></td>
+                  </tr>
+                <% }); %>
+              <% } else { %>
+                <tr>
+                  <td colspan="4">No news rows found in this database/schema.</td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
