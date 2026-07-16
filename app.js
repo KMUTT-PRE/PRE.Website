@@ -612,8 +612,38 @@ app.post("/admin/news", requireAdmin, newsUpload, async (req, res) => {
 
     return res.redirect("/admin/news");
   } catch (err) {
-    console.error("Admin news create error:", err);
+    try {
+      const dbInfo = getDbInfo();
+      console.error("Admin news create error:", err && err.stack ? err.stack : err, {
+        dbInfo,
+        title: req.body?.title,
+        slug: req.body?.slug,
+      });
+    } catch (logErr) {
+      console.error("Admin news create error (failed to get dbInfo):", err, logErr);
+    }
+
     return res.status(500).send("Internal Server Error");
+  }
+});
+
+// Debug helper: return basic counts to verify which DB/schema is active
+app.get("/admin/debug/db-check", requireAdmin, async (req, res) => {
+  try {
+    const db = await getDb();
+    const [newsCount, viewsCount] = await Promise.all([
+      db.get("SELECT COUNT(*) AS count FROM news_posts"),
+      db.get("SELECT COUNT(*) AS count FROM page_views"),
+    ]);
+
+    return res.json({
+      news: newsCount.count,
+      page_views: viewsCount.count,
+      dbInfo: getDbInfo(),
+    });
+  } catch (err) {
+    console.error("/admin/debug/db-check error:", err);
+    return res.status(500).json({ error: "db-check failed" });
   }
 });
 
