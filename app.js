@@ -588,28 +588,33 @@ app.get("/admin/news/new", requireAdmin, (req, res) => {
 });
 
 app.post("/admin/news", requireAdmin, newsUpload, async (req, res) => {
-  const db = await getDb();
-  const post = normalizeNewsInput(req.body, req.files?.cover_image?.[0]);
+  try {
+    const db = await getDb();
+    const post = normalizeNewsInput(req.body, req.files?.cover_image?.[0]);
 
-  const result = await db.run(
-    `INSERT INTO news_posts
+    const result = await db.run(
+      `INSERT INTO news_posts
       (title, slug, category, category_label, branches, published_date,
        cover_image, summary, content, status)
      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-    post.title,
-    post.slug,
-    post.category,
-    post.category_label,
-    post.branches,
-    post.published_date,
-    post.cover_image,
-    post.summary,
-    post.content,
-    post.status,
-  );
-  await saveGalleryImages(db, result.lastID, req.files);
+      post.title,
+      post.slug,
+      post.category,
+      post.category_label,
+      post.branches,
+      post.published_date,
+      post.cover_image,
+      post.summary,
+      post.content,
+      post.status,
+    );
+    await saveGalleryImages(db, result.lastID, req.files);
 
-  res.redirect("/admin/news");
+    return res.redirect("/admin/news");
+  } catch (err) {
+    console.error("Admin news create error:", err);
+    return res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/admin/news/:id/edit", requireAdmin, async (req, res) => {
