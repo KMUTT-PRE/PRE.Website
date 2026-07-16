@@ -589,6 +589,7 @@ app.get("/admin/news/new", requireAdmin, (req, res) => {
 
 app.post("/admin/news", requireAdmin, newsUpload, async (req, res) => {
   try {
+    console.log("Admin news create attempt", { title: req.body?.title, slug: req.body?.slug });
     const db = await getDb();
     const post = normalizeNewsInput(req.body, req.files?.cover_image?.[0]);
 
@@ -624,6 +625,27 @@ app.post("/admin/news", requireAdmin, newsUpload, async (req, res) => {
     }
 
     return res.status(500).send("Internal Server Error");
+  }
+});
+
+// Temporary public debug route (no auth) to verify DB connectivity and counts
+// NOTE: This is temporary for debugging and should be removed after use.
+app.get("/debug/db-check", async (req, res) => {
+  try {
+    const db = await getDb();
+    const [newsCount, viewsCount] = await Promise.all([
+      db.get("SELECT COUNT(*) AS count FROM news_posts"),
+      db.get("SELECT COUNT(*) AS count FROM page_views"),
+    ]);
+
+    return res.json({
+      news: newsCount.count,
+      page_views: viewsCount.count,
+      dbInfo: getDbInfo(),
+    });
+  } catch (err) {
+    console.error("/debug/db-check error:", err);
+    return res.status(500).json({ error: "db-check failed", details: String(err) });
   }
 });
 
