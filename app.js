@@ -511,6 +511,48 @@ app.get("/admin/news", requireAdmin, async (req, res) => {
   res.render("admin/news-list", { posts, formatThaiDate });
 });
 
+app.get("/admin/news/export", requireAdmin, async (req, res) => {
+  const db = await getDb();
+  const [posts, images] = await Promise.all([
+    db.all(`SELECT * FROM news_posts ORDER BY published_date DESC, id DESC`),
+    db.all(`SELECT * FROM news_images ORDER BY news_post_id, sort_order, id`),
+  ]);
+  const exportedAt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Bangkok",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  })
+    .format(new Date())
+    .replace(/[,: ]/g, "-");
+
+  res.setHeader("Content-Type", "application/json; charset=utf-8");
+  res.setHeader(
+    "Content-Disposition",
+    `attachment; filename="pre-website-news-backup-${exportedAt}.json"`,
+  );
+  res.send(
+    JSON.stringify(
+      {
+        exported_at: new Date().toISOString(),
+        database: getDbInfo(),
+        counts: {
+          news_posts: posts.length,
+          news_images: images.length,
+        },
+        news_posts: posts,
+        news_images: images,
+      },
+      null,
+      2,
+    ),
+  );
+});
+
 app.get("/admin/news/new", requireAdmin, (req, res) => {
   res.render("admin/news-form", {
     post: null,
