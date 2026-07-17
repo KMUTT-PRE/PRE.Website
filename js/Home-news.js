@@ -43,10 +43,6 @@ if (newsGrid && prevBtn && nextBtn && statusEl && newsItems.length > 0) {
     statusEl.textContent = `${currentPage} / ${totalPages}`;
     prevBtn.disabled = currentPage <= 1;
     nextBtn.disabled = currentPage >= totalPages;
-    const showControls = totalPages > 1;
-    prevBtn.style.display = showControls ? "inline-flex" : "none";
-    nextBtn.style.display = showControls ? "inline-flex" : "none";
-    statusEl.style.display = showControls ? "inline" : "none";
   }
 
   prevBtn.addEventListener("click", () => {
