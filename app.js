@@ -1,4 +1,11 @@
-require("dotenv").config();
+try {
+  require("dotenv").config();
+} catch (err) {
+  if (err?.code !== "MODULE_NOT_FOUND") {
+    throw err;
+  }
+  console.warn("[Config] dotenv not installed; using environment variables from runtime");
+}
 
 const express = require("express");
 const fs = require("fs");
