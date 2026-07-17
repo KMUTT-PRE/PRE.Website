@@ -51,27 +51,19 @@ app.use(express.static("public"));
 // Configure persistent session store
 const sessionStore = getSessionStore();
 
-// TEMPORARILY DISABLED FOR DEBUGGING - session middleware causing errors
-// app.use(
-//   session({
-//     store: sessionStore,
-//     secret: process.env.SESSION_SECRET || "change-this-session-secret",
-//     resave: false,
-//     saveUninitialized: false,
-//     cookie: {
-//       secure: process.env.NODE_ENV === "production",
-//       httpOnly: true,
-//       maxAge: 24 * 60 * 60 * 1000, // 24 hours
-//    },
-//   }),
-// );
-
-// Use mock session for testing
-const mockSessionMiddleware = (req, res, next) => {
-  req.session = { isAdmin: false };
-  next();
-};
-app.use(mockSessionMiddleware);
+app.use(
+  session({
+    store: sessionStore,
+    secret: process.env.SESSION_SECRET || "change-this-session-secret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: process.env.NODE_ENV === "production",
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    },
+  }),
+);
 
 const upload = multer({
   storage: multer.diskStorage({
