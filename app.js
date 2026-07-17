@@ -628,47 +628,6 @@ app.post("/admin/news", requireAdmin, newsUpload, async (req, res) => {
   }
 });
 
-// Temporary public debug route (no auth) to verify DB connectivity and counts
-// NOTE: This is temporary for debugging and should be removed after use.
-app.get("/debug/db-check", async (req, res) => {
-  try {
-    const db = await getDb();
-    const [newsCount, viewsCount] = await Promise.all([
-      db.get("SELECT COUNT(*) AS count FROM news_posts"),
-      db.get("SELECT COUNT(*) AS count FROM page_views"),
-    ]);
-
-    return res.json({
-      news: newsCount.count,
-      page_views: viewsCount.count,
-      dbInfo: getDbInfo(),
-    });
-  } catch (err) {
-    console.error("/debug/db-check error:", err);
-    return res.status(500).json({ error: "db-check failed", details: String(err) });
-  }
-});
-
-// Debug helper: return basic counts to verify which DB/schema is active
-app.get("/admin/debug/db-check", requireAdmin, async (req, res) => {
-  try {
-    const db = await getDb();
-    const [newsCount, viewsCount] = await Promise.all([
-      db.get("SELECT COUNT(*) AS count FROM news_posts"),
-      db.get("SELECT COUNT(*) AS count FROM page_views"),
-    ]);
-
-    return res.json({
-      news: newsCount.count,
-      page_views: viewsCount.count,
-      dbInfo: getDbInfo(),
-    });
-  } catch (err) {
-    console.error("/admin/debug/db-check error:", err);
-    return res.status(500).json({ error: "db-check failed" });
-  }
-});
-
 app.get("/admin/news/:id/edit", requireAdmin, async (req, res) => {
   const db = await getDb();
   const post = await db.get("SELECT * FROM news_posts WHERE id = ?", req.params.id);
