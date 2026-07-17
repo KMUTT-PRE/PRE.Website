@@ -19,6 +19,14 @@ const pg = require("pg");
 
 async function migrateNews() {
   const databaseUrl = process.env.DATABASE_URL;
+  const databaseSchema = process.env.DATABASE_SCHEMA || "public";
+
+  if (!/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(databaseSchema)) {
+    console.error("ERROR: DATABASE_SCHEMA is invalid");
+    process.exit(1);
+  }
+
+  const qualifiedNewsPosts = `"${databaseSchema}".news_posts`;
 
   if (!databaseUrl) {
     console.error("ERROR: DATABASE_URL environment variable not set");
@@ -67,7 +75,7 @@ async function migrateNews() {
     for (const article of news) {
       try {
         await pgPool.query(
-          `INSERT INTO news_posts 
+          `INSERT INTO ${qualifiedNewsPosts} 
             (id, title, slug, category, category_label, branches, 
              published_date, cover_image, summary, content, status, 
              created_at, updated_at)
@@ -103,7 +111,9 @@ async function migrateNews() {
     }
 
     // Verify
-    const result = await pgPool.query("SELECT COUNT(*) as count FROM news_posts");
+    const result = await pgPool.query(
+      `SELECT COUNT(*) as count FROM ${qualifiedNewsPosts}`,
+    );
     console.log(`\nPostgreSQL now has ${result.rows[0].count} news articles`);
 
   } catch (err) {
