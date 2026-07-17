@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -497,11 +499,10 @@ app.get("/", async (req, res) => {
     `SELECT * FROM news_posts
      WHERE status = 'published'
      ORDER BY published_date DESC, id DESC
-     LIMIT 6`,
+     LIMIT 8`,
   );
 
   res.render("pages/Homepage", {
-    latestNews: legacyNewsFiles(6),
     latestDbNews,
     formatThaiDate,
   });

@@ -108,151 +108,32 @@
         </div>
       </div>
     </div>
-    <!-- ผลงาน -->
-    <div class="reward-carousel">
-      <div class="reward-track">
-        <!-- <div aria-hidden class="reward-group">
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward1.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward2.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card1">
-            <img
-              src="../images/Homepage/Homepage-reward3.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward4.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card1">
-            <img
-              src="../images/Homepage/Homepage-reward5.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward6.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card1">
-            <img
-              src="../images/Homepage/Homepage-reward7.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward8.jpg"
-              class="reward-img"
-            />
-          </div>
-        </div> -->
-        <div aria-hidden class="reward-group">
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward1.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward2.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card1">
-            <img
-              src="../images/Homepage/Homepage-reward3.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward4.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card1">
-            <img
-              src="../images/Homepage/Homepage-reward5.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward6.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card1">
-            <img
-              src="../images/Homepage/Homepage-reward7.jpg"
-              class="reward-img"
-            />
-          </div>
-          <div class="reward-card">
-            <img
-              src="../images/Homepage/Homepage-reward8.jpg"
-              class="reward-img"
-            />
-          </div>
-        </div>
-      </div>
-      <div id="imgModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg" />
-        <div id="caption"></div>
-      </div>
-    </div>
-    <script src="../js/reward.js"></script>
     <!-- ข่าวสาร -->
     <div class="news-header">
       <h2>ข่าวสารและกิจกรรม</h2>
       <span><a href="/news">ดูทั้งหมด</a></span>
     </div>
     <div class="container-bg">
-      <div class="swiper mySwiper">
-        <!-- ค้นหาส่วน <div class="swiper-wrapper"> ในไฟล์ Homepage.ejs -->
-<div class="swiper-wrapper">
-  <% if (typeof latestDbNews !== 'undefined' && latestDbNews.length > 0) { %>
-    <% latestDbNews.forEach(function(post) { %>
-      <div class="swiper-slide">
-        <%- include('../partials/db-news-card', { post: post, formatThaiDate: formatThaiDate }) %>
-      </div>
-    <% }); %>
-  <% } else if (typeof latestNews !== 'undefined' && latestNews.length > 0) { %>
-    <% latestNews.forEach(function(file) { %>
-      <div class="swiper-slide">
-        <%- include('../news/2569/' + file) %>
-      </div>
-    <% }); %>
-  <% } else { %>
-    <div class="swiper-slide">
-      <p>ไม่มีข่าวสารล่าสุดในขณะนี้</p>
-    </div>
-  <% } %>
-</div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-slide-button swiper-button-prev"></div>
-        <div class="swiper-slide-button swiper-button-next"></div>
+      <div class="news-grid">
+          <% if (typeof latestDbNews !== 'undefined' && latestDbNews.length > 0) { %>
+            <% latestDbNews.forEach(function(post) { %>
+              <div class="news-grid-item">
+                <%- include('../partials/db-news-card', { post: post, formatThaiDate: formatThaiDate }) %>
+              </div>
+            <% }); %>
+          <% } else { %>
+            <div class="news-grid-item">
+              <p>ไม่มีข่าวสารล่าสุดในขณะนี้</p>
+            </div>
+          <% } %>
       </div>
     </div>
-    <%- include('../partials/swiper.ejs')%>
-    <script src="../js/Home-news.js"></script>
+    <div class="news-row-controls" aria-label="ตัวควบคุมข่าวสาร">
+      <button type="button" class="news-row-btn" id="news-prev" aria-label="ข่าวก่อนหน้า">ก่อนหน้า</button>
+      <span class="news-row-status" id="news-row-status">1 / 1</span>
+      <button type="button" class="news-row-btn" id="news-next" aria-label="ข่าวถัดไป">ถัดไป</button>
+    </div>
+    <script src="/js/Home-news.js"></script>
     <%- include('../partials/footer')-%>
   </body>
 </html>

@@ -1,0 +1,45 @@
+{
+  // ลดการอ่านไฟล์ที่ไม่เกี่ยวข้องระหว่างค้นหา/อ้างอิงโค้ด
+  "search.exclude": {
+    "**/node_modules/**": true,
+    "**/node/**": true,
+    "data/backups/**": true,
+    "public/uploads/**": true,
+    "public/images/**": true,
+    "public/pdf/**": true,
+    "coverage/**": true,
+    "dist/**": true,
+    "build/**": true,
+    "tmp/**": true,
+    "temp/**": true,
+    "*.log": true
+  },
+
+  // ซ่อนไฟล์/โฟลเดอร์ที่มักไม่ต้องแก้จาก Explorer
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/node": true,
+    "data/backups": true,
+    "public/uploads": true,
+    "coverage": true,
+    "dist": true,
+    "build": true,
+    "tmp": true,
+    "temp": true
+  },
+
+  // ลดภาระ file watcher เพื่อให้ VS Code ลื่นขึ้น
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/node/**": true,
+    "data/backups/**": true,
+    "public/uploads/**": true,
+    "public/images/**": true,
+    "public/pdf/**": true,
+    "coverage/**": true,
+    "dist/**": true,
+    "build/**": true,
+    "tmp/**": true,
+    "temp/**": true
+  }
+}
