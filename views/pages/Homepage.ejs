@@ -3,8 +3,8 @@
   <head>
     <%- include('../partials/navbar', { title : 'Homepage'} ) %>
 
-    <link rel="stylesheet" href="../css/Home.css" />
-    <link rel="stylesheet" href="/css/assets/news-card.css" />
+    <link rel="stylesheet" href="../css/Home.css?v=<%= buildId %>" />
+    <link rel="stylesheet" href="/css/assets/news-card.css?v=<%= buildId %>" />
     <%- include('../partials/Responsive') %>
   </head>
   <body>
@@ -50,7 +50,7 @@
       </div>
     </div>
     <%- include('../partials/bootstrapend') %>
-    <script src="/js/Home-mainpic.js"></script>
+    <script src="/js/Home-mainpic.js?v=<%= buildId %>"></script>
     <!-- button-main -->
     <div class="hp-button1">
       <a href="/pre">
@@ -133,7 +133,8 @@
       <span class="news-row-status" id="news-row-status">1 / 1</span>
       <button type="button" class="news-row-btn" id="news-next" aria-label="ข่าวถัดไป">ถัดไป</button>
     </div>
-    <script src="/js/Home-news.js"></script>
+    <script src="/js/Home-news.js?v=<%= buildId %>"></script>
+    <!-- build: <%= buildId %> -->
     <%- include('../partials/footer')-%>
   </body>
 </html>

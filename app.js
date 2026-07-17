@@ -27,6 +27,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 const hasAdminPassword = Boolean(process.env.ADMIN_PASSWORD?.trim());
 const pageViewDedupMinutes = 10;
+const buildId =
+  process.env.RENDER_GIT_COMMIT ||
+  process.env.GITHUB_SHA ||
+  process.env.SOURCE_VERSION ||
+  `local-${new Date().toISOString().slice(0, 10)}`;
 
 console.log(
   hasAdminPassword
@@ -500,6 +505,7 @@ async function performStartupBackup() {
 }
 
 app.get("/", async (req, res) => {
+  res.set("Cache-Control", "no-store, no-cache, must-revalidate, private");
   res.locals.pageTitle = "Homepage";
   const db = await getDb();
   const latestDbNews = await db.all(
@@ -512,6 +518,15 @@ app.get("/", async (req, res) => {
   res.render("pages/Homepage", {
     latestDbNews,
     formatThaiDate,
+    buildId,
+  });
+});
+
+app.get("/api/version", (req, res) => {
+  res.json({
+    buildId,
+    env: process.env.NODE_ENV || "development",
+    time: new Date().toISOString(),
   });
 });
 
