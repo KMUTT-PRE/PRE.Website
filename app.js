@@ -147,6 +147,97 @@ function legacyNewsFiles(limit) {
   }
 }
 
+function quoteIdentifier(value) {
+  if (!/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(value)) {
+    throw new Error("Invalid PostgreSQL identifier");
+  }
+
+  return `"${value}"`;
+}
+
+async function migrateNewsFromPublicSchemaIfNeeded(db) {
+  const dbInfo = getDbInfo();
+
+  if (dbInfo.provider !== "postgres" || !dbInfo.schema || dbInfo.schema === "public") {
+    return;
+  }
+
+  const primaryNewsCount = await db.get("SELECT COUNT(*) AS count FROM news_posts");
+  const primaryCount = Number(primaryNewsCount?.count || 0);
+
+  if (primaryCount > 0) {
+    return;
+  }
+
+  const publicNewsTable = await db.get(`
+    SELECT EXISTS (
+      SELECT 1
+      FROM information_schema.tables
+      WHERE table_schema = 'public' AND table_name = 'news_posts'
+    ) AS exists
+  `);
+
+  if (!publicNewsTable?.exists) {
+    return;
+  }
+
+  const publicNewsCount = await db.get("SELECT COUNT(*) AS count FROM public.news_posts");
+  const sourceCount = Number(publicNewsCount?.count || 0);
+
+  if (sourceCount === 0) {
+    return;
+  }
+
+  const schema = quoteIdentifier(dbInfo.schema);
+
+  await db.exec(`
+    INSERT INTO ${schema}.news_posts
+      (id, title, slug, category, category_label, branches, published_date,
+       cover_image, summary, content, status, created_at, updated_at)
+    SELECT
+      id, title, slug, category, category_label, branches, published_date,
+      cover_image, summary, content, status, created_at, updated_at
+    FROM public.news_posts
+    ON CONFLICT (id) DO NOTHING;
+
+    SELECT setval(
+      pg_get_serial_sequence('${schema}.news_posts', 'id'),
+      COALESCE((SELECT MAX(id) FROM ${schema}.news_posts), 1),
+      true
+    );
+  `);
+
+  const publicImagesTable = await db.get(`
+    SELECT EXISTS (
+      SELECT 1
+      FROM information_schema.tables
+      WHERE table_schema = 'public' AND table_name = 'news_images'
+    ) AS exists
+  `);
+
+  if (publicImagesTable?.exists) {
+    await db.exec(`
+      INSERT INTO ${schema}.news_images
+        (id, news_post_id, image_path, alt_text, sort_order, created_at)
+      SELECT
+        id, news_post_id, image_path, alt_text, sort_order, created_at
+      FROM public.news_images
+      ON CONFLICT (id) DO NOTHING;
+
+      SELECT setval(
+        pg_get_serial_sequence('${schema}.news_images', 'id'),
+        COALESCE((SELECT MAX(id) FROM ${schema}.news_images), 1),
+        true
+      );
+    `);
+  }
+
+  const repairedNewsCount = await db.get("SELECT COUNT(*) AS count FROM news_posts");
+  console.log(
+    `[Database] Migrated legacy news from public schema: ${sourceCount} -> ${Number(repairedNewsCount?.count || 0)} rows in ${dbInfo.schema}.news_posts`,
+  );
+}
+
 const PAGE_LABELS = {
   "/": "หน้าแรก",
   "/pre": "หลักสูตร PRE",
@@ -510,7 +601,7 @@ app.get("/", async (req, res) => {
   const db = await getDb();
   const latestDbNews = await db.all(
     `SELECT * FROM news_posts
-     WHERE status = 'published'
+      WHERE status IN ('published', 'active')
      ORDER BY published_date DESC, id DESC
      LIMIT 8`,
   );
@@ -548,7 +639,7 @@ app.get("/news", async (req, res) => {
   const db = await getDb();
   const dbNews = await db.all(
     `SELECT * FROM news_posts
-     WHERE status = 'published'
+      WHERE status IN ('published', 'active')
      ORDER BY published_date DESC, id DESC`,
   );
   const newsFiles = legacyNewsFiles();
@@ -565,7 +656,7 @@ app.get("/news/:postID", async (req, res) => {
   const postID = req.params.postID;
   const db = await getDb();
   const post = await db.get(
-    `SELECT * FROM news_posts WHERE slug = ? AND status = 'published'`,
+    `SELECT * FROM news_posts WHERE slug = ? AND status IN ('published', 'active')`,
     postID,
   );
 
@@ -1073,6 +1164,13 @@ app.get("/search", (req, res) => {
 
 initDb()
   .then(async () => {
+    try {
+      const db = await getDb();
+      await migrateNewsFromPublicSchemaIfNeeded(db);
+    } catch (err) {
+      console.warn("[Database] Legacy schema migration check failed:", err.message);
+    }
+
     const dbInfo = getDbInfo();
 
     app.listen(port, async () => {
