@@ -261,6 +261,32 @@ function stripQuery(value) {
   return (value || "").split("?")[0];
 }
 
+function isTrackedContentPath(rawPath) {
+  const cleanPath = stripQuery(rawPath);
+
+  if (!cleanPath) {
+    return false;
+  }
+
+  if (cleanPath.startsWith("/admin") || cleanPath.startsWith("/api/")) {
+    return false;
+  }
+
+  if (cleanPath.includes(".")) {
+    return false;
+  }
+
+  if (PAGE_LABELS[cleanPath]) {
+    return true;
+  }
+
+  if (cleanPath.startsWith("/news/") || cleanPath.startsWith("/personel/")) {
+    return true;
+  }
+
+  return false;
+}
+
 async function pageLabel(db, rawPath) {
   const cleanPath = stripQuery(rawPath);
 
@@ -360,7 +386,12 @@ async function trackPageView(req, res, next) {
   }
 
   res.on("finish", async () => {
-    if (res.statusCode >= 400 || req.path.includes(".")) {
+    if (res.statusCode >= 400 || !isTrackedContentPath(req.path)) {
+      return;
+    }
+
+    const accept = req.get("accept") || "";
+    if (!accept.includes("text/html")) {
       return;
     }
 
@@ -705,16 +736,8 @@ app.post("/admin/logout", requireAdmin, (req, res) => {
 
 app.get("/admin", requireAdmin, async (req, res) => {
   const db = await getDb();
-  const [totalViews, totalNews, topPagesRaw, chartPagesRaw, recentViewsRaw] = await Promise.all([
-    db.get("SELECT COUNT(*) AS count FROM page_views"),
+  const [totalNews, groupedPagesRaw, recentViewsRaw] = await Promise.all([
     db.get("SELECT COUNT(*) AS count FROM news_posts"),
-    db.all(
-      `SELECT path, COUNT(*) AS views
-       FROM page_views
-       GROUP BY path
-       ORDER BY views DESC
-       LIMIT 10`,
-    ),
     db.all(
       `SELECT path, COUNT(*) AS views
        FROM page_views
@@ -728,9 +751,17 @@ app.get("/admin", requireAdmin, async (req, res) => {
        LIMIT 20`,
     ),
   ]);
+
+  const contentPagesRaw = groupedPagesRaw.filter((row) => isTrackedContentPath(row.path));
+  const totalViews = contentPagesRaw.reduce(
+    (sum, row) => sum + Number(row.views || 0),
+    0,
+  );
+  const topPagesRaw = contentPagesRaw.slice(0, 10);
+  const chartPagesRaw = contentPagesRaw;
   const [topPages, recentViews] = await Promise.all([
     withPageLabels(db, topPagesRaw),
-    withPageLabels(db, recentViewsRaw),
+    withPageLabels(db, recentViewsRaw.filter((row) => isTrackedContentPath(row.path))),
   ]);
   const chartPagesWithoutHome = chartPagesRaw.filter((row) => row.path !== "/");
   const chartTopRows = chartPagesWithoutHome.slice(0, 8);
@@ -747,7 +778,7 @@ app.get("/admin", requireAdmin, async (req, res) => {
   );
 
   res.render("admin/dashboard", {
-    totalViews: totalViews.count,
+    totalViews,
     totalNews: totalNews.count,
     topPages,
     chartRows,
@@ -784,7 +815,17 @@ app.get("/admin/db-health-check", requireAdmin, async (req, res) => {
 app.get("/admin/db-status", requireAdmin, async (req, res) => {
   const db = await getDb();
   const dbInfo = getDbInfo();
-  const [totalNews, publishedNews, totalImages, latestPosts] = await Promise.all([
+  const [
+    totalNews,
+    publishedNews,
+    totalImages,
+    latestPosts,
+    pageViewsTotal,
+    pageViewsGrouped,
+    tabeeStats,
+    tabeeDaily,
+    suspiciousPaths,
+  ] = await Promise.all([
     db.get("SELECT COUNT(*) AS count FROM news_posts"),
     db.get("SELECT COUNT(*) AS count FROM news_posts WHERE status = 'published'"),
     db.get("SELECT COUNT(*) AS count FROM news_images"),
@@ -794,7 +835,47 @@ app.get("/admin/db-status", requireAdmin, async (req, res) => {
        ORDER BY published_date DESC, id DESC
        LIMIT 10`,
     ),
+    db.get("SELECT COUNT(*) AS count FROM page_views"),
+    db.all(
+      `SELECT path, COUNT(*) AS views
+       FROM page_views
+       GROUP BY path
+       ORDER BY views DESC`,
+    ),
+    db.get(
+      `SELECT
+          COUNT(*) AS views,
+          COUNT(DISTINCT ip_hash) AS unique_ips,
+          COUNT(DISTINCT user_agent) AS unique_agents,
+          SUM(CASE WHEN COALESCE(referrer, '') = '' THEN 1 ELSE 0 END) AS direct_views
+       FROM page_views
+       WHERE path = '/TABEE'`,
+    ),
+    db.all(
+      `SELECT DATE(visited_at) AS day, COUNT(*) AS views
+       FROM page_views
+       WHERE path = '/TABEE'
+       GROUP BY DATE(visited_at)
+       ORDER BY day DESC
+       LIMIT 14`,
+    ),
+    db.all(
+      `SELECT path, COUNT(*) AS views
+       FROM page_views
+       WHERE path LIKE '/api/%'
+       GROUP BY path
+       ORDER BY views DESC
+       LIMIT 10`,
+    ),
   ]);
+
+  const pageViewsContent = pageViewsGrouped
+    .filter((row) => isTrackedContentPath(row.path))
+    .reduce((sum, row) => sum + Number(row.views || 0), 0);
+  const tabeeTotalViews = Number(tabeeStats?.views || 0);
+  const tabeeShare = pageViewsContent > 0
+    ? Number(((tabeeTotalViews / pageViewsContent) * 100).toFixed(1))
+    : 0;
 
   const dbDebug = {
     currentSchema: null,
@@ -823,6 +904,17 @@ app.get("/admin/db-status", requireAdmin, async (req, res) => {
     totalNews: totalNews.count,
     publishedNews: publishedNews.count,
     totalImages: totalImages.count,
+    pageViewsTotal: pageViewsTotal.count,
+    pageViewsContent,
+    tabeeStats: {
+      views: tabeeTotalViews,
+      uniqueIps: Number(tabeeStats?.unique_ips || 0),
+      uniqueAgents: Number(tabeeStats?.unique_agents || 0),
+      directViews: Number(tabeeStats?.direct_views || 0),
+      sharePercent: tabeeShare,
+    },
+    tabeeDaily,
+    suspiciousPaths,
     latestPosts,
     formatThaiDate,
     dbDebug,
