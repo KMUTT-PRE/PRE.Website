@@ -32,6 +32,18 @@
           <span>Images</span>
           <strong><%= totalImages %></strong>
         </article>
+        <article>
+          <span>Page views (all)</span>
+          <strong><%= pageViewsTotal %></strong>
+        </article>
+        <article>
+          <span>Page views (content only)</span>
+          <strong><%= pageViewsContent %></strong>
+        </article>
+        <article>
+          <span>TABEE share</span>
+          <strong><%= tabeeStats.sharePercent %>%</strong>
+        </article>
       </section>
 
       <section class="admin-grid">
@@ -75,6 +87,82 @@
                       -
                     <% } %>
                   </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+
+        <div>
+          <h2>Analytics Check: TABEE</h2>
+          <table>
+            <tbody>
+              <tr>
+                <th>TABEE views</th>
+                <td><%= tabeeStats.views %></td>
+              </tr>
+              <tr>
+                <th>Unique IP hash</th>
+                <td><%= tabeeStats.uniqueIps %></td>
+              </tr>
+              <tr>
+                <th>Unique User-Agent</th>
+                <td><%= tabeeStats.uniqueAgents %></td>
+              </tr>
+              <tr>
+                <th>Direct/no referrer</th>
+                <td><%= tabeeStats.directViews %></td>
+              </tr>
+              <tr>
+                <th>Share of content views</th>
+                <td><%= tabeeStats.sharePercent %>%</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 style="margin-top: 16px">TABEE (last 14 days)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Views</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (tabeeDaily.length > 0) { %>
+                <% tabeeDaily.forEach(function(row) { %>
+                  <tr>
+                    <td><%= row.day %></td>
+                    <td><%= row.views %></td>
+                  </tr>
+                <% }); %>
+              <% } else { %>
+                <tr>
+                  <td colspan="2">No TABEE visits found.</td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+
+          <h3 style="margin-top: 16px">Potential non-content paths (/api/*)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Path</th>
+                <th>Views</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if (suspiciousPaths.length > 0) { %>
+                <% suspiciousPaths.forEach(function(row) { %>
+                  <tr>
+                    <td><%= row.path %></td>
+                    <td><%= row.views %></td>
+                  </tr>
+                <% }); %>
+              <% } else { %>
+                <tr>
+                  <td colspan="2">No /api/* entries found.</td>
                 </tr>
               <% } %>
             </tbody>
