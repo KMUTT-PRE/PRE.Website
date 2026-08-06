@@ -21,6 +21,7 @@ const {
   linkifyText,
   normalizeNewsInput,
   todayBangkokDate,
+  uploadedImageToDataUrl,
 } = require("./lib/news");
 
 const app = express();
@@ -80,13 +81,7 @@ app.use(
 );
 
 const upload = multer({
-  storage: multer.diskStorage({
-    destination: path.join(__dirname, "public", "uploads", "news"),
-    filename: (req, file, cb) => {
-      const ext = path.extname(file.originalname || "");
-      cb(null, `${Date.now()}-${Math.round(Math.random() * 1e9)}${ext}`);
-    },
-  }),
+  storage: multer.memoryStorage(),
 });
 
 const newsUpload = upload.fields([
@@ -102,10 +97,93 @@ async function saveGalleryImages(db, postId, files) {
       `INSERT INTO news_images (news_post_id, image_path, sort_order)
        VALUES (?, ?, ?)`,
       postId,
-      `/uploads/news/${galleryFiles[index].filename}`,
+      uploadedImageToDataUrl(galleryFiles[index]),
       index,
     );
   }
+}
+
+const IMAGE_MIME_TYPES_BY_EXTENSION = {
+  ".avif": "image/avif",
+  ".gif": "image/gif",
+  ".jpeg": "image/jpeg",
+  ".jpg": "image/jpeg",
+  ".png": "image/png",
+  ".svg": "image/svg+xml",
+  ".webp": "image/webp",
+};
+
+function inlineLegacyNewsImage(imagePath) {
+  if (
+    typeof imagePath !== "string" ||
+    !imagePath.startsWith("/uploads/news/")
+  ) {
+    return "";
+  }
+
+  const diskPath = path.join(__dirname, "public", ...imagePath.slice(1).split("/"));
+  const mimeType = IMAGE_MIME_TYPES_BY_EXTENSION[
+    path.extname(diskPath).toLowerCase()
+  ];
+
+  if (!mimeType || !fs.existsSync(diskPath)) {
+    return "";
+  }
+
+  return `data:${mimeType};base64,${fs.readFileSync(diskPath).toString("base64")}`;
+}
+
+async function migrateStoredNewsImages(db) {
+  let migratedCoverImages = 0;
+  let migratedGalleryImages = 0;
+  const posts = await db.all(
+    `SELECT id, cover_image
+       FROM news_posts
+      WHERE cover_image LIKE '/uploads/news/%'`,
+  );
+  const galleryImages = await db.all(
+    `SELECT id, image_path
+       FROM news_images
+      WHERE image_path LIKE '/uploads/news/%'`,
+  );
+
+  for (const post of posts) {
+    const dataUrl = inlineLegacyNewsImage(post.cover_image);
+
+    if (!dataUrl) {
+      continue;
+    }
+
+    const result = await db.run(
+      `UPDATE news_posts
+          SET cover_image = ?, updated_at = CURRENT_TIMESTAMP
+        WHERE id = ? AND cover_image = ?`,
+      dataUrl,
+      post.id,
+      post.cover_image,
+    );
+    migratedCoverImages += result.changes || 0;
+  }
+
+  for (const image of galleryImages) {
+    const dataUrl = inlineLegacyNewsImage(image.image_path);
+
+    if (!dataUrl) {
+      continue;
+    }
+
+    const result = await db.run(
+      `UPDATE news_images
+          SET image_path = ?
+        WHERE id = ? AND image_path = ?`,
+      dataUrl,
+      image.id,
+      image.image_path,
+    );
+    migratedGalleryImages += result.changes || 0;
+  }
+
+  return { migratedCoverImages, migratedGalleryImages };
 }
 
 async function getPostImages(db, postId) {
@@ -1310,6 +1388,15 @@ initDb()
       try {
         await performStartupBackup();
         const db = await getDb();
+        const imageMigration = await migrateStoredNewsImages(db);
+        if (
+          imageMigration.migratedCoverImages > 0 ||
+          imageMigration.migratedGalleryImages > 0
+        ) {
+          console.log(
+            `[News] Inlined legacy uploaded images: ${imageMigration.migratedCoverImages} cover image(s), ${imageMigration.migratedGalleryImages} gallery image(s)`,
+          );
+        }
         const integrity = await checkDatabaseIntegrity(db);
         console.log(`📊 Database integrity on startup: ${JSON.stringify(integrity)}`);
       } catch (err) {
