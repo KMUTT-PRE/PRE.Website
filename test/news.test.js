@@ -1,7 +1,11 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
 
-const { linkifyText } = require("../lib/news");
+const {
+  linkifyText,
+  normalizeNewsInput,
+  uploadedImageToDataUrl,
+} = require("../lib/news");
 
 test("linkifyText converts HTTP URLs into safe links", () => {
   assert.equal(
@@ -22,4 +26,23 @@ test("linkifyText escapes HTML and rejects non-HTTP link schemes", () => {
     linkifyText('<script>alert("xss")</script> javascript:alert(1)'),
     "&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt; javascript:alert(1)",
   );
+});
+
+test("uploadedImageToDataUrl stores uploaded images inline for persistence", () => {
+  assert.equal(
+    uploadedImageToDataUrl({
+      mimetype: "image/png",
+      buffer: Buffer.from("inline-image"),
+    }),
+    "data:image/png;base64,aW5saW5lLWltYWdl",
+  );
+});
+
+test("normalizeNewsInput keeps the current cover image when no new file is uploaded", () => {
+  const post = normalizeNewsInput({
+    title: "ตัวอย่างข่าว",
+    current_cover_image: "/uploads/news/existing-image.jpg",
+  });
+
+  assert.equal(post.cover_image, "/uploads/news/existing-image.jpg");
 });
