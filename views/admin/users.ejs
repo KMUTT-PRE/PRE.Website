@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>จัดการผู้ดูแลระบบ</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body class="admin-page">
+    <%- include('partials/nav') %>
+    <main class="admin-shell admin-form-shell">
+      <section class="admin-grid-single">
+        <div class="admin-panel">
+          <h1>จัดการผู้ดูแลระบบ</h1>
+          <% if (message) { %>
+            <p class="<%= messageType === 'ok' ? 'admin-success' : 'admin-alert' %>"><%= message %></p>
+          <% } %>
+
+          <h2>เพิ่มผู้ดูแลใหม่</h2>
+          <form method="post" action="/admin/users" class="admin-form">
+            <label>
+              Username
+              <input type="text" name="username" required placeholder="เช่น admin_editor" />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" required minlength="8" />
+            </label>
+            <div class="admin-form-actions">
+              <button type="submit">เพิ่มผู้ดูแล</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="admin-panel">
+          <h2>รายชื่อผู้ดูแล</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>ปรับปรุงบัญชี</th>
+                <th>ลบ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% users.forEach(function(user) { %>
+                <tr>
+                  <td>
+                    <strong><%= user.username %></strong>
+                    <% if (currentAdminUserId === user.id) { %>
+                      <small>บัญชีที่กำลังใช้งาน</small>
+                    <% } %>
+                  </td>
+                  <td>
+                    <form method="post" action="/admin/users/<%= user.id %>/update" class="admin-inline-form">
+                      <input type="text" name="username" value="<%= user.username %>" required />
+                      <input type="password" name="password" minlength="8" placeholder="รหัสผ่านใหม่ (ถ้าต้องการ)" />
+                      <button type="submit">บันทึก</button>
+                    </form>
+                  </td>
+                  <td>
+                    <% if (currentAdminUserId !== user.id) { %>
+                      <form method="post" action="/admin/users/<%= user.id %>/delete" onsubmit="return confirm('ยืนยันการลบผู้ดูแล <%= user.username %> ?')">
+                        <button type="submit">ลบ</button>
+                      </form>
+                    <% } else { %>
+                      <small>ไม่สามารถลบบัญชีตัวเอง</small>
+                    <% } %>
+                  </td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
