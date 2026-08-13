@@ -15,6 +15,12 @@ const session = require("express-session");
 const { getDb, getDbInfo, initDb, testDbConnection } = require("./lib/db");
 const { getSessionStore } = require("./lib/sessionStore");
 const {
+  hashPassword,
+  verifyPassword,
+  normalizeAdminUsername,
+  isValidAdminUsername,
+} = require("./lib/adminAuth");
+const {
   CATEGORY_LABELS,
   formatThaiDate,
   hashIp,
@@ -26,6 +32,7 @@ const {
 
 const app = express();
 const port = process.env.PORT || 3000;
+const adminUsername = process.env.ADMIN_USERNAME?.trim() || "admin";
 const hasAdminPassword = Boolean(process.env.ADMIN_PASSWORD?.trim());
 const pageViewDedupMinutes = 10;
 const buildId =
@@ -62,6 +69,10 @@ app.set("trust proxy", true);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use((req, res, next) => {
+  res.locals.currentAdminUsername = req.session?.adminUsername || null;
+  next();
+});
 
 // Configure persistent session store
 const sessionStore = getSessionStore();
@@ -201,6 +212,33 @@ function requireAdmin(req, res, next) {
   }
 
   return res.redirect("/admin/login");
+}
+
+function adminUsersRedirect(res, messageType, messageText) {
+  const query = new URLSearchParams();
+  query.set(messageType, messageText);
+  return res.redirect(`/admin/users?${query.toString()}`);
+}
+
+async function ensureDefaultAdminUser() {
+  const db = await getDb();
+  const totalAdmins = await db.get("SELECT COUNT(*) AS count FROM admin_users");
+
+  if (Number(totalAdmins?.count || 0) > 0) {
+    return;
+  }
+
+  const seededUsername = normalizeAdminUsername(adminUsername);
+  const seededPassword = process.env.ADMIN_PASSWORD?.trim() || "admin123";
+
+  await db.run(
+    `INSERT INTO admin_users (username, password_hash)
+     VALUES (?, ?)`,
+    seededUsername,
+    hashPassword(seededPassword),
+  );
+
+  console.log(`[Admin] Seeded initial admin user: ${seededUsername}`);
 }
 
 function legacyNewsFiles(limit) {
@@ -792,19 +830,73 @@ app.get("/news/:postID", async (req, res) => {
 });
 
 app.get("/admin/login", (req, res) => {
-  res.render("admin/login", { error: "" });
+  res.render("admin/login", {
+    error: "",
+    username: "",
+  });
 });
 
-app.post("/admin/login", (req, res) => {
-  const password = process.env.ADMIN_PASSWORD?.trim() || "admin123";
+app.post("/admin/login", async (req, res) => {
+  const username = normalizeAdminUsername(req.body.username);
+  const password = String(req.body.password || "");
+  const envPassword = process.env.ADMIN_PASSWORD?.trim() || "admin123";
+  const envUsername = normalizeAdminUsername(adminUsername);
 
-  if (req.body.password?.trim() === password) {
+  if (!username || !password) {
+    return res.render("admin/login", {
+      error: "กรุณากรอกชื่อผู้ใช้และรหัสผ่าน",
+      username,
+    });
+  }
+
+  const db = await getDb();
+  const account = await db.get(
+    `SELECT id, username, password_hash
+       FROM admin_users
+      WHERE username = ?`,
+    username,
+  );
+
+  if (account && verifyPassword(password, account.password_hash)) {
     req.session.isAdmin = true;
+    req.session.adminUserId = account.id;
+    req.session.adminUsername = account.username;
     return res.redirect("/admin");
   }
 
-  return res.status(401).render("admin/login", {
-    error: "รหัสผ่านไม่ถูกต้อง",
+  // Compatibility fallback: allow machine-level admin credentials,
+  // then sync them into admin_users so future logins use DB accounts.
+  if (username === envUsername && password === envPassword) {
+    if (account) {
+      await db.run(
+        `UPDATE admin_users
+            SET password_hash = ?, updated_at = CURRENT_TIMESTAMP
+          WHERE id = ?`,
+        hashPassword(envPassword),
+        account.id,
+      );
+      req.session.isAdmin = true;
+      req.session.adminUserId = account.id;
+      req.session.adminUsername = account.username;
+      return res.redirect("/admin");
+    }
+
+    const result = await db.run(
+      `INSERT INTO admin_users (username, password_hash)
+       VALUES (?, ?)`,
+      envUsername,
+      hashPassword(envPassword),
+    );
+
+    req.session.isAdmin = true;
+    req.session.adminUserId = result.lastID;
+    req.session.adminUsername = envUsername;
+    return res.redirect("/admin");
+  }
+
+  return res.render("admin/login", {
+    error: "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง",
+    username,
   });
 });
 
@@ -863,6 +955,150 @@ app.get("/admin", requireAdmin, async (req, res) => {
     maxChartViews,
     recentViews,
   });
+});
+
+app.get("/admin/users", requireAdmin, async (req, res) => {
+  const db = await getDb();
+  const users = await db.all(
+    `SELECT id, username, created_at, updated_at
+       FROM admin_users
+      ORDER BY username`,
+  );
+
+  res.render("admin/users", {
+    users,
+    message: req.query.ok || req.query.error || "",
+    messageType: req.query.ok ? "ok" : req.query.error ? "error" : "",
+    currentAdminUserId: req.session.adminUserId,
+  });
+});
+
+app.post("/admin/users", requireAdmin, async (req, res) => {
+  const username = normalizeAdminUsername(req.body.username);
+  const password = String(req.body.password || "");
+
+  if (!isValidAdminUsername(username)) {
+    return adminUsersRedirect(
+      res,
+      "error",
+      "ชื่อผู้ใช้ต้องยาว 3-40 ตัว และใช้ได้เฉพาะ a-z, 0-9, . _ -",
+    );
+  }
+
+  if (password.length < 8) {
+    return adminUsersRedirect(res, "error", "รหัสผ่านต้องยาวอย่างน้อย 8 ตัวอักษร");
+  }
+
+  const db = await getDb();
+  const existing = await db.get(
+    "SELECT id FROM admin_users WHERE username = ?",
+    username,
+  );
+
+  if (existing) {
+    return adminUsersRedirect(res, "error", "ชื่อผู้ใช้นี้มีอยู่แล้ว");
+  }
+
+  await db.run(
+    `INSERT INTO admin_users (username, password_hash)
+     VALUES (?, ?)`,
+    username,
+    hashPassword(password),
+  );
+
+  return adminUsersRedirect(res, "ok", `เพิ่มผู้ดูแล ${username} สำเร็จ`);
+});
+
+app.post("/admin/users/:id/update", requireAdmin, async (req, res) => {
+  const id = Number(req.params.id);
+  const username = normalizeAdminUsername(req.body.username);
+  const password = String(req.body.password || "");
+
+  if (!Number.isInteger(id) || id <= 0) {
+    return adminUsersRedirect(res, "error", "รหัสผู้ใช้ไม่ถูกต้อง");
+  }
+
+  if (!isValidAdminUsername(username)) {
+    return adminUsersRedirect(
+      res,
+      "error",
+      "ชื่อผู้ใช้ต้องยาว 3-40 ตัว และใช้ได้เฉพาะ a-z, 0-9, . _ -",
+    );
+  }
+
+  const db = await getDb();
+  const current = await db.get("SELECT id, username FROM admin_users WHERE id = ?", id);
+
+  if (!current) {
+    return adminUsersRedirect(res, "error", "ไม่พบบัญชีผู้ดูแล");
+  }
+
+  const duplicate = await db.get(
+    "SELECT id FROM admin_users WHERE username = ? AND id <> ?",
+    username,
+    id,
+  );
+
+  if (duplicate) {
+    return adminUsersRedirect(res, "error", "ชื่อผู้ใช้นี้ถูกใช้งานแล้ว");
+  }
+
+  if (password && password.length < 8) {
+    return adminUsersRedirect(res, "error", "รหัสผ่านใหม่ต้องยาวอย่างน้อย 8 ตัวอักษร");
+  }
+
+  if (password) {
+    await db.run(
+      `UPDATE admin_users
+          SET username = ?, password_hash = ?, updated_at = CURRENT_TIMESTAMP
+        WHERE id = ?`,
+      username,
+      hashPassword(password),
+      id,
+    );
+  } else {
+    await db.run(
+      `UPDATE admin_users
+          SET username = ?, updated_at = CURRENT_TIMESTAMP
+        WHERE id = ?`,
+      username,
+      id,
+    );
+  }
+
+  if (req.session.adminUserId === id) {
+    req.session.adminUsername = username;
+  }
+
+  return adminUsersRedirect(res, "ok", `อัปเดตผู้ดูแล ${username} สำเร็จ`);
+});
+
+app.post("/admin/users/:id/delete", requireAdmin, async (req, res) => {
+  const id = Number(req.params.id);
+
+  if (!Number.isInteger(id) || id <= 0) {
+    return adminUsersRedirect(res, "error", "รหัสผู้ใช้ไม่ถูกต้อง");
+  }
+
+  if (req.session.adminUserId === id) {
+    return adminUsersRedirect(res, "error", "ไม่สามารถลบบัญชีที่กำลังใช้งานอยู่ได้");
+  }
+
+  const db = await getDb();
+  const total = await db.get("SELECT COUNT(*) AS count FROM admin_users");
+
+  if (Number(total?.count || 0) <= 1) {
+    return adminUsersRedirect(res, "error", "ต้องมีผู้ดูแลอย่างน้อย 1 บัญชี");
+  }
+
+  const target = await db.get("SELECT username FROM admin_users WHERE id = ?", id);
+
+  if (!target) {
+    return adminUsersRedirect(res, "error", "ไม่พบบัญชีผู้ดูแล");
+  }
+
+  await db.run("DELETE FROM admin_users WHERE id = ?", id);
+  return adminUsersRedirect(res, "ok", `ลบบัญชี ${target.username} สำเร็จ`);
 });
 
 /**
@@ -1334,6 +1570,8 @@ app.get("/search", (req, res) => {
 
 initDb()
   .then(async () => {
+    await ensureDefaultAdminUser();
+
     try {
       const db = await getDb();
       await migrateNewsFromPublicSchemaIfNeeded(db);
