@@ -103,6 +103,18 @@ table {
   padding: 20px;
 }
 
+.admin-grid-single {
+  display: grid;
+  gap: 24px;
+}
+
+.admin-panel {
+  background: #fff;
+  border: 1px solid #dde2e8;
+  border-radius: 8px;
+  padding: 20px;
+}
+
 .admin-bar-chart {
   display: grid;
   gap: 12px;
@@ -340,6 +352,24 @@ fieldset {
   color: #9c1d24;
   margin: 0;
   padding: 10px 12px;
+}
+
+.admin-success {
+  background: #eefaf1;
+  border: 1px solid #8ed1a1;
+  border-radius: 6px;
+  color: #1f6d34;
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.admin-inline-form {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-inline-form button {
+  justify-self: start;
 }
 
 .admin-note {
